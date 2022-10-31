@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Pixee Documentation Site',
+  title: 'Pixee',
   tagline: 'Pixee Tag Line', //TODO: We need a tag line!
   url: 'https://openpixee.github.io/',
   baseUrl: '/',
@@ -34,6 +34,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -57,7 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Pixee Documentation Site',
+        title: 'Pixee',
         logo: {
           alt: 'Pixee',
           src: 'img/logo.svg',
@@ -93,8 +94,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Slack (Coming Soon)',
-                href: '',
+                label: 'Slack',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
             ],
           },
