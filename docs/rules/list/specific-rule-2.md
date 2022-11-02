@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Translate your site
+# Specific Rule 2
 
 Let's translate `docs/intro.md` to French.
 
@@ -71,7 +71,6 @@ module.exports = {
 
 The locale dropdown now appears in your navbar:
 
-![Locale Dropdown](./img/localeDropdown.png)
 
 ## Build your localized site
 

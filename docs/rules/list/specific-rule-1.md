@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Manage Docs Versions
+# Specific Rule 1
 
 Docusaurus can manage multiple versions of your docs.
 
@@ -44,8 +44,6 @@ module.exports = {
 ```
 
 The docs version dropdown appears in your navbar:
-
-![Docs Version Dropdown](./img/docsVersionDropdown.png)
 
 ## Update an existing version
 
