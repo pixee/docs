@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Pixee',
   tagline: 'Pixee Tag Line', //TODO: We need a tag line!
-  url: 'https://openpixee.github.io/',
+  url: 'https://docs.pixee.ai/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -73,7 +73,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/openpixee/openpixee.github.io',
+            href: 'https://github.com/pixeeworks/docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -109,7 +109,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/openpixee/openpixee.github.io',
+                href: 'https://github.com/pixeeworks/docs',
               },
             ],
           },
