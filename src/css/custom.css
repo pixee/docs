@@ -10,6 +10,10 @@ body {
   font-family: "Source Sans Pro";
 }
 
+.menu, .navbar__link {
+  font-weight: 600;
+}
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
