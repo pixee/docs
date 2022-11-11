@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Pixee',
-  tagline: 'Pixee Tag Line', //TODO: We need a tag line!
+  title: 'pixeebot',
+  tagline: 'a bot that helps keep your code safe',
   url: 'https://docs.pixee.ai/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
