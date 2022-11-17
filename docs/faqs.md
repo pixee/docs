@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # FAQs
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's discover **Docusaurus in less than 4 minutes**.
 
 ## Getting Started
 
