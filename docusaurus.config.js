@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'pixeeworks', // Usually your GitHub org/user name.
-  projectName: 'pixeeworks.github.io', // Usually your repo name.
+  organizationName: 'pixee', // Usually your GitHub org/user name.
+  projectName: 'internal-docs', // Usually your repo name.
   deploymentBranch: 'main',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -43,14 +43,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/pixeeworks/docs/edit/main/',
+            'https://github.com/pixee/docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/pixeeworks/docs/edit/main/',
+            'https://github.com/pixee/docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -77,7 +77,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/pixeeworks/docs',
+            href: 'https://github.com/pixee/docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -113,7 +113,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/pixeeworks/docs',
+                href: 'https://github.com/pixee/docs',
               },
             ],
           },
