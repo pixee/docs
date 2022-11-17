@@ -16,7 +16,7 @@ There is no way to safely call `BufferedReader#readLine()` on a remote stream si
 Fixing it is straightforward using [a secure API](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/pixee/security/BoundedLineReader.java) which limits the amount of expected characters to some sane amount. The changes from this rule look like this:
 
 ```diff
-+import io.pixee.security.BoundedLineReader;
++import io.openpixee.security.BoundedLineReader;
 
 ...
 

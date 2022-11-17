@@ -23,8 +23,8 @@ In this case, an attacker could supply a value like `jar:file:/path/to/appserver
 Our changes introduce sandboxing around URL creation that force the developers to specify some boundaries on the types of URLs they expect to create:
 
 ```diff
-+import io.pixee.security.HostValidator;
-+import io.pixee.security.Urls;
++import io.openpixee.security.HostValidator;
++import io.openpixee.security.Urls;
 
 ...
 
@@ -37,8 +37,8 @@ InputStream is = u.openConnection();
 This change alone reduces attack surface significantly, but can be enhanced to create even more security by specifying some controls around the hosts we expect to connect with:
 
 ```java
-import io.pixee.security.HostValidator;
-import io.pixee.security.Urls;
+import io.openpixee.security.HostValidator;
+import io.openpixee.security.Urls;
 
 HostValidator allowsOnlyGoodDotCom = HostValidator.fromAllowedHostPattern(Pattern.compile("good\\.com"));
 URL u = Urls.create(url, Urls.HTTP_PROTOCOLS, allowsOnlyGoodDotCom);
