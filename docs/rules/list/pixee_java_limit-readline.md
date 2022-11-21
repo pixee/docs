@@ -36,7 +36,7 @@ We always prefer to use existing controls built into Java, or a control from a w
 
 ### Why is this rule marked as Merge After Cursory Review?
 
-This rule sets a maximum of 5MB allowed per line read by default. It is unlikely but possible that your code may receive lines that are greater than 5MB _and_ you'd still be interested in reading them, so there is some nominal risk of exceptional cases. If you want to customize the behavior of the rule to have a higher default for your repository, you can change its [Rule Settings](#Rule Settings).
+This rule sets a maximum of 5MB allowed per line read by default. It is unlikely but possible that your code may receive lines that are greater than 5MB _and_ you'd still be interested in reading them, so there is some nominal risk of exceptional cases. If you want to customize the behavior of the rule to have a higher default for your repository, you can change its [Rule Settings](./pixee_java_limit-readline.md#rule-settings).
 
 ## Rule Settings
 
