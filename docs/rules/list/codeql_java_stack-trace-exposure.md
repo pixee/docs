@@ -13,7 +13,7 @@ This rule prevents stack trace information from reaching the HTTP response, whic
 
 Have you ever seen an error page and thought, "wow, I certainly shouldn't be seeing all these code details?" That's this problem.
 
-Switching to a safe signature that doesn't look anything is easy the changes look something like this:
+Switching to a safe signature that doesn't leak anything is easy and the changes look something like this:
 
 ```diff
 try {
