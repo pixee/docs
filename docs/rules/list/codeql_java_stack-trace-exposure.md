@@ -28,15 +28,15 @@ try {
 
 ### Why is this rule marked as Merge Without Review?
 
-We believe there is zero risk of fixing this information leak.
+This rule prevents internal coding details from reaching the HTTP response body, and we believe that fixing it presents zero risk.
 
 ## Rule Settings
 
 N/A
 
 ## References
-* [Security Control (Urls.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/pixee/security/Urls.java)
-* [Security Control (HostValidator.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/pixee/security/HostValidator.java)
+* [Security Control (Urls.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/Urls.java)
+* [Security Control (HostValidator.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/HostValidator.java)
 * [https://portswigger.net/web-security/ssrf](https://portswigger.net/web-security/ssrf)
 * [https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
 * [https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/](https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/)

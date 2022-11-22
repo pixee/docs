@@ -51,6 +51,6 @@ rules:
 This change allows each line read to 25MB instead of the default 5MB.
 
 ## References
-* [Security Control (BoundedLineReader.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/pixee/security/BoundedLineReader.java)
+* [Security Control (BoundedLineReader.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/BoundedLineReader.java)
 * [https://cwe.mitre.org/data/definitions/400.html](https://cwe.mitre.org/data/definitions/400.html)
 * [https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service](https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service)
