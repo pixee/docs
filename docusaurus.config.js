@@ -76,6 +76,7 @@ const config = {
             label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/status', label: 'Status', position: 'left'},
           {
             href: 'https://github.com/pixee/docs',
             label: 'GitHub',
