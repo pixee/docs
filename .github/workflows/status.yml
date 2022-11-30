@@ -29,8 +29,6 @@ jobs:
     name: Update status page
     runs-on: ubuntu-latest
     steps:
-      - name: Print inputs
-        run: echo "install={{ inputs.install }}"
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
@@ -39,10 +37,10 @@ jobs:
         run: npm install -g ejs
       - name: Render template
         run: ejs ./src/pages/status.ejs \
-              install={{ inputs.install }} \
-              repo={{ inputs.repo }} \
-              pr={{ inputs.pr }} \
-              command={{ inputs.command }} \
+              install=${{ inputs.install }} \
+              repo=${{ inputs.repo }} \
+              pr=${{ inputs.pr }} \
+              command=${{ inputs.command }} \
               -o ./src/pages/status.md
       - name: Commit files
         run: |
