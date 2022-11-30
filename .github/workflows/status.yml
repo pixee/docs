@@ -29,6 +29,8 @@ jobs:
     name: Update status page
     runs-on: ubuntu-latest
     steps:
+      - name: Print inputs
+        run: echo install={{ inputs.install }}
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
