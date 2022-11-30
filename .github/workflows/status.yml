@@ -27,6 +27,7 @@ on:
 
 jobs:
   update:
+    name: Update status page
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -34,7 +35,7 @@ jobs:
         with:
           node-version: 18
       - name: Install EJS
-        run: npm install ejs
+        run: npm install -g ejs
       - name: Render template
         run: ejs ./src/pages/status.ejs \
               install={{ inputs.install }} \
