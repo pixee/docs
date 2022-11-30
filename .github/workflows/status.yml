@@ -1,7 +1,6 @@
 name: Update status page
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       install:
