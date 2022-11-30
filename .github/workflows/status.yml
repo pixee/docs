@@ -36,12 +36,7 @@ jobs:
       - name: Install EJS
         run: npm install -g ejs
       - name: Render template
-        run: ejs ./src/pages/status.ejs \
-              install=${{ inputs.install }} \
-              repo=${{ inputs.repo }} \
-              pr=${{ inputs.pr }} \
-              command=${{ inputs.command }} \
-              -o ./src/pages/status.md
+        run: ejs ./src/pages/status.ejs install=${{ inputs.install }} repo=${{ inputs.repo }} pr=${{ inputs.pr }} command=${{ inputs.command }} -o ./src/pages/status.md
       - name: Commit files
         run: |
           git config --local user.name "{{ github.triggering_actor }}"
