@@ -1,4 +1,4 @@
-name: Update status page
+name: Update Status Page
 
 on:
   workflow_dispatch:
