@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/upgrade-sslcontext-tls
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance            | Requires SARIF Tool |
+|------------|----------------------------|---------------------|
+ | High       | Merge After Cursory Review | No                  |
 
 This rule ensures that `SSLSocket#setEnabledProtocols()` uses a safe version of Transport Layer Security (TLS), which is necessary for safe SSL connections.
 
@@ -29,7 +29,7 @@ If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai
 
 ### Why is this rule marked as Merge After Cursory Review?
 
-There is 
+There is only a risk of this rule introducing issues if the other party in the communication doesn't support modern versions of TLS. This should be extremely rare as those older versions are no longer honored by browsers or supported by most server software.  
 
 ## Rule Settings
 
