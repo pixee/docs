@@ -23,7 +23,7 @@ response.addCookie(cookie);
 
 ### Why is this rule marked as Merge After Investigation?
 
-This code change may cause issues with the application if any of the places this code runs (in CI, pre-production or in production) are running with non-HTTPS protocol.
+This code change may cause issues with the application if any of the places this code runs (in CI, pre-production or in production) are running over plaintext HTTP.
 
 ## Rule Settings
 
