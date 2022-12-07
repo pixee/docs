@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires SARIF Tool |
 |------------|----------------------|---------------------|
- | High       | Merge Without Review | Yes (CodeQL)        |
+ | Medium     | Merge Without Review | Yes (CodeQL)        |
 
 This rule prevents stack trace information from reaching the HTTP response, which could leak code internals to an attacker and aid in further profiling and attacks.
 

@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
- | High       | Merge After Cursory Review | No                  |
+ | Medium     | Merge After Cursory Review | No                  |
 
 This rule hardens all [`BufferedReader#readLine()`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#readLine--) calls against attack.
 

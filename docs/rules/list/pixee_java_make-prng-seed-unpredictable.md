@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires SARIF Tool |
 |------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+ | Low        | Merge Without Review | No                  |
 
 This rule replaces all the constant seeds passed to `Random#setSeed(long)` with a pseudo-random value, which will make it considerably more secure.
 
