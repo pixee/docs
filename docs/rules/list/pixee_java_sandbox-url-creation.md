@@ -25,9 +25,7 @@ Our changes introduce sandboxing around URL creation that force developers to sp
 ```diff
 +import io.openpixee.security.HostValidator;
 +import io.openpixee.security.Urls;
-
 ...
-
 String url = userInput.getServiceAddress();
 -URL u = new URL(url);
 +URL u = Urls.create(url, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS);

@@ -17,9 +17,7 @@ Fixing it is straightforward using [a secure API](https://github.com/openpixee/j
 
 ```diff
 +import io.openpixee.security.BoundedLineReader;
-
 ...
-
 BufferedReader reader = getReader();
 -String line = reader.readLine(); // unlimited read, can lead to DoS
 +String line = BoundedLineReader.readLine(reader, 5_000_000); // limited to 5MB

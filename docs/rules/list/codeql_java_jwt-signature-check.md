@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|---------------------------|---------------------|
  | Medium     | Merge After Investigation | Yes (CodeQL)        |
 
-This PR switches to Json Web Token (JWT) parsing APIs that perform signature validation.
+This rule switches Json Web Token (JWT) parsing APIs to versions that perform signature validation.
 
 Unfortunately the method names in JWT parsing with the `io.jsonwebtoken.jjwt` library don't convey the risk difference in usage. Although the `parseClaimsJws()` and `parseClaimsJwt()` methods perform signature validation, the `parse()` method does not.
 
@@ -26,7 +26,7 @@ JwtParser jwtParser = parser.setSigningKey(JWT_PASSWORD);
 
 ### Why is this rule marked as Merge After Investigation?
 
-This code may cause issues 
+This code may cause issues if the application is using tokens that can't be validated. This may happen if you're using this code anywhere you use self-signed JWTs. If you expect your tokens to be correctly generated and expect signature validation to be performed when processing JWTs, this change only reduces risk. However, one should be careful to ensure that CI, pre-production, and production are watched closely as this change moves towards deployment.   
 
 ## Rule Settings
 

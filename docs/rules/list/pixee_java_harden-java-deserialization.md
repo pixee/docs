@@ -62,9 +62,9 @@ The protection works by denying deserialization of "gadget types", which are not
 * `mozilla.javascript.ScriptableObject$Slot`
 * `com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase`
 
-A common thread about these types is that they are either internal types or inner types, and thus not intended for application use. There are more public gadgets, but they are not expected to be deserialized either, and represent attacks (e.g., `java.lang.ProcessBuilder`).   
+A common thread about these types is that they are either internal types or inner types, and thus not intended for application use. There are more public gadgets, but they are not expected to be deserialized either, and very clearly represent attacks (e.g., `java.lang.ProcessBuilder`).   
 
-Given all of this, the risk to an application to merge this protection are effectively zero.
+Given all of this, we estimate the risk to an application to merge this protection is effectively zero.
 
 ## Rule Settings
 

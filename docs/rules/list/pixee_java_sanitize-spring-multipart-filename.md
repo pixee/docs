@@ -3,7 +3,7 @@ title: Sanitize Spring Multipart Filename
 sidebar_position: 1
 ---
 
-## pixee:java/sanitize-apache-multipart-filename 
+## pixee:java/sanitize-spring-multipart-filename 
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
