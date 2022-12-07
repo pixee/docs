@@ -1,5 +1,5 @@
 ---
-title: Stack Trace Exposure
+title: "CodeQL: Stack Trace Exposure"
 sidebar_position: 1
 ---
 

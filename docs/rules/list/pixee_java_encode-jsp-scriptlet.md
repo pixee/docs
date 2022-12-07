@@ -1,5 +1,5 @@
 ---
-title: Encode Untrusted Scriptlet Contents
+title: "Encode Untrusted Scriptlet Contents"
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: JWT Signature Check
+title: "CodeQL: JWT Signature Check"
 sidebar_position: 1
 ---
 
