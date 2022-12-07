@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
- | High       | Merge After Cursory Review | No                  |
+ | Medium     | Merge After Cursory Review | No                  |
 
 This rule hardens all [`BufferedReader#readLine()`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#readLine--) calls against attack.
 
@@ -17,9 +17,7 @@ Fixing it is straightforward using [a secure API](https://github.com/openpixee/j
 
 ```diff
 +import io.openpixee.security.BoundedLineReader;
-
 ...
-
 BufferedReader reader = getReader();
 -String line = reader.readLine(); // unlimited read, can lead to DoS
 +String line = BoundedLineReader.readLine(reader, 5_000_000); // limited to 5MB
