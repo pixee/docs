@@ -1,5 +1,5 @@
 ---
-title: Secure Cookie Transmission
+title: "CodeQL: Secure Cookie Transmission"
 sidebar_position: 1
 ---
 
