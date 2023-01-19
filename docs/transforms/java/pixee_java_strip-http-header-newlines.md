@@ -11,15 +11,15 @@ sidebar_position: 1
 
 
 
-If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this rule marked as Merge Without Review?
+### Why is this transform marked as Merge Without Review?
 
 Loren ipsum
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

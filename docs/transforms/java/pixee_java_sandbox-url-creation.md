@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------------|---------------------|
  | High       | Merge After Cursory Review | No                  |
 
-This rule sandboxes the creation of [`java.net.URL`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URL.html) objects so they will be more resistant to Server-Side Request Forgery (SSRF) attacks.
+This transform sandboxes the creation of [`java.net.URL`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URL.html) objects so they will be more resistant to Server-Side Request Forgery (SSRF) attacks.
 
 Most of the time when you create a URL, you're intending to reference an HTTP endpoint, like an internal microservice. However, URLs can point to local file system files, a Gopher stream in your local network, a JAR file on a remote Internet site, and all kinds of other unexpected and undesirable outcomes. When the URL values are influenced by attackers, they can trick your application into fetching internal resources, running malicious code, or otherwise harming the system. Consider the following code:
 
@@ -44,15 +44,15 @@ URL u = Urls.create(url, Urls.HTTP_PROTOCOLS, allowsOnlyGoodDotCom);
 
 Note: Be cautious about writing URL validation of your own. Parsing URLs is difficult and differences between parsers in validation and execution will certainly lead to exploits as attackers [have repeatedly proven](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf).
 
-If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why does this rule require an OpenPixee dependency?
+### Why does this transform require an OpenPixee dependency?
 
 We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, [please let us know](https://pixee.ai/feedback/).
 
-### Why is this rule marked as Merge After Cursory Review?
+### Why is this transform marked as Merge After Cursory Review?
 
 By default, the protection only weaves in 2 checks, which we believe will not cause any issues with the vast majority of code:
 1. The given URL must be HTTP/HTTPS.
@@ -68,7 +68,7 @@ If you want to allow those protocols, change the incoming PR to look more like t
 +URL u = Urls.create(url, fileProtocols);
 ```
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|---------------------------|---------------------|
  | Low        | Merge After Investigation | Yes (CodeQL)        |
 
-This rule marks new HTTP cookies with the ["secure" flag](https://owasp.org/www-community/controls/SecureCookieAttribute). This flag, despite its ambitious name, only provides one type of protection: confidentiality. Cookies with this flag are guaranteed by the browser never to be sent over a cleartext channel ("http://") and only sent over secure channels ("https://").
+This transform marks new HTTP cookies with the ["secure" flag](https://owasp.org/www-community/controls/SecureCookieAttribute). This flag, despite its ambitious name, only provides one type of protection: confidentiality. Cookies with this flag are guaranteed by the browser never to be sent over a cleartext channel ("http://") and only sent over secure channels ("https://").
 
 Our change introduces this flag with a simple 1-line statement:
 
@@ -21,11 +21,11 @@ response.addCookie(cookie);
 
 ## F.A.Q.
 
-### Why is this rule marked as Merge After Investigation?
+### Why is this transform marked as Merge After Investigation?
 
 This code change may cause issues with the application if any of the places this code runs (in CI, pre-production or in production) are running over plaintext HTTP.
 
-## Rule Settings
+## Transform Settings
 
 N/A
 
