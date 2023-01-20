@@ -7,8 +7,22 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires SARIF Tool |
 |------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Medium     | Merge Without Review | No                  |
 
+This transform ensures that HTTP response header values can't contain newline characters, which could disrupt communication with proxies and possibly leave you vulnerable to protocol-based attacks.
+
+If malicious users can get newline characters into an HTTP response header, they can inject and forge new header values that look like they came from the server, and trick web gateways, proxies, and browsers. This leads to vulnerabilities like Cross-site Scripting (XSS), HTTP response splitting, and more attacks from there.
+
+Our change simply makes sure that if the string passed to be a new response header value is non-null, all the newline characters (CR and LF) will be removed: 
+```diff
++import io.openpixee.security.Newlines;
+...
+String orderId = getUserOrderId();
+-response.setHeader("X-Acme-Order-ID", orderId);
++response.setHeader("X-Acme-Order-ID", Newlines.stripAll(orderId));
+```
+
+Note: Many modern application servers will sanitize these values, but it's almost never specified in documentation, and thus there is little guarantee against regression. Given that, we still recommend this practice.
 
 
 If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
@@ -17,7 +31,7 @@ If you have feedback on this transform, [please let us know](mailto:feedback@pix
 
 ### Why is this transform marked as Merge Without Review?
 
-Loren ipsum
+This transform cleanly enforces the boundaries in the HTTP protocol, and we believe it presents no risk.
 
 ## Transform Settings
 
