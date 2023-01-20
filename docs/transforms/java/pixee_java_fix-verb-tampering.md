@@ -48,15 +48,15 @@ Our change is simple: any place we see `<http-method>` listed in a `<security-co
 
 Taking out all the `<http-method>` entries tells the server that this protection must be enforced for all methods, which is almost always the intent of the developer.
 
-If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this rule marked as Merge Without Review?
+### Why is this transform marked as Merge Without Review?
 
 This is an incredibly unintuitive situation and in our professional experience have never seen any ttime developers intended to grant access to "all other" HTTP methods by specifically listing others. 
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

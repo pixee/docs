@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | High       | Merge Without Review | No                  |
 
-This rule updates all instances of [XMLInputFactory](https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html) to prevent them from resolving external entities, which can protect you from arbitrary code execution, sensitive data exfiltration, and probably a bunch more evil things attackers are still discovering.
+This transform updates all instances of [XMLInputFactory](https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html) to prevent them from resolving external entities, which can protect you from arbitrary code execution, sensitive data exfiltration, and probably a bunch more evil things attackers are still discovering.
 
 Without this protection, attackers can cause your `XMLInputFactory` parser to retrieve sensitive information with attacks like this:
 
@@ -38,15 +38,15 @@ You could take our protections one step further by changing our supplied code to
 XMLInputFactory xmlInputFactory = XMLInputFactorySecurity.hardenFactory(XMLInputFactory.newFactory(), XMLRestrictions.DISALLOW_DOCTYPE);
 ```
 
-If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this rule marked as Merge Without Review?
+### Why is this transform marked as Merge Without Review?
 
 We believe this change is safe and effective. The behavior of hardened `XMLInputFactory` instances will only be different if the XML they process uses external entities, which is exceptionally rare (and, as demonstrated, quite unsafe anyway.)   
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

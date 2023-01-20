@@ -10,7 +10,7 @@ sidebar_position: 1
  | High       | Merge After Cursory Review | No                  |
 
 
-This rule encodes certain JSP scriptlets to fix what appear to be trivially exploitable [Reflected Cross-Site Scripting (XSS)](https://portswigger.net/web-security/cross-site-scripting) vulnerabilities in JSP files. XSS is a vulnerability that is tricky to understand initially, but really easy to exploit.
+This transform encodes certain JSP scriptlets to fix what appear to be trivially exploitable [Reflected Cross-Site Scripting (XSS)](https://portswigger.net/web-security/cross-site-scripting) vulnerabilities in JSP files. XSS is a vulnerability that is tricky to understand initially, but really easy to exploit.
 
 Consider the following example code:
 
@@ -31,15 +31,15 @@ Our changes introduce an HTML-encoding mechanism that look something like this:
 
 This change encodes HTML control characters that attackers would use to execute code. 
 
-If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this rule marked as Merge After Cursory Review?
+### Why is this transform marked as Merge After Cursory Review?
 
 This change is safe and effective in almost all situations. However, depending on the context in which the scriptlet is rendered (e.g., inside an HTML tag, in JavaScript, unquoted contexts, etc.), you may need to use another encoding method. Check out the [OWASP XSS Prevention CheatSheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) to learn more about these cases and other controls you may need in exceptional cases. The security control introduced from OWASP used has `forHtml()` variants for all situations (e.g., `forJavaScript()`, `forCssString()`).
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

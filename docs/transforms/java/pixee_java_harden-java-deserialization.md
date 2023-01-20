@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | High       | Merge Without Review | No                  |
 
-This rule hardens Java deserialization operations against attack. Even a simple operation like an object deserialization is unfortunately a real opportunity to yield control of your system to an attacker. In fact, without specific protections, any object deserialization call can lead to arbitrary code execution. The JavaDoc [now even says](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputFilter.html):
+This transform hardens Java deserialization operations against attack. Even a simple operation like an object deserialization is unfortunately a real opportunity to yield control of your system to an attacker. In fact, without specific protections, any object deserialization call can lead to arbitrary code execution. The JavaDoc [now even says](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputFilter.html):
 
 > Deserialization of untrusted data is inherently dangerous and should be avoided.
 
@@ -47,15 +47,15 @@ AcmeObject acme = (AcmeObject)ois.readObject();
 
 This is a tough vulnerability class to understand, but it is deadly serious because it's the highest impact possible (remote code execution) and extremely likely (automated tooling can exploit.) It's best to remove deserialization, but our protections will protect you from all known exploitation strategies.
 
-If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why does this rule require an OpenPixee dependency?
+### Why does this transform require an OpenPixee dependency?
 
 We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, [please let us know](https://pixee.ai/feedback/).
 
-### Why is this rule marked as Merge Without Review?
+### Why is this transform marked as Merge Without Review?
 
 The protection works by denying deserialization of "gadget types", which are not types that applications typically deserialize, such as:
 * `org.apache.commons.collections.functors.InvokerTransformer`
@@ -66,7 +66,7 @@ A common thread about these types is that they are either internal types or inne
 
 Given all of this, we estimate the risk to an application to merge this protection is effectively zero.
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

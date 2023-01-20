@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------------|---------------------|
  | High       | Merge After Cursory Review | No                  |
 
-This rule hardens usage of the [Spring Web](https://github.com/spring-projects/spring-framework) multipart request and file uploading feature to prevent file overwrite attacks.
+This transform hardens usage of the [Spring Web](https://github.com/spring-projects/spring-framework) multipart request and file uploading feature to prevent file overwrite attacks.
 
 Although end users uploading a file through the browser can't fully control the file name, attackers armed with HTTP proxies, scripts or `curl` could manipulate the file to contain directory escape sequences and send in values like `../../../../../etc/passwd`. This is a common place that developers forget to distrust user input and end up including the attacker's file name in the path they end up writing.
 
@@ -24,7 +24,7 @@ MultipartFile uploadedFile = parseFile(request);
 writeFile(new File("my_upload_dir", name));
 ```
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

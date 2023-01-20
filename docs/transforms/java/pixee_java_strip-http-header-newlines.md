@@ -25,15 +25,15 @@ String orderId = getUserOrderId();
 Note: Many modern application servers will sanitize these values, but it's almost never specified in documentation, and thus there is little guarantee against regression. Given that, we still recommend this practice.
 
 
-If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this rule marked as Merge Without Review?
+### Why is this transform marked as Merge Without Review?
 
 This transform cleanly enforces the boundaries in the HTTP protocol, and we believe it presents no risk.
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

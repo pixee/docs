@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------------|---------------------|
  | High       | Merge After Cursory Review | No                  |
 
-This rule hardens usage of Apache Common's popular multipart request and [file uploading library](https://commons.apache.org/proper/commons-fileupload/) to prevent file overwrite attacks.
+This transform hardens usage of Apache Common's popular multipart request and [file uploading library](https://commons.apache.org/proper/commons-fileupload/) to prevent file overwrite attacks.
 
 Although end users uploading a file through the browser can't fully control the file name, attackers armed with HTTP proxies, scripts or `curl` could manipulate the file to contain directory escape sequences and send in values like `../../../../../etc/passwd`. This is a common place that developers forget to distrust user input and end up including the attacker's file name in the path they end up writing.
 
@@ -25,7 +25,7 @@ for (FileItem item : items) {
 }
 ```
 
-## Rule Settings
+## Transform Settings
 
 N/A
 

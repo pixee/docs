@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | High       | Merge Without Review | No                  |
 
-This rule replaces all new instances of `java.util.Random` with the marginally slower, but much more secure `java.security.SecureRandom`.
+This transform replaces all new instances of `java.util.Random` with the marginally slower, but much more secure `java.security.SecureRandom`.
 
 We have to work pretty hard to get computers to generate genuinely unguessable random bits. The `java.util.Random` type uses a method of pseudo-random number generation that unfortunately emits fairly predictable numbers.
 
@@ -22,15 +22,15 @@ Switching to a more secure version is simple and the changes look something like
 + Random r = new java.security.SecureRandom();
 ```
 
-If you have feedback on this rule, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this rule marked as Merge After Cursory Review?
+### Why is this transform marked as Merge After Cursory Review?
 
 Modern versions of more `SecureRandom` are incredibly fast, and unless you're generating hundreds of megabytes per second of random data, it's unlikely the swap will be noticeably slower. 
 
-## Rule Settings
+## Transform Settings
 
 N/A
 
