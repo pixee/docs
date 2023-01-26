@@ -6,6 +6,8 @@
 
 <p align="center" style={{fontSize: '3em', fontWeight: 'bold'}} >Thanks for installing pixeebot!</p>
 
-Pixeebot will begin scanning your repos, and will provide feedback within minutes. You should expect feedback in the form of a pull request with hardening suggestions, or a comment on your latest commit letting you know that pixeebot was unable to find any opportunities to harden your code. But either way pixeebot will remain vigilant, and will help prevent vulnerabilities in the future. Pixeebot will periodically scan your default branch, and open PR's to harden your code. Pixeebot will also analyze your new pull requests and harden your code before it gets merged into the default branch.
+Pixeebot is currently reviewing your repository and will provide feedback in a few minutes. You can expect feedback in the form of a pull request with hardening suggestions or a comment on your latest commit that summarizes our analysis. 
+
+Rest assured, pixeebot will remain vigilant, sending merge-ready feedback to your Pull Requests and repository that harden your code against attacks. Want to learn more about hardening your code?  Click [here](./why-harden) 
 
 To learn more about pixeebot, the changes pixeebot will suggest, configuration, and more.. [Click here to get started](./getting-started).
