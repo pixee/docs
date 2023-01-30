@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img src="img/0-Icon-Trimmed.png" width="200px" />
+  <img src="/img/0-Icon-Trimmed.png" width="200px" />
 </p>
 
 <p align="center" style={{fontSize: '3em', fontWeight: 'bold'}} >Thanks for installing pixeebot!</p>
