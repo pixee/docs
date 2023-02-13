@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | Medium     | Merge Without Review | Yes (CodeQL)        |
 
-This transform prevents stack trace information from reaching the HTTP response, which could leak code internals to an attacker and aid in further profiling and attacks.
+This codemod prevents stack trace information from reaching the HTTP response, which could leak code internals to an attacker and aid in further profiling and attacks.
 
 Have you ever seen an error page and thought, "wow, I certainly shouldn't be seeing all these code details?" That's this problem.
 
@@ -26,11 +26,11 @@ try {
 
 ## F.A.Q.
 
-### Why is this transform marked as Merge Without Review?
+### Why is this codemod marked as Merge Without Review?
 
-This transform prevents internal coding details from reaching the HTTP response body, and we believe that fixing it presents zero risk.
+This codemod prevents internal coding details from reaching the HTTP response body, and we believe that fixing it presents zero risk.
 
-## Transform Settings
+## Codemod Settings
 
 N/A
 

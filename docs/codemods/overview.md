@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Transforms Overview
+# Codemods Overview
 
 Docusaurus can manage multiple versions of your docs.
 

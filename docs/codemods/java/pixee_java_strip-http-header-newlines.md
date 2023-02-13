@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
 | Medium     | Merge Without Review | No                  |
 
-This transform ensures that HTTP response header values can't contain newline characters, which could disrupt communication with proxies and possibly leave you vulnerable to protocol-based attacks.
+This codemod ensures that HTTP response header values can't contain newline characters, which could disrupt communication with proxies and possibly leave you vulnerable to protocol-based attacks.
 
 If malicious users can get newline characters into an HTTP response header, they can inject and forge new header values that look like they came from the server, and trick web gateways, proxies, and browsers. This leads to vulnerabilities like Cross-site Scripting (XSS), HTTP response splitting, and more attacks from there.
 
@@ -25,15 +25,15 @@ String orderId = getUserOrderId();
 Note: Many modern application servers will sanitize these values, but it's almost never specified in documentation, and thus there is little guarantee against regression. Given that, we still recommend this practice.
 
 
-If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this transform marked as Merge Without Review?
+### Why is this codemod marked as Merge Without Review?
 
-This transform cleanly enforces the boundaries in the HTTP protocol, and we believe it presents no risk.
+This codemod cleanly enforces the boundaries in the HTTP protocol, and we believe it presents no risk.
 
-## Transform Settings
+## Codemod Settings
 
 N/A
 
