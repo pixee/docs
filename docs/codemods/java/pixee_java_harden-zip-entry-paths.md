@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | High       | Merge Without Review | No                  |
 
-This transform hardens instances of [ZipInputStream](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/zip/ZipInputStream.html) to protect against malicious entries that attempt to escape their "file root" and overwrite other files on the running filesystem.
+This codemod hardens instances of [ZipInputStream](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/zip/ZipInputStream.html) to protect against malicious entries that attempt to escape their "file root" and overwrite other files on the running filesystem.
 
 Normally, when you're using `ZipInputStream`, it's because you're processing zip files. That code might look like this:
 
@@ -38,15 +38,15 @@ Yes, in the above code, which looks like [every](https://stackoverflow.com/a/238
 +var zip = io.pixee.security.ZipSecurity.createHardenedInputStream(is, StandardCharsets.UTF_8);
 ```
 
-If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this transform marked as Merge Without Review?
+### Why is this codemod marked as Merge Without Review?
 
 We believe this change is safe and effective. The behavior of hardened `XStream` instances will only be different if the types being deserialized are involved in code execution, which is extremely unlikely to in normal operation.   
 
-## Transform Settings
+## Codemod Settings
 
 N/A
 

@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|---------------------------|---------------------|
  | Medium     | Merge After Investigation | Yes (CodeQL)        |
 
-This transform switches Json Web Token (JWT) parsing APIs to versions that perform signature validation.
+This codemod switches Json Web Token (JWT) parsing APIs to versions that perform signature validation.
 
 Unfortunately the method names in JWT parsing with the `io.jsonwebtoken.jjwt` library don't convey the risk difference in usage. Although the `parseClaimsJws()` and `parseClaimsJwt()` methods perform signature validation, the `parse()` method does not.
 
@@ -24,11 +24,11 @@ JwtParser jwtParser = parser.setSigningKey(JWT_PASSWORD);
 
 ## F.A.Q.
 
-### Why is this transform marked as Merge After Investigation?
+### Why is this codemod marked as Merge After Investigation?
 
 This code may cause issues if the application is using tokens that can't be validated. This may happen if you're using this code anywhere you use self-signed JWTs. If you expect your tokens to be correctly generated and expect signature validation to be performed when processing JWTs, this change only reduces risk. However, one should be careful to ensure that CI, pre-production, and production are watched closely as this change moves towards deployment.   
 
-## Transform Settings
+## Codemod Settings
 
 N/A
 

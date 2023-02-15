@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | Low        | Merge Without Review | No                  |
 
-This transform replaces all the constant seeds passed to `Random#setSeed(long)` with a pseudo-random value, which will make it considerably more secure.
+This codemod replaces all the constant seeds passed to `Random#setSeed(long)` with a pseudo-random value, which will make it considerably more secure.
 
 A "seed" tells your pseudo-random number generator (PRNG) "where to start" in a deterministic (huge, but deterministic) set of numbers. If attackers can detect you're using a constant seed, they'll quickly be able to predict the next numbers you will generate.
 
@@ -22,11 +22,11 @@ Random random = new Random();
 ```
 
 
-If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this transform marked as Merge Without Review?
+### Why is this codemod marked as Merge Without Review?
 
 There should be no difference to the code what random numbers are generated. If there is, this change will surface that issue. This case could indicate a serious security weakness.
 
