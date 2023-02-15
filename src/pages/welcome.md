@@ -2,7 +2,7 @@
   <img src="/img/0-Icon-Trimmed.png" width="200px" />
 </p>
 
-### Thanks for installing pixeebot!
+<p align="center" style={{fontSize: '3em', fontWeight: 'bold'}} >Thanks for installing pixeebot!</p>
 
 :white_check_mark: ~~**Install pixeebot:**  Grab the pixeebot GitHub app and tell it which of your repositories you want to level up.~~
 
@@ -17,6 +17,6 @@
   
 <br/><br/><br/>
 
-*<p align="center">
-With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai*
-</p>
+
+**With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai**
+
