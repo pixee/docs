@@ -6,7 +6,7 @@
 
 <p align="center" style={{fontSize: '3em', fontWeight: 'bold'}} >Thanks for installing pixeebot!</p>
 
-<span style={{color:#d3d3d3}}>:white_check_mark: <s><b>Install pixeebot:</b> Grab the pixeebot GitHub app and tell it which of your repositories you want to level up.</s></span>
+<span style={{color: '#d3d3d3'}}>:white_check_mark: <s><b>Install pixeebot:</b> Grab the pixeebot GitHub app and tell it which of your repositories you want to level up.</s></span>
 
 :on: <b>Analyze Repos:</b> pixeebot goes to work, sneaking around in the background of your repos looking for weak spots to harden.
 
