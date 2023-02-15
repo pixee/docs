@@ -15,7 +15,6 @@
 :eyes: **See the Results:**  Check your [GitHub Pull Requests](https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+author%3Aapp%2Fpixeebot) and high five pixeebot for finding ways to make your code even better.
 
   
-</font>
 <br/><br/><br/>
 
 *<p align="center">
