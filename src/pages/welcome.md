@@ -12,12 +12,12 @@
 
 :zap: **Improvements on the Regular:** pixeebot will keep an eye on your default branch and any future Pull Requests to make sure you're always optimizing your code.
 
-:eyes:**See the Results:**  Check your [GitHub Pull Requests](https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+author%3Aapp%2Fpixeebot) and high five pixeebot for finding ways to make your code even better.
+:eyes: **See the Results:**  Check your [GitHub Pull Requests](https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+author%3Aapp%2Fpixeebot) and high five pixeebot for finding ways to make your code even better.
 
   
 </font>
 <br/><br/><br/>
 
-<p align="center">
-With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai
+*<p align="center">
+With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai*
 </p>
