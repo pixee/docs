@@ -14,7 +14,7 @@ pixeebot operates continuously in the background for the respositories you have 
 2. :seedling: **PR Improvement:** check each new Pull Request for improvement opportunities.
 
 ### What environment & languages does pixeebot support?
-pixeebot currently is limited to Java respositories on Github. Additional languages will be supported soon.
+pixeebot currently is limited to Java respositories on GitHub. Additional languages will be supported soon.
 
 ### What does pixeebot cost?
 pixeebot is currently free for all users.
