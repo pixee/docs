@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
 | High       | Merge Without Review | No                  |
 
-This transform hardens all [`ServletRequest#getRequestDispatcher(String)`](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html#getRequestDispatcher-java.lang.String-) calls against attack.
+This codemod hardens all [`ServletRequest#getRequestDispatcher(String)`](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html#getRequestDispatcher-java.lang.String-) calls against attack.
 
 There is a built-in HTTP method for sending clients to another resource: the [client-side redirect](https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections). However, the `getRequestDispatcher(String)` method is unique in that performs a forward which occurs totally within the _server-side_.
 
@@ -24,15 +24,15 @@ Our change introduces an API that offers some validation against forwards that t
 +request.getRequestDispatcher(Jakarta.validateForwardPath(path)).forward(request, response);
 ```
 
-If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this transform marked as Merge Without Review?
+### Why is this codemod marked as Merge Without Review?
 
 There is no reason an application should be forwarding to inner resources like `/WEB-INF/web.xml`, 
 
-## Transform Settings
+## Codemod Settings
 
 N/A
 

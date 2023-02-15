@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | High       | Merge Without Review | No                  |
 
-This transform refactors SQL statements to be parameterized, rather than built by hand.
+This codemod refactors SQL statements to be parameterized, rather than built by hand.
 
 Without parameterization, developers must remember to escape string inputs using the rules for that database. It's usually buggy, at the least -- and sometimes vulnerable. This 
 
@@ -23,15 +23,15 @@ Our changes look something like this:
 +ResultSet rs = stmt.executeQuery();
 ```
 
-If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this transform marked as Merge Without Review
+### Why is this codemod marked as Merge Without Review
 
-We have scoped the  
+The codemod is thoroughly tested to only handle a guaranteed safe set of conditions.
 
-## Transform Settings
+## Codemod Settings
 
 N/A
 

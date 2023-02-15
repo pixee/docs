@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | High       | Merge Without Review | No                  |
 
-This transform hardens usage of the `XStream` library to prevent remote code execution attacks.
+This codemod hardens usage of the `XStream` library to prevent remote code execution attacks.
 
 XStream is a very flexible library, but it has a history of serious vulnerabilities when handling untrusted data because it was never intended for that use case. There are some fundamental issues with the design that make it difficult to make safe when using it by default.
 
@@ -22,15 +22,15 @@ XStream xstream = new XStream();
 
 Looking at the [history of exploits](https://x-stream.github.io/security.html#CVEs) shows that this change will either stop most exploits or raise the bar of exploitation. If you believe there should be more types added to the denylist, please [fill out a ticket](https://github.com/pixeeworks/java-code-hardener/issues/new) with your suggestions.
 
-If you have feedback on this transform, [please let us know](mailto:feedback@pixee.ai)!
+If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q. 
 
-### Why is this transform marked as Merge Without Review?
+### Why is this codemod marked as Merge Without Review?
 
 We believe this change is safe and effective. The behavior of hardened `XStream` instances will only be different if the types being deserialized are involved in code execution, which is extremely unlikely to in normal operation.   
 
-## Transform Settings
+## Codemod Settings
 
 N/A
 
