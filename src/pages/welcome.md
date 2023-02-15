@@ -6,6 +6,16 @@
 
 <p align="center" style={{fontSize: '3em', fontWeight: 'bold'}} >Thanks for installing pixeebot!</p>
 
-Pixeebot will begin scanning your repos, and will provide feedback within minutes. You should expect feedback in the form of a pull request with hardening suggestions, or a comment on your latest commit letting you know that pixeebot was unable to find any opportunities to harden your code. Rest assured, pixeebot will remain vigilant, and will help prevent vulnerabilities in the future. Pixeebot will periodically scan your default branch, and open merge-ready PR's to harden your code. Pixeebot will also analyze your new pull requests and harden your code before it gets merged into the default branch.
+<span style="color:gray">:white_check_mark: <s><b>Install pixeebot:</b> Grab the pixeebot GitHub app and tell it which of your repositories you want to level up.</s></span>
 
-To learn more about pixeebot, the changes pixeebot will suggest, configuration, and more...[click here to get started](/getting-started).
+:on: <b>Analyze Repos:</b> pixeebot goes to work, sneaking around in the background of your repos looking for weak spots to harden.
+
+:mailbox_with_mail: <b>Pull Request in Two:</b> In just 2 minutes, pixeebot pops out a Pull Request with improvements you can merge in right away. If your code is already rockin', pixeebot will just give you a comment on your latest commit.
+
+:zap: <b>Improvements on the Regular:</b> pixeebot will keep an eye on your default branch and any future Pull Requests to make sure you're always optimizing your code.
+
+:eyes: <b>See the Results:</b> Check your ==[Pull Request tab](http://www.github.com/pulls)== and high five pixeebot for finding ways to make your code even better.
+
+
+
+With pixeebot, you can level up your code with ease. We hope you love it and hope to hear from you at feedback@pixee.ai
