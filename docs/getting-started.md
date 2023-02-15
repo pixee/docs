@@ -11,7 +11,7 @@ pixeebot is designed to enable you to get started with minimal effort.
 
 2. :hourglass: <b>Wait for 2 minutes:</b> In a couple minutes, pixeebot will submit a Pull Request with improvements you can merge in right away. If your code is already rockin', pixeebot will just give you a comment on your latest commit.
 
-3. :eyes: <b>See the Results:</b> Check your :point_right:**<u>[GitHub Pull Requests](http://www.github.com/pulls)</u>**:point_left: and high five pixeebot for finding ways to make your code even better.     
+3. :eyes: <b>See the Results:</b> Check your :point_right:**<u>[GitHub Pull Requests](https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+author%3Aapp%2Fpixeebot)</u>**:point_left: and high five pixeebot for finding ways to make your code even better.     
 
 ### What happens now?
 

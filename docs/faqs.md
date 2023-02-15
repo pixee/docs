@@ -5,7 +5,7 @@ sidebar_position: 4
 # FAQs
 
 ### How does Pixee handle my data?
-Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on product security.  All data is encrypted in transit and at rest  
+Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on product security.  All data is encrypted in transit and at rest.   
 
 ## Alpha FAQs
 
