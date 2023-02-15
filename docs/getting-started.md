@@ -7,15 +7,15 @@ pixeebot is designed to enable you to get started with minimal effort.
 
 ### Let's do this!
 
-1. :white_check_mark: <b>Install pixeebot:</b> Grab the pixeebot GitHub app and tell it which of your repositories you want to level up.
+1. :white_check_mark: **Install pixeebot:** Grab the pixeebot GitHub app and tell it which of your repositories you want to level up.
 
-2. :hourglass: <b>Wait for 2 minutes:</b> In a couple minutes, pixeebot will submit a Pull Request with improvements you can merge in right away. If your code is already rockin', pixeebot will just give you a comment on your latest commit.
+2. :hourglass: **Wait for 2 minutes:** In a couple minutes, pixeebot will submit a Pull Request with improvements you can merge in right away. If your code is already rockin', pixeebot will just give you a comment on your latest commit.
 
-3. :eyes: <b>See the Results:</b> Check your :point_right:**<u>[GitHub Pull Requests](http://www.github.com/pulls)</u>**:point_left: and high five pixeebot for finding ways to make your code even better.     
+3. :eyes: **See the Results:** Check your :point_right:**<u>[GitHub Pull Requests](http://www.github.com/pulls)</u>**:point_left: and high five pixeebot for finding ways to make your code even better.     
 
 ### What happens now?
 
-:zap: <b>Improvements on the Regular:</b> pixeebot will keep an eye on your default branch and any future Pull Requests to make sure you're always optimizing your code.
+:zap: **Improvements on the Regular:** pixeebot will keep an eye on your default branch and any future Pull Requests to make sure you're always optimizing your code.
 
 <br/><br/>
 
