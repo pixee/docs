@@ -120,7 +120,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2023 - add-analytics branch`,
+        copyright: `Copyright © 2023 Pixee Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
