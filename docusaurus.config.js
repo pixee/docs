@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Pixee',
-  tagline: 'Pixee Tag Line', //TODO: We need a tag line!
+  tagline: 'Elevate your code, one automated commit at a time.', //TODO: We need a tag line!
   url: 'https://docs.pixee.ai/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -34,7 +34,7 @@ const config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -54,6 +54,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-1M7HM648QD',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -84,12 +88,6 @@ const config = {
         ],
       },
       head: [
-          `<script type="text/javascript">
-          !function(){var e=window.rudderanalytics=window.rudderanalytics||[];e.methods=["load","page","track","identify","alias","group","ready","reset","getAnonymousId","setAnonymousId","getUserId","getUserTraits","getGroupId","getGroupTraits","startSession","endSession"],e.factory=function(t){return function(){e.push([t].concat(Array.prototype.slice.call(arguments)))}};for(var t=0;t<e.methods.length;t++){var r=e.methods[t];e[r]=e.factory(r)}e.loadJS=function(e,t){var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.rudderlabs.com/v1.1/rudder-analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a)},e.loadJS(),
-          e.load("2LnVyJXehxmUVAqsK0yyqos1j0d","https://pixeedavibden.dataplane.rudderstack.com"),
-          e.page()}();
-          </script>
-          `
       ],
       footer: {
         style: 'dark',
@@ -122,13 +120,22 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2023 Pixee`,
+        copyright: `Copyright © 2023 - add-analytics branch`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+
+    scripts: [
+      {
+        src: '/js/loadtags.js',
+        async: true,
+      }
+    ],
+
+
 };
 
-module.exports = config;
+module.exports = config; 
