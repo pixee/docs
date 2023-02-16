@@ -28,7 +28,9 @@ Feedback from the Alpha phase will be used to improve the product. We aim to act
 Users will receive an exclusive invitation to join the OpenPixee community on Slack. This will be one channel to engage with peers who are also interested in Pixee. Feel free to email us at feedback@pixee.ai with any questions.
 
 
-<br/><br/>
+<br/><br/><br/>
 
-*<p align="center">
-With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai</p>*
+<font size="2">
+
+*<p align="center">With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai</p>*
+</font>
