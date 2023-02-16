@@ -1,11 +1,22 @@
-
-
 <p align="center">
   <img src="/img/0-Icon-Trimmed.png" width="200px" />
 </p>
 
 <p align="center" style={{fontSize: '3em', fontWeight: 'bold'}} >Thanks for installing pixeebot!</p>
 
-pixeebot will begin scanning your repos, and will provide feedback within minutes. You should expect feedback in the form of a pull request with hardening suggestions, or a comment on your latest commit letting you know that pixeebot was unable to find any opportunities to harden your code. Rest assured, pixeebot will remain vigilant, and will help prevent vulnerabilities in the future. pixeebot will periodically scan your default branch, and open merge-ready PR's to harden your code. pixeebot will also analyze your new pull requests and harden your code before it gets merged into the default branch.
+<font size="4">
 
-To learn more about pixeebot, the changes pixeebot will suggest, configuration, and more...[click here to get started](/getting-started).
+:on: **Analyzing Repos:** pixeebot is working now, looking for opportunities to harden your code in the background.<br/>
+:mailbox_with_mail: **Pull Request in Two:** In 2 minutes, pixeebot will submit a Pull Request with improvements you can merge in right away. If your code is already rockin', pixeebot will just give you a comment on your latest commit.<br/>
+:zap: **Improvements on the Regular:** pixeebot will keep an eye on your default branch and any future Pull Requests to make sure you're always optimizing your code.
+
+:eyes: **See the Results:**  Lets see if pixeebot came back with any improvements by checking your :point_right: [**GitHub Pull Requests**](https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+author%3Aapp%2Fpixeebot) :point_left:
+
+ </font> 
+<br/><br/><br/>
+
+<font size="2">
+
+*<p align="center">With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai</p>*
+</font>
+
