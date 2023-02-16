@@ -17,8 +17,10 @@ pixeebot is designed to enable you to get started with minimal effort.
 
 :zap: **Improvements on the Regular:** pixeebot will keep an eye on your default branch and any future Pull Requests to make sure you're always optimizing your code.
 
-<br/><br/>
+<br/><br/><br/>
 
-*<p align="center">
-With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai</p>*
+<font size="2">
+
+*<p align="center">With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai</p>*
+</font>
 
