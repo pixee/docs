@@ -100,7 +100,7 @@ const config = {
             items: [
               {
                 label: 'Slack',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA',
               },
             ],
           },
@@ -110,6 +110,14 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/pixee/docs',
+              },
+              {
+                label: 'Terms of Service',
+                href: 'https://www.pixee.ai/terms',
+              },
+              {
+                label: 'Privacy Policy',
+                href: 'https://www.pixee.ai/privacy',
               },
             ],
           },
