@@ -7,9 +7,9 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires SARIF Tool |
 |------------|----------------------|---------------------|
- | Medium     | Merge Without Review | Yes (CodeQL)        |
+| Medium     | Merge Without Review | Yes (CodeQL)        |
 
-This codemod adds [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) to JDBC code to prevent database resources from being leaked, which could lead to denial-of-service conditions like connection pool or file handle exhaustion.
+This codemod adds [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) to JDBC code that is missing `close()` calls. This change prevents database resources from being leaked, which could lead to denial-of-service conditions like connection pool or file handle exhaustion. These types of failures tend to be catastrophic, result in downtime, and many times affect downstream applications as well. 
 
 Our changes look something like this:
 
