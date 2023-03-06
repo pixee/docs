@@ -7,6 +7,8 @@ sidebar_position: 4
 ### How does Pixee handle my data?
 Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on our own security, including secure software development practices, IT practices, corporate controls and partner assessments. In case anyone asks, yes -- all data is encrypted in transit and at rest, and guaranteed to be destroyed after some time. As an aside, many of us have been in security our whole careers and we're quite passionate about it!
 
+### What languages does pixeebot support?
+* Java
 ## Alpha FAQs
 
 ### What can I expect from Alpha testing of pixeebot?

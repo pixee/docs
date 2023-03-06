@@ -3,7 +3,11 @@ sidebar_position: 2
 ---
 
 # Getting Started
-pixeebot is designed to enable you to get started with minimal effort.
+pixeebot is designed to enable you to get started with minimal effort.  The installation is as simple as a few clicks.  
+
+## Before you begin
+There are a few things to know about pixeebot...
+1. pixeebot only work on Java right now.  
 
 ### Let's do this!
 
