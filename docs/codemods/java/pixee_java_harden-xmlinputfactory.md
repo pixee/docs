@@ -24,7 +24,7 @@ Without this protection, attackers can cause your `XMLInputFactory` parser to re
 Yes, it's pretty insane that this is the default behavior. Our change hardens the factories you create with the necessary security features to prevent your parser from resolving external entities.
 
 ```diff
-+import io.openpixee.security.XMLInputFactorySecurity;
++import io.github.pixee.security.XMLInputFactorySecurity;
 ...
 -XMLInputFactory xmlInputFactory = XMLInputFactory.newFactory();
 +XMLInputFactory xmlInputFactory = XMLInputFactorySecurity.hardenFactory(XMLInputFactory.newFactory());
@@ -32,8 +32,8 @@ Yes, it's pretty insane that this is the default behavior. Our change hardens th
 
 You could take our protections one step further by changing our supplied code to prevent the user from supplying a `DOCTYPE`, which is more aggressive and more secure, but also more likely to affect existing code behavior:
 ```java
-+import io.openpixee.security.XMLInputFactorySecurity;
-+import io.openpixee.security.XMLRestrictions;
++import io.github.pixee.security.XMLInputFactorySecurity;
++import io.github.pixee.security.XMLRestrictions;
 ...
 XMLInputFactory xmlInputFactory = XMLInputFactorySecurity.hardenFactory(XMLInputFactory.newFactory(), XMLRestrictions.DISALLOW_DOCTYPE);
 ```
@@ -51,7 +51,7 @@ We believe this change is safe and effective. The behavior of hardened `XMLInput
 N/A
 
 ## References
-* [Security Control (XMLInputFactorySecurity.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/XMLInputFactorySecurity.java)
+* [Security Control (XMLInputFactorySecurity.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/XMLInputFactorySecurity.java)
 * [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
 * [https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
 * [https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md)

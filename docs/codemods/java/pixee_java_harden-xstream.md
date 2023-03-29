@@ -16,6 +16,7 @@ XStream is a very flexible library, but it has a history of serious vulnerabilit
 Our change hardens new instances of `XStream` so that they can't deserialize types that are commonly used in exploits (and never in normal usage) and it looks like this:
 
 ```diff
++import io.github.pixee.security.HardeningConverter;
 XStream xstream = new XStream();
 +xstream.registerConverter(HardeningConverter.INSTANCE);
 ```
@@ -35,7 +36,7 @@ We believe this change is safe and effective. The behavior of hardened `XStream`
 N/A
 
 ## References
-* [Security Control (XMLInputFactorySecurity.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/XMLInputFactorySecurity.java)
+* [Security Control (XMLInputFactorySecurity.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/XMLInputFactorySecurity.java)
 * [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
 * [https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
 * [https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md)

@@ -16,7 +16,7 @@ Although end users uploading a file through the browser can't fully control the 
 Our change sanitizes the output of `FileItem#getName()`, stripping the value of null bytes and directory escape sequences, leaving a simple file name in the expected form. The code change is very simple and looks like this:
 
 ```diff
-+import io.openpixee.security.Filenames;
++import io.github.pixee.security.Filenames;
 ...
 MultipartFile uploadedFile = parseFile(request);
 -String name = uploadedFile.getOriginalFilename(); // vulnerable
@@ -29,6 +29,6 @@ writeFile(new File("my_upload_dir", name));
 N/A
 
 ## References
-* [Security Control (Filenames.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/Filenames.java)
+* [Security Control (Filenames.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/Filenames.java)
 * [https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
 * [https://portswigger.net/web-security/file-upload](https://portswigger.net/web-security/file-upload)

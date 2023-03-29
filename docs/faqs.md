@@ -25,7 +25,7 @@ Each party agrees to hold data and confidential information of the other party i
 Feedback from the Alpha phase will be used to improve the product. We aim to act quick and will do our best to inform users of actions we take from the input they provided us. Alpha users will be kept in the loop to try the future iterations of pixeebot.
 
 ### Where can I learn more about pixeebot?
-Users will receive an exclusive invitation to join the OpenPixee community on Slack. This will be one channel to engage with peers who are also interested in Pixee. Feel free to email us at feedback@pixee.ai with any questions.
+Users will receive an exclusive invitation to join the Pixee community on Slack. This will be one channel to engage with peers who are also interested in Pixee. Feel free to email us at feedback@pixee.ai with any questions.
 
 
 <br/><br/><br/>

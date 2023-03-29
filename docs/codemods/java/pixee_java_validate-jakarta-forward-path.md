@@ -18,7 +18,7 @@ There is some security that usually comes within redirecting users back through 
 Our change introduces an API that offers some validation against forwards that target sensitive data or attempt to access application code.
 
 ```diff
-+import io.openpixee.security.Jakarta;
++import io.github.pixee.security.Jakarta;
 ...
 -request.getRequestDispatcher(path).forward(request, response);
 +request.getRequestDispatcher(Jakarta.validateForwardPath(path)).forward(request, response);
@@ -38,5 +38,5 @@ N/A
 
 ## References
 
-* [Security Control (Jakarta.java)](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/Jakarta.java)
+* [Security Control (Jakarta.java)](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/Jakarta.java)
 * [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-forward-example](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-forward-example)

@@ -46,7 +46,7 @@ The `XMLDecoder` type is meant to serialize Java beans to and from XML. It has a
 Our change wraps all `InputStream` objects passed to `XMLDecoder` constructors with a wrapper stream that attempts to detect the deserialization of dangerous types (e..g, `java.lang.Runtime` for executing system commands, `java.io.FileOutputStream` for overwriting files, etc.). This is not a complete protection, because attackers could possibly build gadget chains that avoid direct invocation of these particular types to accomplish their goals, but it does significantly raise the bar for exploitation. Here's what a typical change looks like:
 
 ```diff
-+import io.openpixee.security.XMLDecoderSecurity;
++import io.github.pixee.security.XMLDecoderSecurity;
 ...
 -XMLDecoder decoder = new XMLDecoder(is);
 +XMLDecoder decoder = new XMLDecoder(XMLDecoderSecurity.hardenStream(is), null, null);
@@ -67,7 +67,7 @@ We believe this change is safe and effective. The behavior of hardened `XMLDecod
 N/A
 
 ## References
-* [Security Control (XMLDecoderSecurity.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/XMLDecoderSecurity.java)
+* [Security Control (XMLDecoderSecurity.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/XMLDecoderSecurity.java)
 * [https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md)
 * [http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html)
 * [https://github.com/pwntester/XMLDecoder](https://github.com/pwntester/XMLDecoder)

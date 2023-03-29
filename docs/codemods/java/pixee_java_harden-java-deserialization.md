@@ -36,7 +36,7 @@ Analyzing this code reveals a terrifying conclusion. If an attacker presents thi
 Attackers can repurpose the logic of selected types within the Java classpath (called "gadgets") and chain them together to achieve arbitrary remote code execution. There are a limited number of publicly known gadgets that can be used for attack, and our change simply inserts an [ObjectInputFilter](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputStream.html#setObjectInputFilter(java.io.ObjectInputFilter)) into the `ObjectInputStream` to prevent them from being used.
 
 ```diff
-+import io.openpixee.security.ObjectInputFilters;
++import io.github.pixee.security.ObjectInputFilters;
 
 ...
 
@@ -51,7 +51,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ## F.A.Q. 
 
-### Why does this codemod require an OpenPixee dependency?
+### Why does this codemod require a Pixee dependency?
 
 We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, [please let us know](https://pixee.ai/feedback/).
 
@@ -71,6 +71,6 @@ Given all of this, we estimate the risk to an application to merge this protecti
 N/A
 
 ## References
-* [Security Control (ObjectInputFilters.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/ObjectInputFilters.java)
+* [Security Control (ObjectInputFilters.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/ObjectInputFilters.java)
 * [https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
 * [https://portswigger.net/web-security/deserialization/exploiting](https://portswigger.net/web-security/deserialization/exploiting)

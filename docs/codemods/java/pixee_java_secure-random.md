@@ -18,8 +18,9 @@ If the numbers it emits are predictable, then it's obviously not safe to use in 
 Switching to a more secure version is simple and the changes look something like this:
 
 ```diff
++ import java.security.SecureRandom;
 - Random r = new Random();
-+ Random r = new java.security.SecureRandom();
++ Random r = new SecureRandom();
 ```
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
