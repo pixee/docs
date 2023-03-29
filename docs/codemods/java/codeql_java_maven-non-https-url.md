@@ -11,7 +11,7 @@ sidebar_position: 1
 
 This codemod replaces any HTTP URLs found in `<repository>` definitions with HTTPS URLs. Without this change, Maven will make requests to either publish or retrieve artifacts over a plaintext channel. 
 
-That plaintext channel can be observed or modified by malicious actors on the network path between the host running Maven and their intended repository. These actors could then sniff repository credentials, publish malicious artifacts, etc. Simply switching to an HTTPS URL is sufficient to make all of these attacks impossible in almost all situations.
+That plaintext channel can be [observed or modified by malicious actors](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) on the network path between the host running Maven and their intended repository. These actors could then sniff repository credentials, publish malicious artifacts, etc. Simply switching to an HTTPS URL is sufficient to make all of these attacks impossible in almost all situations.
 
 Our changes look something like this:
 
@@ -41,7 +41,6 @@ This codemod replaces URLs to repositories that are insecure. Most repositories,
 N/A
 
 ## References
-* [https://codeql.github.com/codeql-query-help/java/jexl-expression-injection/](https://codeql.github.com/codeql-query-help/java/java-database-resource-leak/)
-* [https://commons.apache.org/proper/commons-jexl/apidocs/org/apache/commons/jexl3/introspection/JexlSandbox.html](https://commons.apache.org/proper/commons-jexl/apidocs/org/apache/commons/jexl3/introspection/JexlSandbox.html)
-* [https://cwe.mitre.org/data/definitions/693.html](https://cwe.mitre.org/data/definitions/693.html)
-* [https://cwe.mitre.org/data/definitions/94.html](https://cwe.mitre.org/data/definitions/94.html)
+* [https://codeql.github.com/codeql-query-help/java/java-maven-non-https-url/](https://codeql.github.com/codeql-query-help/java/java-maven-non-https-url/)
+* [https://en.wikipedia.org/wiki/Man-in-the-middle_attack]([https://en.wikipedia.org/wiki/Man-in-the-middle_attack])
+* [https://cwe.mitre.org/data/definitions/494.html](https://cwe.mitre.org/data/definitions/494.html)
