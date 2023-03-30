@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Pixee',
-  tagline: 'Pixee Tag Line', //TODO: We need a tag line!
+  tagline: 'Elevate your code, one automated commit at a time.', //TODO: We need a tag line!
   url: 'https://docs.pixee.ai/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -34,7 +34,7 @@ const config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -54,6 +54,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-1M7HM648QD',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -83,6 +87,8 @@ const config = {
           },
         ],
       },
+      head: [
+      ],
       footer: {
         style: 'dark',
         links: [
@@ -122,13 +128,22 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2023 Pixee`,
+        copyright: `Copyright © 2023 Pixee Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+
+    scripts: [
+      {
+        src: '/js/loadtags.js',
+        async: true,
+      }
+    ],
+
+
 };
 
-module.exports = config;
+module.exports = config; 
