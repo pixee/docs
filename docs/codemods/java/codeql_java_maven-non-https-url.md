@@ -42,5 +42,5 @@ N/A
 
 ## References
 * [https://codeql.github.com/codeql-query-help/java/java-maven-non-https-url/](https://codeql.github.com/codeql-query-help/java/java-maven-non-https-url/)
-* [https://en.wikipedia.org/wiki/Man-in-the-middle_attack]([https://en.wikipedia.org/wiki/Man-in-the-middle_attack])
+* [https://en.wikipedia.org/wiki/Man-in-the-middle_attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
 * [https://cwe.mitre.org/data/definitions/494.html](https://cwe.mitre.org/data/definitions/494.html)
