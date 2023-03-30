@@ -1,5 +1,5 @@
 ---
-title: "CodeQL: Expression language injection (JEXL)"
+title: "CodeQL: Failure to use HTTPS or SFTP URL in Maven artifact upload/download"
 sidebar_position: 1
 ---
 
