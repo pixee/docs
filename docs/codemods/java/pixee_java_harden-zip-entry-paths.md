@@ -34,8 +34,9 @@ contents: root::0:0:root:/:/bin/sh
 Yes, in the above code, which looks like [every](https://stackoverflow.com/a/23870468) [piece](https://stackoverflow.com/a/51285801) of [zip-processing](https://kodejava.org/how-do-i-decompress-a-zip-file-using-zipinputstream/)  code you can [find](https://www.tabnine.com/code/java/classes/java.util.zip.ZipInputStream) on the [Internet](https://www.baeldung.com/java-compress-and-uncompress), attackers could overwrite any files to which the application has access. Our change replaces the standard `ZipInputStream` with a hardened subclass which prevents access to entry paths that attempt to traverse directories above the current directory (which no normal zip file should ever do.) They look something like this:
 
 ```diff
++import io.github.pixee.security.ZipSecurity;
 -var zip = new ZipInputStream(is, StandardCharsets.UTF_8);
-+var zip = io.pixee.security.ZipSecurity.createHardenedInputStream(is, StandardCharsets.UTF_8);
++var zip = ZipSecurity.createHardenedInputStream(is, StandardCharsets.UTF_8);
 ```
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
@@ -51,7 +52,7 @@ We believe this change is safe and effective. The behavior of hardened `XStream`
 N/A
 
 ## References
-* [Security Control (XMLInputFactorySecurity.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/XMLInputFactorySecurity.java)
+* [Security Control (XMLInputFactorySecurity.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/XMLInputFactorySecurity.java)
 * [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
 * [https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
 * [https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md)

@@ -23,8 +23,8 @@ In this case, an attacker could supply a value like `jar:file:/path/to/appserver
 Our changes introduce sandboxing around URL creation that force developers to specify some boundaries on the types of URLs they expect to create:
 
 ```diff
-+import io.openpixee.security.HostValidator;
-+import io.openpixee.security.Urls;
++import io.github.pixee.security.HostValidator;
++import io.github.pixee.security.Urls;
 ...
 String url = userInput.getServiceAddress();
 -URL u = new URL(url);
@@ -35,8 +35,8 @@ InputStream is = u.openConnection();
 This change alone reduces attack surface significantly, but it can be enhanced to create even more security by specifying some controls around the hosts we expect to connect with:
 
 ```java
-import io.openpixee.security.HostValidator;
-import io.openpixee.security.Urls;
+import io.github.pixee.security.HostValidator;
+import io.github.pixee.security.Urls;
 
 HostValidator allowsOnlyGoodDotCom = HostValidator.fromAllowedHostPattern(Pattern.compile("good\\.com"));
 URL u = Urls.create(url, Urls.HTTP_PROTOCOLS, allowsOnlyGoodDotCom);
@@ -48,7 +48,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ## F.A.Q. 
 
-### Why does this codemod require an OpenPixee dependency?
+### Why does this codemod require a Pixee dependency?
 
 We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, [please let us know](https://pixee.ai/feedback/).
 
@@ -73,8 +73,8 @@ If you want to allow those protocols, change the incoming PR to look more like t
 N/A
 
 ## References
-* [Security Control (Urls.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/Urls.java)
-* [Security Control (HostValidator.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/HostValidator.java)
+* [Security Control (Urls.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/Urls.java)
+* [Security Control (HostValidator.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/HostValidator.java)
 * [https://portswigger.net/web-security/ssrf](https://portswigger.net/web-security/ssrf)
 * [https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
 * [https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/](https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/)

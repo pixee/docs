@@ -13,10 +13,10 @@ This codemod hardens all [`BufferedReader#readLine()`](https://docs.oracle.com/j
 
 There is no way to safely call `BufferedReader#readLine()` on a remote stream since it is, by its nature, a read that will only be terminated by the stream provider providing a newline character. A stream influenced by an attacker could keep providing bytes until the JVM runs out of memory, causing a crash.
 
-Fixing it is straightforward using [a secure API](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/pixee/security/BoundedLineReader.java) which limits the amount of expected characters to some sane amount. The changes from this codemod look like this:
+Fixing it is straightforward using [a secure API](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/BoundedLineReader.java) which limits the amount of expected characters to some sane amount. The changes from this codemod look like this:
 
 ```diff
-+import io.openpixee.security.BoundedLineReader;
++import io.github.pixee.security.BoundedLineReader;
 ...
 BufferedReader reader = getReader();
 -String line = reader.readLine(); // unlimited read, can lead to DoS
@@ -28,7 +28,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ## F.A.Q. 
 
-### Why does this codemod require an OpenPixee dependency?
+### Why does this codemod require a Pixee dependency?
 
 We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, [please let us know](https://pixee.ai/feedback/).
 
@@ -49,6 +49,6 @@ codemods:
 This change allows each line read to 25MB instead of the default 5MB.
 
 ## References
-* [Security Control (BoundedLineReader.java) source code](https://github.com/openpixee/java-security-toolkit/blob/main/src/main/java/io/openpixee/security/BoundedLineReader.java)
+* [Security Control (BoundedLineReader.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/BoundedLineReader.java)
 * [https://cwe.mitre.org/data/definitions/400.html](https://cwe.mitre.org/data/definitions/400.html)
 * [https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service](https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service)
