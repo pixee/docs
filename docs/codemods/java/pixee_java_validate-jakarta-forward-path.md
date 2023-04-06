@@ -18,10 +18,10 @@ There is some security that usually comes within redirecting users back through 
 Our change introduces an API that offers some validation against forwards that target sensitive data or attempt to access application code.
 
 ```diff
-+import io.github.pixee.security.Jakarta;
-...
--request.getRequestDispatcher(path).forward(request, response);
-+request.getRequestDispatcher(Jakarta.validateForwardPath(path)).forward(request, response);
++ import static io.github.pixee.security.jakarta.PathValidator.validateDispatcherPath;
+  ...
++ validateDispatcherPath(path);
+  request.getRequestDispatcher(path).forward(request, response);
 ```
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
