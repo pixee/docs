@@ -53,7 +53,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ### Why does this codemod require a Pixee dependency?
 
-We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, [please let us know](https://pixee.ai/feedback/).
+We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, [please let us know](https://ask.pixee.ai/feedback).
 
 ### Why is this codemod marked as Merge Without Review?
 
