@@ -16,11 +16,11 @@ There is no way to safely call `BufferedReader#readLine()` on a remote stream si
 Fixing it is straightforward using [a secure API](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/BoundedLineReader.java) which limits the amount of expected characters to some sane amount. The changes from this codemod look like this:
 
 ```diff
-+import io.github.pixee.security.BoundedLineReader;
-...
-BufferedReader reader = getReader();
--String line = reader.readLine(); // unlimited read, can lead to DoS
-+String line = BoundedLineReader.readLine(reader, 5_000_000); // limited to 5MB
++ import io.github.pixee.security.BoundedLineReader;
+  ...
+  BufferedReader reader = getReader();
+- String line = reader.readLine(); // unlimited read, can lead to DoS
++ String line = BoundedLineReader.readLine(reader, 5_000_000); // limited to 5MB
 ```
 
 

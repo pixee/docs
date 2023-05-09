@@ -14,9 +14,9 @@ This codemod marks new HTTP cookies with the ["secure" flag](https://owasp.org/w
 Our change introduces this flag with a simple 1-line statement:
 
 ```diff
-Cookie cookie = new Cookie("my_cookie", userCookieValue);
-+cookie.setSecure(true);
-response.addCookie(cookie);
+  Cookie cookie = new Cookie("my_cookie", userCookieValue);
++ cookie.setSecure(true);
+  response.addCookie(cookie);
 ```
 
 ## F.A.Q.

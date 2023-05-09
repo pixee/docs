@@ -23,13 +23,13 @@ In this case, an attacker could supply a value like `jar:file:/path/to/appserver
 Our changes introduce sandboxing around URL creation that force developers to specify some boundaries on the types of URLs they expect to create:
 
 ```diff
-+import io.github.pixee.security.HostValidator;
-+import io.github.pixee.security.Urls;
-...
-String url = userInput.getServiceAddress();
--URL u = new URL(url);
-+URL u = Urls.create(url, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS);
-InputStream is = u.openConnection();
++ import io.github.pixee.security.HostValidator;
++ import io.github.pixee.security.Urls;
+  ...
+  String url = userInput.getServiceAddress();
+- URL u = new URL(url);
++ URL u = Urls.create(url, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS);
+  InputStream is = u.openConnection();
 ```
 
 This change alone reduces attack surface significantly, but it can be enhanced to create even more security by specifying some controls around the hosts we expect to connect with:

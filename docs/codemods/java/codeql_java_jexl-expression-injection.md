@@ -16,17 +16,18 @@ Sandboxing helps tremendously, but depending on the attacker profile, the inform
 Our changes look something like this:
 
 ```diff
-+import io.github.pixee.security.UnwantedTypes;
-String input = message.read();
-+JexlSandbox sandbox = new JexlSandbox(true);
-+for (String cls : UnwantedTypes.all()) {
-+  sandbox.block(cls);
-+}
--JexlEngine jexl = new JexlBuilder().create();
-+JexlEngine jexl = new JexlBuilder().sandbox(sandbox).create();
-JexlExpression expression = jexl.createExpression(input);
-JexlContext context = new MapContext();
-expression.evaluate(context);
++ import io.github.pixee.security.UnwantedTypes;
+  ...
+  String input = message.read();
++ JexlSandbox sandbox = new JexlSandbox(true);
++ for (String cls : UnwantedTypes.all()) {
++   sandbox.block(cls);
++ }
+- JexlEngine jexl = new JexlBuilder().create();
++ JexlEngine jexl = new JexlBuilder().sandbox(sandbox).create();
+  JexlExpression expression = jexl.createExpression(input);
+  JexlContext context = new MapContext();
+  expression.evaluate(context);
 ```
 
 ## F.A.Q.

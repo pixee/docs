@@ -1,5 +1,5 @@
 ---
-title: Harden XStream usage
+title: Harden XStream Usage
 sidebar_position: 1
 ---
 

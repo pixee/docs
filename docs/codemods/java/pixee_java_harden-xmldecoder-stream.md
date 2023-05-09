@@ -1,5 +1,5 @@
 ---
-title: Harden XMLDecoder usage
+title: Harden XMLDecoder Usage
 sidebar_position: 1
 ---
 
@@ -46,12 +46,12 @@ The `XMLDecoder` type is meant to serialize Java beans to and from XML. It has a
 Our change wraps all `InputStream` objects passed to `XMLDecoder` constructors with a wrapper stream that attempts to detect the deserialization of dangerous types (e..g, `java.lang.Runtime` for executing system commands, `java.io.FileOutputStream` for overwriting files, etc.). This is not a complete protection, because attackers could possibly build gadget chains that avoid direct invocation of these particular types to accomplish their goals, but it does significantly raise the bar for exploitation. Here's what a typical change looks like:
 
 ```diff
-+import io.github.pixee.security.XMLDecoderSecurity;
-...
--XMLDecoder decoder = new XMLDecoder(is);
-+XMLDecoder decoder = new XMLDecoder(XMLDecoderSecurity.hardenStream(is), null, null);
-AcmeOrder order = (AcmeOrder)decoder.readObject();
-return order;
++ import io.github.pixee.security.XMLDecoderSecurity;
+  ...
+- XMLDecoder decoder = new XMLDecoder(is);
++ XMLDecoder decoder = new XMLDecoder(XMLDecoderSecurity.hardenStream(is), null, null);
+  AcmeOrder order = (AcmeOrder)decoder.readObject();
+  return order;
 ```
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
