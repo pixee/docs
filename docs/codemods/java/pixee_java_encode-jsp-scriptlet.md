@@ -10,7 +10,7 @@ sidebar_position: 1
  | High       | Merge After Cursory Review | No                  |
 
 
-This codemod encodes certain JSP scriptlets to fix what appear to be trivially exploitable [Reflected Cross-Site Scripting (XSS)](https://portswigger.net/web-security/cross-site-scripting) vulnerabilities in JSP files. XSS is a vulnerability that is tricky to understand initially, but really easy to exploit.
+This codemod encodes certain JSP scriptlets to fix what appear to be trivially exploitable [Reflected Cross-Site Scripting (XSS)](https://portswigger.net/web-security/cross-site-scripting) vulnerabilities in JSP files. XSS is a vulnerability that is tricky to understand initially, but easy to exploit.
 
 Consider the following example code:
 

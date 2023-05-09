@@ -11,7 +11,7 @@ sidebar_position: 1
 
 This codemod replaces all the constant seeds passed to `Random#setSeed(long)` with a pseudo-random value, which will make it considerably more secure.
 
-A "seed" tells your pseudo-random number generator (PRNG) "where to start" in a deterministic (huge, but deterministic) set of numbers. If attackers can detect you're using a constant seed, they'll quickly be able to predict the next numbers you will generate.
+A "seed" tells your pseudo-random number generator (PRNG) "where to start" in a deterministic (large, but deterministic) set of numbers. If attackers can detect you're using a constant seed, they'll quickly be able to predict the next numbers you will generate.
 
 Our change replaces the constant with [`System#currentTimeMillis()`](https://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()):
 

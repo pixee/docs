@@ -11,7 +11,7 @@ sidebar_position: 1
 
 This codemod hardens usage of Java's [`java.beans.XMLDecoder`](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/XMLDecoder.html) APIs to prevent remote code execution attacks.
 
-The `XMLDecoder` type is meant to serialize Java beans to and from XML. It has a lot of power built into it, so it is not meant for use with untrusted data. If attackers can influence the XML being deserialized, they can execute arbitrary system commands with exploits [like this](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md) (and you can find [many others](https://github.com/pwntester/XMLDecoder):
+The `XMLDecoder` type is meant to serialize Java beans to and from XML. It has a lot of power built into it, so it is not meant for use with untrusted data. If attackers can influence the XML being deserialized, they can execute arbitrary system commands with exploits [like this](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md) one, which causes the host to open a remote shell on port 4444:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

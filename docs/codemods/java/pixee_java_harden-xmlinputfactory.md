@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
  | High       | Merge Without Review | No                  |
 
-This codemod updates all instances of [XMLInputFactory](https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html) to prevent them from resolving external entities, which can protect you from arbitrary code execution, sensitive data exfiltration, and probably a bunch more evil things attackers are still discovering.
+This codemod updates all instances of [XMLInputFactory](https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html) to prevent them from resolving external entities, which can protect you from arbitrary code execution, sensitive data exfiltration, and an ever-growing list of other abuses attackers have discovered.
 
 Without this protection, attackers can cause your `XMLInputFactory` parser to retrieve sensitive information with attacks like this:
 
@@ -21,7 +21,7 @@ Without this protection, attackers can cause your `XMLInputFactory` parser to re
 </book>
 ```
 
-Yes, it's pretty insane that this is the default behavior. Our change hardens the factories you create with the necessary security features to prevent your parser from resolving external entities.
+It is often surprising to developers that this is the default behavior. Our change hardens the factories you create with the necessary security features to prevent your parser from resolving external entities.
 
 ```diff
 + import io.github.pixee.security.XMLInputFactorySecurity;

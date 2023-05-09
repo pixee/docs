@@ -13,7 +13,7 @@ This codemod ensures that `SSLEngine#setEnabledProtocols()` retrieves a safe ver
 
 TLS v1.0 and TLS v1.1 both have serious issues and are considered unsafe. Right now, the only safe version to use is 1.2.
 
-Our change involves modifying the arguments to `setEnabledProtocols()` to return TLSv1.2 when it can be confirmed to be another, less secure value:
+Our change involves modifying the arguments to `setEnabledProtocols()` to be TLSv1.2 when it can be confirmed to be another, less secure value:
 
 ```diff
   SSLEngine sslEngine = ...;
