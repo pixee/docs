@@ -34,7 +34,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ### Why is this codemod marked as Merge Without Review?
 
-We believe this change is safe and effective. The behavior of hardened `Runtime#exec()` calls will only throw `SecurityException` if they see behavior involved in malicious code execution, which is extremely unlikely to in normal operation.
+We believe this change is safe and effective. The behavior of hardened `Runtime#exec()` calls will only throw `SecurityException` if they see behavior involved in malicious code execution, which is extremely unlikely to happen in normal operation.
 
 ## Codemod Settings
 
