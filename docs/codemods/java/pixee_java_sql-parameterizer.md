@@ -11,7 +11,7 @@ sidebar_position: 1
 
 This codemod refactors SQL statements to be parameterized, rather than built by hand.
 
-Without parameterization, developers must remember to escape string inputs using the rules for that column type and database. This usually results in bugs -- and sometimes vulnerability. This 
+Without parameterization, developers must remember to escape string inputs using the rules for that column type and database. This usually results in bugs -- and sometimes vulnerability. Although it's not clear if this code is exploitable today, this change will make the code more robust in case the conditions which prevent exploitation today ever go away. 
 
 Our changes look something like this:
 
