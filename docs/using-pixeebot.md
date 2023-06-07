@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# Using pixeebot
+# User Guide
 
-Once installed, pixeebot will begin opening pull requests against your repositories immediately. There is no need to invoke pixeebot manually, all of your improvements will come automatically and at a managable pace.
+Once installed, pixeebot will begin opening pull requests against your repositories immediately. There is no need to invoke pixeebot manually -- all of your improvements will come automatically and at a managable pace.
 
 ## Summoning pixeebot
 
@@ -14,7 +14,7 @@ If you have merged all your pixeebot pull requests, and you're eager to see more
 
 This will let pixeebot know it should immediately open a new pull request with additional improvements for this repository.
 
-### Example: Summoning pixeebot via an issue
+### Summoning pixeebot via an issue
 
 Open an issue with the summon command in the issue body:
 
