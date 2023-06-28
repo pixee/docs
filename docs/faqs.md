@@ -5,7 +5,7 @@ sidebar_position: 4
 # FAQs
 
 ### How does Pixee handle my data?
-Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on our own security, including secure software development practices, IT practices, corporate controls and partner assessments. In case anyone asks, yes -- all data is encrypted in transit and at rest, and guaranteed to be destroyed after some time. As an aside, many of us have been in security our whole careers and we're quite passionate about it!
+Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on our own security, including secure software development practices, IT practices, corporate controls and partner assessments. In case anyone asks, yes -- all data is encrypted in transit and at rest, and guaranteed to be destroyed after some time. As an aside, many of us have been in security our whole careers and we're quite passionate about it! We document all of this and more on our Security and Trust center at https://pixee.trustcenter.sprinto.com/
 
 ## Beta FAQs
 
@@ -13,7 +13,7 @@ Pixee is a platform focused on helping developers deliver higher quality code an
 Beta users will be asked to use the product in an guided fashion, with regular check-ins in out #support-beta channel on Slack. Participants may be asked a series of questions following their usage about their experience. The information gleaned will only be used for us to improve our product.
 
 ### What can I say about Pixee or pixeebot publicly?
-Although we aren’t asking participants to sign legal agreements, we ask that you keep Pixee confidential. We are in stealth and plan to make a big public splash in mid-2023.
+Although we aren’t asking participants to sign legal agreements, we ask that you keep Pixee confidential. We are in stealth and plan to make a big public splash in Q3-2023.
 
 ### Will I be compensated?
 There is no compensation or known risk associated with participating. We will try our best to get you some cool swag though. :wink:

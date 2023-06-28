@@ -125,6 +125,10 @@ const config = {
                 label: 'Privacy Policy',
                 href: 'https://www.pixee.ai/privacy',
               },
+              {
+                label: 'Security and Trust',
+                href: 'https://pixee.trustcenter.sprinto.com/',
+              },
             ],
           },
         ],
