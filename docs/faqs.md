@@ -10,7 +10,7 @@ Pixee is a platform focused on helping developers deliver higher quality code an
 ## Beta FAQs
 
 ### What can I expect when Beta testing of pixeebot?
-Beta users will be asked to use the product in an guided fashion, with regular check-ins in out #support-beta channel on Slack. Participants may be asked a series of questions following their usage about their experience. The information gleaned will only be used for us to improve our product.
+Beta users will be asked to use the product in a guided fashion, with regular check-ins in our #support-beta channel on Slack. Participants may be asked a series of questions following their usage about their experience. The information gleaned will only be used for us to improve our product.
 
 ### What can I say about Pixee or pixeebot publicly?
 Although we aren’t asking participants to sign legal agreements, we ask that you keep Pixee confidential. We are in stealth and plan to make a big public splash in Q3-2023.
