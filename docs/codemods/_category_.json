@@ -1,5 +1,5 @@
 {
-  "label": "Standard Codemods",
+  "label": "Core Codemods",
   "position": 4,
   "link": {
     "type": "doc",
