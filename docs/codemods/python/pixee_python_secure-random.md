@@ -19,12 +19,12 @@ If the numbers it emits are predictable, then it's obviously not safe to use in 
 Switching to a more secure version is simple and the changes look something like this:
 
 ```diff
--import random
-+import secrets
-...
--random.random()
-+gen = secrets.SystemRandom()
-+gen.uniform(0, 1)
+- import random
++ import secrets
+  ...
+- random.random()
++ gen = secrets.SystemRandom()
++ gen.uniform(0, 1)
 ```
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
