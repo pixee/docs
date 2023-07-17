@@ -28,9 +28,9 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ## F.A.Q. 
 
-### Why is this codemod marked as Merge After Cursory Review?
+### Why is this codemod marked as Merge Without Review?
 
-Modern versions of more `SecureRandom` are incredibly fast, and unless you're generating hundreds of megabytes per second of random data, it's unlikely the swap will be noticeably slower. 
+We believe this change is safe, effective, and unlikely to be noticeably slower.
 
 ## Codemod Settings
 
