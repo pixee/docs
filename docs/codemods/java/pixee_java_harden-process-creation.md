@@ -11,7 +11,7 @@ sidebar_position: 1
 
 This codemod hardens all instances of [Runtime#exec()](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runtime.html) to offer protection against attack.
 
-Left unchecked, `Runtime#exec()` can execute any arbitrary system command. If an attacker can control part of the strings used to as program paths or arguments, they could execute arbitrary programs, install malware, and anything else they could do if they had a shell open on the application host.
+Left unchecked, `Runtime#exec()` can execute any arbitrary system command. If an attacker can control part of the strings used as program paths or arguments, they could execute arbitrary programs, install malware, and anything else they could do if they had a shell open on the application host.
 
 Our change introduces a sandbox which protects the application:
 
