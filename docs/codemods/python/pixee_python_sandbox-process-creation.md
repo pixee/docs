@@ -1,7 +1,6 @@
 ---
 title: Sandbox Process Creation
 sidebar_position: 1
-draft: true
 ---
 
 
