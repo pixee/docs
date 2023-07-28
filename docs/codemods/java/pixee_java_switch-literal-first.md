@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|---------------------|
 | Low        | Merge Without Review | No                  |
 
-This change defensively switches the order of literals in comparison expressions to ensure that no null pointer exceptions are unexpectedly thrown. Runtime exceptions especially can cause exceptional and unexpected code paths to be taken, and this can result in unexpected behavior.
+This change defensively switches the order of literals in comparison expressions to ensure that null pointer exceptions are not unexpectedly thrown. Runtime exceptions especially can cause exceptional and unexpected code paths to be taken, and this can result in unexpected behavior.
 
 Both simple vulnerabilities (like information disclosure) and complex vulnerabilities (like business logic flaws) can take advantage of these unexpected code paths.
 
