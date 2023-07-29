@@ -1,5 +1,5 @@
 ---
-title: Hardened LDAP calls against deserialization attacks
+title: Hardened LDAP Calls Against Deserialization Attacks
 sidebar_position: 1
 ---
 

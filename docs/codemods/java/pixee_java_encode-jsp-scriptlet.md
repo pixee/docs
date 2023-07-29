@@ -29,7 +29,7 @@ Our changes introduce an HTML-encoding mechanism that look something like this:
 +Welcome to our site <%= org.owasp.encoder.Encode.forHtml(request.getParameter("name")) %>
 ```
 
-This change encodes HTML control characters that attackers would use to execute code. 
+This codemod encodes HTML control characters that attackers would use to execute code. 
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 

@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------------|---------------------|
 | Low        | Merge After Cursory Review | No                  |
 
-This change moves the `default` case of `switch` statements to the end to match convention.
+This codemod moves the `default` case of `switch` statements to the end to match convention.
 
 If code is hard to read, it is by definition hard to reason about. This is true not only during review, but also while coding in that area later. Not being able to quickly and effectively reason about code will lead to bugs, including security vulnerabilities.
 

@@ -1,5 +1,5 @@
 ---
-title: Harden Java serialization calls
+title: Harden Java Deserialization Calls
 sidebar_position: 1
 ---
 
