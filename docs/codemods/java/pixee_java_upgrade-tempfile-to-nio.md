@@ -17,6 +17,7 @@ Our changes look something like this:
 
 ```diff
 +  import java.nio.file.Files;
+   ...
 -  File txtFile = File.createTempFile("acme", ".txt");
 +  File txtFile = Files.createTempFile("acme", ".txt").toFile();
 ```
