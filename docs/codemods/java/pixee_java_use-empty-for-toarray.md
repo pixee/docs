@@ -11,7 +11,7 @@ sidebar_position: 1
 
 This codemod updates new array creation with [Collection#toArray(T[])](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-) to use an empty array argument, which is better for performance.
 
-The point of the argument is provide an array to hold the objects and be returned, according to the documentation:
+The point of the argument is to provide an array to hold the objects and be returned, according to the documentation:
 
 > If the collection fits in the specified array, it is returned therein.
 
