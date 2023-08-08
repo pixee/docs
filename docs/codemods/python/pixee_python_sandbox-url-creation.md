@@ -32,14 +32,14 @@ In this case, an attacker could supply a value like `"http://169.254.169.254/use
 Our changes introduce sandboxing around URL creation that force developers to specify some boundaries on the types of URLs they expect to create:
 
 ```diff
-from flask import Flask, request
+  from flask import Flask, request
 - import requests
 + from security import safe_requests
 
-app = Flask(__name__)
+  app = Flask(__name__)
 
-@app.route("/request-url")
-def request_url():
+  @app.route("/request-url")
+  def request_url():
     url = request.args["loc"]
 -   resp = requests.get(url)
 +   resp = safe_requests.get.get(url)
