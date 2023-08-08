@@ -1,5 +1,5 @@
 ---
-title: Python Limit readline()
+title: Limit readline()
 sidebar_position: 1
 ---
 
