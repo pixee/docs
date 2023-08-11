@@ -15,8 +15,8 @@ The fix uses a safety check that already exists in the `yaml` module, replacing 
 The changes from this codemod look like this:
 
 ```diff
-import yaml
-data = b'!!python/object/apply:subprocess.Popen \\n- ls'
+  import yaml
+  data = b'!!python/object/apply:subprocess.Popen \\n- ls'
 - deserialized_data = yaml.load(data, yaml.Loader)
 + deserialized_data = yaml.load(data, Loader=yaml.SafeLoader)
 ```

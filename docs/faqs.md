@@ -1,13 +1,13 @@
 ---
-sidebar_position: 4
+sidebar_position: 7
 ---
 
 # FAQs
 
 ### How does Pixee handle my data?
-Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on our own security, including secure software development practices, IT practices, corporate controls and partner assessments. In case anyone asks, yes -- all data is encrypted in transit and at rest, and guaranteed to be destroyed after some time. As an aside, many of us have been in security our whole careers and we're quite passionate about it! We document all of this and more on our Security and Trust center at https://pixee.trustcenter.sprinto.com/
+Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on our own security, including secure software development practices, IT practices, corporate controls and partner assessments. In case anyone asks, yes -- all data is encrypted in transit and at rest, and guaranteed to be destroyed after some time. 
 
-## Beta FAQs
+As an aside, many of us have been in security our whole careers, and we're quite passionate about it! We document all of this and more on our Security and Trust center at https://pixee.trustcenter.sprinto.com/.
 
 ### What can I expect when Beta testing of pixeebot?
 Beta users will be asked to use the product in a guided fashion, with regular check-ins in our #support-beta channel on Slack. Participants may be asked a series of questions following their usage about their experience. The information gleaned will only be used for us to improve our product.
@@ -23,10 +23,3 @@ Each party agrees to hold data and confidential information of the other party i
 
 ### Where can I learn more about pixeebot?
 Users will receive an exclusive invitation to join the Pixee community on Slack. This will be one channel to engage with peers who are also interested in Pixee. Feel free to email us at feedback@pixee.ai with any questions.
-
-<br/><br/><br/>
-
-<font size="2">
-
-*<p align="center">With pixeebot, you can level up your code with ease. We hope you :heart: it and hope to hear from you at feedback@pixee.ai</p>*
-</font>

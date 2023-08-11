@@ -15,7 +15,7 @@ Fixing it is straightforward by providing adding a size argument to any `readlin
 The changes from this codemod look like this:
 
 ```diff
-file = open('some_file.txt')
+  file = open('some_file.txt')
 - file.readline()
 + file.readline(5_000_000)
 ```

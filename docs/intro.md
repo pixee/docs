@@ -22,8 +22,4 @@ pixeebot is currently limited to Java repositories on GitHub. Additional languag
 ### What does pixeebot cost?
 pixeebot is currently and will probably forever be free for all users.
 
-<span style={{fontSize: 'small'}}>
-<p align="center">* With pixeebot, you can level up your code with ease. We hope you ❤️ it and hope to hear from you at <a href="mailto:feedback@pixee.ai">feedback@pixee.ai</a> *</p>
-</span>
-
 

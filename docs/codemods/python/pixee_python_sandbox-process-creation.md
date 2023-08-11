@@ -16,12 +16,12 @@ Left unchecked, `subprocess.run` and `subprocess.call` can execute any arbitrary
 Our change introduces a sandbox which protects the application:
 
 ```diff
-import subprocess
+  import subprocess
 + from security import safe_command
-...
+  ...
 - subprocess.run("echo 'hi'", shell=True)
 + safe_command.run(subprocess.run, "echo 'hi'", shell=True)
-
+  ...
 - subprocess.call(["ls", "-l"])
 + safe_command.call(subprocess.call, ["ls", "-l"])
 ```
