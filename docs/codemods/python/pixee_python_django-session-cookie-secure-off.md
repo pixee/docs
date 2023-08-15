@@ -23,7 +23,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ### Why is this codemod marked as Merge After Cursory?? Review?
 
-Django's `SESSION_COOKIE_SECURE` flag may be overridden somewhere else or the runtime settings file may be set with the `DJANGO_SETTINGS_MODULE` environment variable. This means that the flag may intentionally be left off or missing.
+Django's `SESSION_COOKIE_SECURE` flag may be overridden somewhere else or the runtime settings file may be set with the `DJANGO_SETTINGS_MODULE` environment variable. This means that the flag may intentionally be left off or missing. Also some applications may still want to support pure http. This is often the case for legacy apps. 
 
 ## Codemod Settings
 
