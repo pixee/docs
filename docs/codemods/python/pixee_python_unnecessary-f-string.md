@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires SARIF Tool |
 |------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+ | Low       | Merge Without Review | No                  |
 
 This codemod converts any f-strings without interpolation to regular strings.
 
