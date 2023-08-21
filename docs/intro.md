@@ -20,4 +20,4 @@ We suggest improvements for your code's security, performance, and quality.
 Pixeebot is currently limited to Java repositories on GitHub. Additional languages are coming soon!
 
 ### What does Pixeebot cost?
-Pixeebot is currently and will probably forever be free for all users.
+Pixeebot is currently free for all users. We will add paid tiers in the future.
