@@ -71,6 +71,7 @@ const config = {
         logo: {
           alt: 'Pixee',
           src: 'img/logo.png',
+          href: 'https://pixee.ai',
         },
         items: [
           {
