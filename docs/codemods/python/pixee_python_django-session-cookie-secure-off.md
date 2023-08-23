@@ -3,7 +3,7 @@ title: Django Secure Session Cookie
 sidebar_position: 1
 ---
 
-## pixee:python/django-debug-flag-on
+## pixee:python/django-session-cookie-secure-off
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
