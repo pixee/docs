@@ -84,53 +84,17 @@ const config = {
             type: 'html',
             position: 'right',
             value:
-              '<a href="https://github.com/apps/pixeebot" target="_blank"><img src="img/github-logo.png" width="25px" style="padding-Top:5px"/><a/>',
+              '<a href="https://github.com/apps/pixeebot" target="_blank"><div class="header-github-link"></div><a/>',
           },
           {
             type: 'html',
             position: 'right',
             value:
-              '<a href="https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA" target="_blank",><img src="img/slack-logo.png" width="20px" style="padding-Top:5px"/><a/>',
+              '<a href="https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA" target="_blank",><div class="header-slack-link"></div><a/>',
           },
         ],
       },
       head: [],
-      // footer: {
-      //   style: 'dark',
-      //   // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      //   links: [
-      //     {
-      //       title:
-      //         'Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.',
-      //     },
-      //     {
-      //       items: [
-      //         {
-      //           label: 'Terms of Service',
-      //           href: 'https://www.pixee.ai/terms',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       items: [
-      //         {
-      //           label: 'Privacy Policy',
-      //           href: 'https://www.pixee.ai/privacy',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       items: [
-      //         {
-      //           label: 'Contact us',
-      //           href: 'https://pixee.trustcenter.sprinto.com/',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      //   // customFooter: require.resolve('./src/theme/Footer.js'),
-      //   // copyright: `Copyright © 2023 Pixee Inc.`,
-      // },
       footer: {
         links: [
           {
@@ -140,13 +104,14 @@ const config = {
                 <div class="footerContent">
                   <div class="copyright"><span>© 2023 Pixee Inc.</span> All rights reserved</div>
                   <div class="socialIcons">
-                  <a href="https://twitter.com/pixeebot" target="_blank"><img src="img/twitter-logo.svg" width="16px"></a>
-                  <a href="https://www.linkedin.com/company/pixee/" target="_blank"><img src="img/linkedin-logo.svg" width="16px"></a>
+                  <a href="https://twitter.com/pixeebot" target="_blank"><div class="footer-twitter-link"></div></a>
+                  <a href="https://www.linkedin.com/company/pixee/" target="_blank"><div class="footer-linkedin-link"></div></a>
                   </div>
+
                   <div class="links">
                     <a href="https://www.pixee.ai/terms" target="_blank">Terms of Service</a>
                     <a href="https://www.pixee.ai/privacy" target="_blank">Privacy Policy</a>
-                    <a href="#">Contact us</a>
+                    <a href = "mailto: hi@pixee.ai">Contact us</a>
                   </div>
                 </div>
                   `,
