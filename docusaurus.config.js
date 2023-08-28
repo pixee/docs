@@ -29,7 +29,7 @@ const config = {
   },
 
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap",
+    'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap',
   ],
 
   presets: [
@@ -42,15 +42,13 @@ const config = {
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/pixee/docs/edit/main/',
+          editUrl: 'https://github.com/pixee/docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/pixee/docs/edit/main/',
+          editUrl: 'https://github.com/pixee/docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -73,6 +71,7 @@ const config = {
           src: 'img/logo.png',
           href: 'https://pixee.ai',
         },
+
         items: [
           {
             type: 'doc',
@@ -80,60 +79,81 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/status', label: 'Status', position: 'left'},
+          { to: '/status', label: 'Status', position: 'left' },
           {
-            href: 'https://github.com/pixee/docs',
-            label: 'GitHub',
+            type: 'html',
             position: 'right',
+            value:
+              '<a href="https://github.com/apps/pixeebot" target="_blank"><img src="img/github-logo.png" width="25px" style="padding-Top:5px"/><a/>',
+          },
+          {
+            type: 'html',
+            position: 'right',
+            value:
+              '<a href="https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA" target="_blank",><img src="img/slack-logo.png" width="20px" style="padding-Top:5px"/><a/>',
           },
         ],
       },
-      head: [
-      ],
+      head: [],
+      // footer: {
+      //   style: 'dark',
+      //   // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      //   links: [
+      //     {
+      //       title:
+      //         'Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.',
+      //     },
+      //     {
+      //       items: [
+      //         {
+      //           label: 'Terms of Service',
+      //           href: 'https://www.pixee.ai/terms',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       items: [
+      //         {
+      //           label: 'Privacy Policy',
+      //           href: 'https://www.pixee.ai/privacy',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       items: [
+      //         {
+      //           label: 'Contact us',
+      //           href: 'https://pixee.trustcenter.sprinto.com/',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      //   // customFooter: require.resolve('./src/theme/Footer.js'),
+      //   // copyright: `Copyright © 2023 Pixee Inc.`,
+      // },
       footer: {
-        style: 'dark',
         links: [
           {
-            title: 'Docs',
             items: [
               {
-                label: 'Docs',
-                to: '/',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Slack',
-                href: 'https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/pixee/docs',
-              },
-              {
-                label: 'Terms of Service',
-                href: 'https://www.pixee.ai/terms',
-              },
-              {
-                label: 'Privacy Policy',
-                href: 'https://www.pixee.ai/privacy',
-              },
-              {
-                label: 'Security and Trust',
-                href: 'https://pixee.trustcenter.sprinto.com/',
+                html: `
+                <div class="footerContent">
+                  <div class="copyright"><span>© 2023 Pixee Inc.</span> All rights reserved</div>
+                  <div class="socialIcons">
+                  <a href="https://twitter.com/pixeebot" target="_blank"><img src="img/twitter-logo.svg" width="16px"></a>
+                  <a href="https://www.linkedin.com/company/pixee/" target="_blank"><img src="img/linkedin-logo.svg" width="16px"></a>
+                  </div>
+                  <div class="links">
+                    <a href="https://www.pixee.ai/terms" target="_blank">Terms of Service</a>
+                    <a href="https://www.pixee.ai/privacy" target="_blank">Privacy Policy</a>
+                    <a href="#">Contact us</a>
+                  </div>
+                </div>
+                  `,
               },
             ],
           },
         ],
-        copyright: `Copyright © 2023 Pixee Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -141,14 +161,12 @@ const config = {
       },
     }),
 
-    scripts: [
-      {
-        src: '/js/loadtags.js',
-        async: true,
-      }
-    ],
-
-
+  scripts: [
+    {
+      src: '/js/loadtags.js',
+      async: true,
+    },
+  ],
 };
 
-module.exports = config; 
+module.exports = config;

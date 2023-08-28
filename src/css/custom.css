@@ -7,33 +7,132 @@
 /* You can override the default Infima variables here. */
 
 body {
-  font-family: "Source Sans Pro";
+  font-family: 'Source Sans Pro';
 }
 
-.menu, .navbar__link {
+/* Menu styles */
+.menu,
+.navbar__link {
   font-weight: 600;
 }
 
+.menu,
+.navbar__item {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #fff;
+  padding-bottom: 24px;
+  padding: 24px 80px 24px 80px;
+  font-size: 14px;
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  color: #656074;
+}
+
+.footer a {
+  color: #656074;
+}
+
+.footer a:hover {
+  color: #e80266;
+  text-decoration: none;
+}
+
+.footer .container {
+  max-width: none;
+}
+
+.footer .footerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.test {
+  background-image: url('https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png');
+}
+
+.footer .links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  color: #656074;
+}
+
+.footer .socialIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.footer .copyright span {
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    padding: 0 0 0 20px;
+  }
+  .footer .col {
+    margin-bottom: 10px;
+  }
+  .footer .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .socialIcons {
+    justify-content: center;
+  }
+  .footer .links {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #e80266;
+  --ifm-color-primary-dark: #d1025c;
+  --ifm-color-primary-darker: #c50257;
+  --ifm-color-primary-darkest: #a20147;
+  --ifm-color-primary-light: #fd0571;
+  --ifm-color-primary-lighter: #fd1077;
+  --ifm-color-primary-lightest: #fd338b;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #39e7ad;
+  --ifm-color-primary-dark: #1fe4a2;
+  --ifm-color-primary-darker: #1ada9a;
+  --ifm-color-primary-darkest: #16b47f;
+  --ifm-color-primary-light: #53eab8;
+  --ifm-color-primary-lighter: #60ecbd;
+  --ifm-color-primary-lightest: #86f0cd;
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #1c1533;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: #3d3751;
+}
+
+[data-theme='dark'] .footer {
+  background-color: #1c1533;
+  color: #fff;
+}
+
+[data-theme='dark'] .footer .links,
+[data-theme='dark'] .footer .links a {
+  color: #fff;
+}
+
+[data-theme='dark'] .footer a:hover {
+  color: #39e7ad;
+  text-decoration: none;
 }
