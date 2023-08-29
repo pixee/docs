@@ -78,8 +78,14 @@ const config = {
             docId: 'intro',
             position: 'left',
             label: 'Docs',
+            className: 'header-routes',
           },
-          { to: '/status', label: 'Status', position: 'left' },
+          {
+            to: '/status',
+            label: 'Status',
+            position: 'left',
+            className: 'header-routes',
+          },
           {
             type: 'html',
             position: 'right',
