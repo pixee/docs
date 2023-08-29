@@ -29,7 +29,7 @@ const config = {
   },
 
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap",
+    'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap',
   ],
 
   presets: [
@@ -42,15 +42,13 @@ const config = {
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/pixee/docs/edit/main/',
+          editUrl: 'https://github.com/pixee/docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/pixee/docs/edit/main/',
+          editUrl: 'https://github.com/pixee/docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -73,67 +71,60 @@ const config = {
           src: 'img/logo.png',
           href: 'https://pixee.ai',
         },
+
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Docs',
+            className: 'header-routes',
           },
-          {to: '/status', label: 'Status', position: 'left'},
           {
-            href: 'https://github.com/pixee/docs',
-            label: 'GitHub',
+            to: '/status',
+            label: 'Status',
+            position: 'left',
+            className: 'header-routes',
+          },
+          {
+            type: 'html',
             position: 'right',
+            value:
+              '<a href="https://github.com/apps/pixeebot" target="_blank"><div class="header-github-link"></div><a/>',
+          },
+          {
+            type: 'html',
+            position: 'right',
+            value:
+              '<a href="https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA" target="_blank",><div class="header-slack-link"></div><a/>',
           },
         ],
       },
-      head: [
-      ],
+      head: [],
       footer: {
-        style: 'dark',
         links: [
           {
-            title: 'Docs',
             items: [
               {
-                label: 'Docs',
-                to: '/',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Slack',
-                href: 'https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/pixee/docs',
-              },
-              {
-                label: 'Terms of Service',
-                href: 'https://www.pixee.ai/terms',
-              },
-              {
-                label: 'Privacy Policy',
-                href: 'https://www.pixee.ai/privacy',
-              },
-              {
-                label: 'Security and Trust',
-                href: 'https://pixee.trustcenter.sprinto.com/',
+                html: `
+                <div class="footerContent">
+                  <div class="copyright"><span>© 2023 Pixee Inc.</span> All rights reserved</div>
+                  <div class="socialIcons">
+                  <a href="https://twitter.com/pixeebot" target="_blank"><div class="footer-twitter-link"></div></a>
+                  <a href="https://www.linkedin.com/company/pixee/" target="_blank"><div class="footer-linkedin-link"></div></a>
+                  </div>
+
+                  <div class="links">
+                    <a href="https://www.pixee.ai/terms" target="_blank">Terms of Service</a>
+                    <a href="https://www.pixee.ai/privacy" target="_blank">Privacy Policy</a>
+                    <a href = "mailto: hi@pixee.ai">Contact us</a>
+                  </div>
+                </div>
+                  `,
               },
             ],
           },
         ],
-        copyright: `Copyright © 2023 Pixee Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -141,14 +132,12 @@ const config = {
       },
     }),
 
-    scripts: [
-      {
-        src: '/js/loadtags.js',
-        async: true,
-      }
-    ],
-
-
+  scripts: [
+    {
+      src: '/js/loadtags.js',
+      async: true,
+    },
+  ],
 };
 
-module.exports = config; 
+module.exports = config;
