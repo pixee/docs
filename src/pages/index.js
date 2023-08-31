@@ -18,11 +18,13 @@ function HomepageHeader() {
 
 export default function Home() {
   return (
-    <Layout>
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
+    <div className="landingPage">
+      <Layout>
+        <HomepageHeader />
+        <main>
+          <HomepageFeatures />
+        </main>
+      </Layout>
+    </div>
   );
 }

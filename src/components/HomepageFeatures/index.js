@@ -1,33 +1,57 @@
 import React from 'react';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 export default function HomepageFeatures() {
+  const navigateToDocs = (type) => {
+    if (type === 1) {
+      window.location = '/intro';
+    } else if (type === 2) {
+      window.location = '/codemods/overview';
+    } else if (type === 3) {
+      window.location = '/configuring';
+    } else if (type === 4) {
+      window.location = '/running-your-own';
+    } else if (type === 5) {
+      window.location = '/faqs';
+    } else if (type === 6) {
+      window.location = '/using-pixeebot';
+    } else {
+      window.location = '/release-notes';
+    }
+  };
   return (
     <>
       <div className={styles.grid}>
-        <div className={styles.item}>
+        <div className={styles.item} onClick={() => navigateToDocs(1)}>
           <h1>
             ⬇ <span>Install Pixeebot</span>
           </h1>
           <p>
-            Pixeebot installation begins by visiting our Github App page. From
-            there, click the Configure button and follow the prompts from
-            GitHub. You’ll be directed to your Pixee dashboard once the process
-            is complete.
+            Pixeebot installation begins by visiting our{' '}
+            <Link to="https://github.com/apps/pixeebot">Github App page</Link>.
+            From there, click the <span>Configure</span> button and follow the
+            prompts from GitHub. You’ll be directed to your Pixee dashboard once
+            the process is complete.
           </p>
         </div>
-        <div className={styles.item}>
+        <div className={styles.item} onClick={() => navigateToDocs(2)}>
           <h1>
             🌱 <span>Core codemods</span>
           </h1>
           <p>
             Get detailed information on our core codemods, maintained as part of
-            the codemodder project to help strengthen your code.
+            the <Link to="/codemods/overview">codemodder project</Link> to help
+            strengthen your code.
           </p>
-          <p>Java</p>
-          <p>Python</p>
+          <p>
+            <Link to="/category/java">Java</Link>
+          </p>
+          <p>
+            <Link to="/category/python">Python</Link>
+          </p>
         </div>
-        <div className={styles.item}>
+        <div className={styles.item} onClick={() => navigateToDocs(3)}>
           <h1>
             ⚙️ <span>Configuration</span>
           </h1>
@@ -36,13 +60,13 @@ export default function HomepageFeatures() {
             get details about specific fields.
           </p>
         </div>
-        <div className={styles.item}>
+        <div className={styles.item} onClick={() => navigateToDocs(4)}>
           <h1>
             ✨️️ <span>Custom codemods</span>
           </h1>
           <p>Coming soon!</p>
         </div>
-        <div className={styles.item}>
+        <div className={styles.item} onClick={() => navigateToDocs(5)}>
           <h1>
             ❓ <span>AQs</span>
           </h1>
@@ -51,7 +75,7 @@ export default function HomepageFeatures() {
             get details about specific fields.
           </p>
         </div>
-        <div className={styles.item}>
+        <div className={styles.item} onClick={() => navigateToDocs(6)}>
           <h1>
             👤️️ <span>User guide</span>
           </h1>
@@ -61,13 +85,14 @@ export default function HomepageFeatures() {
           </p>
         </div>
       </div>
-      <div className={styles.lastGrid}>
+      <div className={styles.lastGrid} onClick={() => navigateToDocs(7)}>
         <div className={styles.item}>
           <h1>
             📄 <span>Release notes</span>
           </h1>
           <p>
-            May 15, 2023 <br /> This release supports Java code on Github.
+            <Link to="/release-notes">May 15, 2023</Link>
+            <br /> This release supports Java code on Github.
           </p>
         </div>
       </div>
