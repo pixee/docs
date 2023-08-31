@@ -17,6 +17,11 @@
 
 body {
   font-family: 'Source Sans Pro';
+  color: var(--ifr-color-neutral-90);
+}
+
+[data-theme='dark'] body {
+  color: var(--ifr-color-neutral-10);
 }
 
 /* Menu styles */
@@ -201,6 +206,13 @@ body {
   --ifm-color-primary-light: #fd0571;
   --ifm-color-primary-lighter: #fd1077;
   --ifm-color-primary-lightest: #fd338b;
+  --ifr-color-neutral-10: #fbfafb;
+  --ifr-color-neutral-90: #2c2541;
+  --ifr-color-neutral-20: #e6e4ea;
+  --ifr-color-neutral-70: #3d3751;
+  --ifr-color-neutral-white: #fff;
+  --ifm-heading-font-family: 'CustomFont', sans-serif;
+  --ifm-background-color: var(--ifr-color-neutral-10);
 }
 
 /* Dark mode styles */
@@ -235,4 +247,75 @@ html[data-theme='dark'] {
 [data-theme='dark'] .footer a:hover {
   color: var(--ifm-color-primary);
   text-decoration: none;
+}
+
+/* Doc file styles */
+
+.language-diff,
+.language-python,
+.language-yaml,
+.language-java,
+.language-xml,
+.language-binary {
+  --prism-background-color: var(--ifr-color-neutral-white);
+}
+
+[data-theme='dark'] .language-diff,
+[data-theme='dark'] .language-python,
+[data-theme='dark'] .language-yaml,
+[data-theme='dark'] .language-java,
+[data-theme='dark'] .language-xml,
+[data-theme='dark'] .language-binary {
+  --prism-background-color: var(--ifr-color-neutral-90);
+}
+
+/* left side bar */
+
+.theme-doc-sidebar-item-category li .menu__link.menu__link--active,
+.theme-doc-sidebar-menu li .menu__link.menu__link--active {
+  color: var(--ifm-color-primary);
+}
+
+.theme-doc-sidebar-item-category li .menu__link,
+.theme-doc-sidebar-menu li .menu__link {
+  color: var(--ifr-color-neutral-90);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-category li .menu__link,
+[data-theme='dark'] .theme-doc-sidebar-menu li .menu__link {
+  color: var(--ifr-color-neutral-10);
+}
+[data-theme='dark']
+  .theme-doc-sidebar-item-category
+  li
+  [data-theme='dark']
+  .menu__link.menu__link--active,
+.theme-doc-sidebar-menu li .menu__link.menu__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Right side bar */
+
+.table-of-contents li a {
+  color: var(--ifr-color-neutral-90);
+}
+
+.table-of-contents li a.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .table-of-contents li a {
+  color: var(--ifr-color-neutral-10);
+}
+
+[data-theme='dark'] .table-of-contents li a.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+}
+
+.table-of-contents {
+  border-color: var(--ifr-color-neutral-20);
+}
+
+[data-theme='dark'] .table-of-contents {
+  border-color: var(--ifr-color-neutral-70);
 }
