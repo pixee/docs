@@ -15,6 +15,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Poppins-thin';
+  src: url('./../../static/fonts/Poppins-Light.woff2') format('woff2'),
+    url('./../../static/fonts/Poppins-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'Source Sans Pro';
 }
@@ -175,7 +183,7 @@ body {
 /* Mobile view styles*/
 @media (max-width: 800px) {
   .footer {
-    padding: 0 0 0 20px;
+    padding: 0;
   }
   .footer .col {
     margin-bottom: 10px;

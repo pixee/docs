@@ -4,15 +4,14 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 72px 0 64px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
 .heroBanner h1 {
-  /* need to add font family */
-  /* font-family: Poppins; */
+  font-family: 'Poppins-thin', sans-serif;
   font-size: 72px;
   font-style: normal;
   font-weight: 300;
@@ -28,13 +27,35 @@
   color: var(--ifr-color-neutral-90);
 }
 
+/* Dark mode styles */
 [data-theme='dark'] .heroBanner h1,
 [data-theme='dark'] .heroBanner p {
   color: var(--ifr-color-neutral-10);
 }
 
-/* @media screen and (max-width: 996px) {
+/* Mobile view styles*/
+@media (max-width: 800px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 50px 0 50px 0;
   }
-} */
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .heroBanner h1 {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    color: var(--ifr-color-neutral-90);
+  }
+
+  .heroBanner p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--ifr-color-neutral-90);
+  }
+}
