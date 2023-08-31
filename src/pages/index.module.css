@@ -10,14 +10,31 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
+.heroBanner h1 {
+  /* need to add font family */
+  /* font-family: Poppins; */
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 80px;
+  color: var(--ifr-color-neutral-90);
+}
+
+.heroBanner p {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--ifr-color-neutral-90);
+}
+
+[data-theme='dark'] .heroBanner h1,
+[data-theme='dark'] .heroBanner p {
+  color: var(--ifr-color-neutral-10);
+}
+
+/* @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+} */
