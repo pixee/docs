@@ -212,15 +212,16 @@ body {
 }
 
 :root {
-  --ifm-color-primary: #e80266;
+  --ifm-color-primary: #c10b5e;
   --ifm-color-primary-dark: #d1025c;
   --ifm-color-primary-darker: #c50257;
   --ifm-color-primary-darkest: #a20147;
   --ifm-color-primary-light: #fd0571;
   --ifm-color-primary-lighter: #fd1077;
   --ifm-color-primary-lightest: #fd338b;
-  --ifr-color-neutral-90: #1c1533;
+  --ifm-link-color: var(--ifm-color-primary);
   --ifr-color-neutral-10: #fbfafb;
+  --ifr-color-neutral-90: #1c1533;
 }
 
 /* Dark mode styles */

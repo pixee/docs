@@ -11,10 +11,10 @@
 }
 
 .heroBanner h1 {
-  font-family: 'Poppins-thin', sans-serif;
-  font-size: 72px;
+  font-family: 'CustomFont', sans-serif;
+  font-size: 64px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 80px;
   color: var(--ifr-color-neutral-90);
 }
