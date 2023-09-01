@@ -194,7 +194,7 @@ body {
 }
 
 :root {
-  --ifm-color-primary: #e80266;
+  --ifm-color-primary: #c10b5e;
   --ifm-color-primary-dark: #d1025c;
   --ifm-color-primary-darker: #c50257;
   --ifm-color-primary-darkest: #a20147;
@@ -235,4 +235,16 @@ html[data-theme='dark'] {
 [data-theme='dark'] .footer a:hover {
   color: var(--ifm-color-primary);
   text-decoration: none;
+}
+
+/* Sidebar styles */
+
+.menu__link--active:not(.menu__link--sublist) {
+  border-left: 4px solid #e80266;
+  background-color: transparent;
+}
+
+[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+  border-left: 4px solid #39e7ad;
+  background: var(--neutral-neutral-70, #3d3751);
 }
