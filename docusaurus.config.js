@@ -68,7 +68,7 @@ const config = {
         title: 'Pixee',
         logo: {
           alt: 'Pixee',
-          src: 'img/logo.png',
+          src: 'img/pixee-logo.png',
           href: 'https://pixee.ai',
         },
 
