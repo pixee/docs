@@ -1,11 +1,97 @@
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+/* Grid style */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 0 200px;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.lastGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin: 32px 200px 72px 200px;
+}
+
+.item {
+  border-radius: 16px;
+  border: 1px solid var(--neutral-neutral-20, #e6e4ea);
+  background: var(--ifr-color-neutral-20);
+  padding: 24px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(225, 230, 250, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 60%,
+    rgba(249, 214, 230, 1) 100%
+  );
+  border: 1px solid var(--primary-barbie, #e80266);
+}
+
+.grid h1,
+.lastGrid h1 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.grid h1 span,
+.lastGrid h1 span {
+  font-family: 'CustomFont', sans-serif;
+  color: var(--ifr-color-neutral-90);
+}
+
+.grid p,
+.lastGrid p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--ifr-color-neutral-90);
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .item {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  border: 1px solid #463b68;
+  background: var(--ifr-color-neutral-90);
+  padding: 24px;
+}
+
+[data-theme='dark'] .grid h1 span,
+[data-theme='dark'] .lastGrid h1 span,
+[data-theme='dark'] .grid p,
+[data-theme='dark'] .lastGrid p {
+  color: var(--ifr-color-neutral-10);
+}
+
+[data-theme='dark'] .item:hover {
+  background: var(
+    --backgrounds-iris-focus,
+    radial-gradient(80.33% 96.88% at 84.06% -18.59%, #6000fe 0%, #2c2541 91.18%)
+  );
+  border: 1px solid var(--primary-iris, #6000fe);
+}
+
+/* Mobile view styles*/
+@media (max-width: 800px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 0 20px;
+  }
+
+  .lastGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 32px 20px;
+  }
 }
