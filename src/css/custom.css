@@ -15,6 +15,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Poppins-thin';
+  src: url('./../../static/fonts/Poppins-Light.woff2') format('woff2'),
+    url('./../../static/fonts/Poppins-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'Source Sans Pro';
   color: var(--ifr-color-neutral-90);
@@ -22,6 +30,16 @@ body {
 
 [data-theme='dark'] body {
   color: var(--ifr-color-neutral-10);
+}
+
+.landingPage {
+  background: linear-gradient(
+    45deg,
+    rgba(225, 230, 250, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 60%,
+    rgba(249, 214, 230, 1) 100%
+  );
 }
 
 /* Menu styles */
@@ -106,7 +124,7 @@ body {
 .footer {
   background-color: #fff;
   padding-bottom: 24px;
-  padding: 24px 80px 24px 80px;
+  padding: 10px 80px 10px 80px;
   font-size: 14px;
   font-family: 'Source Sans Pro';
   font-weight: 400;
@@ -180,7 +198,7 @@ body {
 /* Mobile view styles*/
 @media (max-width: 800px) {
   .footer {
-    padding: 0 0 0 20px;
+    padding: 0;
   }
   .footer .col {
     margin-bottom: 10px;
@@ -231,6 +249,14 @@ body {
 
 html[data-theme='dark'] {
   --ifm-background-color: #1c1533;
+}
+
+[data-theme='dark'] .landingPage {
+  background: radial-gradient(
+    circle,
+    rgba(52, 52, 79, 1) 0%,
+    rgba(28, 21, 51, 1) 60%
+  );
 }
 
 [data-theme='dark'] .navbar {
