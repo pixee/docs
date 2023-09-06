@@ -334,7 +334,8 @@ html[data-theme='dark'] {
 
 .theme-doc-sidebar-item-category li .menu__link :hover,
 .theme-doc-sidebar-menu li .menu__link:hover {
-  font-weight: 400;
+  font-weight: 700;
+
 }
 
 [data-theme='dark'] .theme-doc-sidebar-item-category li .menu__link,
