@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Introducing Pixeebot 🧚‍🤖️
+# Introducing Pixeebot 👋
 
 Pixeebot is a [GitHub app](https://github.com/apps/pixeebot/) that automatically improves your code. It acts like another developer on your team and opens pull requests (PRs) for you to review and merge.
 

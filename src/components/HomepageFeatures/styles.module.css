@@ -16,7 +16,7 @@
 .item {
   border-radius: 16px;
   border: 1px solid var(--neutral-neutral-20, #e6e4ea);
-  background: var(--ifr-color-neutral-20);
+  background: #fff;
   padding: 24px;
   cursor: pointer;
 }
