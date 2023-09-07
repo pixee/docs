@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Release Notes
 
-## August 22 2023 - Public Beta
+## August 22, 2023 - Public Beta
 
 Hello World! This is our first public release. We're ecstatic to announce that Pixeebot for Java on Github is here. This release includes:
 * Continuous improvement that automatically runs a weekly analysis on your entire repo for any hardening opportunities
@@ -18,3 +18,4 @@ Hello World! This is our first public release. We're ecstatic to announce that P
 * Configurability of basic settings, as requested by Alpha users
 * Simple installation in just 2 steps via GitHub
 
+ 
