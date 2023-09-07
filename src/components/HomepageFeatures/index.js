@@ -91,8 +91,8 @@ export default function HomepageFeatures() {
             📄 <span>Release notes</span>
           </h1>
           <p>
-            <Link to="/release-notes">May 15, 2023</Link>
-            <br /> This release supports Java code on Github.
+            <Link to="/release-notes">August 22, 2023 - Public Beta</Link>
+            <br /> Hello World! This is our first public release. We're ecstatic to announce that Pixeebot for Java on Github is here.
           </p>
         </div>
       </div>
