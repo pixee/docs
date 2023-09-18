@@ -6,6 +6,7 @@ sidebar_position: 8
 
 ## September 25, 2023
 * Python repositories can now be enrolled for Beta testing
+* pixeebot commits signatures are now verified
 
 ## August 22, 2023 - Public Beta
 
