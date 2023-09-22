@@ -6,7 +6,6 @@ sidebar_position: 8
 
 ## September 25, 2023
 * Python repositories can now be enrolled for Beta testing
-* Pixeebot commits signatures are now verified
 * Users can enable contextual descriptions from supported codemods through resporitory configuraiton
 * Java repos are now enabled by default
 
