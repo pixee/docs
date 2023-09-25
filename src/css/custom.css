@@ -50,6 +50,7 @@ body {
 
 .navbar__title {
   font-family: 'CustomFont', sans-serif;
+  font-size: 20px;
 }
 
 .menu,
