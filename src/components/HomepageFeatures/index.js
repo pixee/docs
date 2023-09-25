@@ -1,64 +1,101 @@
 import React from 'react';
-import clsx from 'clsx';
 import styles from './styles.module.css';
-
-const FeatureList = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
-
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+import Link from '@docusaurus/Link';
 
 export default function HomepageFeatures() {
+  const navigateToDocs = (type) => {
+    if (type === 1) {
+      window.location = '/installing';
+    } else if (type === 2) {
+      window.location = '/codemods/overview';
+    } else if (type === 3) {
+      window.location = '/configuring';
+    } else if (type === 4) {
+      window.location = '/running-your-own';
+    } else if (type === 5) {
+      window.location = '/faqs';
+    } else if (type === 6) {
+      window.location = '/using-pixeebot';
+    } else {
+      window.location = '/release-notes';
+    }
+  };
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <>
+      <div className={styles.grid}>
+        <div className={styles.item}>
+          <h1 onClick={() => navigateToDocs(1)}>
+            ⬇ <span>Install Pixeebot</span>
+          </h1>
+          <p>
+            Pixeebot installation begins by visiting our{' '}
+            <Link to="https://github.com/apps/pixeebot">GitHub App page</Link>.
+            From there, click the <span>Configure</span> button and follow the
+            prompts from GitHub. You’ll be directed to your Pixee dashboard once
+            the process is complete.
+          </p>
+        </div>
+        <div className={styles.item}>
+          <h1 onClick={() => navigateToDocs(2)}>
+            🌱 <span>Core codemods</span>
+          </h1>
+          <p>
+            Get detailed information on our core codemods, maintained as part of
+            the <Link to="https://codemodder.io/">codemodder project</Link> to
+            help strengthen your code.
+          </p>
+          <p>
+            <Link to="/category/java">Java</Link>
+          </p>
+          <p>
+            <Link to="/category/python">Python</Link>
+          </p>
+        </div>
+        <div className={styles.item} onClick={() => navigateToDocs(3)}>
+          <h1>
+            ⚙️ <span>Configuration</span>
+          </h1>
+          <p>
+            Understand how and where to configure Pixeebot, view examples and
+            get details about specific fields.
+          </p>
+        </div>
+        <div className={styles.item} onClick={() => navigateToDocs(4)}>
+          <h1>
+            ✨️️ <span>Custom codemods</span>
+          </h1>
+          <p>Coming soon!</p>
+        </div>
+        <div className={styles.item} onClick={() => navigateToDocs(5)}>
+          <h1>
+            ❓ <span>FAQs</span>
+          </h1>
+          <p>
+            Understand how and where to configure Pixeebot, view examples and
+            get details about specific fields.
+          </p>
+        </div>
+        <div className={styles.item} onClick={() => navigateToDocs(6)}>
+          <h1>
+            👤️️ <span>User guide</span>
+          </h1>
+          <p>
+            Learn more about how to engage with Pixeebot, including a summon
+            command to call it whenever you’re ready!
+          </p>
         </div>
       </div>
-    </section>
+      <div className={styles.lastGrid} onClick={() => navigateToDocs(7)}>
+        <div className={styles.item}>
+          <h1>
+            📄 <span>Release notes</span>
+          </h1>
+          <p>
+            <Link to="/release-notes">August 22, 2023 - Public Beta</Link>
+            <br /> Hello World! This is our first public release. We're ecstatic to announce that Pixeebot for Java on Github is here.
+          </p>
+        </div>
+      </div>
+    </>
   );
 }
