@@ -11,7 +11,7 @@ sidebar_position: 1
 
 
 This codemod ensures calls to [jwt.decode](https://pyjwt.readthedocs.io/en/stable/api.html#jwt.decode) do not disable signature validation and other
-verifications. It checks that both the `verify` parameter (soon to be deprecated) and any key starting with `verify_` in the `options` dict parameter are not assigned to `False`.
+verifications. It checks that both the `verify` parameter (soon to be deprecated) and any key starting with `verify_` in the `options` dict parameter are not set to `False`.
 
 Our change looks as follows:
 
