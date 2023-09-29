@@ -59,6 +59,12 @@ body {
   padding-left: 5px;
 }
 
+.navbar, 
+.navbar__fixed-top {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 /* Nav-bar styles*/
 .header-routes {
   color: #1c1533;
