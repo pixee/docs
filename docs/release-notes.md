@@ -6,7 +6,8 @@ sidebar_position: 8
 
 ## September 25, 2023
 * Python repositories can now be enrolled for Beta testing
-* Users can enable contextual descriptions from supported codemods through resporitory configuraiton
+* Users can enable contextual descriptions from supported codemods through repository configuration
+* ```
 * Java repos are now enabled by default
 
 ## August 22, 2023 - Public Beta
