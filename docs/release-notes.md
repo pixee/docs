@@ -4,6 +4,11 @@ sidebar_position: 8
 
 # Release Notes
 
+## September 25, 2023
+* Python repositories can now be enrolled for Beta testing
+* Users can enable contextual descriptions from supported codemods through repository configuration
+* Java repos are now enabled by default
+
 ## August 22, 2023 - Public Beta
 
 Hello World! This is our first public release. We're ecstatic to announce that Pixeebot for Java on Github is here. This release includes:
