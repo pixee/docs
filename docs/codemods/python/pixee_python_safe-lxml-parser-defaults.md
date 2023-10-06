@@ -1,5 +1,5 @@
 ---
-title: Safe lxml parser defaults
+title: Safe lxml Parser Defaults
 sidebar_position: 1
 ---
 
