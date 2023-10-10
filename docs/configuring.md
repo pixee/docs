@@ -4,7 +4,12 @@ sidebar_position: 3
 
 # Configuring
 
-You can configure Pixeebot by creating a YAML file at `.github/pixeebot.yaml.`
+To configure Pixeebot, you have two options:
+1. **Target Repository Configuration**: Place a `pixeebot.yaml` file in the `.github` firectory of the target repoository. Configurations in the target repository will take precendenc over other configurations.
+2. **Global Repository Configuration**: Alternatively, you can place the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
+
+> ⚠️ You must grant access to the `.github` repository for Global Repository Configuration to work 
+
 
 A typical configuration file might look like this:
 ```yaml
