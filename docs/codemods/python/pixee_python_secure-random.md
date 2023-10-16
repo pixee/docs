@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
- | High       | Merge After Cursory Review | No                  |
+| High       | Merge After Cursory Review | No                  |
 
 This codemod replaces all instances of functions in the `random` module (e.g. `random.random()` with their, much more secure, equivalents from the `secrets` module (e.g. `secrets.SystemRandom().random()`).
 
@@ -27,17 +27,17 @@ Switching to a more secure version is simple and the changes look something like
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge After Cursory Review?
 
-While most of the functions in the `random` module aren't cryptographically secure, there are still valid use cases for
-`random.random()` such as for simulations or games.
+While most of the functions in the `random` module aren't cryptographically secure, there are still valid use cases for `random.random()` such as for simulations or games.
 
 ## Codemod Settings
 
 N/A
 
 ## References
+
 * [https://owasp.org/www-community/vulnerabilities/Insecure_Randomness](https://owasp.org/www-community/vulnerabilities/Insecure_Randomness)
 * [https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html)

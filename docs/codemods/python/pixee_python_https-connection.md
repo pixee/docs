@@ -1,5 +1,5 @@
 ---
-title: Use HTTPS in urllib3
+title: Changes HTTPConnectionPool to HTTPSConnectionPool to Enforce Secure Connection
 sidebar_position: 1
 ---
 
@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
-| High       | Merge Without Review       | No                  |
+| High       | Merge Without Review | No                  |
 
 This codemod replaces calls to `urllib3.connectionpool.HTTPConnectionPool` and `urllib3.HTTPConnectionPool` with their secure variant (`HTTPSConnectionPool`).
 
@@ -21,7 +21,7 @@ import urllib3
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge Without Review?
 
@@ -32,5 +32,6 @@ Support for HTTPS is widespread which, save in some legacy applications, makes t
 N/A
 
 ## References
+
 * [https://owasp.org/www-community/vulnerabilities/Insecure_Transport](https://owasp.org/www-community/vulnerabilities/Insecure_Transport)
 * [https://urllib3.readthedocs.io/en/stable/reference/urllib3.connectionpool.html#urllib3.HTTPConnectionPool](https://urllib3.readthedocs.io/en/stable/reference/urllib3.connectionpool.html#urllib3.HTTPConnectionPool)

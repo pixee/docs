@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
- | Medium     | Merge Without Review | No                  |
+| Medium       | Merge Without Review | No                  |
 
 Using mutable values for default arguments is not a safe practice.
 Look at the following very simple example code:
@@ -62,9 +62,18 @@ Using `None` is a much safer default. The new code checks if `None` is passed,
 and if so uses an empty `list` for the value of `y`. This will guarantee
 consistent and safe behavior between calls.
 
-## F.A.Q. 
+If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
+
+## F.A.Q.
 
 ### Why is this codemod marked as Merge Without Review?
 
-We believe that this codemod fixes an unsafe practice and that the changes
-themselves are safe and reliable.
+We believe that this codemod fixes an unsafe practice and that the changes themselves are safe and reliable.
+
+## Codemod Settings
+
+N/A
+
+## References
+
+N/A
