@@ -6,16 +6,21 @@ sidebar_position: 3
 
 There are two approaches to configuring Pixeebot:
 
-1. **Target Repository Configuration**: Create a `pixeebot.yaml` file in the `.github` directory of the target repoository. Configurations in the target repository will take precendence over other configurations.
-2. **Global Repository Configuration**: Alternatively, you can create the pixeebot.yaml file in the .github directory of your .github repository. This will serve as a global configuration that applies to multiple repositories
+1. **Target Repository Configuration:**
+Create a `pixeebot.yaml` file in the `.github` directory of the target repository. Configurations in the target repository will take precedence over other configurations.
 
+2. **Global Repository Configuration:**
+Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
 
-A typical configuration file might look like this:
+## YAML
+A typical .yaml configuration file might look like this:
+
 ```yaml
 assignees: [mary, luis]
 ```
+## Properties
 
-## `assignees`
+### `assignees`
 Setting this field tells Pixeebot which GitHub collaborators from the repository should be assigned when it sends pull requests to the main branch. The bot will randomly select from the list every time a pull request is issued.
 
 If no assignees are provided through this configuration, a collaborator may be assigned at random. 
