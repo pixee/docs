@@ -1,5 +1,5 @@
 ---
-title: Flip Django Debug Flag to Off
+title: Disable Django Debug Mode
 sidebar_position: 1
 ---
 

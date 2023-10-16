@@ -3,11 +3,11 @@ title: Remove Unused Imports
 sidebar_position: 1
 ---
 
-## pixee:python/remove-unnecessary-f-str
+## pixee:python/unused-imports
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | Low       | Merge Without Review | No                  |
+| Importance | Review Guidance            | Requires SARIF Tool |
+|------------|----------------------------|---------------------|
+| Low       | Merge Without Review | No                  |
 
 Removes unused imports from a module. Imports involving the `__future__` module are ignored.
 
@@ -20,7 +20,7 @@ b.function()
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge Without Review?
 
