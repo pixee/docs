@@ -25,7 +25,6 @@ Our codemod checks if you forgot to enable autoescape or if you explicitly disab
   ...
 ```
 
-
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q.

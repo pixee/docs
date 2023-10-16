@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
-| High       | Merge Without Review | No                  |
+| High       | Merge After Cursory Review | No                  |
 
 This codemod sandboxes all instances of [subprocess.run](https://docs.python.org/3/library/subprocess.html#subprocess.run) and [subprocess.call](https://docs.python.org/3/library/subprocess.html#subprocess.call) to offer protection against attack.
 
@@ -36,7 +36,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ## F.A.Q.
 
-### Why is this codemod marked as Merge Without Review?
+### Why is this codemod marked as Merge After Cursory Review?
 
 We believe this change is safe and effective. The behavior of sandboxing `subprocess.run` and `subprocess.call` calls will only throw `SecurityException` if they see behavior involved in malicious code execution, which is extremely unlikely to happen in normal operation.
 
