@@ -1,5 +1,5 @@
 ---
-title: Verify Requests
+title: Verify SSL Certificates for Requests.
 sidebar_position: 1
 ---
 
@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
- | High       | Merge After Cursory Review | No                  |
+| High       | Merge After Cursory Review | No                  |
 
 This codemod checks that calls to the `requests` module API use `verify=True` or a path to a CA bundle to ensure TLS certificate validation.
 
@@ -28,15 +28,18 @@ This codemod also checks other methods in the `requests` module that accept a `v
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge After Cursory Review?
 
 There may be times when setting `verify=False` is useful for testing though we discourage it. 
-You may also decide to set `verify=/path/to/ca/bundle`. This codemod will not attempt to modify the `verify` value if
-you do set it to a path.
+You may also decide to set `verify=/path/to/ca/bundle`. This codemod will not attempt to modify the `verify` value if you do set it to a path.
 
+## Codemod Settings
+
+N/A
 
 ## References
+
 * [https://requests.readthedocs.io/en/latest/api/](https://requests.readthedocs.io/en/latest/api/)
 * [https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)

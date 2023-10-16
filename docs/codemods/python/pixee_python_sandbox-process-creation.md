@@ -3,11 +3,11 @@ title: Sandbox Process Creation
 sidebar_position: 1
 ---
 
-
 ## pixee:python/sandbox-process-creation
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+
+| Importance | Review Guidance            | Requires SARIF Tool |
+|------------|----------------------------|---------------------|
+| High       | Merge Without Review | No                  |
 
 This codemod sandboxes all instances of [subprocess.run](https://docs.python.org/3/library/subprocess.html#subprocess.run) and [subprocess.call](https://docs.python.org/3/library/subprocess.html#subprocess.call) to offer protection against attack.
 
@@ -34,7 +34,7 @@ There are [more options for sandboxing](https://github.com/pixee/python-security
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge Without Review?
 
@@ -45,5 +45,6 @@ We believe this change is safe and effective. The behavior of sandboxing `subpro
 N/A
 
 ## References
-* [Safe command API source code](https://github.com/pixee/python-security/blob/main/src/security/safe_command/api.py)
+
+* [https://github.com/pixee/python-security/blob/main/src/security/safe_command/api.py](https://github.com/pixee/python-security/blob/main/src/security/safe_command/api.py)
 * [https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)

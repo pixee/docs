@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/upgrade-sslcontext-minimum-version
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
-| High     | Merge Without Review | No                  |
+| Importance | Review Guidance            | Requires SARIF Tool |
+|------------|----------------------------|---------------------|
+| High       | Merge Without Review | No                  |
 
 This codemod replaces all unsafe and/or deprecated SSL/TLS versions when used
 to set the `ssl.SSLContext.minimum_version` attribute. It uses
@@ -28,13 +28,15 @@ There is no functional difference between the unsafe and safe versions, and all 
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge Without Review?
 
-This codemod updates the minimum supported version of TLS. Since this is an
-important security fix and since all modern servers offer TLSv1.2, we believe
-this change can be safely merged without review.
+This codemod updates the minimum supported version of TLS. Since this is an important security fix and since all modern servers offer TLSv1.2, we believe this change can be safely merged without review.
+
+## Codemod Settings
+
+N/A
 
 ## References
 

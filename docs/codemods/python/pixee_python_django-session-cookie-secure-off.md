@@ -1,5 +1,5 @@
 ---
-title: Django Secure Session Cookie
+title: Secure Setting for Django `SESSION_COOKIE_SECURE` flag
 sidebar_position: 1
 ---
 
@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires SARIF Tool |
 |------------|----------------------------|---------------------|
- | Medium       | Merge After Cursory Review | No                  |
+| Medium       | Merge After Cursory Review | No                  |
 
 This codemod will set django's `SESSION_COOKIE_SECURE` flag to `True` if it's `False` or missing on the `settings.py` file within django's default directory structure.
 
@@ -19,16 +19,17 @@ Setting this flag on ensures that the session cookies are only sent under an HTT
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge After Cursory Review?
 
-Django's `SESSION_COOKIE_SECURE` flag may be overridden somewhere else or the runtime settings file may be set with the `DJANGO_SETTINGS_MODULE` environment variable. This means that the flag may intentionally be left off or missing. Also some applications may still want to support pure http. This is often the case for legacy apps. 
+Django's `SESSION_COOKIE_SECURE` flag may be overridden somewhere else or the runtime settings file may be set with the `DJANGO_SETTINGS_MODULE` environment variable. This means that the flag may intentionally be left off or missing. Also some applications may still want to support pure http. This is often the case for legacy apps.
 
 ## Codemod Settings
 
 N/A
 
 ## References
+
 * [https://owasp.org/www-community/controls/SecureCookieAttribute](https://owasp.org/www-community/controls/SecureCookieAttribute)
 * [https://docs.djangoproject.com/en/4.2/ref/settings/#session-cookie-secure](https://docs.djangoproject.com/en/4.2/ref/settings/#session-cookie-secure)

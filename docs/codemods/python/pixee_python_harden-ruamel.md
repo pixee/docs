@@ -1,13 +1,13 @@
 ---
-title: Harden ruamel.yaml.YAML()
+title: Use `typ='safe'` in ruamel.yaml() Calls
 sidebar_position: 1
 ---
 
 ## pixee:python/harden-ruamel
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | Medium     | Merge Without Review | No                  |
+| Importance | Review Guidance            | Requires SARIF Tool |
+|------------|----------------------------|---------------------|
+| Medium       | Merge Without Review | No                  |
 
 This codemod hardens any unsafe [`ruamel.yaml.YAML()`](https://yaml.readthedocs.io/en/latest/) calls against attacks that could result from deserializing untrusted data.
 
@@ -24,11 +24,16 @@ The changes from this codemod look like this:
 
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge Without Review?
 
-This codemod replaces any unsafe `typ` argument with `typ="safe"`, which makes safety explicit and is one of the recommended uses suggested in `ruamel` documentation. We believe this replacement is safe and should not result in any issues.
+This codemod replaces any unsafe `typ` argument with `typ='safe'`, which makes safety explicit and is one of the recommended uses suggested in `ruamel` documentation. We believe this replacement is safe and should not result in any issues.
+
+## Codemod Settings
+
+N/A
 
 ## References
+
 * [https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data](https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data)
