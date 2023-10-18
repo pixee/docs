@@ -51,6 +51,11 @@ body {
 .navbar__title {
   font-family: 'CustomFont', sans-serif;
   font-size: 20px;
+  color: var(--ifr-color-neutral-90);
+}
+
+[data-theme='dark'] .navbar__title {
+  color: var(--ifr-color-neutral-10);
 }
 
 .menu,
@@ -289,7 +294,7 @@ html[data-theme='dark'] {
 }
 
 [data-theme='dark'] .navbar {
-  background-color: #3d3751;
+  background-color: var(--ifr-color-neutral-80);
 }
 
 [data-theme='dark'] .footer {
