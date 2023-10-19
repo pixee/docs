@@ -57,7 +57,7 @@ export default function HomepageFeatures() {
           </h1>
           <p>
             Understand how and where to configure Pixeebot, view examples and
-            get details about specific fields.
+            get details about specific properties.
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(4)}>
@@ -71,8 +71,7 @@ export default function HomepageFeatures() {
             ❓ <span>FAQs</span>
           </h1>
           <p>
-            Understand how and where to configure Pixeebot, view examples and
-            get details about specific fields.
+            Addressing common topics such as data handling and use of LLMs.
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(6)}>
