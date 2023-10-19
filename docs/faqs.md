@@ -4,6 +4,19 @@ sidebar_position: 7
 
 # FAQs
 
+### What are Pixee's AI features?
+
+So far, we've built an **enrichment service** (which does XYZ). Eventually, we intend to evolve toward AI-assisted code mods (which will do XYZ) With these features we aim to provide the highest level of value back to our users. *(Like what? More example/detail)*
+
+
+### What is Pixee's AI policy?
+
+We've opted to enable access of LLMs (Large Language Models) by default, a decision not taken lightly. Our confidence in embracing this approach is primarily grounded in our utilization of the [Azure OpenAI license](https://azure.microsoft.com/en-us/products/ai-services/openai-service). We anticipate our users will resonate with this choice, and we are committed to increasing comfort levels through full transparency and a comprehensive understanding of how data is being utilized.
+
+The default configuration enables LLMs by default, which means code *could* be sent to an LLM by Pixee. This can be changed in the user's `.yaml`configuration file. See [Configuring](docs.pixee.ai/configuring) for full detail.
+
+---
+
 ### What is Pixee's AI policy?
 
 We've opted to enable access of LLMs (Large Language Models) by default, a decision not taken lightly. Our confidence in embracing this approach is primarily grounded in our utilization of the [Azure OpenAI license](https://azure.microsoft.com/en-us/products/ai-services/openai-service). We anticipate our users will resonate with this choice, and we are committed to increasing comfort levels through full transparency and a comprehensive understanding of how data is being utilized.
