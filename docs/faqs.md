@@ -13,7 +13,7 @@ So far, we've built an **enrichment service** (which does XYZ). Eventually, we i
 
 We've opted to enable access of LLMs (Large Language Models) by default, a decision not taken lightly. Our confidence in embracing this approach is primarily grounded in our utilization of the [Azure OpenAI license](https://azure.microsoft.com/en-us/products/ai-services/openai-service). We anticipate our users will resonate with this choice, and we are committed to increasing comfort levels through full transparency and a comprehensive understanding of how data is being utilized.
 
-The default configuration enables LLMs by default, which means code *could* be sent to an LLM by Pixee. This can be changed in the user's `.yaml`configuration file. See [Configuring](docs.pixee.ai/configuring) for full detail.
+The default configuration enables LLMs by default, which means code *could* be sent to an LLM by Pixee. This can be changed in the user's `.yaml`configuration file. See [Configuring](../configuring) for full detail.
 
 ---
 
@@ -21,7 +21,7 @@ The default configuration enables LLMs by default, which means code *could* be s
 
 We've opted to enable access of LLMs (Large Language Models) by default, a decision not taken lightly. Our confidence in embracing this approach is primarily grounded in our utilization of the [Azure OpenAI license](https://azure.microsoft.com/en-us/products/ai-services/openai-service). We anticipate our users will resonate with this choice, and we are committed to increasing comfort levels through full transparency and a comprehensive understanding of how data is being utilized.
 
-The default [configuration](docs.pixee.ai/configuring) turns on our enrichment service and eventually, we intend to evolve toward AI-assisted code mods. This means code *could* be sent to an LLM by Pixee, with the aim to provide the highest level of value back to users. *(Like what?)*
+The default [configuration](../configuring) turns on our enrichment service and eventually, we intend to evolve toward AI-assisted code mods. This means code *could* be sent to an LLM by Pixee, with the aim to provide the highest level of value back to users. *(Like what?)*
 
 *(More examples/detail?)*
 
