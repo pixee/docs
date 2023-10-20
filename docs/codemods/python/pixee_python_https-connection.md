@@ -1,5 +1,5 @@
 ---
-title: Changes HTTPConnectionPool to HTTPSConnectionPool to Enforce Secure Connection
+title: Enforce HTTPS Connection for `urllib3`
 sidebar_position: 1
 ---
 
