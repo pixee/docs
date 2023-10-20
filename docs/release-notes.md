@@ -10,7 +10,7 @@ We're working hard to bring you new features, enhancements and reliability to th
 * More Python codemods are out! 15+ and counting...
 * Python now supports PR Hardening mode
 ### 🐛 Bug Fixes:
-* Temporary fix for repository enrollment issues in place
+* Temporary fix for repository enrollment issues
 
 ## October 6, 2023
 ### 🚀 New Features & Enhancements:
