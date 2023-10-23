@@ -91,8 +91,7 @@ export default function HomepageFeatures() {
             📄 <span>Release notes</span>
           </h1>
           <p>
-            <Link to="/release-notes">September 25, 2023</Link>
-            <br /> Python repositories can now be enrolled for Beta testing, and more!
+            <br /> We are constantly updating our product. Check out our weekly release notes here.
           </p>
         </div>
       </div>
