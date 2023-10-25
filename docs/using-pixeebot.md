@@ -23,3 +23,8 @@ Open an issue with the summon command in the issue body:
 Within a couple of minutes, Pixeebot will open a new pull request with additional improvements for your repository:
 
 ![Summon from issue](/img/summon3.png)
+
+
+### Pull request updates 
+
+If Pixeebot opens a pull request that remains open, additional updates will be made automatically over time. The first update will be a reminder from Pixeebot in the form of a pull request comment. If the pull request is not merged or closed after the first reminder comment, Pixeebot will eventually close the pull request with a final comment. If a closed pull request indicates additional suggestions are available, Pixeebot can still be summoned after the pull request has been reopened. 
