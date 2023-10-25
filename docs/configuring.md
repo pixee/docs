@@ -24,8 +24,10 @@ assignees: [mary, luis]
 ## Properties
 
 ### `ai`
+Contains settings related to AI functionality 
 
-Setting `allow_llm_access` to `true` will enable Pixeebot to send code to an LLM to enhance its findings. 
+#### `allow_llm_access`
+Setting to `true` will enable Pixeebot to send code to an LLM to enhance its findings. 
 > **Note** This is the default configuration upon installation.
 
 ### `assignees`
