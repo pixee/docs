@@ -12,13 +12,13 @@ Create a `pixeebot.yaml` file in the `.github` directory of the target repositor
 2. **Global Repository Configuration:**
 Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
 
-## YAMLdocs/faqs.md
+## YAML
 A typical .yaml configuration file might look like this:
 
 ```yaml
 ai:
   allow_llm_access: true
-  
+
 assignees: [mary, luis]
 ```
 ## Properties
