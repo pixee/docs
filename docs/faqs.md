@@ -5,7 +5,7 @@ sidebar_position: 7
 # FAQs
 
 ### What are Pixee's AI features?
-We utilize Large Language Models (LLMs) to provide context-aware code fixes and to add code-specific comments to help developers understand why a change is being recommeneded.
+We utilize Large Language Models (LLMs) to provide context-aware code fixes and to add code-specific comments, helping developers understand why a change is being recommended.
 
 ### What is Pixee's AI policy?
 
