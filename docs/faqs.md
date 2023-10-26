@@ -5,28 +5,17 @@ sidebar_position: 7
 # FAQs
 
 ### What are Pixee's AI features?
-
-So far, we've built an **enrichment service** (which does XYZ). Eventually, we intend to evolve toward AI-assisted code mods (which will do XYZ) With these features we aim to provide the highest level of value back to our users. *(Like what? More example/detail)*
-
+We utilize Large Language Models (LLMs) to enhance your pull request experience by analyzing your code, generating context-aware and personalized suggestions, and delivering tailored, intelligent recommendations that understand your project's specific needs.
 
 ### What is Pixee's AI policy?
 
-We've opted to enable access of LLMs (Large Language Models) by default, a decision not taken lightly. Our confidence in embracing this approach is primarily grounded in our utilization of the [Azure OpenAI license](https://azure.microsoft.com/en-us/products/ai-services/openai-service). We anticipate our users will resonate with this choice, and we are committed to increasing comfort levels through full transparency and a comprehensive understanding of how data is being utilized.
+At Pixee, we take your data privacy and security seriously. To ensure your trust, we've have decided to use [Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy). We want you to have peace of mind, knowing that your data will never be used to train AI models.
 
-The default configuration enables LLMs by default, which means code *could* be sent to an LLM by Pixee. This can be changed in the user's `.yaml`configuration file. See [Configuring](../configuring) for full detail.
+By default, we enable the use of Large Language Models (LLMs) for an enhanced user experience. However, if you prefer not to use them, you can easily [disable](configuring.md) this feature at your convenience. We believe in providing you with the flexibility to tailor your experience according to your preferences and needs.
 
----
-
-### What is Pixee's AI policy?
-
-We've opted to enable access of LLMs (Large Language Models) by default, a decision not taken lightly. Our confidence in embracing this approach is primarily grounded in our utilization of the [Azure OpenAI license](https://azure.microsoft.com/en-us/products/ai-services/openai-service). We anticipate our users will resonate with this choice, and we are committed to increasing comfort levels through full transparency and a comprehensive understanding of how data is being utilized.
-
-The default [configuration](../configuring) turns on our enrichment service and eventually, we intend to evolve toward AI-assisted code mods. This means code *could* be sent to an LLM by Pixee, with the aim to provide the highest level of value back to users. *(Like what?)*
-
-*(More examples/detail?)*
 
 ### How does Pixee handle my data?
-Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on our own security, including secure software development practices, IT practices, corporate controls and partner assessments. In case anyone asks, yes -- all data is encrypted in transit and at rest, and guaranteed to be destroyed after some time.
+Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on our own security, including secure software development practices, IT practices, corporate controls and partner assessments. In case anyone asks, yes -- all data is encrypted in transit and at rest, and guaranteed to be destroyed.
 
 As an aside, many of us have been in security our whole careers, and we're quite passionate about it! We document all of this and more in our [Security and Trust Center](https://trust.pixee.ai/).
 
