@@ -9,7 +9,7 @@ We utilize Large Language Models (LLMs) to provide context-aware code fixes and 
 
 ### What is Pixee's AI policy?
 
-At Pixee, we take your data privacy and security seriously. To ensure your trust, we've have decided to use [Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy). We want you to have peace of mind, knowing that your data will never be used to train AI models.
+At Pixee, we take your data privacy and security seriously. To ensure your trust, we have decided to use the [Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy). We want you to have peace of mind, knowing that your data will never be used to train AI models.
 
 By default, we enable the use of Large Language Models (LLMs) for an enhanced user experience. However, if you prefer not to use them, you can easily [disable](configuring.md) this feature at your convenience. We believe in providing you with the flexibility to tailor your experience according to your preferences and needs.
 
