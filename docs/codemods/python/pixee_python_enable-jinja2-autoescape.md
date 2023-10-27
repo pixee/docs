@@ -9,9 +9,7 @@ sidebar_position: 1
 |------------|----------------------------|---------------------|
 | High       | Merge Without Review | No                  |
 
-This codemod enables autoescaping of HTML content in `jinja2`. Unfortunately, the jinja2
-default behavior is to not autoescape when rendering templates, which makes your applications
-potentially vulnerable to Cross-Site Scripting (XSS) attacks.
+This codemod enables autoescaping of HTML content in `jinja2`. Unfortunately, the jinja2 default behavior is to not autoescape when rendering templates, which makes your applications potentially vulnerable to Cross-Site Scripting (XSS) attacks.
 
 Our codemod checks if you forgot to enable autoescape or if you explicitly disabled it. The change looks as follows:
 
