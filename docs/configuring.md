@@ -16,9 +16,19 @@ Alternatively, you can create the `pixeebot.yaml` file in the `.github` director
 A typical .yaml configuration file might look like this:
 
 ```yaml
+ai:
+  allow_llm_access: true
+
 assignees: [mary, luis]
 ```
 ## Properties
+
+### `ai`
+Contains settings related to AI functionality 
+
+#### `allow_llm_access`
+Setting to `true` will enable Pixeebot to [send data to a LLM](faq.md) while analyzing your code
+> **Note** This is the default configuration upon installation.
 
 ### `assignees`
 Setting this field tells Pixeebot which GitHub collaborators from the repository should be assigned when it sends pull requests to the main branch. The bot will randomly select from the list every time a pull request is issued.
