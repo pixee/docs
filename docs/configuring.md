@@ -20,6 +20,7 @@ ai:
   allow_llm_access: true
 
 assignees: [mary, luis]
+build_checks_enabled: true
 ```
 ## Properties
 
@@ -32,6 +33,10 @@ Setting to `true` will enable Pixeebot to [send data to a LLM](faqs.md) while an
 
 ### `assignees`
 Setting this field tells Pixeebot which GitHub collaborators from the repository should be assigned when it sends pull requests to the main branch. The bot will randomly select from the list every time a pull request is issued.
+
+### `build_checks_enabled`
+Setting to `true` enables Pixeebot to provide feedback through a GitHub check run. 
+
 
 **Note**
 * If no assignees are provided through this configuration, a collaborator may be assigned at random. 
