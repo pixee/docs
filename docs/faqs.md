@@ -23,4 +23,4 @@ As an aside, many of us have been in security our whole careers, and we're quite
 Each party agrees to hold data and confidential information of the other party in confidence and not to disclose, retain, or distribute such information to third parties or to use such information for any purpose whatsoever. Please take a look at our full [Privacy Policy](https://www.pixee.ai/privacy) for more detail.
 
 ### Where can I learn more and discuss Pixeebot?
-Users can join the Pixee community [on Slack](https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA). This channel can be used to engage with peers who are also interested in Pixee. Feel free to email us at feedback@pixee.ai with any questions or comments.
+Users can join the Pixee community [on Slack](https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA). This channel can be used to engage with peers who are also interested in Pixee. Feel free to email us at help@pixee.ai with any questions or comments.
