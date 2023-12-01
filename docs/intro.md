@@ -20,20 +20,20 @@ Pixeebot monitors your repositories and provides fixes in two different ways:
 Pixeebot is built to find and fix a variety of problems, whether they are performance and quality issues or known security vulnerabilities. Here are a few of the most common issues Pixeebot resolves:
 
 * NullPointerExceptions 
-* Removal of unnecessary F-strings
-* XSS and XXE attack vulnerabilities 
-* DoS attack vulnerabilities 
+* Cross Site Scripting (XSS) and XML External Entity (XXE) attack vulnerabilities 
+* Denial of Service (DoS) attack vulnerabilities 
 * SQL injection vulnerailities
+* Removal of unnecessary F-strings
 
 ### How can I test Pixeebot?
 
-Pixeebot is quick to install and starts working immediately upon activation. While Pixeebot is designed for repositories of all sizes, it is most effective at identifying vulnerabilities in medium to large-sized projects. If you need a repository to test with, we recommend trying Pixeebot out with a deliberately insecure application like OWASP’s WebGoat: [https://github.com/WebGoat/WebGoat](https://github.com/WebGoat/WebGoat) 
+Pixeebot is quick to install and starts working immediately upon activation. While Pixeebot is designed for repositories of all sizes, it is most effective at identifying vulnerabilities in active medium to large-sized projects. If you need a repository to test with, we recommend trying Pixeebot out with a deliberately insecure application like OWASP’s WebGoat: [https://github.com/WebGoat/WebGoat](https://github.com/WebGoat/WebGoat) 
 
 Working with an application like WebGoat can give you an idea of how Pixeebot works, before installing it directly on your personal or professional repositories. 
 
 ### What environment & languages does Pixeebot support?
 
-Pixeebot is currently available for Java and Python repositories on GitHub, with support for other languages coming soon. Have a language you’d like to see supported? Let us know in an email to [hi@pixee.ai](hi@pixee.ai). We’d love to hear from you! 
+Pixeebot is currently available for Java and Python repositories on GitHub, with support for additional languages coming soon. Have a language you’d like to see supported? Let us know in an email to [hi@pixee.ai](hi@pixee.ai). We’d love to hear from you! 
 
 ### What does Pixeebot cost?
 
