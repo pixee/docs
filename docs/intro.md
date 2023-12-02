@@ -27,9 +27,9 @@ Pixeebot is built to find and fix a variety of problems, whether they are perfor
 
 ### How can I test Pixeebot?
 
-Pixeebot is quick to install and starts working immediately upon activation. While Pixeebot is designed for repositories of all sizes, it is most effective at identifying vulnerabilities in active medium to large-sized projects. If you need a repository to test with, we recommend trying Pixeebot out with a deliberately insecure application like OWASP’s WebGoat: [https://github.com/WebGoat/WebGoat](https://github.com/WebGoat/WebGoat) 
+Pixeebot is quick to install and starts working immediately upon activation. While Pixeebot is designed for repositories of all sizes, it is most effective at identifying vulnerabilities in active medium to large-sized projects. If you need a repository to test with, we recommend trying Pixeebot out with a deliberately insecure application. Template repositories containing Java and Python test applications are available in PixeeSandbox: [https://github.com/PixeeSandbox](https://github.com/PixeeSandbox)
 
-Working with an application like WebGoat can give you an idea of how Pixeebot works, before installing it directly on your personal or professional repositories. 
+Testing Pixeebot with these deliberately insecure applications can give you an idea of how Pixeebot works, before installing it directly on your personal or professional repositories. 
 
 ### What environment & languages does Pixeebot support?
 
