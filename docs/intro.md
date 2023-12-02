@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Introducing Pixeebot 👋
 
-Pixeebot is a [GitHub app](https://github.com/apps/pixeebot/) that automatically improves your code. It acts like a developer on your team by reviewing your code for you, and recommending changes to enhance code quality, performance, and security. Pixeebot opens merge-ready pull requests (PRs) for each recommendation, so all you have to do is review and merge. 
+Pixeebot is a [GitHub app](https://github.com/apps/pixeebot/) that automatically improves your code. It acts like a developer on your team by reviewing your code, and recommending changes to enhance code quality, performance, and security. Pixeebot opens merge-ready pull requests (PRs) for each recommendation, so all you have to do is review and merge. 
 
 Pixeebot is powered by our open source toolkit [codemodder](https://codemodder.io/), a pluggable framework for building expressive codemods. These codemods help power Pixeebot’s recommendations, and are continuously updated to ensure Pixeebot’s recommendations align with industry standards and best practices.
 
@@ -27,9 +27,11 @@ Pixeebot is built to find and fix a variety of problems, whether they are perfor
 
 ### How can I test Pixeebot?
 
-Pixeebot is quick to install and starts working immediately upon activation. While Pixeebot is designed for repositories of all sizes, it is most effective at identifying vulnerabilities in active medium to large-sized projects. If you need a repository to test with, we recommend trying Pixeebot out with a deliberately insecure application. Template repositories containing Java and Python test applications are available in PixeeSandbox: [https://github.com/PixeeSandbox](https://github.com/PixeeSandbox)
+Pixeebot is quick to install and starts working immediately upon activation. While Pixeebot is designed for repositories of all sizes, it is most effective at identifying vulnerabilities in active medium to large-sized projects. 
 
-Testing Pixeebot with these deliberately insecure applications can give you an idea of how Pixeebot works, before installing it directly on your personal or professional repositories. 
+If you need a repository to test with, we recommend trying Pixeebot out with a deliberately insecure application. Template repositories containing Java and Python test applications are available in PixeeSandbox: [https://github.com/PixeeSandbox](https://github.com/PixeeSandbox)
+
+Testing with these deliberately insecure applications can give you an idea of how Pixeebot works, before installing it directly on your personal or professional repositories. 
 
 ### What environment & languages does Pixeebot support?
 
