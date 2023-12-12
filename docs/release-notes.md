@@ -27,9 +27,9 @@ This entry covers updates and enhancements implemented in October and November. 
 ## Codemodder
 ### 🐍 Python
 General support for Python is live! Some updates that made Python support possible:
-* New codemod: `fix-file-resource-leak` auto closes file object to prevent resource leaks and possible Denial-of-Service (DoS) attacks
-* New codemod: `django-json-response-type` correctly sets content-type header for Django JSON responses. This can prevent Cross-site-scripting (XSS) attacks (a Flask equivalent is on the way!)
-* New codemod: `numpy-nan-equality` replaces erroneous equality check for numpy NaN (`a == numpy.nan`) with correct check (`numpy.isnan(a)`)
+* New codemod: `fix-file-resource-leak` auto closes file object to prevent resource leaks and possible Denial-of-Service (DoS) attacks. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-file-resource-leak)
+* New codemod: `django-json-response-type` correctly sets content-type header for Django JSON responses. This can prevent Cross-site-scripting (XSS) attacks (a Flask equivalent is on the way!) See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_django-json-response-type) 
+* New codemod: `numpy-nan-equality` replaces erroneous equality check for numpy NaN (`a == numpy.nan`) with correct check (`numpy.isnan(a)`) See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_numpy-nan-equality)
 * Codemod enhancement: support for f-strings in `sql-parameterization` codemod
 * Codemod enhancement: added support for `aiohttp_jinja2` in `enable-jinja2-autoescape` codemod
 * Streamlined dependency management by:
