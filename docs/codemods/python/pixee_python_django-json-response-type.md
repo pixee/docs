@@ -1,5 +1,5 @@
 ---
-title: Set content type to `json/application` for `django.http.HttpResponse` with JSON data
+title: Set content type to `application/json` for `django.http.HttpResponse` with JSON data
 sidebar_position: 1
 ---
 

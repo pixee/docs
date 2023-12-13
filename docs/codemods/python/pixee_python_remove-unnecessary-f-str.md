@@ -9,7 +9,12 @@ sidebar_position: 1
 |------------|----------------------------|---------------------|
 | Low       | Merge Without Review | No                  |
 
-This codemod converts any f-strings without interpolation to regular strings.
+This codemod converts any f-strings without interpolated variables into regular strings.
+In these cases the use of f-string is not necessary; a simple string literal is sufficient. 
+
+While in some (extreme) cases we might expect a very modest performance
+improvement, in general this is a fix that improves the overall cleanliness and
+quality of your code.
 
 ```diff
 - var = f"hello"
@@ -31,4 +36,5 @@ N/A
 
 ## References
 
+* [https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/f-string-without-interpolation.html](https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/f-string-without-interpolation.html)
 * [https://github.com/Instagram/LibCST/blob/main/libcst/codemod/commands/unnecessary_format_string.py](https://github.com/Instagram/LibCST/blob/main/libcst/codemod/commands/unnecessary_format_string.py)
