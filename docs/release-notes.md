@@ -5,6 +5,49 @@ sidebar_position: 8
 # Release Notes
 We're working hard to bring you new features, enhancements and reliability to the Pixee Platform. We'd ❤️ to hear from you, drop us a note at [hi@pixee.ai](mailto:hi@pixee.ai)! 
 
+## December 12, 2023
+This entry covers updates and enhancements implemented in October and November. These changes reflect our system's ongoing evolution, improvements, and new features.
+
+> ⚡️
+> **Updated Pixeebot app permissions:** 
+> To give users feedback in real time about Pixeebot Analysis, we have requested additional Github Application Permissions. **This change increases Pixeebot's access to Checks from read-only to read and write.** Existing users must update their app permissions and have received an email prompting them to do so.  Please reach out to us with any questions!
+
+
+
+
+## Pixeebot App + Platform
+### 🚀 New Features & Enhancements
+* Enhanced first-time user modal and replaced with welcome toast
+* Improved consistency in dashboard with styling updates and modifications
+* Improved reliability of Codemod orchestration platform
+
+### 🐛 Bug Fixes
+* Addressed intermittent issues with authentication tokens invalidating user sessions
+
+## Codemodder
+### 🐍 Python
+General support for Python is live! Some updates that made Python support possible:
+* New codemod: `fix-file-resource-leak` auto closes file object to prevent resource leaks and possible Denial-of-Service (DoS) attacks. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-file-resource-leak)
+* New codemod: `django-json-response-type` correctly sets content-type header for Django JSON responses. This can prevent Cross-site-scripting (XSS) attacks (a Flask equivalent is on the way!) See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_django-json-response-type) 
+* New codemod: `numpy-nan-equality` replaces erroneous equality check for numpy NaN (`a == numpy.nan`) with correct check (`numpy.isnan(a)`) See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_numpy-nan-equality)
+* Codemod enhancement: support for f-strings in `sql-parameterization` codemod
+* Codemod enhancement: added support for `aiohttp_jinja2` in `enable-jinja2-autoescape` codemod
+* Streamlined dependency management by:
+  - Introducing error handling to improve parsing reliability for `pyproject.toml`
+  - Integrating a `setup.py`  writer functionality
+  - Enabling the Python repo manager with a basic heuristic for dependency location selection.
+
+
+### ☕️ Java 
+* New codemod: used for setting a private constructor to hide implicit public constructor (for Sonar)
+* New codemod: replaces  `@Controller` with `@RestController` and removes `@ResponseBody` annotations (for Sonar)
+* New codemod: removes redundant variable creation (for Sonar)
+* New codemod: enforces the appropriate parsing technique for converting Strings to
+primitive types in the codebase (for Sonar)
+* New codemod: substitutes `String#replaceAll()` for `String#replace()` where appropriate (for Sonar)
+
+
+
 ## October 13, 2023
 ### 🚀 New Features & Enhancements
 * More Python codemods are out! 15+ and counting...
