@@ -25,8 +25,8 @@ export default function HomepageFeatures() {
   return (
     <>
       <div className={styles.grid}>
-        <div className={styles.item}>
-          <h1 onClick={() => navigateToDocs(1)}>
+        <div className={styles.item} onClick={() => navigateToDocs(1)}>
+          <h1>
             ⬇ <span>Install Pixeebot</span>
           </h1>
           <p>
@@ -37,8 +37,8 @@ export default function HomepageFeatures() {
             the process is complete.
           </p>
         </div>
-        <div className={styles.item}>
-          <h1 onClick={() => navigateToDocs(2)}>
+        <div className={styles.item} onClick={() => navigateToDocs(2)}>
+          <h1>
             🌱 <span>Core codemods</span>
           </h1>
           <p>
