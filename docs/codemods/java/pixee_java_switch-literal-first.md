@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/switch-literal-first
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
-| Low        | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Low        | Merge Without Review | No                     |
 
 This codemod defensively switches the order of literals in comparison expressions to ensure that null pointer exceptions are not unexpectedly thrown. Runtime exceptions especially can cause exceptional and unexpected code paths to be taken, and this can result in unexpected behavior.
 

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/harden-java-deserialization 
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod hardens Java deserialization operations against attack. Even a simple operation like an object deserialization is unfortunately a real opportunity to yield control of your system to an attacker. In fact, without specific protections, any object deserialization call can lead to arbitrary code execution. The JavaDoc [now even says](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputFilter.html):
 

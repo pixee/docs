@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/sanitize-spring-multipart-filename 
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
- | High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+ | High       | Merge After Cursory Review | No                     |
 
 This codemod hardens usage of the [Spring Web](https://github.com/spring-projects/spring-framework) multipart request and file uploading feature to prevent file overwrite attacks.
 

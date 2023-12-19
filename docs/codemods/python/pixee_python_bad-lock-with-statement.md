@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/bad-lock-with-statement
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Low       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Low        | Merge Without Review | No                     |
 
 This codemod separates creating a threading lock instance from calling it as a context manager. Calling `with threading.Lock()` does not have the effect you would expect. The lock is not acquired. Instead, to correctly acquire a lock, create the instance separately, before calling it as a context manager.
 

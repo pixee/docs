@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/django-debug-flag-on
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| Medium     | Merge After Cursory Review | No                     |
 
 This codemod will flip django's `DEBUG` flag to `False` if it's `True` on the `settings.py` file within django's default directory structure.
 

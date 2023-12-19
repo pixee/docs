@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/validate-jakarta-forward-path
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
-| High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| High       | Merge Without Review | No                     |
 
 This codemod hardens all [`ServletRequest#getRequestDispatcher(String)`](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html#getRequestDispatcher-java.lang.String-) calls against attack.
 

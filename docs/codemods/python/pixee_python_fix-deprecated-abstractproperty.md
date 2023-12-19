@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/fix-deprecated-abstractproperty
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Low       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Low        | Merge Without Review | No                     |
 
 The `@abstractproperty` decorator from `abc` has been [deprecated](https://docs.python.org/3/library/abc.html#abc.abstractproperty) since Python 3.3. This is because it's possible to use `@property` in combination with `@abstractmethod`. 
 

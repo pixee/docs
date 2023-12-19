@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/secure-flask-session-configuration
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium       | Merge After Review | No                  |
+| Importance | Review Guidance    | Requires Scanning Tool |
+|------------|--------------------|------------------------|
+| Medium     | Merge After Review | No                     |
 
 Flask applications can configure sessions behavior at the application level. 
 This codemod looks for Flask application configuration that set `SESSION_COOKIE_HTTPONLY`, `SESSION_COOKIE_SECURE`, or `SESSION_COOKIE_SAMESITE` to an insecure value and changes it to a secure one.

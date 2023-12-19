@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/prevent-filewriter-leak-with-nio
 
-| Importance    | Review Guidance            | Requires SARIF Tool |
-|---------------|----------------------------|---------------------|
-| Medium        | Merge Without Review       | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Medium     | Merge Without Review | No                     |
 
 This codemod prevents a file descriptor leak and modernizes the file writing API pattern.
 

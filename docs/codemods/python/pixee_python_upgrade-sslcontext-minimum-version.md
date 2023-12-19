@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/upgrade-sslcontext-minimum-version
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| High       | Merge Without Review | No                     |
 
 This codemod replaces all unsafe and/or deprecated SSL/TLS versions when used
 to set the `ssl.SSLContext.minimum_version` attribute. It uses

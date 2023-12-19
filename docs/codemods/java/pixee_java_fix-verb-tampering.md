@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/fix-verb-tampering
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 The `web.xml` specification offers a way to protect certain parts of your URL space. Unfortunately, it doesn't work the way people think it does, developers who are trying to enhance their security often end up accidentally exposing those parts they were trying to protect.
 

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/flask-json-response-type
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Medium     | Merge Without Review | No                     |
 
 The default `mimetype` for `make_response` in Flask is `'text/html'`. This is true even when the response contains JSON data.
 If the JSON contains (unsanitized) user-supplied input, a malicious user may supply HTML code which leaves the application vulnerable to cross-site scripting (XSS). 

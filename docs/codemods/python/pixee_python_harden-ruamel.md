@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/harden-ruamel
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Medium     | Merge Without Review | No                     |
 
 This codemod hardens any unsafe [`ruamel.yaml.YAML()`](https://yaml.readthedocs.io/en/latest/) calls against attacks that could result from deserializing untrusted data.
 

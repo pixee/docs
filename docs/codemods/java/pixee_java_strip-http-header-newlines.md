@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/strip-http-header-newlines
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
-| Medium     | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Medium     | Merge Without Review | No                     |
 
 This codemod ensures that HTTP response header values can't contain newline characters, which could disrupt communication with proxies and possibly leave you vulnerable to protocol-based attacks.
 

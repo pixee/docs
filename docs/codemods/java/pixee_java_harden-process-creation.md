@@ -5,9 +5,9 @@ sidebar_position: 1
 
 
 ## pixee:java/harden-process-creation
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod hardens all instances of [Runtime#exec()](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runtime.html) to offer protection against attack.
 

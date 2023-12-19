@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/https-connection
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| High       | Merge Without Review | No                     |
 
 This codemod replaces calls to `urllib3.connectionpool.HTTPConnectionPool` and `urllib3.HTTPConnectionPool` with their secure variant (`HTTPSConnectionPool`).
 

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/remove-unnecessary-f-str
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Low       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Low        | Merge Without Review | No                     |
 
 This codemod converts any f-strings without interpolated variables into regular strings.
 In these cases the use of f-string is not necessary; a simple string literal is sufficient. 

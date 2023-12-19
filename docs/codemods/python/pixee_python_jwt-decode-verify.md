@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/jwt-decode-verify
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| High       | Merge Without Review | No                     |
 
 This codemod ensures calls to [jwt.decode](https://pyjwt.readthedocs.io/en/stable/api.html#jwt.decode) do not disable signature validation and other verifications. It checks that both the `verify` parameter (soon to be deprecated) and any `verify` key in the `options` dict parameter are not assigned to `False`.
 

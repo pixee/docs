@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/secure-flask-cookie
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| Medium     | Merge After Cursory Review | No                     |
 
 This codemod sets the most secure parameters when Flask applications call `set_cookie` on a response object. Without these parameters, your Flask
 application cookies may be vulnerable to being intercepted and used to gain access to sensitive data.

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/safe-lxml-parser-defaults
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| High       | Merge Without Review | No                     |
 
 This codemod configures safe parameter values when initializing `lxml.etree.XMLParser`, `lxml.etree.ETCompatXMLParser`, `lxml.etree.XMLTreeBuilder`, or `lxml.etree.XMLPullParser`. If parameters `resolve_entities`, `no_network`, and `dtd_validation` are not set to safe values, your code may be vulnerable to entity expansion attacks and external entity (XXE) attacks.
 

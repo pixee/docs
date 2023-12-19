@@ -5,9 +5,9 @@ sidebar_position: 1
 
 
 ## pixee:java/harden-xmlinputfactory
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod updates all instances of [XMLInputFactory](https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html) to prevent them from resolving external entities, which can protect you from arbitrary code execution, sensitive data exfiltration, and an ever-growing list of other abuses attackers have discovered.
 

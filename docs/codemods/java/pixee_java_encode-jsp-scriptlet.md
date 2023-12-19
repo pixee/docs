@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/encode-jsp-scriptlet
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
- | High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+ | High       | Merge After Cursory Review | No                     |
 
 
 This codemod encodes certain JSP scriptlets to fix what appear to be trivially exploitable [Reflected Cross-Site Scripting (XSS)](https://portswigger.net/web-security/cross-site-scripting) vulnerabilities in JSP files. XSS is a vulnerability that is tricky to understand initially, but easy to exploit.

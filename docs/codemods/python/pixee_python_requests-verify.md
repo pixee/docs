@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/requests-verify
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| High       | Merge After Cursory Review | No                     |
 
 This codemod checks that calls to the `requests` module API use `verify=True` or a path to a CA bundle to ensure TLS certificate validation.
 

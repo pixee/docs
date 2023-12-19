@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## codeql:java/stack-trace-exposure 
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | Medium     | Merge Without Review | Yes (CodeQL)        |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | Medium     | Merge Without Review | Yes (CodeQL)           |
 
 This codemod prevents stack trace information from reaching the HTTP response, which could leak code internals to an attacker and aid in further profiling and attacks.
 

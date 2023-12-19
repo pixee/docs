@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/fix-mutable-params
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Medium     | Merge Without Review | No                     |
 
 Using mutable values for default arguments is not a safe practice.
 Look at the following very simple example code:

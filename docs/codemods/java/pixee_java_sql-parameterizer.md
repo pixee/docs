@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/sql-parameterizer
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod refactors SQL statements to be parameterized, rather than built by hand.
 

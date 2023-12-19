@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/secure-random
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| High       | Merge After Cursory Review | No                     |
 
 This codemod replaces all instances of functions in the `random` module (e.g. `random.random()` with their, much more secure, equivalents from the `secrets` module (e.g. `secrets.SystemRandom().random()`).
 
