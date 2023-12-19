@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## codeql:java/insecure-cookie 
 
-| Importance | Review Guidance           | Requires SARIF Tool |
-|------------|---------------------------|---------------------|
- | Low        | Merge After Investigation | Yes (CodeQL)        |
+| Importance | Review Guidance           | Requires Scanning Tool |
+|------------|---------------------------|------------------------|
+ | Low        | Merge After Investigation | Yes (CodeQL)           |
 
 This codemod marks new HTTP cookies with the ["secure" flag](https://owasp.org/www-community/controls/SecureCookieAttribute). This flag, despite its ambitious name, only provides one type of protection: confidentiality. Cookies with this flag are guaranteed by the browser never to be sent over a cleartext channel ("http://") and only sent over secure channels ("https://").
 

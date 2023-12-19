@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/url-sandbox
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| High       | Merge After Cursory Review | No                     |
 
 This codemod sandboxes calls to [`requests.get`](https://requests.readthedocs.io/en/latest/api/#requests.get) to be more resistant to Server-Side Request Forgery (SSRF) attacks.
 

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/sandbox-url-creation 
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
- | High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+ | High       | Merge After Cursory Review | No                     |
 
 This codemod sandboxes the creation of [`java.net.URL`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URL.html) objects so they will be more resistant to Server-Side Request Forgery (SSRF) attacks.
 

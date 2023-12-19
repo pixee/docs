@@ -5,9 +5,9 @@ sidebar_position: 1
 
 
 ## pixee:java/harden-xstream
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod hardens usage of the `XStream` library to prevent remote code execution attacks.
 

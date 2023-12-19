@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/add-clarifying-braces
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| High       | Merge After Cursory Review | No                     |
 
 This codemod adds clarifying braces to misleading code blocks that look like they may be executing unintended code.
 

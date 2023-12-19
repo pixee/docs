@@ -5,9 +5,9 @@ sidebar_position: 1
 
 
 ## pixee:java/harden-xmldecoder-stream
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod hardens usage of Java's [`java.beans.XMLDecoder`](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/XMLDecoder.html) APIs to prevent remote code execution attacks.
 

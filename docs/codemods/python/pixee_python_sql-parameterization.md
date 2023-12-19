@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/sql-parameterization
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| High       | Merge After Cursory Review | No                     |
 
 This codemod refactors SQL statements to be parameterized, rather than built by hand.
 

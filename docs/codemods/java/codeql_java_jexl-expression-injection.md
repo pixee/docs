@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## codeql:java/jexl-expression-injection 
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium     | Merge After Cursory Review | Yes (CodeQL)        |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| Medium     | Merge After Cursory Review | Yes (CodeQL)           |
 
 This codemod adds [a sandbox](https://commons.apache.org/proper/commons-jexl/apidocs/org/apache/commons/jexl3/introspection/JexlSandbox.html) to JEXL expression evaluation. This sandbox prevents access to many types that don't appear in typical usage, but are very common in exploits. 
 

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/secure-random
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod replaces all new instances of `java.util.Random` with the marginally slower, but much more secure `java.security.SecureRandom`.
 

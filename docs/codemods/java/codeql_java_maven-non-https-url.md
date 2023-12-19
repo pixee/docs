@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## codeql:java/maven-non-https-url 
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium     | Merge After Cursory Review | Yes (CodeQL)        |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| Medium     | Merge After Cursory Review | Yes (CodeQL)           |
 
 This codemod replaces any HTTP URLs found in `<repository>` definitions with HTTPS URLs. Without this change, Maven will make requests to either publish or retrieve artifacts over a plaintext channel. 
 

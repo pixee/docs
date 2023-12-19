@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## codeql:java/jwt-signature-check 
 
-| Importance | Review Guidance           | Requires SARIF Tool |
-|------------|---------------------------|---------------------|
- | Medium     | Merge After Investigation | Yes (CodeQL)        |
+| Importance | Review Guidance           | Requires Scanning Tool |
+|------------|---------------------------|------------------------|
+ | Medium     | Merge After Investigation | Yes (CodeQL)           |
 
 This codemod switches Json Web Token (JWT) parsing APIs to versions that perform signature validation.
 

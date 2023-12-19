@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/sandbox-process-creation
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| High       | Merge After Cursory Review | No                     |
 
 This codemod sandboxes all instances of [subprocess.run](https://docs.python.org/3/library/subprocess.html#subprocess.run) and [subprocess.call](https://docs.python.org/3/library/subprocess.html#subprocess.call) to offer protection against attack.
 

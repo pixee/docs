@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/django-session-cookie-secure-off
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| Medium     | Merge After Cursory Review | No                     |
 
 This codemod will set django's `SESSION_COOKIE_SECURE` flag to `True` if it's `False` or missing on the `settings.py` file within django's default directory structure.
 

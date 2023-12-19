@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/upgrade-tempfile-to-nio
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
-| Medium     | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Medium     | Merge Without Review | No                     |
 
 This codemod replaces the usage of [`java.io.File#createTempFile`](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/io/File.html#createTempFile(java.lang.String,java.lang.String)) with [`java.nio.file.Files#createTempFile`](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/nio/file/Files.html#createTempFile(java.lang.String,java.lang.String,java.nio.file.attribute.FileAttribute...)) which has more secure attributes.
 

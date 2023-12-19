@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## codeql:java/output-resource-leak
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
-| Medium     | Merge Without Review | Yes (CodeQL)        |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Medium     | Merge Without Review | Yes (CodeQL)           |
 
 This codemod adds [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) to a subclass of `Writer` or `OutputStream` without `close()` calls. Without explicit closing, these resources will be "leaked", and won't be re-claimed until garbage collection.  In situations where these resources are leaked rapidly (either through malicious repetitive action or unusually spiky usage), connection pool or file handle exhaustion will occur. These types of failures tend to be catastrophic, resulting in downtime and many times affect downstream applications.
 

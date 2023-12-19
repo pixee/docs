@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/upgrade-sslparameters-tls
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| High       | Merge After Cursory Review | No                     |
 
 This codemod ensures that `SSLParameters#setProtocols()` uses a safe version of Transport Layer Security (TLS), which is necessary for safe SSL connections.
 

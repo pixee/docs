@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/make-prng-seed-unpredictable
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | Low        | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | Low        | Merge Without Review | No                     |
 
 This codemod replaces all the constant seeds passed to `Random#setSeed(long)` with a pseudo-random value, which will make it considerably more secure.
 

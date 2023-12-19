@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/use-generator
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Low       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Low        | Merge Without Review | No                     |
 
 Imagine that someone handed you a pile of 100 apples and then asked you to count how many of them were green without putting any of them down. You'd probably find this quite challenging and you'd struggle to hold the pile of apples at all. Now imagine someone handed you the apples one at a time and asked you to just count the green ones. This would be a much easier task.
 

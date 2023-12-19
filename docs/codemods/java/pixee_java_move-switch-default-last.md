@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/move-switch-default-last
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Low        | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| Low        | Merge After Cursory Review | No                     |
 
 This codemod moves the `default` case of `switch` statements to the end to match convention.
 

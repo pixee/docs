@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/sanitize-apache-multipart-filename 
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
- | High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+ | High       | Merge After Cursory Review | No                     |
 
 This codemod hardens usage of Apache Common's popular multipart request and [file uploading library](https://commons.apache.org/proper/commons-fileupload/) to prevent file overwrite attacks.
 

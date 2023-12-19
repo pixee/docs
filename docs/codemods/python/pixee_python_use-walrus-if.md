@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/use-walrus-if
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Low       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| Low        | Merge After Cursory Review | No                     |
 
 This codemod updates places where two separate statements involving an assignment and conditional can be replaced with a single Assignment Expression (commonly known as the walrus operator).
 

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/disable-dircontext-deserialization 
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod patches the LDAP interaction code to harden against a remote code execution vulnerability.
 

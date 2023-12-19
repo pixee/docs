@@ -5,9 +5,9 @@ sidebar_position: 1
 
 
 ## pixee:java/harden-zip-entry-paths
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
- | High       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+ | High       | Merge Without Review | No                     |
 
 This codemod hardens instances of [ZipInputStream](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/zip/ZipInputStream.html) to protect against malicious entries that attempt to escape their "file root" and overwrite other files on the running filesystem.
 

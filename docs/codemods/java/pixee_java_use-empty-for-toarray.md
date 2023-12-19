@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:java/use-empty-for-toarray
 
-| Importance | Review Guidance      | Requires SARIF Tool |
-|------------|----------------------|---------------------|
-| Low        | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Low        | Merge Without Review | No                     |
 
 This codemod updates new array creation with [Collection#toArray(T[])](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-) to use an empty array argument, which is better for performance.
 

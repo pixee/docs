@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/upgrade-sslcontext-tls
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| High       | Merge After Cursory Review | No                  |
+| Importance | Review Guidance            | Requires Scanning Tool |
+|------------|----------------------------|------------------------|
+| High       | Merge After Cursory Review | No                     |
 
 This codemod replaces the use of all unsafe and/or deprecated SSL/TLS versions
 in the `ssl.SSLContext` constructor. It uses `PROTOCOL_TLS_CLIENT` instead,

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/harden-pyyaml
 
-| Importance | Review Guidance            | Requires SARIF Tool |
-|------------|----------------------------|---------------------|
-| Medium       | Merge Without Review | No                  |
+| Importance | Review Guidance      | Requires Scanning Tool |
+|------------|----------------------|------------------------|
+| Medium     | Merge Without Review | No                     |
 
 This codemod hardens all [`yaml.load()`](https://pyyaml.org/wiki/PyYAMLDocumentation) calls against attacks that could result from deserializing untrusted data.
 
