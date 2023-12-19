@@ -9,12 +9,14 @@ export default function HomepageFeatures() {
     } else if (type === 2) {
       window.location = '/codemods/overview';
     } else if (type === 3) {
-      window.location = '/configuring';
+      window.location = 'https://github.com/pixee/pixee-cli';
     } else if (type === 4) {
-      window.location = '/running-your-own';
+      window.location = '/configuring';
     } else if (type === 5) {
-      window.location = '/faqs';
+      window.location = '/running-your-own';
     } else if (type === 6) {
+      window.location = '/faqs';
+    } else if (type === 7) {
       window.location = '/using-pixeebot';
     } else {
       window.location = '/release-notes';
@@ -53,6 +55,15 @@ export default function HomepageFeatures() {
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(3)}>
           <h1>
+            💻 <span>Pixee CLI</span>
+          </h1>
+          <p>
+            Try out the power of Pixee codemods locally with our command line interface. See how
+            Pixee can improve and harden your code before installing the GitHub app.
+          </p>
+        </div>
+        <div className={styles.item} onClick={() => navigateToDocs(4)}>
+          <h1>
             ⚙️ <span>Configuration</span>
           </h1>
           <p>
@@ -60,13 +71,13 @@ export default function HomepageFeatures() {
             get details about specific properties.
           </p>
         </div>
-        <div className={styles.item} onClick={() => navigateToDocs(4)}>
+        <div className={styles.item} onClick={() => navigateToDocs(5)}>
           <h1>
             ✨️️ <span>Custom codemods</span>
           </h1>
           <p>Coming soon!</p>
         </div>
-        <div className={styles.item} onClick={() => navigateToDocs(5)}>
+        <div className={styles.item} onClick={() => navigateToDocs(6)}>
           <h1>
             ❓ <span>FAQs</span>
           </h1>
@@ -74,7 +85,7 @@ export default function HomepageFeatures() {
             Addressing common topics such as data handling and use of LLMs.
           </p>
         </div>
-        <div className={styles.item} onClick={() => navigateToDocs(6)}>
+        <div className={styles.item} onClick={() => navigateToDocs(7)}>
           <h1>
             👤️️ <span>User guide</span>
           </h1>
@@ -83,9 +94,7 @@ export default function HomepageFeatures() {
             command to call it whenever you’re ready!
           </p>
         </div>
-      </div>
-      <div className={styles.lastGrid} onClick={() => navigateToDocs(7)}>
-        <div className={styles.item}>
+        <div className={styles.item} onClick={() => navigateToDocs(7)}>
           <h1>
             📄 <span>Release notes</span>
           </h1>
