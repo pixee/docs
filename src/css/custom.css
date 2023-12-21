@@ -6,21 +6,6 @@
 
 /* You can override the default Infima variables here. */
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('./../../static/fonts/Poppins-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./../../static/fonts/Poppins-Light.woff2') format('woff2'),
-    url('./../../static/fonts/Poppins-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
 body {
   font-family: 'Source Sans Pro';
   color: var(--ifr-color-neutral-90);
