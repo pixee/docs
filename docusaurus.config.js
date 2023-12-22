@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Pixee',
   tagline: 'Elevate your code, one automated commit at a time.', //TODO: We need a tag line!
-  url: 'https://docs.pixee.ai/',
+  url: 'https://docs.pixee.ai',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
