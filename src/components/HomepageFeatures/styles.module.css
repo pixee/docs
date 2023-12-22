@@ -42,7 +42,8 @@
 
 .grid h1 span,
 .lastGrid h1 span {
-  font-family: 'CustomFont', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   color: var(--ifr-color-neutral-90);
 }
 

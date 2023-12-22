@@ -6,23 +6,6 @@
 
 /* You can override the default Infima variables here. */
 
-/* Import the custom fonts */
-@font-face {
-  font-family: 'CustomFont';
-  src: url('./../../static/fonts/Poppins-Bold.woff2') format('woff2'),
-    url('./../../static/fonts/Poppins-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins-thin';
-  src: url('./../../static/fonts/Poppins-Light.woff2') format('woff2'),
-    url('./../../static/fonts/Poppins-Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   font-family: 'Source Sans Pro';
   color: var(--ifr-color-neutral-90);
@@ -49,7 +32,7 @@ body {
 }
 
 .navbar__title {
-  font-family: 'CustomFont', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   color: var(--ifr-color-neutral-90);
 }
@@ -64,7 +47,7 @@ body {
   padding-left: 5px;
 }
 
-.navbar, 
+.navbar,
 .navbar__fixed-top {
   padding-left: 24px;
   padding-right: 24px;
@@ -90,7 +73,7 @@ body {
   color: #fbfafb;
 }
 
-[data-theme='dark'] .navbar__link:hover{
+[data-theme='dark'] .navbar__link:hover {
   color: var(--ifm-navbar-link-hover-color);
   text-decoration: none;
   font-weight: 400;
@@ -265,7 +248,7 @@ body {
   --ifr-color-neutral-90: #1c1533;
   --ifr-color-neutral-white: #fff;
   --ifm-link-color: var(--ifm-color-primary);
-  --ifm-heading-font-family: 'CustomFont', sans-serif;
+  --ifm-heading-font-family: 'Poppins', sans-serif;
   --ifm-background-color: var(--ifr-color-neutral-10);
 }
 
@@ -286,11 +269,7 @@ html[data-theme='dark'] {
 }
 
 [data-theme='dark'] .landingPage {
-  background: radial-gradient(
-    circle,
-    rgba(52, 52, 79, 1) 0%,
-    rgba(28, 21, 51, 1) 60%
-  );
+  background: radial-gradient(circle, rgba(52, 52, 79, 1) 0%, rgba(28, 21, 51, 1) 60%);
 }
 
 [data-theme='dark'] .navbar {
@@ -421,11 +400,7 @@ html[data-theme='dark'] {
 [data-theme='dark'] .theme-doc-sidebar-menu li .menu__link {
   color: var(--ifr-color-neutral-10);
 }
-[data-theme='dark']
-  .theme-doc-sidebar-item-category
-  li
-  [data-theme='dark']
-  .menu__link.menu__link--active,
+[data-theme='dark'] .theme-doc-sidebar-item-category li [data-theme='dark'] .menu__link.menu__link--active,
 .theme-doc-sidebar-menu li .menu__link.menu__link--active {
   color: var(--ifm-color-primary);
 }
