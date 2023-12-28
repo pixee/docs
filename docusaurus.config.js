@@ -68,7 +68,7 @@ const config = {
       announcementBar: {
         id: 'CLI_launch',
         content: 
-        '🎉 Introducing the Pixee CLI. Bring the power of Pixee\'s <a target="_blank" href="https://codemodder.io/">Codemodder framework</a> to your local development environment. <a target="_blank" href="https://github.com/pixee/pixee-cli">Learn more</a>',
+        '<b>🎉 Introducing the Pixee CLI.</b> Bring the power of Pixee\'s <a target="_blank" href="https://codemodder.io/">Codemodder framework</a> to your local development environment. <a target="_blank" href="https://github.com/pixee/pixee-cli">Learn more</a>',
         backgroundColor: 'fbfafb',
         textColor: '1c1533',
         isCloseable: true,
