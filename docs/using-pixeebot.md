@@ -32,3 +32,10 @@ If Pixeebot opens a pull request that remains open, additional updates will be m
 The first update will be a reminder from Pixeebot in the form of a pull request comment. If the pull request is not merged or closed after the first reminder comment, Pixeebot will eventually close the pull request with a final comment. 
 
 If a closed pull request indicates additional suggestions are available, Pixeebot can still be summoned after the pull request has been reopened. 
+
+### Securing new pull requests
+When a pull request is opened, Pixeebot will initiate its operations, and you can monitor Pixeebot's progress in the status checks section of your pull request.
+
+If Pixeebot does not have any suggestions, it will mark the check as successful. However, if there are suggestions, a pull request will be generated, and the check will be marked as "Neutral." For further information regarding the pull request and its details, you can access the check's detail page.
+
+![checks in progress](/img/checks_in_progress.png)
