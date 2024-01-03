@@ -4,19 +4,21 @@ sidebar_position: 4
 
 # User Guide
 
-Once installed, Pixeebot will begin opening pull requests against your repositories immediately. There is no need to summon Pixeebot manually -- all of your improvements will come automatically and at a manageable pace.
+## Continuous improvement
+
+Once installed, Pixeebot will begin opening pull requests against your repositories immediately. There is no need to summon Pixeebot manually - all of your improvements will come automatically at a manageable weekly cadence.
 
 ## Summoning Pixeebot
 
-If you have merged all your Pixeebot pull requests, and you're eager to see more suggestions, you can summon Pixeebot manually. Simply reply to a pull request or open an issue with the following text:
+If you have merged all your Pixeebot pull requests and you're eager to see more recommendations, you can summon Pixeebot manually. Simply reply to a pull request or open an issue with the following command:
 
 `@pixeebot next`
 
 This will let Pixeebot know it should immediately open a new pull request with additional improvements for this repository.
 
-### Summoning Pixeebot via an issue
+### Summon via an issue
 
-Open an issue with the summon command in the issue body:
+You can also open an issue with the summon command in the issue body:
 
 ![Summon from issue](/img/summon1.png)
 
@@ -25,10 +27,19 @@ Within a couple of minutes, Pixeebot will open a new pull request with additiona
 ![Summon from issue](/img/summon3.png)
 
 
-### Pull request updates 
+## Pull request reminders 
 
-If Pixeebot opens a pull request that remains open, additional updates will be made automatically over time. 
+If a Pixeebot pull request remains open, two automatic reminders will occur over time in the form of comments on the pull request. 
 
-The first update will be a reminder from Pixeebot in the form of a pull request comment. If the pull request is not merged or closed after the first reminder comment, Pixeebot will eventually close the pull request with a final comment. 
+If the pull request is still not merged or closed after two weeks, Pixeebot will close it automatically with a final comment. 
 
-If a closed pull request indicates additional suggestions are available, Pixeebot can still be summoned after the pull request has been reopened. 
+If a closed pull request indicates additional recommendations are available, Pixeebot can still be summoned after the pull request has been reopened. 
+
+## Pixeebot status
+When a pull request is opened, Pixeebot will initiate its run, and you can monitor progress in the status checks section of your pull request.
+
+If Pixeebot does not have any recommendations, it will mark the check as Successful. If recommendations are found, a separate pull request will be generated, and the check will be marked as Neutral. Review the check details to access the new pull request link and additional information regarding the recommendations. If you merge the new pull request, the original check will register this and be updated to Successful.
+
+> Note: Pixeebot will only run when the pull request is first opened. If subsequent commits are introduced, Pixeebot will not initiate another run and the check will disappear, as progress is linked to the initial commit.
+
+![checks in progress](/img/checks_in_progress.png)
