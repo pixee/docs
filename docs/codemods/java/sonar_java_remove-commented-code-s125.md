@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires Scanning Tool |
 |------------|----------------------|------------------------|
-| Low        | Merge Without Review | Yes (Sonar)            |
+| High       | Merge Without Review | Yes (Sonar)            |
 
 This codemod eliminates commented-out code that may impede readability and distract focus. Any deleted code can still be accessed through the source control history if needed.
 
