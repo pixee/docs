@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/use-defusedxml
 
-| Importance | Review Guidance    | Requires Scanning Tool |
-|------------|--------------------|------------------------|
-| High       | Merge After Review | No                     |
+| Importance | Review Guidance     | Requires Scanning Tool |
+|------------|---------------------|------------------------|
+| High       | Merge After Review  | No                     |
 
 You might be surprised to learn that Python's built-in XML libraries are [considered insecure](https://docs.python.org/3/library/xml.html#xml-vulnerabilities) against various kinds of attacks.
 
