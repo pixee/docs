@@ -34,7 +34,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ### Why is this codemod marked as Merge Without Review?
 
-There is no reason an application should be forwarding to inner resources like `/WEB-INF/web.xml`, 
+Although the readability and clarity has been increased, there is no functional difference between the code before, and code after.
 
 ## Codemod Settings
 
