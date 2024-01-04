@@ -9,7 +9,7 @@ sidebar_position: 1
 |------------|----------------------|------------------------|
 | Normal     | Merge Without Review | No                     |
 
-This change simplifies Spring Framework annotations by making use of shortened annotations when applicable.
+This codemod simplifies Spring Framework annotations by making use of shortened annotations when applicable.
 Code that is easy to read is easy to review, reason about, and detect bugs in.
 
 Making use of shortcut annotations accomplishes this by removing *wordy for no reason* elements.  
