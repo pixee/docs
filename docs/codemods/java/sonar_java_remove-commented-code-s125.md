@@ -9,15 +9,15 @@ sidebar_position: 1
 |------------|----------------------|------------------------|
 | Low        | Merge Without Review | Yes (Sonar)            |
 
-TODO
+This change eliminates commented-out code that may impede readability and distract focus. Any deleted code can still be accessed through the source control history if needed.
 
-Our changes look like this:
+Our changes look something like this:
 
 ```diff
-
--   // LOG.error("Unexpected problem ", ex);
-+   
-
+   catch (IOException e) { 
+-    // LOG.error("Unexpected problem ", ex);
+     return handleError(ex);
+   }
 ```
 
 
