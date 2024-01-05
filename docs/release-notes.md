@@ -5,6 +5,41 @@ sidebar_position: 8
 # Release Notes
 We're working hard to bring you new features, enhancements and reliability to the Pixee Platform. We'd ❤️ to hear from you, drop us a note at [hi@pixee.ai](mailto:hi@pixee.ai)! 
 
+## December 29, 2023
+
+> 🎉 
+> **Introducing the Pixee CLI:** 
+> You can now access Pixee’s automated code hardening functionalities from the command line! The Pixee CLI gives you the ability to run Java and Python codemods and apply recommended code changes locally, in your own development environment. 
+> We built this to give developers the ability to see and apply the types of changes Pixee recommends, before installing Pixeebot on their GitHub repositories. **See Pixee CLI documentation [here](https://www.pixee.ai/cli)**   
+
+
+## Pixeebot App + Platform
+### 🚀 New Features & Enhancements
+* Checks API Integration: We have integrated Pixeebot with the GitHub Checks API to enhance Pixeebot’s pull request hardening feature. This integration provides real-time status updates on Pixeebot’s analysis of your pull requests. See documentation [here](https://docs.pixee.ai/using-pixeebot/#pixeebot-status)
+* Styling updates to the user platform including skeleton tables for loading, and improvements to color consistency
+* Enhancement to improve load time performance on the installations page
+
+### 🐛 Bug Fixes
+* Fixed bugs related to activation and commit status data to ensure both statuses are displayed correctly on the user platform
+* Resolved a bug that caused duplicate pull requests to be opened for Pixeebot recommendations
+
+
+## Codemodder
+### 🐍 Python
+* New codemod: `add-requests-timeout` adds a timeout to requests made using the requests package. These requests do not timeout by default, which is potentially unsafe as it can cause an application to hand indefinitely. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_add-requests-timeouts)
+* New codemod: `remove-future-imports`  removes all `__future__` imports often found in older codebases for forwards compatibility with features. While harmless, they are also unnecessary and in most cases you probably just forgot to remove them. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_remove-future-imports)
+* New codemod: `flask-json-response-type` correctly sets content-type header for Django JSON responses. This can prevent Cross-site-scripting (XSS) attacks) See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_flask-json-response-type/)
+* New codemod: `exception-without-raise` fixes cases where an exception is referenced by itself in a statement without being raised. This most likely indicates a bug: you probably meant to actually raise the exception. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_exception-without-raise)
+* Enhanced pull request descriptions for Python codemods that add new dependencies. When a codemod fails to add a dependency, these enhancements provide additional context as to why 
+
+
+### ☕️ Java 
+* New codemod: `sonar:java/remove-commented-code` eliminates commented-out code that may impede readability and distract focus. (for Sonar) See codemod documentationn [here](https://docs.pixee.ai/codemods/java/sonar_java_remove-commented-code-s125)
+* New codemod: `sonar:java/replace-stream-collectors-to-list` modernizes a stream's `List` creation to be driven from the simple, and more readable [`Stream#toList()`](https://docs.oracle.com/javase/16/docs/api/java.base/java/util/stream/Collectors.html#toList()) method. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_replace-stream-collectors-to-list-s6204)
+* New codemod: `sonar:java/remove-useless-parentheses` removes redundant parentheses that make it harder to understand code. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_remove-useless-parentheses-s1110)
+* New codemod: `sonar:java/remove-unused-local-variable` removes unused variables that make  code harder to read, leading to confusion and bugs. This codemod only removes variables that have no state-changing effects. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_remove-unused-local-variable-s1481) 
+
+
 ## December 12, 2023
 This entry covers updates and enhancements implemented in October and November. These changes reflect our system's ongoing evolution, improvements, and new features.
 
@@ -35,7 +70,7 @@ General support for Python is live! Some updates that made Python support possib
 * Streamlined dependency management by:
   - Introducing error handling to improve parsing reliability for `pyproject.toml`
   - Integrating a `setup.py`  writer functionality
-  - Enabling the Python repo manager with a basic heuristic for dependency location selection.
+  - Enabling the Python repo manager with a basic heuristic for dependency location selection
 
 
 ### ☕️ Java 
