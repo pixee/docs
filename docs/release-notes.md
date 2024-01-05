@@ -26,7 +26,7 @@ We're working hard to bring you new features, enhancements and reliability to th
 
 ## Codemodder
 ### 🐍 Python
-* New codemod: `add-requests-timeout` adds a timeout to requests made using the requests package. These requests do not timeout by default, which is potentially unsafe as it can cause an application to hand indefinitely. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_add-requests-timeouts)
+* New codemod: `add-requests-timeout` adds a timeout to requests made using the requests package. These requests do not timeout by default, which is potentially unsafe as it can cause an application to hang indefinitely. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_add-requests-timeouts)
 * New codemod: `remove-future-imports`  removes all `__future__` imports often found in older codebases for forwards compatibility with features. While harmless, they are also unnecessary and in most cases you probably just forgot to remove them. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_remove-future-imports)
 * New codemod: `flask-json-response-type` correctly sets content-type header for Django JSON responses. This can prevent Cross-site-scripting (XSS) attacks) See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_flask-json-response-type/)
 * New codemod: `exception-without-raise` fixes cases where an exception is referenced by itself in a statement without being raised. This most likely indicates a bug: you probably meant to actually raise the exception. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_exception-without-raise)
