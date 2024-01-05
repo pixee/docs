@@ -94,7 +94,7 @@ export default function HomepageFeatures() {
             command to call it whenever you’re ready!
           </p>
         </div>
-        <div className={styles.item} onClick={() => navigateToDocs(7)}>
+        <div className={styles.item} onClick={() => navigateToDocs()}>
           <h1>
             📄 <span>Release notes</span>
           </h1>
