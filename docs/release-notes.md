@@ -14,7 +14,7 @@ We're working hard to bring you new features, enhancements, and reliability to t
 
 
 ## Pixeebot App + Platform
-### 🚀 New Features & Enhancements
+### 🚀 New Features & Enhancements {#2023-12-29---new-features--enhancements}
 * Checks API Integration: We have integrated Pixeebot with the GitHub Checks API to enhance Pixeebot’s pull request hardening feature. This integration provides real-time status updates on Pixeebot’s analysis of your pull requests. See documentation [here](https://docs.pixee.ai/using-pixeebot/#pixeebot-status)
 * Styling updates to the user platform, including skeleton tables for loading and improvements to color consistency
 * Enhancement to improve load time performance on the installations page
