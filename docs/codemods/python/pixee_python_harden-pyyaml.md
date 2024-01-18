@@ -1,5 +1,5 @@
 ---
-title: Use SafeLoader in `yaml.load()` Calls
+title: Replace unsafe `pyyaml` loader with `SafeLoader`
 sidebar_position: 1
 ---
 
