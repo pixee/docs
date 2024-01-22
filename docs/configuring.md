@@ -33,6 +33,9 @@ Setting to `true` will enable Pixeebot to [send data to a LLM](faqs.md) while an
 ### `assignees`
 Setting this field tells Pixeebot which GitHub collaborators from the repository should be assigned when it sends pull requests to the main branch. The bot will randomly select from the list every time a pull request is issued.
 
+### `issues_dashboard`
+The Issues Dashboard is automatically activated upon installation, provided that GitHub Issues are enabled for your repository. This dashboard is created within GitHub Issues and offers a holistic perspective on Pixeebot's assessment of your repository. Through this interface, you can conveniently monitor open pull requests and pending recommendations made by Pixeebot.
+
 **Note**
 * If no assignees are provided through this configuration, a collaborator may be assigned at random. 
 * If an assignee provided through this configuration is not a collaborator on the repository, a different collaborator may be assigned at random.
