@@ -16,6 +16,8 @@ Alternatively, you can create the `pixeebot.yaml` file in the `.github` director
 A typical .yaml configuration file might look like this:
 
 ```yaml
+activity_dashboard: true
+
 ai:
   allow_llm_access: true
 
@@ -23,18 +25,18 @@ assignees: [mary, luis]
 ```
 ## Properties
 
+### `activity_dashboard`
+The activity dashboard exists as a GitHub Issue and offers a holistic perspective on Pixeebot's functionality within your repository. Through this interface, you can conveniently monitor open pull requests, pending recommendations, and more. The dashboard is automatically triggered upon installation, provided that GitHub Issues are enabled for your repository. Setting to `false` will remove it from view. 
+
 ### `ai`
-Contains settings related to AI functionality 
+Contains settings related to AI functionality. 
 
 #### `allow_llm_access`
-Setting to `true` will enable Pixeebot to [send data to a LLM](faqs.md) while analyzing your code
+Setting to `true` will enable Pixeebot to [send data to a LLM](faqs.md) while analyzing your code.
 > **Note** This is the default configuration upon installation.
 
 ### `assignees`
 Setting this field tells Pixeebot which GitHub collaborators from the repository should be assigned when it sends pull requests to the main branch. The bot will randomly select from the list every time a pull request is issued.
-
-### `issues_dashboard`
-The Issues Dashboard is automatically activated upon installation, provided that GitHub Issues are enabled for your repository. This dashboard is created within GitHub Issues and offers a holistic perspective on Pixeebot's assessment of your repository. Through this interface, you can conveniently monitor open pull requests and pending recommendations made by Pixeebot.
 
 **Note**
 * If no assignees are provided through this configuration, a collaborator may be assigned at random. 
