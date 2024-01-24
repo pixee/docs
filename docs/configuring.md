@@ -7,35 +7,65 @@ sidebar_position: 3
 There are two approaches to configuring Pixeebot:
 
 1. **Target Repository Configuration:**
-Create a `pixeebot.yaml` file in the `.github` directory of the target repository. Configurations in the target repository will take precedence over other configurations.
+   Create a `pixeebot.yaml` file in the `.github` directory of the target repository. Configurations in the target repository will take precedence over other configurations.
 
 2. **Global Repository Configuration:**
-Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
+   Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
 
 ## YAML
+
 A typical .yaml configuration file might look like this:
 
 ```yaml
 ai:
   allow_llm_access: true
-
-assignees: [mary, luis]
 ```
+
 ## Properties
 
 ### `ai`
-Contains settings related to AI functionality 
+
+Contains settings related to AI functionality
 
 #### `allow_llm_access`
+
 Setting to `true` will enable Pixeebot to [send data to a LLM](faqs.md) while analyzing your code
+
 > **Note** This is the default configuration upon installation.
 
-### `assignees`
-Setting this field tells Pixeebot which GitHub collaborators from the repository should be assigned when it sends pull requests to the main branch. The bot will randomly select from the list every time a pull request is issued.
+# Configuring Automatic Assignment
 
-**Note**
-* If no assignees are provided through this configuration, a collaborator may be assigned at random. 
-* If an assignee provided through this configuration is not a collaborator on the repository, a different collaborator may be assigned at random.
-  
+To automatically assign reviewers to pixeebot PRs, consider [setting up a `CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
-To automatically assign reviewers to Pixeebot PRs, consider [setting up a `CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+To automatically assign users to pixeebot PRs, consider creating a github action. Below is an example action that will assign all pixeebot PRs to the user octocat:
+
+```yaml
+name: Assign pixeebot PRs to octocat
+
+on:
+  pull_request_target:
+    types: [opened, ready_for_review]
+
+jobs:
+  assign-to-me:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Assign pixeebot PRs to octocat
+        run: |
+          # Check if the PR is opened by pixeebot
+          if [[ "${{ github.event.pull_request.user.login }}" == "pixeebot[bot]" ]]; then
+            # Assign the PR to octocat
+            echo "Assigning PR to octocat..."
+            gh pr edit ${{ github.event.pull_request.number }} --add-assignee "octocat"
+          else
+            echo "PR is not opened by pixeebot. No action needed."
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+```
+
+Please contact us at help@pixee.ai if you have any questions, or would like more options for automatic assignment.
