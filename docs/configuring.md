@@ -40,32 +40,29 @@ To automatically assign reviewers to pixeebot PRs, consider [setting up a `CODEO
 To automatically assign users to pixeebot PRs, consider creating a github action. Below is an example action that will assign all pixeebot PRs to the user octocat:
 
 ```yaml
-name: Assign pixeebot PRs to octocat
-
 on:
-  pull_request_target:
-    types: [opened, ready_for_review]
+  pull_request:
+    types: [opened, reopened, ready_for_review]
 
 jobs:
-  assign-to-me:
+  auto-assign:
     runs-on: ubuntu-latest
-
+    if: github.actor == 'pixeebot[bot]'
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Assign pixeebot PRs to octocat
-        run: |
-          # Check if the PR is opened by pixeebot
-          if [[ "${{ github.event.pull_request.user.login }}" == "pixeebot[bot]" ]]; then
-            # Assign the PR to octocat
-            echo "Assigning PR to octocat..."
-            gh pr edit ${{ github.event.pull_request.number }} --add-assignee "octocat"
-          else
-            echo "PR is not opened by pixeebot. No action needed."
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Assign PR to Collaborators
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const collaborators = ['octocat']; // Replace with actual GitHub usernames
+            github.rest.issues.addAssignees({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              assignees: collaborators
+            })
 ```
 
 Please contact us at help@pixee.ai if you have any questions, or would like more options for automatic assignment.
