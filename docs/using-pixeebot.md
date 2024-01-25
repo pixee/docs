@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# User Guide
+# User guide
 
 ## Continuous improvement
 
@@ -43,3 +43,8 @@ If Pixeebot does not have any recommendations, it will mark the check as Success
 > Note: Pixeebot will only run when the pull request is first opened. If subsequent commits are introduced, Pixeebot will not initiate another run and the check will disappear, as progress is linked to the initial commit.
 
 ![checks in progress](/img/checks_in_progress.png)
+
+## Pixeebot activity
+The Activity dashboard exists as a GitHub Issue and offers a holistic perspective on Pixeebot's functionality within your repository. Through this interface, you can conveniently monitor your open pull requests, other available recommendations, and more. The dashboard is automatically enabled upon installation, provided that GitHub Issues are also enabled for your repository. 
+
+The issue can remain open, and the data will automatically refresh with each Pixeebot analysis that occurs. If the issue is closed, the feature will be disabled and the data will become stale. Reopening it will reactivate the dashboard, and resume auto-updates when Pixeebot runs.

@@ -13,20 +13,15 @@ Create a `pixeebot.yaml` file in the `.github` directory of the target repositor
 Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
 
 ## YAML
-A typical .yaml configuration file might look like this:
+A typical `.yaml` configuration file might look like this:
 
 ```yaml
-activity_dashboard: true
-
 ai:
   allow_llm_access: true
 
 assignees: [mary, luis]
 ```
 ## Properties
-
-### `activity_dashboard`
-The activity dashboard exists as a GitHub Issue and offers a holistic perspective on Pixeebot's functionality within your repository. Through this interface, you can conveniently monitor open pull requests, pending recommendations, and more. The dashboard is automatically triggered upon installation, provided that GitHub Issues are enabled for your repository. Setting to `false` will remove it from view. 
 
 ### `ai`
 Contains settings related to AI functionality. 
