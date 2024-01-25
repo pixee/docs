@@ -6,10 +6,10 @@ sidebar_position: 3
 
 There are two approaches to configuring Pixeebot:
 
-1. **Target Repository Configuration:**
+1. **Target repository configuration:**
    Create a `pixeebot.yaml` file in the `.github` directory of the target repository. Configurations in the target repository will take precedence over other configurations.
 
-2. **Global Repository Configuration:**
+2. **Global repository configuration:**
    Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
 
 ## YAML
@@ -32,7 +32,7 @@ Setting to `true` will enable Pixeebot to [send data to an LLM](faqs.md) while a
 
 > **Note** This is the default configuration upon installation.
 
-## Configuring Automatic Assignment
+## Configuring automatic assignment
 
 To automatically assign **reviewers** to Pixeebot PRs, consider [setting up a `CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
