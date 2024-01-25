@@ -6,15 +6,14 @@ sidebar_position: 3
 
 There are two approaches to configuring Pixeebot:
 
-1. **Target Repository Configuration:**
+1. **Target repository configuration:**
    Create a `pixeebot.yaml` file in the `.github` directory of the target repository. Configurations in the target repository will take precedence over other configurations.
 
-2. **Global Repository Configuration:**
+2. **Global repository configuration:**
    Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
 
 ## YAML
-
-A typical .yaml configuration file might look like this:
+A typical `.yaml` configuration file might look like this:
 
 ```yaml
 ai:
@@ -25,19 +24,19 @@ ai:
 
 ### `ai`
 
-Contains settings related to AI functionality
+Contains settings related to AI functionality. 
 
 #### `allow_llm_access`
 
-Setting to `true` will enable Pixeebot to [send data to a LLM](faqs.md) while analyzing your code
+Setting to `true` will enable Pixeebot to [send data to an LLM](faqs.md) while analyzing your code.
 
 > **Note** This is the default configuration upon installation.
 
-# Configuring Automatic Assignment
+## Configuring automatic assignment
 
-To automatically assign reviewers to pixeebot PRs, consider [setting up a `CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+To automatically assign **reviewers** to Pixeebot PRs, consider [setting up a `CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
-To automatically assign users to pixeebot PRs, consider creating a github action. Below is an example action that will assign all pixeebot PRs to the user octocat:
+To automatically assign **users** to Pixeebot PRs, consider creating a GitHub action. Below is an example action that will assign all Pixeebot PRs to the user Octocat:
 
 ```yaml
 on:
@@ -65,4 +64,4 @@ jobs:
             })
 ```
 
-Please contact us at help@pixee.ai if you have any questions, or would like more options for automatic assignment.
+Please contact us at help@pixee.ai with any questions, or if you would like more options for automatic assignment.
