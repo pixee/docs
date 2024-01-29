@@ -39,4 +39,4 @@ Pixeebot is currently available for Java and Python repositories on GitHub, with
 
 ### What does Pixeebot cost?
 
-Pixeebot is currently free for all users. We will add paid tiers in the future.
+Please see https://www.pixee.ai/pricing
