@@ -6,6 +6,47 @@ sidebar_position: 8
 
 We're working hard to bring you new features, enhancements, and reliability to the Pixee Platform. We'd ❤️ to hear from you. Drop us a note at [hi@pixee.ai](mailto:hi@pixee.ai)!
 
+## January 26, 2024 
+
+> 🌟
+> **Introducing the Activity Dashboard:**
+> This dashboard exists as a GitHub Issue, and is your source of truth for Pixeebot’s functionality within your repository. Use the Activity dashboard to: 
+> * Easily manage the open pull requests Pixeebot has created for you
+> * Check for available fixes in the continuous improvement queue, and summon Pixeebot to create pull requests for them
+> * Review the work that Pixeebot has already completed in your repository 
+> The dashboard is automatically enabled upon installation, provided that GitHub Issues are also enabled for your repository. See Activity dashboard documentation [here](https://docs.pixee.ai/using-pixeebot/#pixeebot-activity).
+
+### Pixeebot App + Platform
+
+#### 🚀 New Features & Enhancements {#2024-01-26---new-features--enhancements}
+
+* Released performance improvement for navigating between pages on the user dashboard.
+
+#### 🐛 Bug Fixes
+
+* Resolved a bug that occurred when users requested a continuous improvement changes using `@pixeebot next`, Pixeebot would analyze the user’s repository twice and potentially send two PRs.
+  
+
+### Codemodder
+
+#### 🐍 Python
+
+* `security` package updates and release
+* New codemod: `combine-startswith-endswith` Simplifies boolean expressions used with the `startswith` and `endswith` methods of `str` objects. A lot of code uses boolean expressions such as `x.startswith('foo')` or `x.startswith('bar')` , which is unnecessary since these objects can accept a tuple of strings to match. Where possible, this codemod replaces such boolean expressions with `x.startswith(('foo', 'bar))` for cleaner, more concise code. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_combine-startswith-endswith) 
+* New codemod: `fix-deprecated-logging-warn` Updates usage of the `warn` method from `logging` (which has been [deprecated](https://docs.python.org/3/library/logging.html#logging.Logger.warning) since Python 3.3) in favor of `warning`.  See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-deprecated-logging-warn)
+* New codemod: `flask-enable-csrf-protection` Introduces protections against cross-site forgery (CSRF) attacks by embedding an additional token into HTTP requests to identify requests from unauthorized locations. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_flask-enable-csrf-protection)
+* New codemod: `remove-debug-breakpoint` removes any calls to `breakpoint()` or `pdb.set_trace()` which are generally only used for interactive debugging and should not be deployed in production. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_remove-debug-breakpoint).
+* New codemod: `replace-flask-send-fil`e Introduces protections against path traversal attacks when using the `Flask` `send_file` function. This codemod uses Flasks’s `flask.send_from_directory` function for input path validation. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_replace-flask-send-file)
+* New codemod: `use-set-literal` Converts Python set constructions using literal list arguments into more efficient and readable set literals. It simplifies expressions like `set([1, 2, 3])` to `{1, 2, 3}`, enhancing both performance and code clarity. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_use-set-literal#pixeepythonuse-set-literal)
+
+ #### ☕️ Java
+ * Added short-circuiting to improve performance of composed codemods
+ * New codemod: `sonar:java/remove-unused-private-method` removes unused `private` methods. These can increase both the mental load and maintenance burden of maintainers, as you have to keep compiling the unused code when making sweeping changes to the APIs used within the method. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_remove-unused-private-method-s1144)
+ * New codemod: `sonar:java/declare-variable-on-separate-line` splits variable assignments onto their own lines. [Many](https://wiki.sei.cmu.edu/confluence/display/java/DCL52-J.+Do+not+declare+more+than+one+variable+per+declaration) [sources](https://rules.sonarsource.com/java/RSPEC-1659/) [believe](https://dart.dev/tools/linter-rules/avoid_multiple_declarations_per_line) it is easier to review code where the variables are separate statements on their own individual line. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_declare-variable-on-separate-line-s1659) 
+
+
+
+
 ## December 29, 2023
 
 > 🎉
