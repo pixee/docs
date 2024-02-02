@@ -14,6 +14,7 @@ We're working hard to bring you new features, enhancements, and reliability to t
 > * Easily manage the open pull requests Pixeebot has created for you
 > * Check for available fixes in the continuous improvement queue, and summon Pixeebot to create pull requests for them
 > * Review the work that Pixeebot has already completed in your repository 
+>
 > The dashboard is automatically enabled upon installation, provided that GitHub Issues are also enabled for your repository. See Activity dashboard documentation [here](https://docs.pixee.ai/using-pixeebot/#pixeebot-activity).
 
 ### Pixeebot App + Platform
