@@ -21,7 +21,7 @@ Our changes look something like this:
   class AcmeChild implements AcmeParent {
 
 +   @Override
-    void doThing() {
+    public void doThing() {
       thing();
     }
     
