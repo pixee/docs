@@ -1,19 +1,19 @@
 ---
-title: Limit Java readLine()
+title: "Protect `readLine()` against DoS"
 sidebar_position: 1
 ---
 
-## pixee:java/limit-readline
+## pixee:java/limit-readline 
 
-| Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
- | Medium     | Merge After Cursory Review | No                     |
+| Importance  | Review Guidance      | Requires Scanning Tool |
+|-------------|----------------------|------------------------|
+| MEDIUM | Merge Without Review | No     |
 
-This codemod hardens all [`BufferedReader#readLine()`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#readLine--) calls against attack.
+This change hardens all [`BufferedReader#readLine()`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#readLine--) operations against memory exhaustion.
 
-There is no way to safely call `BufferedReader#readLine()` on a remote stream since it is, by its nature, a read that will only be terminated by the stream provider providing a newline character. A stream influenced by an attacker could keep providing bytes until the JVM runs out of memory, causing a crash.
+There is no way to call `readLine()` safely since it is, by its nature, a read that must be terminated by the stream provider. Furthermore, a stream of data provided by an untrusted source could lead to a denial of service attack, as attackers can provide an infinite stream of bytes until the process runs out of memory.
 
-Fixing it is straightforward using [a secure API](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/BoundedLineReader.java) which limits the amount of expected characters to some sane amount. The changes from this codemod look like this:
+Fixing it is straightforward using an API which limits the amount of expected characters to some sane limit. This is what our changes look like:
 
 ```diff
 + import io.github.pixee.security.BoundedLineReader;
@@ -23,32 +23,13 @@ Fixing it is straightforward using [a secure API](https://github.com/pixee/java-
 + String line = BoundedLineReader.readLine(reader, 5_000_000); // limited to 5MB
 ```
 
-
-If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
-
-## F.A.Q. 
+## F.A.Q.
 
 ### Why does this codemod require a Pixee dependency?
 
-We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, [please let us know](https://ask.pixee.ai/feedback).
+We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, please let us know.
 
-### Why is this codemod marked as Merge After Cursory Review?
-
-This codemod sets a maximum of 5MB allowed per line read by default. It is unlikely but possible that your code may receive lines that are greater than 5MB _and_ you'd still be interested in reading them, so there is some nominal risk of exceptional cases. If you want to customize the behavior of the codemod to have a higher default for your repository, you can change its [Transform Settings](./pixee_java_limit-readline.md#transform-settings).
-
-## Codemod Settings
-
-### Default Line Maximum
-If you want to set a specific line maximum for your repository, add the following section to your `.pixee.yaml`:
-```yaml
-codemods:
-  name: pixee:java/limit-readline
-  properties:
-    maximumLineRead: 25000000
-```
-This change allows each line read to 25MB instead of the default 5MB.
 
 ## References
-* [Security Control (BoundedLineReader.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/BoundedLineReader.java)
-* [https://cwe.mitre.org/data/definitions/400.html](https://cwe.mitre.org/data/definitions/400.html)
-* [https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service](https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service)
+ * [https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service](https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service)
+ * [https://cwe.mitre.org/data/definitions/400.html](https://cwe.mitre.org/data/definitions/400.html)

@@ -1,17 +1,17 @@
 ---
-title: Pass Empty Array to Collection.toArray()
+title: "Use empty for Collection#toArray([])"
 sidebar_position: 1
 ---
 
-## pixee:java/use-empty-for-toarray
+## pixee:java/use-empty-for-toarray 
 
-| Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
-| Low        | Merge Without Review | No                     |
+| Importance  | Review Guidance      | Requires Scanning Tool |
+|-------------|----------------------|------------------------|
+| LOW | Merge Without Review | No     |
 
-This codemod updates new array creation with [Collection#toArray(T[])](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-) to use an empty array argument, which is better for performance.
+This change updates new array creation with [https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-](Collection#toArray(T[])) to use an empty array argument, which is better for performance.
 
-The point of the argument is to provide an array to hold the objects and be returned, according to the documentation:
+The point of the argument is provide an array to hold the objects and be returned, according to the documentation:
 
 > If the collection fits in the specified array, it is returned therein.
 
@@ -27,14 +27,7 @@ Our changes look something like this:
   processTokens(tokenArray);
 ```
 
-If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
-
-## F.A.Q.
-
-### Why is this codemod marked as Merge Without Review?
-
-There should be no difference to code flow if the literal is first except in cases where the behavior is now fixed where a bug previously existed.
 
 ## References
-* [https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall](https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall)
-* [https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion](https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion)
+ * [https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall](https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall)
+ * [https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion](https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion)

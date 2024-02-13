@@ -1,17 +1,17 @@
 ---
-title: Harden XMLDecoder Usage
+title: "Hardened XMLDecoder usage to prevent common attacks"
 sidebar_position: 1
 ---
 
+## pixee:java/harden-xmldecoder-stream 
 
-## pixee:java/harden-xmldecoder-stream
-| Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
- | High       | Merge Without Review | No                     |
+| Importance  | Review Guidance      | Requires Scanning Tool |
+|-------------|----------------------|------------------------|
+| HIGH | Merge Without Review | No     |
 
-This codemod hardens usage of Java's [`java.beans.XMLDecoder`](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/XMLDecoder.html) APIs to prevent remote code execution attacks.
+This change hardens usage of Java's [`java.beans.XMLDecoder`](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/XMLDecoder.html) APIs to prevent remote code execution attacks.
 
-The `XMLDecoder` type is meant to serialize Java beans to and from XML. It has a lot of power built into it, so it is not meant for use with untrusted data. If attackers can influence the XML being deserialized, they can execute arbitrary system commands with exploits [like this](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md) one, which causes the host to open a remote shell on port 4444:
+The `XMLDecoder` type is meant to serialize Java beans to and from XML. It has a lot of power built into it, so it is not meant for use with untrusted data. If attackers can influence the XML being deserialized, they can execute arbitrary system commands with exploits [like this](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -43,7 +43,7 @@ The `XMLDecoder` type is meant to serialize Java beans to and from XML. It has a
 </java>
 ```
 
-Our change wraps all `InputStream` objects passed to `XMLDecoder` constructors with a wrapper stream that attempts to detect the deserialization of dangerous types (e..g, `java.lang.Runtime` for executing system commands, `java.io.FileOutputStream` for overwriting files, etc.). This is not a complete protection, because attackers could possibly build gadget chains that avoid direct invocation of these particular types to accomplish their goals, but it does significantly raise the bar for exploitation. Here's what a typical change looks like:
+Our change wraps all `InputStream` objects passed to `XMLDecoder` constructors with a wrapper that attempts to detect the deserialization of dangerous types (e..g, `java.lang.Runtime` for executing system commands, `java.io.FileOutputStream` for overwriting files, etc.). This is not a complete protection, because attackers could possibly build gadget chains that avoid direct invocation of these particular types to accomplish their goals, but it does raise the bar for exploitation. Here's what a typical change looks like:
 
 ```diff
 + import io.github.pixee.security.XMLDecoderSecurity;
@@ -54,20 +54,13 @@ Our change wraps all `InputStream` objects passed to `XMLDecoder` constructors w
   return order;
 ```
 
-If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
-
-## F.A.Q. 
+## F.A.Q.
 
 ### Why is this codemod marked as Merge Without Review?
 
 We believe this change is safe and effective. The behavior of hardened `XMLDecoder` instances will only throw `SecurityException` if they see types being deserialized are involved in code execution, which is extremely unlikely to in normal operation.
 
-## Codemod Settings
-
-N/A
 
 ## References
-* [Security Control (XMLDecoderSecurity.java) source code](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/XMLDecoderSecurity.java)
-* [https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md)
-* [http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html)
-* [https://github.com/pwntester/XMLDecoder](https://github.com/pwntester/XMLDecoder)
+ * [https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md)
+ * [http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html)
