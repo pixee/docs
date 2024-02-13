@@ -9,7 +9,7 @@ sidebar_position: 1
 |-------------|----------------------|------------------------|
 | LOW | Merge Without Review | No     |
 
-This change updates new array creation with [https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-](Collection#toArray(T[])) to use an empty array argument, which is better for performance.
+This change updates new array creation with [Collection#toArray(T[])](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-) to use an empty array argument, which is better for performance.
 
 The point of the argument is provide an array to hold the objects and be returned, according to the documentation:
 
