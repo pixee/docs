@@ -1,15 +1,15 @@
 ---
-title: Add Clarifying Braces
+title: "Add clarifying braces to misleading code"
 sidebar_position: 1
 ---
 
-## pixee:java/add-clarifying-braces
+## pixee:java/add-clarifying-braces 
 
-| Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
-| High       | Merge After Cursory Review | No                     |
+| Importance  | Review Guidance      | Requires Scanning Tool |
+|-------------|----------------------|------------------------|
+| HIGH | Merge Without Review | No     |
 
-This codemod adds clarifying braces to misleading code blocks that look like they may be executing unintended code.
+This change adds clarifying braces to misleading code blocks that look like they may be executing unintended code.
 
 Consider the following code:
 ```java
@@ -29,17 +29,15 @@ This codemod will add braces to control flow statements to make the code more cl
     doSecondThing();
 ```
 
-Note that these changes illuminate situations in which there may be bugs and help make the control flow more clear.
-
-
-If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
+Note that these changes illuminate situations in which there may be bugs and help make the control flow more clear. 
 
 ## F.A.Q.
 
-### Why is this codemod marked as Merge After Cursory Review?
+### Why is this codemod marked as Merge Without Review?
 
 The intention of the changes introduced by this codemod is to illuminate situations where they may be bugs and format the code to make it more clear. Therefore, we invite review of this codemod's output not to double check the changed logic, but to see if any bugs have been found.
 
+
 ## References
-* [https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall](https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall)
-* [https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion](https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion)
+ * [https://cwe.mitre.org/data/definitions/483.html](https://cwe.mitre.org/data/definitions/483.html)
+ * [https://www.synopsys.com/blogs/software-security/understanding-apple-goto-fail-vulnerability-2/](https://www.synopsys.com/blogs/software-security/understanding-apple-goto-fail-vulnerability-2/)

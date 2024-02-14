@@ -1,17 +1,17 @@
 ---
-title: "Semgrep: Overly Permissive File Permission"
+title: "Fixed overly permissive file permissions (issue discovered by Semgrep)"
 sidebar_position: 1
 ---
 
-## semgrep:java/java.lang.security.audit.overly-permissive-file-permission.overly-permissive-file-permission
+## semgrep:java/java.lang.security.audit.overly-permissive-file-permission.overly-permissive-file-permission 
 
-| Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
-| Medium     | Merge After Cursory Review | Yes (Semgrep)          |
+| Importance  | Review Guidance      | Requires Scanning Tool |
+|-------------|----------------------|------------------------|
+| MEDIUM | Merge After Cursory Review | Yes (Semgrep)     |
 
-This codemod removes excessive privilege from a file that appears to be overly permissive. Files can be granted privileges to the file's owner, the file owner's group, or "others" -- meaning anyone else. It is hard to imagine the need for a file to be readable, writable or executable by anyone other than the file's owner or the file owner's group in modern software development.
+This change removes excessive privilege from a file that appears to be overly permissive. Files can be granted privileges to the file's owner, the file owner's group, or "others" -- meaning anyone else. It is hard to imagine the need for a file to be readable, writable or executable by anyone other than the file's owner or the file owner's group in modern software development. 
 
-If a file is readable by "others", it could be read by a malicious system user to retrieve sensitive information or useful implementation details. If the file is writable by "others", the application could be tricked into performing actions on data provide by malicious users. Allowing execution of a file by "others" could allow malicious users to run arbitrary code on the server.
+If a file is readable by "others", it could be read by a malicious system user to retrieve sensitive information or useful implementation details. If the file is writable by "others", the application could be tricked into performing actions on data provide by malicious users. Allowing execution of a file by "others" could allow malicious users to run arbitrary code on the server. 
 
 Our changes look something like this:
 
@@ -28,20 +28,8 @@ Our changes look something like this:
 
 Note: It's worth considering whether you could use a more restrictive permission than `GROUP_WRITE` here. For example, if the file is owned by the same user that's running the application, you could use `OWNER_WRITE` instead.
 
-If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
-
-## F.A.Q.
-
-### Why is this codemod marked as Merge After Review?
-
-Although there is very little reason to limiting the file permissions as stated would have any effect, it conceivable that the weak permissions are incidentally taken advantage of during pre-production development practices or through file aggregation tools (e.g., Splunk.)  
-
-## Codemod Settings
-
-N/A
 
 ## References
-
-* [https://find-sec-bugs.github.io/bugs.htm#OVERLY_PERMISSIVE_FILE_PERMISSION](https://find-sec-bugs.github.io/bugs.htm#OVERLY_PERMISSIVE_FILE_PERMISSION)
-* [https://registry.semgrep.dev/rule/java.lang.security.audit.overly-permissive-file-permission.overly-permissive-file-permission](https://registry.semgrep.dev/rule/java.lang.security.audit.overly-permissive-file-permission.overly-permissive-file-permission)
-* [https://cwe.mitre.org/data/definitions/732.html](https://cwe.mitre.org/data/definitions/732.html)
+ * [https://find-sec-bugs.github.io/bugs.htm#OVERLY_PERMISSIVE_FILE_PERMISSION](https://find-sec-bugs.github.io/bugs.htm#OVERLY_PERMISSIVE_FILE_PERMISSION)
+ * [https://registry.semgrep.dev/rule/java.lang.security.audit.overly-permissive-file-permission.overly-permissive-file-permission](https://registry.semgrep.dev/rule/java.lang.security.audit.overly-permissive-file-permission.overly-permissive-file-permission)
+ * [https://cwe.mitre.org/data/definitions/732.html](https://cwe.mitre.org/data/definitions/732.html)
