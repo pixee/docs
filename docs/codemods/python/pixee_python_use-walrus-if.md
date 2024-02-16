@@ -22,8 +22,6 @@ The changes from this codemod look like this:
       print(x)
 ```
 
-The walrus operator is only supported in Python 3.8 and later.
-
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
 ## F.A.Q.
