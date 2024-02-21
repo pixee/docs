@@ -1,5 +1,5 @@
 ---
-title: Replace unsafe usage of `flask.send_file`
+title: "Replace unsafe usage of `flask.send_file`"
 sidebar_position: 1
 ---
 

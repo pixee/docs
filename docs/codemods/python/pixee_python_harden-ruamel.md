@@ -1,5 +1,5 @@
 ---
-title: Use `typ='safe'` in ruamel.yaml() Calls
+title: "Use `typ='safe'` in ruamel.yaml() Calls"
 sidebar_position: 1
 ---
 

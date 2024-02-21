@@ -1,5 +1,5 @@
 ---
-title: Enforce HTTPS Connection for `urllib3`
+title: "Enforce HTTPS Connection for `urllib3`"
 sidebar_position: 1
 ---
 

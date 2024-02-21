@@ -1,5 +1,5 @@
 ---
-title: Parameterize SQL Queries
+title: "Parameterize SQL Queries"
 sidebar_position: 1
 ---
 

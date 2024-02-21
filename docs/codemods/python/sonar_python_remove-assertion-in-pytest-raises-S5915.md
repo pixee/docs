@@ -1,5 +1,5 @@
 ---
-title: Sonar: Moves assertions out of `pytest.raises` scope
+title: "Sonar: Moves assertions out of `pytest.raises` scope"
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Replace == comparison with numpy.isnan()
+title: "Replace == comparison with numpy.isnan()"
 sidebar_position: 1
 ---
 

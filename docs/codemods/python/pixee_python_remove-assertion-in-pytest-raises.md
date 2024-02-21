@@ -1,5 +1,5 @@
 ---
-title: Moves assertions out of `pytest.raises` scope
+title: "Moves assertions out of `pytest.raises` scope"
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Sonar: Ensure bare exception statements are raised
+title: "Sonar: Ensure bare exception statements are raised"
 sidebar_position: 1
 ---
 

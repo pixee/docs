@@ -1,5 +1,5 @@
 ---
-title: Upgrade and Secure Temp File Creation
+title: "Upgrade and Secure Temp File Creation"
 sidebar_position: 1
 ---
 

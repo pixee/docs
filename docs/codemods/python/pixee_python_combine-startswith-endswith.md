@@ -1,5 +1,5 @@
 ---
-title: Simplify Boolean Expressions Using `startswith` and `endswith`
+title: "Simplify Boolean Expressions Using `startswith` and `endswith`"
 sidebar_position: 1
 ---
 

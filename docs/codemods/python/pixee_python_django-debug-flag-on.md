@@ -1,5 +1,5 @@
 ---
-title: Disable Django Debug Mode
+title: "Disable Django Debug Mode"
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Use Safe Defaults for `lxml` Parsers
+title: "Use Safe Defaults for `lxml` Parsers"
 sidebar_position: 1
 ---
 

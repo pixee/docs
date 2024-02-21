@@ -1,5 +1,5 @@
 ---
-title: Sonar: Fix `assert` on Non-Empty Tuple Literal
+title: "Sonar: Fix `assert` on Non-Empty Tuple Literal"
 sidebar_position: 1
 ---
 

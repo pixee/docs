@@ -1,5 +1,5 @@
 ---
-title: Verify JWT Decode
+title: "Verify JWT Decode"
 sidebar_position: 1
 ---
 

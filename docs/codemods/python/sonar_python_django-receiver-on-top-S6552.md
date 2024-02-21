@@ -1,5 +1,5 @@
 ---
-title: Sonar: Ensure Django @receiver is the first decorator
+title: "Sonar: Ensure Django @receiver is the first decorator"
 sidebar_position: 1
 ---
 

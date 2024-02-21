@@ -1,5 +1,5 @@
 ---
-title: Enable CSRF protection globally for a Flask app.
+title: "Enable CSRF protection globally for a Flask app."
 sidebar_position: 1
 ---
 

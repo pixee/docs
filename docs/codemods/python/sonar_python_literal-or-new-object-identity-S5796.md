@@ -1,5 +1,5 @@
 ---
-title: Sonar: Replace `is` with `==` for literal or new object comparisons
+title: "Sonar: Replace `is` with `==` for literal or new object comparisons"
 sidebar_position: 1
 ---
 

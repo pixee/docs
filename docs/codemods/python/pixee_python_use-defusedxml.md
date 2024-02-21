@@ -1,5 +1,5 @@
 ---
-title: Use `defusedxml` for Parsing XML
+title: "Use `defusedxml` for Parsing XML"
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Use Set Literals Instead of Sets from Lists
+title: "Use Set Literals Instead of Sets from Lists"
 sidebar_position: 1
 ---
 

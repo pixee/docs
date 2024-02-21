@@ -1,5 +1,5 @@
 ---
-title: Remove `global` Usage at Module Level
+title: "Remove `global` Usage at Module Level"
 sidebar_position: 1
 ---
 
