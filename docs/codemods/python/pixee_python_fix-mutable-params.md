@@ -1,5 +1,5 @@
 ---
-title: Replace Mutable Default Parameters
+title: "Replace Mutable Default Parameters"
 sidebar_position: 1
 ---
 

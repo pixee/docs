@@ -1,5 +1,5 @@
 ---
-title: Automatically Close Resources
+title: "Automatically Close Resources"
 sidebar_position: 1
 ---
 

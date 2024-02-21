@@ -1,5 +1,5 @@
 ---
-title: Sonar: Set content type to `application/json` for `django.http.HttpResponse` with JSON data
+title: "Sonar: Set content type to `application/json` for `django.http.HttpResponse` with JSON data"
 sidebar_position: 1
 ---
 

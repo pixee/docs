@@ -1,5 +1,5 @@
 ---
-title: Ensure bare exception statements are raised
+title: "Ensure bare exception statements are raised"
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Use Safe Parameters in `flask` Response `set_cookie` Call
+title: "Use Safe Parameters in `flask` Response `set_cookie` Call"
 sidebar_position: 1
 ---
 

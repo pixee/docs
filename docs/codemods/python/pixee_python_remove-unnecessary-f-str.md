@@ -1,5 +1,5 @@
 ---
-title: Remove Unnecessary F-strings
+title: "Remove Unnecessary F-strings"
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Replace Comparisons to Empty Sequence with Implicit Boolean Comparison
+title: "Replace Comparisons to Empty Sequence with Implicit Boolean Comparison"
 sidebar_position: 1
 ---
 

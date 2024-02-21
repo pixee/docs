@@ -1,5 +1,5 @@
 ---
-title: Convert Implicit String Concat Inside Sequence into Individual Elements
+title: "Convert Implicit String Concat Inside Sequence into Individual Elements"
 sidebar_position: 1
 ---
 

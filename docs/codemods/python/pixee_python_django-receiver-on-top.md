@@ -1,5 +1,5 @@
 ---
-title: Ensure Django @receiver is the first decorator
+title: "Ensure Django @receiver is the first decorator"
 sidebar_position: 1
 ---
 

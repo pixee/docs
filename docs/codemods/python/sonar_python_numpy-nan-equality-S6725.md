@@ -1,5 +1,5 @@
 ---
-title: Sonar: Replace == comparison with numpy.isnan()
+title: "Sonar: Replace == comparison with numpy.isnan()"
 sidebar_position: 1
 ---
 

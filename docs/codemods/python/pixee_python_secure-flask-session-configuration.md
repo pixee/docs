@@ -1,5 +1,5 @@
 ---
-title: Flip Insecure `Flask` Session Configurations
+title: "Flip Insecure `Flask` Session Configurations"
 sidebar_position: 1
 ---
 

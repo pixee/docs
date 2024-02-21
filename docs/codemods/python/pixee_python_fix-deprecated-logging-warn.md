@@ -1,5 +1,5 @@
 ---
-title: Replace Deprecated `logging.warn`
+title: "Replace Deprecated `logging.warn`"
 sidebar_position: 1
 ---
 

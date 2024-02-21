@@ -1,5 +1,5 @@
 ---
-title: Secure Setting for Django `SESSION_COOKIE_SECURE` flag
+title: "Secure Setting for Django `SESSION_COOKIE_SECURE` flag"
 sidebar_position: 1
 ---
 

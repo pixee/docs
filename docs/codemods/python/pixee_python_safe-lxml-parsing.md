@@ -1,5 +1,5 @@
 ---
-title: Use Safe Parsers in `lxml` Parsing Functions
+title: "Use Safe Parsers in `lxml` Parsing Functions"
 sidebar_position: 1
 ---
 

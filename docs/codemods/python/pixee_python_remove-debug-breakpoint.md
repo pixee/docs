@@ -1,5 +1,5 @@
 ---
-title: Remove Calls to `builtin` `breakpoint` and `pdb.set_trace
+title: "Remove Calls to `builtin` `breakpoint` and `pdb.set_trace"
 sidebar_position: 1
 ---
 

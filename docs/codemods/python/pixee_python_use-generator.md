@@ -1,5 +1,5 @@
 ---
-title: Use Generator Expressions Instead of List Comprehensions
+title: "Use Generator Expressions Instead of List Comprehensions"
 sidebar_position: 1
 ---
 

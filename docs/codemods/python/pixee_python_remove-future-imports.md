@@ -1,5 +1,5 @@
 ---
-title: Remove deprecated `__future__` imports
+title: "Remove deprecated `__future__` imports"
 sidebar_position: 1
 ---
 

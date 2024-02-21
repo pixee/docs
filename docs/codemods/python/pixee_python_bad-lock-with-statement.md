@@ -1,5 +1,5 @@
 ---
-title: Separate Lock Instantiation from `with` Call
+title: "Separate Lock Instantiation from `with` Call"
 sidebar_position: 1
 ---
 

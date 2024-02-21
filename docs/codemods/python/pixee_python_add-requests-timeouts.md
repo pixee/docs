@@ -1,5 +1,5 @@
 ---
-title: Add timeout to `requests` calls
+title: "Add timeout to `requests` calls"
 sidebar_position: 1
 ---
 

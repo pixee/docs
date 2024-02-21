@@ -1,5 +1,5 @@
 ---
-title: Secure Source of Randomness
+title: "Secure Source of Randomness"
 sidebar_position: 1
 ---
 

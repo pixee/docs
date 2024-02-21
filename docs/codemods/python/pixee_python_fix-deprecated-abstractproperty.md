@@ -1,5 +1,5 @@
 ---
-title: Replace deprecated abstractproperty
+title: "Replace deprecated abstractproperty"
 sidebar_position: 1
 ---
 

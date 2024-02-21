@@ -1,5 +1,5 @@
 ---
-title: Upgrade SSLContext Minimum Version
+title: "Upgrade SSLContext Minimum Version"
 sidebar_position: 1
 ---
 

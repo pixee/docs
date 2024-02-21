@@ -1,5 +1,5 @@
 ---
-title: Sonar: Set content type to `application/json` for `flask.make_response` with JSON data
+title: "Sonar: Set content type to `application/json` for `flask.make_response` with JSON data"
 sidebar_position: 1
 ---
 

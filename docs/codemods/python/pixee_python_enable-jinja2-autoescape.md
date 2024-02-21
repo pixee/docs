@@ -1,13 +1,13 @@
 ---
-title: Enable Jinja2 Autoescape
+title: "Enable Jinja2 Autoescape"
 sidebar_position: 1
 ---
 
 ## pixee:python/enable-jinja2-autoescape
 
-| Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
-| High       | Merge Without Review | No                     |
+| Importance | Review Guidance     | Requires Scanning Tool |
+|------------|---------------------|------------------------|
+| High       | Merge After Review  | No                     |
 
 This codemod enables autoescaping of HTML content in `jinja2`. Unfortunately, the jinja2 default behavior is to not autoescape when rendering templates, which makes your applications potentially vulnerable to Cross-Site Scripting (XSS) attacks.
 
@@ -27,9 +27,9 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 
 ## F.A.Q.
 
-### Why is this codemod marked as Merge Without Review?
+### Why is this codemod marked as Merge After Review?
 
-This codemod protects your applications against XSS attacks. We believe using the default behavior is unsafe.
+This codemod protects your applications against XSS attacks. However, it's possible you would like to set the `autoescape` parameter to a custom callable.
 
 ## Codemod Settings
 

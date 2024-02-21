@@ -1,5 +1,5 @@
 ---
-title: Replace unsafe `pyyaml` loader with `SafeLoader`
+title: "Replace unsafe `pyyaml` loader with `SafeLoader`"
 sidebar_position: 1
 ---
 

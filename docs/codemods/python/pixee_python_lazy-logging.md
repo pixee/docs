@@ -1,5 +1,5 @@
 ---
-title: Convert Eager Logging to Lazy Logging
+title: "Convert Eager Logging to Lazy Logging"
 sidebar_position: 1
 ---
 
