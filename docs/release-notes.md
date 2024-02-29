@@ -14,7 +14,7 @@ We're working hard to bring you new features, enhancements, and reliability to t
 >
 > All Pixeebot commits will show a green verified badge you can use to verify authenticity, and review detailed information on the verified signature.
 
-## Pixeebot App + Platform {#2024-02-22---pixeebot-app--platform}
+### Pixeebot App + Platform {#2024-02-22---pixeebot-app--platform}
 
 #### 🚀 New Features & Enhancements {#2024-02-22---new-features--enhancements}
 
