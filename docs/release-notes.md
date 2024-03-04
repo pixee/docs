@@ -6,6 +6,28 @@ sidebar_position: 8
 
 We're working hard to bring you new features, enhancements, and reliability to the Pixee Platform. We'd ❤️ to hear from you. Drop us a note at [hi@pixee.ai](mailto:hi@pixee.ai)!
 
+## March 1, 2024 
+
+### Pixeebot App + Platform {#2024-03-01---pixeebot-app--platform}
+
+#### 🚀 New Features & Enhancements {#2024-03-01---new-features--enhancements}
+
+* Implemented changes to optimize codemod performance
+
+#### 🐛 Bug Fixes {#2024-03-01---bug-fixes}
+
+* Fixed an issue that caused Pixeebot to open multiple pull requests for a single issue 
+
+### Codemodder {#2024-03-01---codemodder}
+
+#### 🐍 Python {#2024-03-01---codemodder-python}
+* New codemod: `str-concat-in-sequence-literals` fixes cases of implicit string concatenation inside lists, sets, or tuples. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_str-concat-in-sequence-literals)
+* New codemod: `fix-async-task-instantiation` replaces manual instantiation of a `Task` with a `create_task` call per the asyncio [documentation](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task). See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-async-task-instantiation) 
+
+#### ☕️ Java {#2024-03-01---codemodder-java}
+* Fixed a hang issue that caused stalls in code analysis  
+
+
 ## February 22, 2024 
 > 🔏
 > **Now Supporting Signed Commits:**
