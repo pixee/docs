@@ -78,28 +78,37 @@ const config = {
         logo: {
           alt: 'Pixee',
           src: 'img/pixee-logo.png',
-          href: 'https://pixee.ai',
+          /*
+          to: '/index',
+          */
         },
-
+/* */
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Docs',
+            label: 'Home',
             className: 'header-routes',
           },
+         /*
           {
             to: '/status',
             label: 'Status',
             position: 'left',
             className: 'header-routes',
           },
+          */
+          {
+            type: 'html',
+            position: 'left',
+            value: '<a href="https://codemodder.io" target="_new"<div class="header-routes">Codemodder</div></a>',
+          },
           {
             type: 'html',
             position: 'right',
             value:
-              '<a href="https://github.com/apps/pixeebot" target="_blank"><div class="header-github-link"></div><a/>',
+              '<a href="https://github.com/pixee" target="_blank"><div class="header-github-link"></div><a/>',
           },
           {
             type: 'html',
