@@ -3,11 +3,11 @@ title: "Prevent file descriptor leak and modernize BufferedWriter creation"
 sidebar_position: 1
 ---
 
-## pixee:java/prevent-filewriter-leak-with-nio 
+## pixee:java/prevent-filewriter-leak-with-nio
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| MEDIUM | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| MEDIUM     | Merge Without Review | No                     |
 
 This change prevents a file descriptor leak and modernizes the file writing API pattern.
 
@@ -20,6 +20,6 @@ Our changes look something like this:
 +  BufferedWriter writer = Files.newBufferedWriter(f.toPath());
 ```
 
-
 ## References
- * [https://cwe.mitre.org/data/definitions/775.html](https://cwe.mitre.org/data/definitions/775.html)
+
+- [https://cwe.mitre.org/data/definitions/775.html](https://cwe.mitre.org/data/definitions/775.html)

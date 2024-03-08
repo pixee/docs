@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/django-debug-flag-on
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | Medium     | Merge After Cursory Review | No                     |
 
 This codemod will flip django's `DEBUG` flag to `False` if it's `True` on the `settings.py` file within django's default directory structure.
@@ -32,5 +32,5 @@ N/A
 
 ## References
 
-* [https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure](https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure)
-* [https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-DEBUG](https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-DEBUG)
+- [https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure](https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure)
+- [https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-DEBUG](https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-DEBUG)

@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/use-walrus-if
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | Low        | Merge After Cursory Review | No                     |
 
 This codemod updates places where two separate statements involving an assignment and conditional can be replaced with a single Assignment Expression (commonly known as the walrus operator).
@@ -36,4 +36,4 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions](https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions)
+- [https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions](https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions)

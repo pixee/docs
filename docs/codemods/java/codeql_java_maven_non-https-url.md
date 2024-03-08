@@ -3,11 +3,11 @@ title: "Failure to use HTTPS or SFTP URL in Maven artifact upload/download (Code
 sidebar_position: 1
 ---
 
-## codeql:java/maven/non-https-url 
+## codeql:java/maven/non-https-url
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| MEDIUM | Merge Without Review | Yes (CodeQL)     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| MEDIUM     | Merge Without Review | Yes (CodeQL)           |
 
 This change replaces any HTTP URLs found in `<repository>` definitions with HTTPS URLs. Without this change, Maven will make requests to either publish or retrieve artifacts over a plaintext channel.
 
@@ -30,8 +30,8 @@ Our changes look something like this:
   </project>
 ```
 
-
 ## References
- * [https://codeql.github.com/codeql-query-help/java/java-maven-non-https-url](https://codeql.github.com/codeql-query-help/java/java-maven-non-https-url)
- * [https://cwe.mitre.org/data/definitions/494.html](https://cwe.mitre.org/data/definitions/494.html)
- * [https://en.wikipedia.org/wiki/Man-in-the-middle_attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
+
+- [https://codeql.github.com/codeql-query-help/java/java-maven-non-https-url](https://codeql.github.com/codeql-query-help/java/java-maven-non-https-url)
+- [https://cwe.mitre.org/data/definitions/494.html](https://cwe.mitre.org/data/definitions/494.html)
+- [https://en.wikipedia.org/wiki/Man-in-the-middle_attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)

@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/flask-enable-csrf-protection
 
-| Importance | Review Guidance     | Requires Scanning Tool |
-|------------|---------------------|------------------------|
-| High       | Merge After Review  | No                     |
+| Importance | Review Guidance    | Requires Scanning Tool |
+| ---------- | ------------------ | ---------------------- |
+| High       | Merge After Review | No                     |
 
 Cross-site request forgery (CSRF) is an attack where a user is tricked by a malicious agent to submit a unintended request (e.g login requests). A common way to mitigate this issue is to embed an additional token into requests to identify requests from unauthorized locations.
 
@@ -39,5 +39,5 @@ N/A
 
 ## References
 
-* [https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf)
-* [https://flask-wtf.readthedocs.io/en/1.2.x/csrf/](https://flask-wtf.readthedocs.io/en/1.2.x/csrf/)
+- [https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf)
+- [https://flask-wtf.readthedocs.io/en/1.2.x/csrf/](https://flask-wtf.readthedocs.io/en/1.2.x/csrf/)

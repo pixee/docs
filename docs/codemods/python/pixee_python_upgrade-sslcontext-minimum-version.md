@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/upgrade-sslcontext-minimum-version
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | High       | Merge Without Review | No                     |
 
 This codemod replaces all unsafe and/or deprecated SSL/TLS versions when used
@@ -40,6 +40,6 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/library/ssl.html#security-considerations](https://docs.python.org/3/library/ssl.html#security-considerations)
-* [https://datatracker.ietf.org/doc/rfc8996/](https://datatracker.ietf.org/doc/rfc8996/)
-* [https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1](https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1)
+- [https://docs.python.org/3/library/ssl.html#security-considerations](https://docs.python.org/3/library/ssl.html#security-considerations)
+- [https://datatracker.ietf.org/doc/rfc8996/](https://datatracker.ietf.org/doc/rfc8996/)
+- [https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1](https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1)

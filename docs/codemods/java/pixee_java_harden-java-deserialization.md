@@ -3,11 +3,11 @@ title: "Introduced protections against deserialization attacks"
 sidebar_position: 1
 ---
 
-## pixee:java/harden-java-deserialization 
+## pixee:java/harden-java-deserialization
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change hardens Java deserialization operations against attack. Even a simple operation like an object deserialization is an opportunity to yield control of your system to an attacker. In fact, without specific, non-default protections, any object deserialization call can lead to arbitrary code execution. The JavaDoc [now even says](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputFilter.html):
 
@@ -33,7 +33,7 @@ static class MethodInvokeTypeProvider implements TypeProvider {
 
 Reflecting on this code reveals a terrifying conclusion. If an attacker presents this object to be deserialized by your app, the runtime will take a class and a method name from the attacker and then call them. Note that an attacker can provide any serliazed type -- it doesn't have to be the one you're expecting, and it will still deserialize.
 
-Attackers can repurpose the logic of selected types within the Java classpath (called "gadgets") and chain them together to achieve arbitrary remote code execution. There are a limited number of publicly known gadgets that can be used for attack, and our change simply inserts an [ObjectInputFilter](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputStream.html#setObjectInputFilter(java.io.ObjectInputFilter)) into the `ObjectInputStream` to prevent them from being used.
+Attackers can repurpose the logic of selected types within the Java classpath (called "gadgets") and chain them together to achieve arbitrary remote code execution. There are a limited number of publicly known gadgets that can be used for attack, and our change simply inserts an [ObjectInputFilter](<https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/ObjectInputStream.html#setObjectInputFilter(java.io.ObjectInputFilter)>) into the `ObjectInputStream` to prevent them from being used.
 
 ```diff
 + import io.github.pixee.security.ObjectInputFilters;
@@ -50,7 +50,7 @@ This is a tough vulnerability class to understand, but it is deadly serious. It 
 
 We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, older versions of Java don't support fine-grained deserialization filter controls, and there are no community-trusted controls.
 
-
 ## References
- * [https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
- * [https://portswigger.net/web-security/deserialization/exploiting](https://portswigger.net/web-security/deserialization/exploiting)
+
+- [https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+- [https://portswigger.net/web-security/deserialization/exploiting](https://portswigger.net/web-security/deserialization/exploiting)

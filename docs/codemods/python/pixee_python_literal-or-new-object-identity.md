@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/literal-or-new-object-identity
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Low        | Merge Without Review | No                     |
 
 The `is` and `is not` operators only evaluate to `True` when the expressions on each side have the same `id`. In other words, `a is b` is equivalent to `id(a) == id(b)`. With few exceptions, objects and literals have unique identities and thus shouldn't generally be compared by using the `is` or `is not` operators.
@@ -33,4 +33,4 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/library/stdtypes.html#comparisons](https://docs.python.org/3/library/stdtypes.html#comparisons)
+- [https://docs.python.org/3/library/stdtypes.html#comparisons](https://docs.python.org/3/library/stdtypes.html#comparisons)

@@ -3,11 +3,11 @@ title: "Sandboxed URL creation to prevent SSRF attacks"
 sidebar_position: 1
 ---
 
-## pixee:java/sandbox-url-creation 
+## pixee:java/sandbox-url-creation
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change sandboxes the creation of [`java.net.URL`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URL.html) objects so they will be more resistant to Server-Side Request Forgery (SSRF) attacks.
 
@@ -44,10 +44,10 @@ This change alone reduces attack surface significantly, but can be enhanced to c
 
 Note: Beware temptation to write some validation on your own. Parsing URLs is difficult and differences between parsers in validation and execution will certainly lead to exploits as attackers [have repeatedly proven](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf).
 
-
 ## References
- * [https://www.hacksplaining.com/prevention/ssrf](https://www.hacksplaining.com/prevention/ssrf)
- * [https://portswigger.net/web-security/ssrf](https://portswigger.net/web-security/ssrf)
- * [https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
- * [https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/](https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/)
- * [https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/](https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/)
+
+- [https://www.hacksplaining.com/prevention/ssrf](https://www.hacksplaining.com/prevention/ssrf)
+- [https://portswigger.net/web-security/ssrf](https://portswigger.net/web-security/ssrf)
+- [https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/](https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/)
+- [https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/](https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/)

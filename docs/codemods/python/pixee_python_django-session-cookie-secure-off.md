@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/django-session-cookie-secure-off
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | Medium     | Merge After Cursory Review | No                     |
 
 This codemod will set django's `SESSION_COOKIE_SECURE` flag to `True` if it's `False` or missing on the `settings.py` file within django's default directory structure.
@@ -31,5 +31,5 @@ N/A
 
 ## References
 
-* [https://owasp.org/www-community/controls/SecureCookieAttribute](https://owasp.org/www-community/controls/SecureCookieAttribute)
-* [https://docs.djangoproject.com/en/4.2/ref/settings/#session-cookie-secure](https://docs.djangoproject.com/en/4.2/ref/settings/#session-cookie-secure)
+- [https://owasp.org/www-community/controls/SecureCookieAttribute](https://owasp.org/www-community/controls/SecureCookieAttribute)
+- [https://docs.djangoproject.com/en/4.2/ref/settings/#session-cookie-secure](https://docs.djangoproject.com/en/4.2/ref/settings/#session-cookie-secure)

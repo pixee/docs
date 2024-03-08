@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/combine-startswith-endswith
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Low        | Merge Without Review | No                     |
 
 Many developers are not necessarily aware that the `startswith` and `endswith` methods of `str` objects can accept a tuple of strings to match. This means that there is a lot of code that uses boolean expressions such as `x.startswith('foo') or x.startswith('bar')` instead of the simpler expression `x.startswith(('foo', 'bar'))`.

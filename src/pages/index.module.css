@@ -11,7 +11,7 @@
 }
 
 .heroBanner h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
@@ -28,8 +28,8 @@
 }
 
 /* Dark mode styles */
-[data-theme='dark'] .heroBanner h1,
-[data-theme='dark'] .heroBanner p {
+[data-theme="dark"] .heroBanner h1,
+[data-theme="dark"] .heroBanner p {
   color: var(--ifr-color-neutral-10);
 }
 
@@ -44,7 +44,7 @@
   }
 
   .heroBanner h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;

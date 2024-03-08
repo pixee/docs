@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/url-sandbox
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | High       | Merge After Cursory Review | No                     |
 
 This codemod sandboxes calls to [`requests.get`](https://requests.readthedocs.io/en/latest/api/#requests.get) to be more resistant to Server-Side Request Forgery (SSRF) attacks.
@@ -49,10 +49,9 @@ Our changes introduce sandboxing around URL creation that force developers to sp
 This change alone reduces attack surface significantly because the default behavior of `safe_requests.get` raises a `SecurityException` if
 a user attempts to access a known infrastructure location, unless specifically disabled.
 
-
 If you have feedback on this codemod, [please let us know](mailto:feedback@pixee.ai)!
 
-## F.A.Q. 
+## F.A.Q.
 
 ### Why does this codemod require a Pixee dependency?
 
@@ -61,6 +60,7 @@ We always prefer to use built-in Python functions or one from a well-known and t
 ### Why is this codemod marked as Merge After Cursory Review?
 
 By default, the protection only weaves in 2 checks, which we believe will not cause any issues with the vast majority of code:
+
 1. The given URL must be HTTP/HTTPS.
 2. The given URL must not point to a "well-known infrastructure target", which includes things like AWS Metadata Service endpoints, and internal routers (e.g., 192.168.1.1) which are common targets of attacks.
 
@@ -80,6 +80,7 @@ If you have feedback on this codemod, [please let us know](mailto:feedback@pixee
 ### Why is this codemod marked as Merge After Cursory Review?
 
 By default, the protection only weaves in 2 checks, which we believe will not cause any issues with the vast majority of code:
+
 1. The given URL must be HTTP/HTTPS.
 2. The given URL must not point to a "well-known infrastructure target", which includes things like AWS Metadata Service endpoints, and internal routers (e.g., 192.168.1.1) which are common targets of attacks.
 
@@ -98,8 +99,8 @@ N/A
 
 ## References
 
-* [https://github.com/pixee/python-security/blob/main/src/security/safe_requests/api.py](https://github.com/pixee/python-security/blob/main/src/security/safe_requests/api.py)
-* [https://portswigger.net/web-security/ssrf](https://portswigger.net/web-security/ssrf)
-* [https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
-* [https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/](https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/)
-* [https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/](https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/)
+- [https://github.com/pixee/python-security/blob/main/src/security/safe_requests/api.py](https://github.com/pixee/python-security/blob/main/src/security/safe_requests/api.py)
+- [https://portswigger.net/web-security/ssrf](https://portswigger.net/web-security/ssrf)
+- [https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/](https://www.rapid7.com/blog/post/2021/11/23/owasp-top-10-deep-dive-defending-against-server-side-request-forgery/)
+- [https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/](https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/)

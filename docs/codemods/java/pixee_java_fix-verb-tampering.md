@@ -3,15 +3,16 @@ title: "Introduced protections against verb tampering attacks (authN/authZ bypas
 sidebar_position: 1
 ---
 
-## pixee:java/fix-verb-tampering 
+## pixee:java/fix-verb-tampering
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 The `web.xml` specification offers a way to protect certain parts of your URL space. Unfortunately, it doesn't work the way people think it does, developers who are trying to enhance their security often end up accidentally exposing those parts they were trying to protect.
 
 Consider the following `web.xml`, which is trying to restrict the `/admin/*` space to only those with the `admin` role:
+
 ```xml
 <security-constraint>
   <web-resource-collection>
@@ -46,8 +47,8 @@ Our change is simple: any place we see `<http-method>` listed in a `<security-co
 
 Taking out all the `<http-method>` entries tells the server that this protection must be enforced for all methods, which is almost always the intent of the developer.
 
-
 ## References
- * [https://dl.packetstormsecurity.net/papers/web/Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf](https://dl.packetstormsecurity.net/papers/web/Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf)
- * [https://vulncat.fortify.com/en/detail?id=desc.config.java.http_verb_tampering](https://vulncat.fortify.com/en/detail?id=desc.config.java.http_verb_tampering)
- * [https://capec.mitre.org/data/definitions/274.html](https://capec.mitre.org/data/definitions/274.html)
+
+- [https://dl.packetstormsecurity.net/papers/web/Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf](https://dl.packetstormsecurity.net/papers/web/Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf)
+- [https://vulncat.fortify.com/en/detail?id=desc.config.java.http_verb_tampering](https://vulncat.fortify.com/en/detail?id=desc.config.java.http_verb_tampering)
+- [https://capec.mitre.org/data/definitions/274.html](https://capec.mitre.org/data/definitions/274.html)

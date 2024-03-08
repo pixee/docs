@@ -3,11 +3,11 @@ title: "Refactored to use parameterized HQL APIs"
 sidebar_position: 1
 ---
 
-## pixee:java/hql-parameterizer 
+## pixee:java/hql-parameterizer
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge After Review | No     |
+| Importance | Review Guidance    | Requires Scanning Tool |
+| ---------- | ------------------ | ---------------------- |
+| HIGH       | Merge After Review | No                     |
 
 This change refactors Hibernate queries to be parameterized, rather than built by hand.
 
@@ -26,7 +26,7 @@ Our changes look something like this:
 
 Although there should be no functional differences, the rewrite here is complex and should be verified by a human.
 
-
 ## References
- * [https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html#using-java-with-hibernate](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html#using-java-with-hibernate)
- * [https://cwe.mitre.org/data/definitions/564.html](https://cwe.mitre.org/data/definitions/564.html)
+
+- [https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html#using-java-with-hibernate](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html#using-java-with-hibernate)
+- [https://cwe.mitre.org/data/definitions/564.html](https://cwe.mitre.org/data/definitions/564.html)

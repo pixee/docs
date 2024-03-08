@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/subprocess-shell-false
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | High       | Merge After Cursory Review | No                     |
 
 This codemod sets the `shell` keyword argument to `False` in `subprocess` module function calls that have set it to `True`.
@@ -35,6 +35,6 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/library/subprocess.html#security-considerations](https://docs.python.org/3/library/subprocess.html#security-considerations)
-* [https://en.wikipedia.org/wiki/Code_injection#Shell_injection](https://en.wikipedia.org/wiki/Code_injection#Shell_injection)
-* [https://stackoverflow.com/a/3172488](https://stackoverflow.com/a/3172488)
+- [https://docs.python.org/3/library/subprocess.html#security-considerations](https://docs.python.org/3/library/subprocess.html#security-considerations)
+- [https://en.wikipedia.org/wiki/Code_injection#Shell_injection](https://en.wikipedia.org/wiki/Code_injection#Shell_injection)
+- [https://stackoverflow.com/a/3172488](https://stackoverflow.com/a/3172488)

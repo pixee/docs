@@ -3,11 +3,11 @@ title: "Sanitized user-provided file names in HTTP multipart uploads"
 sidebar_position: 1
 ---
 
-## pixee:java/sanitize-spring-multipart-filename 
+## pixee:java/sanitize-spring-multipart-filename
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change hardens usage of the [Spring Web](https://github.com/spring-projects/spring-framework) multipart request and file uploading feature to prevent file overwrite attacks.
 
@@ -24,8 +24,8 @@ Our change sanitizes the output of `FileItem#getName()`, stripping the value of 
   writeFile(new File("my_upload_dir", name));
 ```
 
-
 ## References
- * [https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
- * [https://portswigger.net/web-security/file-upload](https://portswigger.net/web-security/file-upload)
- * [https://github.com/spring-projects/spring-framework/blob/c989470f94926ee5c7474bead278b00e9aaac787/spring-web/src/main/java/org/springframework/web/multipart/MultipartFile.java#L68](https://github.com/spring-projects/spring-framework/blob/c989470f94926ee5c7474bead278b00e9aaac787/spring-web/src/main/java/org/springframework/web/multipart/MultipartFile.java#L68)
+
+- [https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
+- [https://portswigger.net/web-security/file-upload](https://portswigger.net/web-security/file-upload)
+- [https://github.com/spring-projects/spring-framework/blob/c989470f94926ee5c7474bead278b00e9aaac787/spring-web/src/main/java/org/springframework/web/multipart/MultipartFile.java#L68](https://github.com/spring-projects/spring-framework/blob/c989470f94926ee5c7474bead278b00e9aaac787/spring-web/src/main/java/org/springframework/web/multipart/MultipartFile.java#L68)

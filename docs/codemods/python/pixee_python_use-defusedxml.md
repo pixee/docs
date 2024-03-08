@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/use-defusedxml
 
-| Importance | Review Guidance     | Requires Scanning Tool |
-|------------|---------------------|------------------------|
-| High       | Merge After Review  | No                     |
+| Importance | Review Guidance    | Requires Scanning Tool |
+| ---------- | ------------------ | ---------------------- |
+| High       | Merge After Review | No                     |
 
 You might be surprised to learn that Python's built-in XML libraries are [considered insecure](https://docs.python.org/3/library/xml.html#xml-vulnerabilities) against various kinds of attacks.
 
@@ -16,6 +16,7 @@ In fact, the [Python documentation itself](https://docs.python.org/3/library/xml
 This codemod updates all relevant uses of the standard library parsers with safe versions from `defusedxml`. It also adds the `defusedxml` dependency to your project where possible.
 
 The changes from this codemod look like this:
+
 ```diff
 - from xml.etree.ElementTree import parse
 + import defusedxml.ElementTree
@@ -38,7 +39,7 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/library/xml.html#xml-vulnerabilities](https://docs.python.org/3/library/xml.html#xml-vulnerabilities)
-* [https://docs.python.org/3/library/xml.html#the-defusedxml-package](https://docs.python.org/3/library/xml.html#the-defusedxml-package)
-* [https://pypi.org/project/defusedxml/](https://pypi.org/project/defusedxml/)
-* [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [https://docs.python.org/3/library/xml.html#xml-vulnerabilities](https://docs.python.org/3/library/xml.html#xml-vulnerabilities)
+- [https://docs.python.org/3/library/xml.html#the-defusedxml-package](https://docs.python.org/3/library/xml.html#the-defusedxml-package)
+- [https://pypi.org/project/defusedxml/](https://pypi.org/project/defusedxml/)
+- [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)

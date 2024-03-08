@@ -5,6 +5,7 @@ sidebar_position: 7
 # FAQs
 
 ### What are Pixee's AI features?
+
 We utilize Large Language Models (LLMs) to provide context-aware code fixes and to add code-specific comments, helping developers understand why a change is being recommended.
 
 ### What is Pixee's AI policy?
@@ -13,14 +14,16 @@ At Pixee, we take your data privacy and security seriously. To ensure your trust
 
 By default, we enable the use of Large Language Models (LLMs) for an enhanced user experience. However, if you prefer not to use them, you can easily [disable](configuring.md) this feature at your convenience. We believe in providing you with the flexibility to tailor your experience according to your preferences and needs.
 
-
 ### How does Pixee handle my data?
+
 Pixee is a platform focused on helping developers deliver higher quality code and places the utmost importance on our own security, including secure software development practices, IT practices, corporate controls and partner assessments. In case anyone asks, yes -- all data is encrypted in transit and at rest, and guaranteed to be destroyed.
 
 As an aside, many of us have been in security our whole careers, and we're quite passionate about it! We document all of this and more in our [Security and Trust Center](https://trust.pixee.ai/).
 
 ### How will my information (i.e. code, projects, etc.) be used?
+
 Each party agrees to hold data and confidential information of the other party in confidence and not to disclose, retain, or distribute such information to third parties or to use such information for any purpose whatsoever. Please take a look at our full [Privacy Policy](https://www.pixee.ai/privacy) for more detail.
 
 ### Where can I learn more and discuss Pixeebot?
+
 Users can join the Pixee community [on Slack](https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA). This channel can be used to engage with peers who are also interested in Pixee. Feel free to email us at help@pixee.ai with any questions or comments.

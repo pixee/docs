@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/numpy-nan-equality
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Medium     | Merge Without Review | No                     |
 
 Comparisons against `numpy.nan` always result in `False`. Thus comparing an expression directly against `numpy.nan` is always unintended. The correct way to compare a value for `NaN` is to use the `numpy.isnan` function.
@@ -36,4 +36,4 @@ N/A
 
 ## References
 
-* [https://numpy.org/doc/stable/reference/constants.html#numpy.nan](https://numpy.org/doc/stable/reference/constants.html#numpy.nan)
+- [https://numpy.org/doc/stable/reference/constants.html#numpy.nan](https://numpy.org/doc/stable/reference/constants.html#numpy.nan)

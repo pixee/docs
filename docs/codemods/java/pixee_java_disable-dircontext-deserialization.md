@@ -3,11 +3,11 @@ title: "Hardened LDAP call against deserialization attacks"
 sidebar_position: 1
 ---
 
-## pixee:java/disable-dircontext-deserialization 
+## pixee:java/disable-dircontext-deserialization
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge After Cursory Review | No     |
+| Importance | Review Guidance            | Requires Scanning Tool |
+| ---------- | -------------------------- | ---------------------- |
+| HIGH       | Merge After Cursory Review | No                     |
 
 This change patches the LDAP interaction code to harden against a remote code execution vulnerability.
 
@@ -29,7 +29,7 @@ Our changes look like this:
 
 The protection works by denying deserialization during processing of an LDAP query which we're confident is intentional in a vanishingly small percentage of usage.
 
-
 ## References
- * [https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf)
- * [https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+
+- [https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf)
+- [https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)

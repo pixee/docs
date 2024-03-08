@@ -1,25 +1,25 @@
-import React from 'react';
-import styles from './styles.module.css';
-import Link from '@docusaurus/Link';
+import React from "react";
+import styles from "./styles.module.css";
+import Link from "@docusaurus/Link";
 
 export default function HomepageFeatures() {
   const navigateToDocs = (type) => {
     if (type === 1) {
-      window.location = '/installing';
+      window.location = "/installing";
     } else if (type === 2) {
-      window.location = '/codemods/overview';
+      window.location = "/codemods/overview";
     } else if (type === 3) {
-      window.location = 'https://github.com/pixee/pixee-cli';
+      window.location = "https://github.com/pixee/pixee-cli";
     } else if (type === 4) {
-      window.location = '/configuring';
+      window.location = "/configuring";
     } else if (type === 5) {
-      window.location = '/running-your-own';
+      window.location = "/running-your-own";
     } else if (type === 6) {
-      window.location = '/faqs';
+      window.location = "/faqs";
     } else if (type === 7) {
-      window.location = '/using-pixeebot';
+      window.location = "/using-pixeebot";
     } else {
-      window.location = '/release-notes';
+      window.location = "/release-notes";
     }
   };
   return (
@@ -30,7 +30,7 @@ export default function HomepageFeatures() {
             ⬇ <span>Install Pixeebot</span>
           </h1>
           <p>
-            Pixeebot installation begins by visiting our{' '}
+            Pixeebot installation begins by visiting our{" "}
             <Link to="https://github.com/apps/pixeebot">GitHub App page</Link>.
             From there, click the <span>Configure</span> button and follow the
             prompts from GitHub. You’ll be directed to your Pixee dashboard once
@@ -58,8 +58,9 @@ export default function HomepageFeatures() {
             💻 <span>Pixee CLI</span>
           </h1>
           <p>
-            Try out the power of Pixee codemods locally with our command line interface. See how
-            Pixee can improve and harden your code before installing the GitHub app.
+            Try out the power of Pixee codemods locally with our command line
+            interface. See how Pixee can improve and harden your code before
+            installing the GitHub app.
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(4)}>
@@ -81,9 +82,7 @@ export default function HomepageFeatures() {
           <h1>
             ❓ <span>FAQs</span>
           </h1>
-          <p>
-            Addressing common topics such as data handling and use of LLMs.
-          </p>
+          <p>Addressing common topics such as data handling and use of LLMs.</p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(7)}>
           <h1>
@@ -99,7 +98,8 @@ export default function HomepageFeatures() {
             📄 <span>Release notes</span>
           </h1>
           <p>
-            <br /> We are constantly updating our product. Check out our weekly release notes here.
+            <br /> We are constantly updating our product. Check out our weekly
+            release notes here.
           </p>
         </div>
       </div>

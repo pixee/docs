@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/replace-flask-send-file
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Medium     | Merge Without Review | No                     |
 
 The `Flask` `send_file` function from Flask is susceptible to a path traversal attack if its input is not properly validated.
@@ -43,5 +43,5 @@ N/A
 
 ## References
 
-* [https://flask.palletsprojects.com/en/3.0.x/api/#flask.send_from_directory](https://flask.palletsprojects.com/en/3.0.x/api/#flask.send_from_directory)
-* [https://owasp.org/www-community/attacks/Path_Traversal](https://owasp.org/www-community/attacks/Path_Traversal)
+- [https://flask.palletsprojects.com/en/3.0.x/api/#flask.send_from_directory](https://flask.palletsprojects.com/en/3.0.x/api/#flask.send_from_directory)
+- [https://owasp.org/www-community/attacks/Path_Traversal](https://owasp.org/www-community/attacks/Path_Traversal)

@@ -3,11 +3,11 @@ title: "Hardened XMLDecoder usage to prevent common attacks"
 sidebar_position: 1
 ---
 
-## pixee:java/harden-xmldecoder-stream 
+## pixee:java/harden-xmldecoder-stream
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change hardens usage of Java's [`java.beans.XMLDecoder`](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/XMLDecoder.html) APIs to prevent remote code execution attacks.
 
@@ -60,7 +60,7 @@ Our change wraps all `InputStream` objects passed to `XMLDecoder` constructors w
 
 We believe this change is safe and effective. The behavior of hardened `XMLDecoder` instances will only throw `SecurityException` if they see types being deserialized are involved in code execution, which is extremely unlikely to in normal operation.
 
-
 ## References
- * [https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md)
- * [http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html)
+
+- [https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md](https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/web/java-XMLDecoder-RCE.md)
+- [http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html)

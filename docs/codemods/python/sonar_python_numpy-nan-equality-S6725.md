@@ -6,7 +6,7 @@ sidebar_position: 1
 ## sonar:python/numpy-nan-equality-S6725
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Medium     | Merge Without Review | Yes (Sonar)            |
 
 This codemod acts upon the following Sonar rules: 'python:S6725'.
@@ -38,5 +38,5 @@ N/A
 
 ## References
 
-* [https://numpy.org/doc/stable/reference/constants.html#numpy.nan](https://numpy.org/doc/stable/reference/constants.html#numpy.nan)
-* [https://rules.sonarsource.com/python/type/Bug/RSPEC-6725/](https://rules.sonarsource.com/python/type/Bug/RSPEC-6725/)
+- [https://numpy.org/doc/stable/reference/constants.html#numpy.nan](https://numpy.org/doc/stable/reference/constants.html#numpy.nan)
+- [https://rules.sonarsource.com/python/type/Bug/RSPEC-6725/](https://rules.sonarsource.com/python/type/Bug/RSPEC-6725/)

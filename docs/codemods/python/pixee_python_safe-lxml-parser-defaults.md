@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/safe-lxml-parser-defaults
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | High       | Merge Without Review | No                     |
 
 This codemod configures safe parameter values when initializing `lxml.etree.XMLParser`, `lxml.etree.ETCompatXMLParser`, `lxml.etree.XMLTreeBuilder`, or `lxml.etree.XMLPullParser`. If parameters `resolve_entities`, `no_network`, and `dtd_validation` are not set to safe values, your code may be vulnerable to entity expansion attacks and external entity (XXE) attacks.
@@ -42,6 +42,6 @@ N/A
 
 ## References
 
-* [https://lxml.de/apidoc/lxml.etree.html#lxml.etree.XMLParser](https://lxml.de/apidoc/lxml.etree.html#lxml.etree.XMLParser)
-* [https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
-* [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [https://lxml.de/apidoc/lxml.etree.html#lxml.etree.XMLParser](https://lxml.de/apidoc/lxml.etree.html#lxml.etree.XMLParser)
+- [https://owasp.org/www-community/vulnerabilities/XML*External_Entity*(XXE)\_Processing](<https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing>)
+- [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)

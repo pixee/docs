@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/secure-tempfile
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | High       | Merge Without Review | No                     |
 
 This codemod replaces all `tempfile.mktemp` calls to the more secure `tempfile.mkstemp`.
@@ -14,7 +14,6 @@ This codemod replaces all `tempfile.mktemp` calls to the more secure `tempfile.m
 The Python [tempfile documentation](https://docs.python.org/3/library/tempfile.html#tempfile.mktemp) is explicit
 that `tempfile.mktemp` should be deprecated to avoid an unsafe and unexpected race condition.
 The changes from this codemod look like this:
-
 
 ```diff
   import tempfile
@@ -36,4 +35,4 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/library/tempfile.html#tempfile.mktemp](https://docs.python.org/3/library/tempfile.html#tempfile.mktemp)
+- [https://docs.python.org/3/library/tempfile.html#tempfile.mktemp](https://docs.python.org/3/library/tempfile.html#tempfile.mktemp)

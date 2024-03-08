@@ -6,13 +6,13 @@ sidebar_position: 1
 ## sonar:python/django-json-response-type-S5131
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Medium     | Merge Without Review | Yes (Sonar)            |
 
 This codemod acts upon the following Sonar rules: 'pythonsecurity:S5131'.
 
 The default `content_type` for `HttpResponse` in Django is `'text/html'`. This is true even when the response contains JSON data.
-If the JSON contains (unsanitized) user-supplied input, a malicious user may supply HTML code which leaves the application vulnerable to cross-site scripting (XSS). 
+If the JSON contains (unsanitized) user-supplied input, a malicious user may supply HTML code which leaves the application vulnerable to cross-site scripting (XSS).
 This fix explicitly sets the response type to `application/json` when the response body is JSON data to avoid this vulnerability. Our changes look something like this:
 
 ```diff
@@ -39,6 +39,6 @@ N/A
 
 ## References
 
-* [https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.HttpResponse.__init__](https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.HttpResponse.__init__)
-* [https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding-for-javascript-contexts](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding-for-javascript-contexts)
-* [https://rules.sonarsource.com/python/type/Bug/RSPEC-5131/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5131/)
+- [https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.HttpResponse.**init**](https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.HttpResponse.__init__)
+- [https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding-for-javascript-contexts](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding-for-javascript-contexts)
+- [https://rules.sonarsource.com/python/type/Bug/RSPEC-5131/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5131/)

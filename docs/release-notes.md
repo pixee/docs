@@ -6,29 +6,31 @@ sidebar_position: 8
 
 We're working hard to bring you new features, enhancements, and reliability to the Pixee Platform. We'd ❤️ to hear from you. Drop us a note at [hi@pixee.ai](mailto:hi@pixee.ai)!
 
-## March 1, 2024 
+## March 1, 2024
 
 ### Pixeebot App + Platform {#2024-03-01---pixeebot-app--platform}
 
 #### 🚀 New Features & Enhancements {#2024-03-01---new-features--enhancements}
 
-* Implemented changes to optimize codemod performance
+- Implemented changes to optimize codemod performance
 
 #### 🐛 Bug Fixes {#2024-03-01---bug-fixes}
 
-* Fixed an issue that caused Pixeebot to open multiple pull requests for a single issue 
+- Fixed an issue that caused Pixeebot to open multiple pull requests for a single issue
 
 ### Codemodder {#2024-03-01---codemodder}
 
 #### 🐍 Python {#2024-03-01---codemodder-python}
-* New codemod: `str-concat-in-sequence-literals` fixes cases of implicit string concatenation inside lists, sets, or tuples. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_str-concat-in-sequence-literals)
-* New codemod: `fix-async-task-instantiation` replaces manual instantiation of a `Task` with a `create_task` call per the asyncio [documentation](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task). See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-async-task-instantiation) 
+
+- New codemod: `str-concat-in-sequence-literals` fixes cases of implicit string concatenation inside lists, sets, or tuples. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_str-concat-in-sequence-literals)
+- New codemod: `fix-async-task-instantiation` replaces manual instantiation of a `Task` with a `create_task` call per the asyncio [documentation](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task). See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-async-task-instantiation)
 
 #### ☕️ Java {#2024-03-01---codemodder-java}
-* Fixed a hang issue that caused stalls in code analysis  
 
+- Fixed a hang issue that caused stalls in code analysis
 
-## February 22, 2024 
+## February 22, 2024
+
 > 🔏
 > **Now Supporting Signed Commits:**
 >
@@ -40,35 +42,35 @@ We're working hard to bring you new features, enhancements, and reliability to t
 
 #### 🚀 New Features & Enhancements {#2024-02-22---new-features--enhancements}
 
-* Implemented a change to the installation flow so that more repositories skip the waitlist 
-* Added a search and filter functionality to the installations page of the user platform, allowing users to search for specific Pixeebot installations and filter results
+- Implemented a change to the installation flow so that more repositories skip the waitlist
+- Added a search and filter functionality to the installations page of the user platform, allowing users to search for specific Pixeebot installations and filter results
 
 #### 🐛 Bug Fixes {#2024-02-22---bug-fixes}
 
-* Fixed a bug affecting Java repositories that caused contextual comments included in Pixeebot fixes to contain incorrect line numbers 
+- Fixed a bug affecting Java repositories that caused contextual comments included in Pixeebot fixes to contain incorrect line numbers
 
 ### Codemodder {#2024-02-22---codemodder}
 
 #### 🐍 Python {#2024-02-22---codemodder-python}
-* Updated `requests-verify` codemod to support the [httpx](https://www.python-httpx.org/) library. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_requests-verify)
-* Updated `fix-file-resource-leak` codemod for better handling of indent blocks containing multiple open statements. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-file-resource-leak)
+
+- Updated `requests-verify` codemod to support the [httpx](https://www.python-httpx.org/) library. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_requests-verify)
+- Updated `fix-file-resource-leak` codemod for better handling of indent blocks containing multiple open statements. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-file-resource-leak)
 
 #### ☕️ Java {#2024-02-22---codemodder-java}
 
-* New codemod: `overrides-match-synchronization` adds missing synchronized keyword to methods that override a synchronized method in the parent class, ensuring [proper synchronization](https://wiki.sei.cmu.edu/confluence/display/java/TSM00-J.+Do+not+override+thread-safe+methods+with+methods+that+are+not+thread-safe). This improves code maintainability, and reduces the risk of issues like race conditions and data corruption. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_overrides-match-synchronization-s3551)
-* Updated `define-constant-for-duplicate-literal` codemod to inject new literals at the end of a file, rather than the beginning. This change improves the style of code generated by this codemod. See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_define-constant-for-duplicate-literal-s1192)
+- New codemod: `overrides-match-synchronization` adds missing synchronized keyword to methods that override a synchronized method in the parent class, ensuring [proper synchronization](https://wiki.sei.cmu.edu/confluence/display/java/TSM00-J.+Do+not+override+thread-safe+methods+with+methods+that+are+not+thread-safe). This improves code maintainability, and reduces the risk of issues like race conditions and data corruption. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_overrides-match-synchronization-s3551)
+- Updated `define-constant-for-duplicate-literal` codemod to inject new literals at the end of a file, rather than the beginning. This change improves the style of code generated by this codemod. See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_define-constant-for-duplicate-literal-s1192)
 
-
-
-## January 26, 2024 
+## January 26, 2024
 
 > 🌟
 > **Introducing the Activity Dashboard:**
 >
-> This dashboard exists as a GitHub Issue, and is your source of truth for Pixeebot’s functionality within your repository. Use the Activity dashboard to: 
-> * Easily manage the open pull requests Pixeebot has created for you
-> * Check for available fixes in the continuous improvement queue, and summon Pixeebot to create pull requests for them
-> * Review the work that Pixeebot has already completed in your repository 
+> This dashboard exists as a GitHub Issue, and is your source of truth for Pixeebot’s functionality within your repository. Use the Activity dashboard to:
+>
+> - Easily manage the open pull requests Pixeebot has created for you
+> - Check for available fixes in the continuous improvement queue, and summon Pixeebot to create pull requests for them
+> - Review the work that Pixeebot has already completed in your repository
 >
 > The dashboard is automatically enabled upon installation, provided that GitHub Issues are also enabled for your repository. See Activity dashboard documentation [here](https://docs.pixee.ai/using-pixeebot/#pixeebot-activity).
 
@@ -76,32 +78,29 @@ We're working hard to bring you new features, enhancements, and reliability to t
 
 #### 🚀 New Features & Enhancements {#2024-01-26---new-features--enhancements}
 
-* Released performance improvement for navigating between pages on the user dashboard.
+- Released performance improvement for navigating between pages on the user dashboard.
 
 #### 🐛 Bug Fixes {#2024-01-26---bug-fixes}
 
-* Resolved a bug that occurred when users requested a continuous improvement changes using `@pixeebot next`, Pixeebot would analyze the user’s repository twice and potentially send two PRs.
-  
+- Resolved a bug that occurred when users requested a continuous improvement changes using `@pixeebot next`, Pixeebot would analyze the user’s repository twice and potentially send two PRs.
 
 ### Codemodder {#2024-01-26---codemodder}
 
 #### 🐍 Python {#2024-01-26---codemodder-python}
 
-* `security` package updates and release
-* New codemod: `combine-startswith-endswith` Simplifies boolean expressions used with the `startswith` and `endswith` methods of `str` objects. A lot of code uses boolean expressions such as `x.startswith('foo')` or `x.startswith('bar')` , which is unnecessary since these objects can accept a tuple of strings to match. Where possible, this codemod replaces such boolean expressions with `x.startswith(('foo', 'bar))` for cleaner, more concise code. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_combine-startswith-endswith) 
-* New codemod: `fix-deprecated-logging-warn` Updates usage of the `warn` method from `logging` (which has been [deprecated](https://docs.python.org/3/library/logging.html#logging.Logger.warning) since Python 3.3) in favor of `warning`.  See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-deprecated-logging-warn)
-* New codemod: `flask-enable-csrf-protection` Introduces protections against cross-site forgery (CSRF) attacks by embedding an additional token into HTTP requests to identify requests from unauthorized locations. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_flask-enable-csrf-protection)
-* New codemod: `remove-debug-breakpoint` removes any calls to `breakpoint()` or `pdb.set_trace()` which are generally only used for interactive debugging and should not be deployed in production. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_remove-debug-breakpoint).
-* New codemod: `replace-flask-send-fil`e Introduces protections against path traversal attacks when using the `Flask` `send_file` function. This codemod uses Flasks’s `flask.send_from_directory` function for input path validation. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_replace-flask-send-file)
-* New codemod: `use-set-literal` Converts Python set constructions using literal list arguments into more efficient and readable set literals. It simplifies expressions like `set([1, 2, 3])` to `{1, 2, 3}`, enhancing both performance and code clarity. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_use-set-literal#pixeepythonuse-set-literal)
+- `security` package updates and release
+- New codemod: `combine-startswith-endswith` Simplifies boolean expressions used with the `startswith` and `endswith` methods of `str` objects. A lot of code uses boolean expressions such as `x.startswith('foo')` or `x.startswith('bar')` , which is unnecessary since these objects can accept a tuple of strings to match. Where possible, this codemod replaces such boolean expressions with `x.startswith(('foo', 'bar))` for cleaner, more concise code. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_combine-startswith-endswith)
+- New codemod: `fix-deprecated-logging-warn` Updates usage of the `warn` method from `logging` (which has been [deprecated](https://docs.python.org/3/library/logging.html#logging.Logger.warning) since Python 3.3) in favor of `warning`. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-deprecated-logging-warn)
+- New codemod: `flask-enable-csrf-protection` Introduces protections against cross-site forgery (CSRF) attacks by embedding an additional token into HTTP requests to identify requests from unauthorized locations. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_flask-enable-csrf-protection)
+- New codemod: `remove-debug-breakpoint` removes any calls to `breakpoint()` or `pdb.set_trace()` which are generally only used for interactive debugging and should not be deployed in production. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_remove-debug-breakpoint).
+- New codemod: `replace-flask-send-fil`e Introduces protections against path traversal attacks when using the `Flask` `send_file` function. This codemod uses Flasks’s `flask.send_from_directory` function for input path validation. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_replace-flask-send-file)
+- New codemod: `use-set-literal` Converts Python set constructions using literal list arguments into more efficient and readable set literals. It simplifies expressions like `set([1, 2, 3])` to `{1, 2, 3}`, enhancing both performance and code clarity. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_use-set-literal#pixeepythonuse-set-literal)
 
- #### ☕️ Java {#2024-01-26---codemodder-java}
- * Added short-circuiting to improve performance of composed codemods
- * New codemod: `sonar:java/remove-unused-private-method` removes unused `private` methods. These can increase both the mental load and maintenance burden of maintainers, as you have to keep compiling the unused code when making sweeping changes to the APIs used within the method. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_remove-unused-private-method-s1144)
- * New codemod: `sonar:java/declare-variable-on-separate-line` splits variable assignments onto their own lines. [Many](https://wiki.sei.cmu.edu/confluence/display/java/DCL52-J.+Do+not+declare+more+than+one+variable+per+declaration) [sources](https://rules.sonarsource.com/java/RSPEC-1659/) [believe](https://dart.dev/tools/linter-rules/avoid_multiple_declarations_per_line) it is easier to review code where the variables are separate statements on their own individual line. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_declare-variable-on-separate-line-s1659) 
+#### ☕️ Java {#2024-01-26---codemodder-java}
 
-
-
+- Added short-circuiting to improve performance of composed codemods
+- New codemod: `sonar:java/remove-unused-private-method` removes unused `private` methods. These can increase both the mental load and maintenance burden of maintainers, as you have to keep compiling the unused code when making sweeping changes to the APIs used within the method. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_remove-unused-private-method-s1144)
+- New codemod: `sonar:java/declare-variable-on-separate-line` splits variable assignments onto their own lines. [Many](https://wiki.sei.cmu.edu/confluence/display/java/DCL52-J.+Do+not+declare+more+than+one+variable+per+declaration) [sources](https://rules.sonarsource.com/java/RSPEC-1659/) [believe](https://dart.dev/tools/linter-rules/avoid_multiple_declarations_per_line) it is easier to review code where the variables are separate statements on their own individual line. (for Sonar) See codemod documentation [here](https://docs.pixee.ai/codemods/java/sonar_java_declare-variable-on-separate-line-s1659)
 
 ## December 29, 2023
 
@@ -220,7 +219,7 @@ General support for Python is live! Some updates that made Python support possib
 - Java is Generally Available! Your Java repos will no longer be waitlisted
 
 #### 🐛 Bug Fixes {#2023-09-29---bug-fixes}
- 
+
 - GitHub Comment Errors: We've resolved the issue where 422 errors were encountered while leaving comments on GitHub. You can now interact seamlessly without errors
 
 ## September 22, 2023

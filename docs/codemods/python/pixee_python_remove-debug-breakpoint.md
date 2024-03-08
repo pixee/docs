@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/remove-debug-breakpoint
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Medium     | Merge Without Review | No                     |
 
 This codemod removes any calls to `breakpoint()` or `pdb.set_trace()` which are generally only used for interactive debugging and should not be deployed in production code.

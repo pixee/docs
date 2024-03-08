@@ -5,9 +5,9 @@ sidebar_position: 1
 
 ## pixee:python/enable-jinja2-autoescape
 
-| Importance | Review Guidance     | Requires Scanning Tool |
-|------------|---------------------|------------------------|
-| High       | Merge After Review  | No                     |
+| Importance | Review Guidance    | Requires Scanning Tool |
+| ---------- | ------------------ | ---------------------- |
+| High       | Merge After Review | No                     |
 
 This codemod enables autoescaping of HTML content in `jinja2`. Unfortunately, the jinja2 default behavior is to not autoescape when rendering templates, which makes your applications potentially vulnerable to Cross-Site Scripting (XSS) attacks.
 
@@ -37,5 +37,5 @@ N/A
 
 ## References
 
-* [https://owasp.org/www-community/attacks/xss/](https://owasp.org/www-community/attacks/xss/)
-* [https://jinja.palletsprojects.com/en/3.1.x/api/#autoescaping](https://jinja.palletsprojects.com/en/3.1.x/api/#autoescaping)
+- [https://owasp.org/www-community/attacks/xss/](https://owasp.org/www-community/attacks/xss/)
+- [https://jinja.palletsprojects.com/en/3.1.x/api/#autoescaping](https://jinja.palletsprojects.com/en/3.1.x/api/#autoescaping)

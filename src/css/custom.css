@@ -7,11 +7,11 @@
 /* You can override the default Infima variables here. */
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   color: var(--ifr-color-neutral-90);
 }
 
-[data-theme='dark'] body {
+[data-theme="dark"] body {
   color: var(--ifr-color-neutral-10);
 }
 
@@ -32,12 +32,12 @@ body {
 }
 
 .navbar__title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   color: var(--ifr-color-neutral-90);
 }
 
-[data-theme='dark'] .navbar__title {
+[data-theme="dark"] .navbar__title {
   color: var(--ifr-color-neutral-10);
 }
 
@@ -61,31 +61,31 @@ body {
 }
 
 .custom-navbar-logo-class {
-  content: '';
+  content: "";
   width: 24px;
   height: 24px;
   display: flex;
-  background: url('./../../static/img/pixee-logo.png') no-repeat;
+  background: url("./../../static/img/pixee-logo.png") no-repeat;
   background-size: cover;
 }
 
-[data-theme='dark'] .header-routes {
+[data-theme="dark"] .header-routes {
   color: #fbfafb;
 }
 
-[data-theme='dark'] .navbar__link:hover {
+[data-theme="dark"] .navbar__link:hover {
   color: var(--ifm-navbar-link-hover-color);
   text-decoration: none;
   font-weight: 400;
 }
 
-[data-theme='dark'] .navbar__link--active {
+[data-theme="dark"] .navbar__link--active {
   color: var(--ifm-navbar-link-hover-color);
   text-decoration: none;
   font-weight: 700;
 }
 
-[data-theme='dark'] .navbar__link--active:hover {
+[data-theme="dark"] .navbar__link--active:hover {
   color: var(--ifm-navbar-link-hover-color);
   text-decoration: none;
   font-weight: 700;
@@ -110,30 +110,30 @@ body {
 }
 
 .header-github-link::before {
-  content: '';
+  content: "";
   width: 24px;
   height: 24px;
   display: flex;
-  background: url('./../../static/img/github-icon-light.svg') no-repeat;
+  background: url("./../../static/img/github-icon-light.svg") no-repeat;
   background-size: cover;
 }
 
 .header-slack-link::before {
-  content: '';
+  content: "";
   width: 24px;
   height: 24px;
   display: flex;
-  background: url('./../../static/img/slack-icon-light.svg') no-repeat;
+  background: url("./../../static/img/slack-icon-light.svg") no-repeat;
   background-size: cover;
 }
 
-[data-theme='dark'] .header-github-link::before {
-  background: url('./../../static/img/github-icon-dark.svg') no-repeat;
+[data-theme="dark"] .header-github-link::before {
+  background: url("./../../static/img/github-icon-dark.svg") no-repeat;
   background-size: cover;
 }
 
-[data-theme='dark'] .header-slack-link::before {
-  background: url('./../../static/img/slack-icon-dark.svg') no-repeat;
+[data-theme="dark"] .header-slack-link::before {
+  background: url("./../../static/img/slack-icon-dark.svg") no-repeat;
   background-size: cover;
 }
 
@@ -143,7 +143,7 @@ body {
   padding-bottom: 24px;
   padding: 10px 80px 10px 80px;
   font-size: 14px;
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   font-weight: 400;
   color: #656074;
 }
@@ -185,30 +185,30 @@ body {
 }
 
 .footer-twitter-link::before {
-  content: '';
+  content: "";
   width: 16px;
   height: 16px;
   display: flex;
-  background: url('./../../static/img/twitter-icon-light.svg') no-repeat;
+  background: url("./../../static/img/twitter-icon-light.svg") no-repeat;
   background-size: cover;
 }
 
-[data-theme='dark'] .footer-twitter-link::before {
-  background: url('./../../static/img/twitter-icon-dark.svg') no-repeat;
+[data-theme="dark"] .footer-twitter-link::before {
+  background: url("./../../static/img/twitter-icon-dark.svg") no-repeat;
   background-size: cover;
 }
 
 .footer-linkedin-link::before {
-  content: '';
+  content: "";
   width: 16px;
   height: 16px;
   display: flex;
-  background: url('./../../static/img/linkedin-icon-light.svg') no-repeat;
+  background: url("./../../static/img/linkedin-icon-light.svg") no-repeat;
   background-size: cover;
 }
 
-[data-theme='dark'] .footer-linkedin-link::before {
-  background: url('./../../static/img/linkedin-icon-dark.svg') no-repeat;
+[data-theme="dark"] .footer-linkedin-link::before {
+  background: url("./../../static/img/linkedin-icon-dark.svg") no-repeat;
   background-size: cover;
 }
 
@@ -248,12 +248,12 @@ body {
   --ifr-color-neutral-90: #1c1533;
   --ifr-color-neutral-white: #fff;
   --ifm-link-color: var(--ifm-color-primary);
-  --ifm-heading-font-family: 'Poppins', sans-serif;
+  --ifm-heading-font-family: "Poppins", sans-serif;
   --ifm-background-color: var(--ifr-color-neutral-10);
 }
 
 /* Dark mode styles */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #39e7ad;
   --ifm-color-primary-dark: #1fe4a2;
   --ifm-color-primary-darker: #1ada9a;
@@ -264,29 +264,33 @@ body {
   --docusaurus-highlighted-code-line-bg: rgb(10, 46, 146);
 }
 
-html[data-theme='dark'] {
+html[data-theme="dark"] {
   --ifm-background-color: #1c1533;
 }
 
-[data-theme='dark'] .landingPage {
-  background: radial-gradient(circle, rgba(52, 52, 79, 1) 0%, rgba(28, 21, 51, 1) 60%);
+[data-theme="dark"] .landingPage {
+  background: radial-gradient(
+    circle,
+    rgba(52, 52, 79, 1) 0%,
+    rgba(28, 21, 51, 1) 60%
+  );
 }
 
-[data-theme='dark'] .navbar {
+[data-theme="dark"] .navbar {
   background-color: var(--ifr-color-neutral-80);
 }
 
-[data-theme='dark'] .footer {
+[data-theme="dark"] .footer {
   background-color: #1c1533;
   color: #aeabb6;
 }
 
-[data-theme='dark'] .footer .links,
-[data-theme='dark'] .footer .links a {
+[data-theme="dark"] .footer .links,
+[data-theme="dark"] .footer .links a {
   color: #aeabb6;
 }
 
-[data-theme='dark'] .footer a:hover {
+[data-theme="dark"] .footer a:hover {
   color: var(--ifm-color-primary);
   text-decoration: none;
 }
@@ -302,12 +306,12 @@ html[data-theme='dark'] {
   --prism-background-color: var(--ifr-color-neutral-white);
 }
 
-[data-theme='dark'] .language-diff,
-[data-theme='dark'] .language-python,
-[data-theme='dark'] .language-yaml,
-[data-theme='dark'] .language-java,
-[data-theme='dark'] .language-xml,
-[data-theme='dark'] .language-binary {
+[data-theme="dark"] .language-diff,
+[data-theme="dark"] .language-python,
+[data-theme="dark"] .language-yaml,
+[data-theme="dark"] .language-java,
+[data-theme="dark"] .language-xml,
+[data-theme="dark"] .language-binary {
   --prism-background-color: var(--ifr-color-neutral-80);
 }
 
@@ -322,12 +326,12 @@ html[data-theme='dark'] {
   --prism-background-color: var(--ifr-color-neutral-white);
 }
 
-[data-theme='dark'] .language-diff,
-[data-theme='dark'] .language-python,
-[data-theme='dark'] .language-yaml,
-[data-theme='dark'] .language-java,
-[data-theme='dark'] .language-xml,
-[data-theme='dark'] .language-binary {
+[data-theme="dark"] .language-diff,
+[data-theme="dark"] .language-python,
+[data-theme="dark"] .language-yaml,
+[data-theme="dark"] .language-java,
+[data-theme="dark"] .language-xml,
+[data-theme="dark"] .language-binary {
   --prism-background-color: var(--ifr-color-neutral-80);
 }
 
@@ -366,41 +370,54 @@ html[data-theme='dark'] {
 }
 
 /* dark mode default */
-[data-theme='dark'] .theme-doc-sidebar-item-category li .menu__link,
-[data-theme='dark'] .theme-doc-sidebar-menu li .menu__link {
+[data-theme="dark"] .theme-doc-sidebar-item-category li .menu__link,
+[data-theme="dark"] .theme-doc-sidebar-menu li .menu__link {
   border-left: 4px solid #1c1533;
   color: var(--ifr-color-neutral-10);
   font-weight: 400;
 }
 
 /* dark mode default hover */
-[data-theme='dark'] .theme-doc-sidebar-item-category li .menu__link:hover,
-[data-theme='dark'] .theme-doc-sidebar-menu li .menu__link:hover {
+[data-theme="dark"] .theme-doc-sidebar-item-category li .menu__link:hover,
+[data-theme="dark"] .theme-doc-sidebar-menu li .menu__link:hover {
   border-left: 4px solid #2c2541;
   color: #39e7ad;
   font-weight: 400;
 }
 
 /* dark mode active */
-[data-theme='dark'] .theme-doc-sidebar-item-category li .menu__link.menu__link--active,
-[data-theme='dark'] .theme-doc-sidebar-menu li .menu__link.menu__link--active {
+[data-theme="dark"]
+  .theme-doc-sidebar-item-category
+  li
+  .menu__link.menu__link--active,
+[data-theme="dark"] .theme-doc-sidebar-menu li .menu__link.menu__link--active {
   border-left: 4px solid #39e7ad;
   color: var(--ifm-color-primary);
   font-weight: 700;
 }
 
 /* dark mode active hover */
-[data-theme='dark'] .theme-doc-sidebar-item-category li .menu__link.menu__link--active:hover,
-[data-theme='dark'] .theme-doc-sidebar-menu li .menu__link.menu__link--active:hover {
+[data-theme="dark"]
+  .theme-doc-sidebar-item-category
+  li
+  .menu__link.menu__link--active:hover,
+[data-theme="dark"]
+  .theme-doc-sidebar-menu
+  li
+  .menu__link.menu__link--active:hover {
   color: #39e7ad;
   font-weight: 700;
 }
 
-[data-theme='dark'] .theme-doc-sidebar-item-category li .menu__link,
-[data-theme='dark'] .theme-doc-sidebar-menu li .menu__link {
+[data-theme="dark"] .theme-doc-sidebar-item-category li .menu__link,
+[data-theme="dark"] .theme-doc-sidebar-menu li .menu__link {
   color: var(--ifr-color-neutral-10);
 }
-[data-theme='dark'] .theme-doc-sidebar-item-category li [data-theme='dark'] .menu__link.menu__link--active,
+[data-theme="dark"]
+  .theme-doc-sidebar-item-category
+  li
+  [data-theme="dark"]
+  .menu__link.menu__link--active,
 .theme-doc-sidebar-menu li .menu__link.menu__link--active {
   color: var(--ifm-color-primary);
 }
@@ -410,7 +427,7 @@ html[data-theme='dark'] {
   background-color: var(--ifr-color-neutral-20);
 }
 
-[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+[data-theme="dark"] .menu__link--active:not(.menu__link--sublist) {
   border-left: 4px solid #39e7ad;
   background: var(--ifr-color-neutral-80);
 }
@@ -425,11 +442,11 @@ html[data-theme='dark'] {
   color: var(--ifm-color-primary);
 }
 
-[data-theme='dark'] .table-of-contents li a {
+[data-theme="dark"] .table-of-contents li a {
   color: var(--ifr-color-neutral-10);
 }
 
-[data-theme='dark'] .table-of-contents li a.table-of-contents__link--active {
+[data-theme="dark"] .table-of-contents li a.table-of-contents__link--active {
   color: var(--ifm-color-primary);
 }
 
@@ -437,6 +454,6 @@ html[data-theme='dark'] {
   border-color: var(--ifr-color-neutral-20);
 }
 
-[data-theme='dark'] .table-of-contents {
+[data-theme="dark"] .table-of-contents {
   border-color: var(--ifr-color-neutral-70);
 }

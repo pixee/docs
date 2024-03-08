@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/limit-readline
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | Medium     | Merge After Cursory Review | No                     |
 
 This codemod hardens all [`readline()`](https://docs.python.org/3/library/io.html#io.IOBase.readline) calls from file objects returned from an `open()` call, `StringIO` and `BytesIO` against denial of service attacks. A stream influenced by an attacker could keep providing bytes until the system runs out of memory, causing a crash.
@@ -34,4 +34,4 @@ N/A
 
 ## References
 
-* [https://cwe.mitre.org/data/definitions/400.html](https://cwe.mitre.org/data/definitions/400.html)
+- [https://cwe.mitre.org/data/definitions/400.html](https://cwe.mitre.org/data/definitions/400.html)
