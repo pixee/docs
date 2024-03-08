@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/sql-parameterization
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | High       | Merge After Cursory Review | No                     |
 
 This codemod refactors SQL statements to be parameterized, rather than built by hand.
@@ -39,5 +39,5 @@ N/A
 
 ## References
 
-* [https://cwe.mitre.org/data/definitions/89.html](https://cwe.mitre.org/data/definitions/89.html)
-* [https://owasp.org/www-community/attacks/SQL_Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [https://cwe.mitre.org/data/definitions/89.html](https://cwe.mitre.org/data/definitions/89.html)
+- [https://owasp.org/www-community/attacks/SQL_Injection](https://owasp.org/www-community/attacks/SQL_Injection)

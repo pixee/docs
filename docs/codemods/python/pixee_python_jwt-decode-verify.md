@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/jwt-decode-verify
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | High       | Merge Without Review | No                     |
 
 This codemod ensures calls to [jwt.decode](https://pyjwt.readthedocs.io/en/stable/api.html#jwt.decode) do not disable signature validation and other verifications. It checks that both the `verify` parameter (soon to be deprecated) and any `verify` key in the `options` dict parameter are not assigned to `False`.
@@ -39,5 +39,5 @@ N/A
 
 ## References
 
-* [https://pyjwt.readthedocs.io/en/stable/api.html](https://pyjwt.readthedocs.io/en/stable/api.html)
-* [https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens)
+- [https://pyjwt.readthedocs.io/en/stable/api.html](https://pyjwt.readthedocs.io/en/stable/api.html)
+- [https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens)

@@ -3,11 +3,11 @@ title: "Protect `readLine()` against DoS"
 sidebar_position: 1
 ---
 
-## pixee:java/limit-readline 
+## pixee:java/limit-readline
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| MEDIUM | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| MEDIUM     | Merge Without Review | No                     |
 
 This change hardens all [`BufferedReader#readLine()`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#readLine--) operations against memory exhaustion.
 
@@ -29,7 +29,7 @@ Fixing it is straightforward using an API which limits the amount of expected ch
 
 We always prefer to use existing controls built into Java, or a control from a well-known and trusted community dependency. However, we cannot find any such control. If you know of one, please let us know.
 
-
 ## References
- * [https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service](https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service)
- * [https://cwe.mitre.org/data/definitions/400.html](https://cwe.mitre.org/data/definitions/400.html)
+
+- [https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service](https://vulncat.fortify.com/en/detail?id=desc.dataflow.abap.denial_of_service)
+- [https://cwe.mitre.org/data/definitions/400.html](https://cwe.mitre.org/data/definitions/400.html)

@@ -3,11 +3,11 @@ title: "Implemented parsing usage when converting Strings to primitives (Sonar)"
 sidebar_position: 1
 ---
 
-## sonar:java/harden-string-parse-to-primitives-s2130 
+## sonar:java/harden-string-parse-to-primitives-s2130
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| LOW | Merge Without Review | Yes (Sonar)     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| LOW        | Merge Without Review | Yes (Sonar)            |
 
 This change updates `String`-to-number conversions by leveraging the intended parse methods.
 
@@ -34,6 +34,6 @@ Our changes look like this:
 
 There is no functional difference after the change, but the source code will be easier to understand.
 
-
 ## References
- * [https://rules.sonarsource.com/java/RSPEC-2130/](https://rules.sonarsource.com/java/RSPEC-2130/)
+
+- [https://rules.sonarsource.com/java/RSPEC-2130/](https://rules.sonarsource.com/java/RSPEC-2130/)

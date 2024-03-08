@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/https-connection
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | High       | Merge Without Review | No                     |
 
 This codemod replaces calls to `urllib3.connectionpool.HTTPConnectionPool` and `urllib3.HTTPConnectionPool` with their secure variant (`HTTPSConnectionPool`).
@@ -33,5 +33,5 @@ N/A
 
 ## References
 
-* [https://owasp.org/www-community/vulnerabilities/Insecure_Transport](https://owasp.org/www-community/vulnerabilities/Insecure_Transport)
-* [https://urllib3.readthedocs.io/en/stable/reference/urllib3.connectionpool.html#urllib3.HTTPConnectionPool](https://urllib3.readthedocs.io/en/stable/reference/urllib3.connectionpool.html#urllib3.HTTPConnectionPool)
+- [https://owasp.org/www-community/vulnerabilities/Insecure_Transport](https://owasp.org/www-community/vulnerabilities/Insecure_Transport)
+- [https://urllib3.readthedocs.io/en/stable/reference/urllib3.connectionpool.html#urllib3.HTTPConnectionPool](https://urllib3.readthedocs.io/en/stable/reference/urllib3.connectionpool.html#urllib3.HTTPConnectionPool)

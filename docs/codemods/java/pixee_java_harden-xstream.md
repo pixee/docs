@@ -3,11 +3,11 @@ title: "Hardened XStream with a converter to prevent exploitation"
 sidebar_position: 1
 ---
 
-## pixee:java/harden-xstream 
+## pixee:java/harden-xstream
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change hardens usage of the `XStream` library to prevent remote code execution attacks.
 
@@ -30,9 +30,9 @@ Looking at the [history of exploits](https://x-stream.github.io/security.html#CV
 
 We believe this change is safe and effective. The behavior of hardened XStream instances will only be different if the types being deserialized are involved in code execution, which is extremely unlikely to in normal operation.
 
-
 ## References
- * [https://x-stream.github.io/security.html](https://x-stream.github.io/security.html)
- * [http://diniscruz.blogspot.com/2013/12/xstream-remote-code-execution-exploit.html](http://diniscruz.blogspot.com/2013/12/xstream-remote-code-execution-exploit.html)
- * [https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream](https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream)
- * [https://x-stream.github.io/CVE-2013-7285.html](https://x-stream.github.io/CVE-2013-7285.html)
+
+- [https://x-stream.github.io/security.html](https://x-stream.github.io/security.html)
+- [http://diniscruz.blogspot.com/2013/12/xstream-remote-code-execution-exploit.html](http://diniscruz.blogspot.com/2013/12/xstream-remote-code-execution-exploit.html)
+- [https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream](https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream)
+- [https://x-stream.github.io/CVE-2013-7285.html](https://x-stream.github.io/CVE-2013-7285.html)

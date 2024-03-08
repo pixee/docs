@@ -1,19 +1,20 @@
 Redirecting to rule page...
 <script>
-    let rule = document.location.search
-    if(rule) {
-        const regex = new RegExp("^([A-Za-z0-9]+):([A-Za-z0-9]+)\/([A-Za-z0-9\-]+)$");
-        const found = rule.substring(1).match(regex);
-        if(found) {
-            const vendor = found[1]
-            const lang = found[2]
-            const id = found[3]
-            window.location = "/rules/" + lang + "/" + vendor + "_" + lang + "_" + id
-        } else {
-            document.write("invalid rule")
-        }
+  let rule = document.location.search;
+  if (rule) {
+    const regex = new RegExp(
+      "^([A-Za-z0-9]+):([A-Za-z0-9]+)\/([A-Za-z0-9\-]+)$",
+    );
+    const found = rule.substring(1).match(regex);
+    if (found) {
+      const vendor = found[1];
+      const lang = found[2];
+      const id = found[3];
+      window.location = "/rules/" + lang + "/" + vendor + "_" + lang + "_" + id;
     } else {
-        document.write("no rule")
+      document.write("invalid rule");
     }
-
+  } else {
+    document.write("no rule");
+  }
 </script>

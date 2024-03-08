@@ -3,11 +3,11 @@ title: "Fixed inefficient usage of `String#replaceAll()` (Sonar)"
 sidebar_position: 1
 ---
 
-## sonar:java/substitute-replaceAll-s5361 
+## sonar:java/substitute-replaceAll-s5361
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| MEDIUM | Merge Without Review | Yes (Sonar)     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| MEDIUM     | Merge Without Review | Yes (Sonar)            |
 
 This change replaces `String#replaceAll()` with `String#replace()` to enhance performance and avoid confusion.
 
@@ -22,6 +22,6 @@ Our changes look something like this:
 +   String changed = init.replace("\n", "<br>");
 ```
 
-
 ## References
- * [https://rules.sonarsource.com/java/RSPEC-5361/](https://rules.sonarsource.com/java/RSPEC-5361/)
+
+- [https://rules.sonarsource.com/java/RSPEC-5361/](https://rules.sonarsource.com/java/RSPEC-5361/)

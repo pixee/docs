@@ -6,7 +6,7 @@ sidebar_position: 1
 ## sonar:python/fix-assert-tuple-S5905
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | Medium     | Merge After Cursory Review | Yes (Sonar)            |
 
 This codemod acts upon the following Sonar rules: 'python:S5905'.
@@ -35,4 +35,4 @@ N/A
 
 ## References
 
-* [https://rules.sonarsource.com/python/type/Bug/RSPEC-5905/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5905/)
+- [https://rules.sonarsource.com/python/type/Bug/RSPEC-5905/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5905/)

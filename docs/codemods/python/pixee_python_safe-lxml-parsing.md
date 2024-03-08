@@ -6,10 +6,10 @@ sidebar_position: 1
 ## pixee:python/safe-lxml-parsing
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | High       | Merge Without Review | No                     |
 
-This codemod sets the `parser` parameter in calls to  `lxml.etree.parse`  and `lxml.etree.fromstring` if omitted or set to `None` (the default value). Unfortunately, the default `parser=None` means `lxml` will rely on an unsafe parser, making your code potentially vulnerable to entity expansion attacks and external entity (XXE) attacks.
+This codemod sets the `parser` parameter in calls to `lxml.etree.parse` and `lxml.etree.fromstring` if omitted or set to `None` (the default value). Unfortunately, the default `parser=None` means `lxml` will rely on an unsafe parser, making your code potentially vulnerable to entity expansion attacks and external entity (XXE) attacks.
 
 The changes look as follows:
 
@@ -35,6 +35,6 @@ N/A
 
 ## References
 
-* [https://lxml.de/apidoc/lxml.etree.html#lxml.etree.XMLParser](https://lxml.de/apidoc/lxml.etree.html#lxml.etree.XMLParser)
-* [https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
-* [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [https://lxml.de/apidoc/lxml.etree.html#lxml.etree.XMLParser](https://lxml.de/apidoc/lxml.etree.html#lxml.etree.XMLParser)
+- [https://owasp.org/www-community/vulnerabilities/XML*External_Entity*(XXE)\_Processing](<https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing>)
+- [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)

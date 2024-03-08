@@ -3,11 +3,11 @@ title: "Sanitized user-provided file names in HTTP multipart uploads"
 sidebar_position: 1
 ---
 
-## pixee:java/sanitize-apache-multipart-filename 
+## pixee:java/sanitize-apache-multipart-filename
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change hardens usage of Apache Common's popular multipart request and [file uploading library](https://commons.apache.org/proper/commons-fileupload/) to prevent file overwrite attacks.
 
@@ -26,7 +26,7 @@ Our change sanitizes the output of `FileItem#getName()`, stripping the value of 
 }
 ```
 
-
 ## References
- * [https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
- * [https://portswigger.net/web-security/file-upload](https://portswigger.net/web-security/file-upload)
+
+- [https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
+- [https://portswigger.net/web-security/file-upload](https://portswigger.net/web-security/file-upload)

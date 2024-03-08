@@ -3,11 +3,11 @@ title: "Use empty for Collection#toArray([])"
 sidebar_position: 1
 ---
 
-## pixee:java/use-empty-for-toarray 
+## pixee:java/use-empty-for-toarray
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| LOW | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| LOW        | Merge Without Review | No                     |
 
 This change updates new array creation with [Collection#toArray(T[])](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-) to use an empty array argument, which is better for performance.
 
@@ -15,8 +15,8 @@ The point of the argument is provide an array to hold the objects and be returne
 
 > If the collection fits in the specified array, it is returned therein.
 
-Although it's not intuitive, allocating a right-sized array ahead of time to pass to the API appears to be [generally worse for performance](https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion) according to benchmarking and JVM developers due to a number of implementation details in both Java and the virtual machine.   
- 
+Although it's not intuitive, allocating a right-sized array ahead of time to pass to the API appears to be [generally worse for performance](https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion) according to benchmarking and JVM developers due to a number of implementation details in both Java and the virtual machine.
+
 For a real world example, consider [this issue in H2](https://github.com/h2database/h2database/issues/311) where significant gains were achieved by switching to an empty array instead of a right-sized one.
 
 Our changes look something like this:
@@ -27,7 +27,7 @@ Our changes look something like this:
   processTokens(tokenArray);
 ```
 
-
 ## References
- * [https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall](https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall)
- * [https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion](https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion)
+
+- [https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall](https://docs.pmd-code.org/latest/pmd_rules_java_performance.html#optimizabletoarraycall)
+- [https://shipilev.net/blog/2016/arrays-wisdom-ancients/#\_conclusion](https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion)

@@ -3,11 +3,11 @@ title: "Introduced protections against predictable RNG abuse"
 sidebar_position: 1
 ---
 
-## pixee:java/secure-random 
+## pixee:java/secure-random
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| MEDIUM | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| MEDIUM     | Merge Without Review | No                     |
 
 This change replaces all new instances of `java.util.Random` with the marginally slower, but much more secure `java.security.SecureRandom`.
 
@@ -22,8 +22,8 @@ Switching to a more secure version is simple and our changes all look something 
 + Random r = new java.security.SecureRandom();
 ```
 
-
 ## References
- * [https://owasp.org/www-community/vulnerabilities/Insecure_Randomness](https://owasp.org/www-community/vulnerabilities/Insecure_Randomness)
- * [https://metebalci.com/blog/everything-about-javas-securerandom/](https://metebalci.com/blog/everything-about-javas-securerandom/)
- * [https://cwe.mitre.org/data/definitions/330.html](https://cwe.mitre.org/data/definitions/330.html)
+
+- [https://owasp.org/www-community/vulnerabilities/Insecure_Randomness](https://owasp.org/www-community/vulnerabilities/Insecure_Randomness)
+- [https://metebalci.com/blog/everything-about-javas-securerandom/](https://metebalci.com/blog/everything-about-javas-securerandom/)
+- [https://cwe.mitre.org/data/definitions/330.html](https://cwe.mitre.org/data/definitions/330.html)

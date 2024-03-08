@@ -6,12 +6,13 @@ sidebar_position: 1
 ## pixee:python/fix-async-task-instantiation
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | Low        | Merge After Cursory Review | No                     |
 
 The `asyncio` [documentation](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task) explicitly discourages manual instantiation of a `Task` instance and instead recommends calling `create_task`. This keeps your code in line with recommended best practices and promotes maintainability.
 
 Our changes look like the following:
+
 ```diff
  import asyncio
 
@@ -33,4 +34,4 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/library/asyncio-task.html#asyncio.Task](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task)
+- [https://docs.python.org/3/library/asyncio-task.html#asyncio.Task](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task)

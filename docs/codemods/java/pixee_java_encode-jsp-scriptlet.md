@@ -3,11 +3,11 @@ title: "Introduced protections against XSS attacks in JSP scriptlets"
 sidebar_position: 1
 ---
 
-## pixee:java/encode-jsp-scriptlet 
+## pixee:java/encode-jsp-scriptlet
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change encodes certain JSP scriptlets to fix what appear to be trivially exploitable [Reflected Cross-Site Scripting (XSS)](https://portswigger.net/web-security/cross-site-scripting) vulnerabilities in your JSP files. XSS is a vulnerability that is tricky to understand initially, but really easy to exploit.
 
@@ -28,8 +28,8 @@ Our changes introduce an HTML-encoding mechanism that look something like this:
 
 This change neutralizes the control characters that attackers would use to execute code. Depending on the context in which the scriptlet is rendered (e.g., inside HTML tags, HTML attributes, in JavaScript, quoted contexts, etc.), you may need to use another encoder. Check out the [OWASP XSS Prevention CheatSheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) to learn more about these cases and other controls you may need.
 
-
 ## References
- * [https://portswigger.net/web-security/cross-site-scripting](https://portswigger.net/web-security/cross-site-scripting)
- * [https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
- * [https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
+
+- [https://portswigger.net/web-security/cross-site-scripting](https://portswigger.net/web-security/cross-site-scripting)
+- [https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+- [https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)

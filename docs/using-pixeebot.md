@@ -26,16 +26,16 @@ Within a couple of minutes, Pixeebot will open a new pull request with additiona
 
 ![Summon from issue](/img/summon3.png)
 
+## Pull request reminders
 
-## Pull request reminders 
+If a Pixeebot pull request remains open, two automatic reminders will occur over time in the form of comments on the pull request.
 
-If a Pixeebot pull request remains open, two automatic reminders will occur over time in the form of comments on the pull request. 
+If the pull request is still not merged or closed after two weeks, Pixeebot will close it automatically with a final comment.
 
-If the pull request is still not merged or closed after two weeks, Pixeebot will close it automatically with a final comment. 
-
-If a closed pull request indicates additional recommendations are available, Pixeebot can still be summoned after the pull request has been reopened. 
+If a closed pull request indicates additional recommendations are available, Pixeebot can still be summoned after the pull request has been reopened.
 
 ## Pixeebot status
+
 When a pull request is opened, Pixeebot will initiate its run, and you can monitor progress in the status checks section of your pull request.
 
 If Pixeebot does not have any recommendations, it will mark the check as Successful. If recommendations are found, a separate pull request will be generated, and the check will be marked as Neutral. Review the check details to access the new pull request link and additional information regarding the recommendations. If you merge the new pull request, the original check will register this and be updated to Successful.
@@ -45,6 +45,7 @@ If Pixeebot does not have any recommendations, it will mark the check as Success
 ![checks in progress](/img/checks_in_progress.png)
 
 ## Pixeebot activity
-The Activity dashboard exists as a GitHub Issue and offers a holistic perspective on Pixeebot's functionality within your repository. Through this interface, you can conveniently monitor your open pull requests, other available recommendations, and more. The dashboard is automatically enabled upon installation, provided that GitHub Issues are also enabled for your repository. 
+
+The Activity dashboard exists as a GitHub Issue and offers a holistic perspective on Pixeebot's functionality within your repository. Through this interface, you can conveniently monitor your open pull requests, other available recommendations, and more. The dashboard is automatically enabled upon installation, provided that GitHub Issues are also enabled for your repository.
 
 The issue can remain open, and the data will automatically refresh with each Pixeebot analysis that occurs. If the issue is closed, the feature will be disabled and the data will become stale. Reopening it will reactivate the dashboard, and resume auto-updates when Pixeebot runs.

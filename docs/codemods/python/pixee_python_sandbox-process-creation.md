@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/sandbox-process-creation
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | High       | Merge After Cursory Review | No                     |
 
 This codemod sandboxes all instances of [subprocess.run](https://docs.python.org/3/library/subprocess.html#subprocess.run) and [subprocess.call](https://docs.python.org/3/library/subprocess.html#subprocess.call) to offer protection against attack.
@@ -27,8 +27,9 @@ Our change introduces a sandbox which protects the application:
 ```
 
 The default `safe_command` restrictions applied are the following:
-* **Prevent command chaining**. Many exploits work by injecting command separators and causing the shell to interpret a second, malicious command. The `safe_command` functions attempt to parse the given command, and throw a `SecurityException` if multiple commands are present.
-* **Prevent arguments targeting sensitive files.** There is little reason for custom code to target sensitive system files like `/etc/passwd`, so the sandbox prevents arguments that point to these files that may be targets for exfiltration.
+
+- **Prevent command chaining**. Many exploits work by injecting command separators and causing the shell to interpret a second, malicious command. The `safe_command` functions attempt to parse the given command, and throw a `SecurityException` if multiple commands are present.
+- **Prevent arguments targeting sensitive files.** There is little reason for custom code to target sensitive system files like `/etc/passwd`, so the sandbox prevents arguments that point to these files that may be targets for exfiltration.
 
 There are [more options for sandboxing](https://github.com/pixee/python-security/blob/main/src/security/safe_command/api.py#L5) if you are interested in locking down system commands even more.
 
@@ -46,5 +47,5 @@ N/A
 
 ## References
 
-* [https://github.com/pixee/python-security/blob/main/src/security/safe_command/api.py](https://github.com/pixee/python-security/blob/main/src/security/safe_command/api.py)
-* [https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [https://github.com/pixee/python-security/blob/main/src/security/safe_command/api.py](https://github.com/pixee/python-security/blob/main/src/security/safe_command/api.py)
+- [https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)

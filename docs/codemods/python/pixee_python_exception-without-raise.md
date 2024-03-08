@@ -6,12 +6,13 @@ sidebar_position: 1
 ## pixee:python/exception-without-raise
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Low        | Merge Without Review | No                     |
 
-This codemod fixes cases where an exception is referenced by itself in a statement without being raised. This most likely indicates a bug: you probably meant to actually raise the exception. 
+This codemod fixes cases where an exception is referenced by itself in a statement without being raised. This most likely indicates a bug: you probably meant to actually raise the exception.
 
 Our changes look something like this:
+
 ```diff
 try:
 -   ValueError
@@ -34,4 +35,4 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/tutorial/errors.html#raising-exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions)
+- [https://docs.python.org/3/tutorial/errors.html#raising-exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions)

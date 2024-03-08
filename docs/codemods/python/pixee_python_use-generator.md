@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/use-generator
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Low        | Merge Without Review | No                     |
 
 Imagine that someone handed you a pile of 100 apples and then asked you to count how many of them were green without putting any of them down. You'd probably find this quite challenging and you'd struggle to hold the pile of apples at all. Now imagine someone handed you the apples one at a time and asked you to just count the green ones. This would be a much easier task.
@@ -18,6 +18,7 @@ Using generator expressions instead of list comprehensions can lead to better pe
 This codemod replaces the use of a list comprehension expression with a generator expression within certain function calls. Generators allow for lazy evaluation of the iterator, which can have performance benefits.
 
 The changes from this codemod look like this:
+
 ```diff
 - result = sum([x for x in range(1000)])
 + result = sum(x for x in range(1000))
@@ -37,6 +38,6 @@ N/A
 
 ## References
 
-* [https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/use-a-generator.html](https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/use-a-generator.html)
-* [https://docs.python.org/3/glossary.html#term-generator-expression](https://docs.python.org/3/glossary.html#term-generator-expression)
-* [https://docs.python.org/3/glossary.html#term-list-comprehension](https://docs.python.org/3/glossary.html#term-list-comprehension)
+- [https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/use-a-generator.html](https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/use-a-generator.html)
+- [https://docs.python.org/3/glossary.html#term-generator-expression](https://docs.python.org/3/glossary.html#term-generator-expression)
+- [https://docs.python.org/3/glossary.html#term-list-comprehension](https://docs.python.org/3/glossary.html#term-list-comprehension)

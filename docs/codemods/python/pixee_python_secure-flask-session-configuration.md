@@ -5,11 +5,11 @@ sidebar_position: 1
 
 ## pixee:python/secure-flask-session-configuration
 
-| Importance | Review Guidance     | Requires Scanning Tool |
-|------------|---------------------|------------------------|
-| Medium     | Merge After Review  | No                     |
+| Importance | Review Guidance    | Requires Scanning Tool |
+| ---------- | ------------------ | ---------------------- |
+| Medium     | Merge After Review | No                     |
 
-Flask applications can configure sessions behavior at the application level. 
+Flask applications can configure sessions behavior at the application level.
 This codemod looks for Flask application configuration that set `SESSION_COOKIE_HTTPONLY`, `SESSION_COOKIE_SECURE`, or `SESSION_COOKIE_SAMESITE` to an insecure value and changes it to a secure one.
 
 The changes from this codemod look like this:
@@ -37,5 +37,5 @@ N/A
 
 ## References
 
-* [https://owasp.org/www-community/controls/SecureCookieAttribute](https://owasp.org/www-community/controls/SecureCookieAttribute)
-* [https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+- [https://owasp.org/www-community/controls/SecureCookieAttribute](https://owasp.org/www-community/controls/SecureCookieAttribute)
+- [https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)

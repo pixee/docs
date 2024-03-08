@@ -3,11 +3,11 @@ title: "Refactored to use parameterized SQL APIs"
 sidebar_position: 1
 ---
 
-## pixee:java/sql-parameterizer 
+## pixee:java/sql-parameterizer
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge After Review | No     |
+| Importance | Review Guidance    | Requires Scanning Tool |
+| ---------- | ------------------ | ---------------------- |
+| HIGH       | Merge After Review | No                     |
 
 This change refactors SQL statements to be parameterized, rather than built by hand.
 
@@ -29,7 +29,7 @@ Our changes look something like this:
 
 Although there should be no functional differences, the rewrite here is complex and should be verified by a human.
 
-
 ## References
- * [https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
- * [https://cwe.mitre.org/data/definitions/89.html](https://cwe.mitre.org/data/definitions/89.html)
+
+- [https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+- [https://cwe.mitre.org/data/definitions/89.html](https://cwe.mitre.org/data/definitions/89.html)

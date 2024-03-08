@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/bad-lock-with-statement
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Low        | Merge Without Review | No                     |
 
 This codemod separates creating a threading lock instance from calling it as a context manager. Calling `with threading.Lock()` does not have the effect you would expect. The lock is not acquired. Instead, to correctly acquire a lock, create the instance separately, before calling it as a context manager.
@@ -37,5 +37,5 @@ N/A
 
 ## References
 
-* [https://pylint.pycqa.org/en/latest/user_guide/messages/warning/useless-with-lock.](https://pylint.pycqa.org/en/latest/user_guide/messages/warning/useless-with-lock.)
-* [https://docs.python.org/3/library/threading.html#using-locks-conditions-and-semaphores-in-the-with-statement](https://docs.python.org/3/library/threading.html#using-locks-conditions-and-semaphores-in-the-with-statement)
+- [https://pylint.pycqa.org/en/latest/user_guide/messages/warning/useless-with-lock.](https://pylint.pycqa.org/en/latest/user_guide/messages/warning/useless-with-lock.)
+- [https://docs.python.org/3/library/threading.html#using-locks-conditions-and-semaphores-in-the-with-statement](https://docs.python.org/3/library/threading.html#using-locks-conditions-and-semaphores-in-the-with-statement)

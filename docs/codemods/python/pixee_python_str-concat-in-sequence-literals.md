@@ -6,12 +6,13 @@ sidebar_position: 1
 ## pixee:python/str-concat-in-sequence-literals
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | Medium     | Merge After Cursory Review | No                     |
 
-This codemod fixes cases of implicit string concatenation inside lists, sets, or tuples. This is most likely a mistake: you probably meant include a comma in between the concatenated strings. 
+This codemod fixes cases of implicit string concatenation inside lists, sets, or tuples. This is most likely a mistake: you probably meant include a comma in between the concatenated strings.
 
 Our changes look something like this:
+
 ```diff
 bad = [
 -    "ab"

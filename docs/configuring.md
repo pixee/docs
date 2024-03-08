@@ -13,6 +13,7 @@ There are two approaches to configuring Pixeebot:
    Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
 
 ## YAML
+
 A typical `.yaml` configuration file might look like this:
 
 ```yaml
@@ -24,7 +25,7 @@ ai:
 
 ### `ai`
 
-Contains settings related to AI functionality. 
+Contains settings related to AI functionality.
 
 #### `allow_llm_access`
 

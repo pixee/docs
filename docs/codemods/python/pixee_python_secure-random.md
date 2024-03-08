@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/secure-random
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | High       | Merge After Cursory Review | No                     |
 
 This codemod replaces all instances of functions in the `random` module (e.g. `random.random()` with their, much more secure, equivalents from the `secrets` module (e.g. `secrets.SystemRandom().random()`).
@@ -39,5 +39,5 @@ N/A
 
 ## References
 
-* [https://owasp.org/www-community/vulnerabilities/Insecure_Randomness](https://owasp.org/www-community/vulnerabilities/Insecure_Randomness)
-* [https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html)
+- [https://owasp.org/www-community/vulnerabilities/Insecure_Randomness](https://owasp.org/www-community/vulnerabilities/Insecure_Randomness)
+- [https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html)

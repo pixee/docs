@@ -3,11 +3,11 @@ title: "Introduced protections against system command injection"
 sidebar_position: 1
 ---
 
-## pixee:java/harden-process-creation 
+## pixee:java/harden-process-creation
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change hardens all instances of [Runtime#exec()](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runtime.html) to offer protection against attack.
 
@@ -23,8 +23,9 @@ Our change introduces a sandbox which protects the application:
 ```
 
 The default restrictions applied are the following:
-* **Prevent command chaining**. Many exploits work by injecting command separators and causing the shell to interpret a second, malicious command. The `SystemCommand#runCommand()` attempts to parse the given command, and throw a `SecurityException` if multiple commands are present.
-* **Prevent arguments targeting sensitive files.** There is little reason for custom code to target sensitive system files like `/etc/passwd`, so the sandbox prevents arguments that point to these files that may be targets for exfiltration.
+
+- **Prevent command chaining**. Many exploits work by injecting command separators and causing the shell to interpret a second, malicious command. The `SystemCommand#runCommand()` attempts to parse the given command, and throw a `SecurityException` if multiple commands are present.
+- **Prevent arguments targeting sensitive files.** There is little reason for custom code to target sensitive system files like `/etc/passwd`, so the sandbox prevents arguments that point to these files that may be targets for exfiltration.
 
 There are [more options for sandboxing](https://github.com/pixee/java-security-toolkit/blob/main/src/main/java/io/github/pixee/security/SystemCommand.java#L15) if you are interested in locking down system commands even more.
 
@@ -34,7 +35,7 @@ There are [more options for sandboxing](https://github.com/pixee/java-security-t
 
 We believe this change is safe and effective. The behavior of hardened `Runtime#exec()` calls will only throw `SecurityException` if they see behavior involved in malicious code execution, which is extremely unlikely to happen in normal operation.
 
-
 ## References
- * [https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
- * [https://wiki.sei.cmu.edu/confluence/display/java/IDS07-J.+Sanitize+untrusted+data+passed+to+the+Runtime.exec%28%29+method](https://wiki.sei.cmu.edu/confluence/display/java/IDS07-J.+Sanitize+untrusted+data+passed+to+the+Runtime.exec%28%29+method)
+
+- [https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [https://wiki.sei.cmu.edu/confluence/display/java/IDS07-J.+Sanitize+untrusted+data+passed+to+the+Runtime.exec%28%29+method](https://wiki.sei.cmu.edu/confluence/display/java/IDS07-J.+Sanitize+untrusted+data+passed+to+the+Runtime.exec%28%29+method)

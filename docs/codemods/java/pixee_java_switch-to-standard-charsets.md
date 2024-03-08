@@ -3,11 +3,11 @@ title: "Switch to StandardCharsets fields instead of strings"
 sidebar_position: 1
 ---
 
-## pixee:java/switch-to-standard-charsets 
+## pixee:java/switch-to-standard-charsets
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| LOW | Merge After Review | No     |
+| Importance | Review Guidance    | Requires Scanning Tool |
+| ---------- | ------------------ | ---------------------- |
+| LOW        | Merge After Review | No                     |
 
 This change removes character set lookups with hardcoded strings like `"UTF-8"` in favor of referencing the `StandardCharsets` constants, which were [introduced in Java 7](https://docs.oracle.com/javase/7/docs/api/java/nio/charset/StandardCharsets.html).
 
@@ -23,7 +23,7 @@ Our changes look something like this:
 
 Note: Further changes to exception handling may be needed.
 
-
 ## References
- * [https://community.sonarsource.com/t/use-standardcharsets-instead-of-charset-names/638](https://community.sonarsource.com/t/use-standardcharsets-instead-of-charset-names/638)
- * [https://github.com/pmd/pmd/issues/3190](https://github.com/pmd/pmd/issues/3190)
+
+- [https://community.sonarsource.com/t/use-standardcharsets-instead-of-charset-names/638](https://community.sonarsource.com/t/use-standardcharsets-instead-of-charset-names/638)
+- [https://github.com/pmd/pmd/issues/3190](https://github.com/pmd/pmd/issues/3190)

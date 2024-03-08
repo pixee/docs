@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/fix-mutable-params
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Medium     | Merge Without Review | No                     |
 
 Using mutable values for default arguments is not a safe practice.
@@ -38,11 +38,12 @@ But that's not what happens!
 
 The value of `y` is preserved between calls! This might seem surprising, and it is. It's due to the way that scope works for function arguments in Python.
 
-The result is that any default argument value will be preserved between function calls. This is problematic for *mutable* types, including things like `list`, `dict`, and `set`.
+The result is that any default argument value will be preserved between function calls. This is problematic for _mutable_ types, including things like `list`, `dict`, and `set`.
 
 Relying on this behavior is unpredictable and generally considered to be unsafe. Most of us who write code like this were not anticipating the surprising behavior, so it's best to fix it.
 
 Our codemod makes an update that looks like this:
+
 ```diff
 - def foo(x, y=[]):
 + def foo(x, y=None):

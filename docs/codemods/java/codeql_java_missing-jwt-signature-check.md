@@ -3,11 +3,11 @@ title: "Switch JWT calls to versions that enforce signature validity (CodeQL)"
 sidebar_position: 1
 ---
 
-## codeql:java/missing-jwt-signature-check 
+## codeql:java/missing-jwt-signature-check
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| MEDIUM | Merge Without Review | Yes (CodeQL)     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| MEDIUM     | Merge Without Review | Yes (CodeQL)           |
 
 This change switches to Json Web Token (JWT) parsing APIs that perform signature validation.
 
@@ -22,7 +22,7 @@ Changing out these methods is easy and our changes look something like this:
 + Jwt<Header, Claims> jwt = jwtParser.parseClaimsJwt(token);
 ```
 
-
 ## References
- * [https://codeql.github.com/codeql-query-help/java/java-missing-jwt-signature-check/](https://codeql.github.com/codeql-query-help/java/java-missing-jwt-signature-check/)
- * [https://cwe.mitre.org/data/definitions/347.html](https://cwe.mitre.org/data/definitions/347.html)
+
+- [https://codeql.github.com/codeql-query-help/java/java-missing-jwt-signature-check/](https://codeql.github.com/codeql-query-help/java/java-missing-jwt-signature-check/)
+- [https://cwe.mitre.org/data/definitions/347.html](https://cwe.mitre.org/data/definitions/347.html)

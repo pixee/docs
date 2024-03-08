@@ -3,11 +3,11 @@ title: "Upgraded SSLEngine#setEnabledProtocols() TLS versions to match current b
 sidebar_position: 1
 ---
 
-## pixee:java/upgrade-sslengine-tls 
+## pixee:java/upgrade-sslengine-tls
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change ensures that `SSLEngine#setEnabledProtocols()` retrieves a safe version of Transport Layer Security (TLS), which is necessary for safe SSL connections.
 
@@ -23,7 +23,7 @@ Our change involves modifying the arguments to `setEnabledProtocols()` to return
 
 There is no functional difference between the unsafe and safe versions, and all modern servers offer TLSv1.2.
 
-
 ## References
- * [https://datatracker.ietf.org/doc/rfc8996/](https://datatracker.ietf.org/doc/rfc8996/)
- * [https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1](https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1)
+
+- [https://datatracker.ietf.org/doc/rfc8996/](https://datatracker.ietf.org/doc/rfc8996/)
+- [https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1](https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1)

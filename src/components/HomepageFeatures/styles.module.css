@@ -42,7 +42,7 @@
 
 .grid h1 span,
 .lastGrid h1 span {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: var(--ifr-color-neutral-90);
 }
@@ -57,7 +57,7 @@
 }
 
 /* Dark mode styles */
-[data-theme='dark'] .item {
+[data-theme="dark"] .item {
   border: 1px solid #ccc;
   border-radius: 16px;
   border: 1px solid #463b68;
@@ -65,14 +65,14 @@
   padding: 24px;
 }
 
-[data-theme='dark'] .grid h1 span,
-[data-theme='dark'] .lastGrid h1 span,
-[data-theme='dark'] .grid p,
-[data-theme='dark'] .lastGrid p {
+[data-theme="dark"] .grid h1 span,
+[data-theme="dark"] .lastGrid h1 span,
+[data-theme="dark"] .grid p,
+[data-theme="dark"] .lastGrid p {
   color: var(--ifr-color-neutral-10);
 }
 
-[data-theme='dark'] .item:hover {
+[data-theme="dark"] .item:hover {
   background: var(
     --backgrounds-iris-focus,
     radial-gradient(80.33% 96.88% at 84.06% -18.59%, #6000fe 0%, #2c2541 91.18%)

@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/secure-flask-cookie
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | Medium     | Merge After Cursory Review | No                     |
 
 This codemod sets the most secure parameters when Flask applications call `set_cookie` on a response object. Without these parameters, your Flask
@@ -39,5 +39,5 @@ N/A
 
 ## References
 
-* [https://flask.palletsprojects.com/en/3.0.x/api/#flask.Response.set_cookie](https://flask.palletsprojects.com/en/3.0.x/api/#flask.Response.set_cookie)
-* [https://owasp.org/www-community/controls/SecureCookieAttribute](https://owasp.org/www-community/controls/SecureCookieAttribute)
+- [https://flask.palletsprojects.com/en/3.0.x/api/#flask.Response.set_cookie](https://flask.palletsprojects.com/en/3.0.x/api/#flask.Response.set_cookie)
+- [https://owasp.org/www-community/controls/SecureCookieAttribute](https://owasp.org/www-community/controls/SecureCookieAttribute)

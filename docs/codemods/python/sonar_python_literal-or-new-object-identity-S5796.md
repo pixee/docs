@@ -6,7 +6,7 @@ sidebar_position: 1
 ## sonar:python/literal-or-new-object-identity-S5796
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Low        | Merge Without Review | Yes (Sonar)            |
 
 This codemod acts upon the following Sonar rules: 'python:S5796'.
@@ -35,5 +35,5 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/library/stdtypes.html#comparisons](https://docs.python.org/3/library/stdtypes.html#comparisons)
-* [https://rules.sonarsource.com/python/type/Bug/RSPEC-5796/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5796/)
+- [https://docs.python.org/3/library/stdtypes.html#comparisons](https://docs.python.org/3/library/stdtypes.html#comparisons)
+- [https://rules.sonarsource.com/python/type/Bug/RSPEC-5796/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5796/)

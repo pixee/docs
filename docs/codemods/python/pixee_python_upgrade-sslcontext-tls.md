@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/upgrade-sslcontext-tls
 
 | Importance | Review Guidance            | Requires Scanning Tool |
-|------------|----------------------------|------------------------|
+| ---------- | -------------------------- | ---------------------- |
 | High       | Merge After Cursory Review | No                     |
 
 This codemod replaces the use of all unsafe and/or deprecated SSL/TLS versions
@@ -19,7 +19,7 @@ use `PROTOCOL_TLS_CLIENT`.
 
 ```diff
   import ssl
-- context = ssl.SSLContext()  
+- context = ssl.SSLContext()
 + context = ssl.SSLContext(protocol=PROTOCOL_TLS_CLIENT)
 - context = ssl.SSLContext(protocol=PROTOCOL_SSLv3)
 + context = ssl.SSLContext(protocol=PROTOCOL_TLS_CLIENT)
@@ -47,6 +47,6 @@ N/A
 
 ## References
 
-* [https://docs.python.org/3/library/ssl.html#security-considerations](https://docs.python.org/3/library/ssl.html#security-considerations)
-* [https://datatracker.ietf.org/doc/rfc8996/](https://datatracker.ietf.org/doc/rfc8996/)
-* [https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1](https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1)
+- [https://docs.python.org/3/library/ssl.html#security-considerations](https://docs.python.org/3/library/ssl.html#security-considerations)
+- [https://datatracker.ietf.org/doc/rfc8996/](https://datatracker.ietf.org/doc/rfc8996/)
+- [https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1](https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1)

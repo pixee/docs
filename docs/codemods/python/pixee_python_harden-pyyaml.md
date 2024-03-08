@@ -6,7 +6,7 @@ sidebar_position: 1
 ## pixee:python/harden-pyyaml
 
 | Importance | Review Guidance      | Requires Scanning Tool |
-|------------|----------------------|------------------------|
+| ---------- | -------------------- | ---------------------- |
 | Medium     | Merge Without Review | No                     |
 
 This codemod hardens all [`yaml.load()`](https://pyyaml.org/wiki/PyYAMLDocumentation) calls against attacks that could result from deserializing untrusted data.
@@ -20,6 +20,7 @@ The changes from this codemod look like this:
 - deserialized_data = yaml.load(data, yaml.Loader)
 + deserialized_data = yaml.load(data, Loader=yaml.SafeLoader)
 ```
+
 The codemod will also catch if you pass in the loader argument as a kwarg and if you use any loader other than `SafeLoader`,
 including `FullLoader` and `UnsafeLoader`.
 
@@ -37,4 +38,4 @@ N/A
 
 ## References
 
-* [https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data](https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data)
+- [https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data](https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data)

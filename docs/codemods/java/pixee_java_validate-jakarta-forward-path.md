@@ -3,11 +3,11 @@ title: "Introduced protections against user-controlled internal request forwardi
 sidebar_position: 1
 ---
 
-## pixee:java/validate-jakarta-forward-path 
+## pixee:java/validate-jakarta-forward-path
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| HIGH | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| HIGH       | Merge Without Review | No                     |
 
 This change hardens all [`ServletRequest#getRequestDispatcher(String)`](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html#getRequestDispatcher-java.lang.String-) calls against attack.
 
@@ -24,6 +24,6 @@ Our change introduces an API that offers some validation against forwards that t
   request.getRequestDispatcher(path).forward(request, response);
 ```
 
-
 ## References
- * [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-forward-example](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-forward-example)
+
+- [https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-forward-example](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-forward-example)

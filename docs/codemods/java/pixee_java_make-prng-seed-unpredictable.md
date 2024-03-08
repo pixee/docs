@@ -3,11 +3,11 @@ title: "Strengthened cipher seed with more unpredictable value"
 sidebar_position: 1
 ---
 
-## pixee:java/make-prng-seed-unpredictable 
+## pixee:java/make-prng-seed-unpredictable
 
-| Importance  | Review Guidance      | Requires Scanning Tool |
-|-------------|----------------------|------------------------|
-| LOW | Merge Without Review | No     |
+| Importance | Review Guidance      | Requires Scanning Tool |
+| ---------- | -------------------- | ---------------------- |
+| LOW        | Merge Without Review | No                     |
 
 This change replaces all the constant seeds passed to `Random#setSeed(long)` with a pseudo-random value, which will make it considerably more secure.
 
@@ -21,9 +21,9 @@ Our change replaces the constant with `System#currentTimeMillis()`.
 + random.setSeed(System.currentTimeMillis());
 ```
 
-
 ## References
- * [https://wiki.sei.cmu.edu/confluence/display/c/MSC32-C.+Properly+seed+pseudorandom+number+generators](https://wiki.sei.cmu.edu/confluence/display/c/MSC32-C.+Properly+seed+pseudorandom+number+generators)
- * [https://wiki.sei.cmu.edu/confluence/display/cplusplus/MSC51-CPP.+Ensure+your+random+number+generator+is+properly+seeded](https://wiki.sei.cmu.edu/confluence/display/cplusplus/MSC51-CPP.+Ensure+your+random+number+generator+is+properly+seeded)
- * [https://cwe.mitre.org/data/definitions/337.html](https://cwe.mitre.org/data/definitions/337.html)
- * [https://en.wikipedia.org/wiki/Random_seed](https://en.wikipedia.org/wiki/Random_seed)
+
+- [https://wiki.sei.cmu.edu/confluence/display/c/MSC32-C.+Properly+seed+pseudorandom+number+generators](https://wiki.sei.cmu.edu/confluence/display/c/MSC32-C.+Properly+seed+pseudorandom+number+generators)
+- [https://wiki.sei.cmu.edu/confluence/display/cplusplus/MSC51-CPP.+Ensure+your+random+number+generator+is+properly+seeded](https://wiki.sei.cmu.edu/confluence/display/cplusplus/MSC51-CPP.+Ensure+your+random+number+generator+is+properly+seeded)
+- [https://cwe.mitre.org/data/definitions/337.html](https://cwe.mitre.org/data/definitions/337.html)
+- [https://en.wikipedia.org/wiki/Random_seed](https://en.wikipedia.org/wiki/Random_seed)

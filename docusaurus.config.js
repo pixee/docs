@@ -1,61 +1,61 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Pixee',
-  tagline: 'Pixee is your automated product security engineer', //TODO: We need a tag line!
-  url: 'https://docs.pixee.ai',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  title: "Pixee",
+  tagline: "Pixee is your automated product security engineer", //TODO: We need a tag line!
+  url: "https://docs.pixee.ai",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'pixee', // Usually your GitHub org/user name.
-  projectName: 'internal-docs', // Usually your repo name.
-  deploymentBranch: 'main',
+  organizationName: "pixee", // Usually your GitHub org/user name.
+  projectName: "internal-docs", // Usually your repo name.
+  deploymentBranch: "main",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   stylesheets: [
-    'https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap',
-    'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap',
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap",
+    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap",
   ],
 
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          sidebarPath: require.resolve("./sidebars.js"),
+          routeBasePath: "/",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/pixee/docs/edit/main/',
+          editUrl: "https://github.com/pixee/docs/edit/main/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/pixee/docs/edit/main/',
+          editUrl: "https://github.com/pixee/docs/edit/main/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-1M7HM648QD',
+          trackingID: "G-1M7HM648QD",
           anonymizeIP: true,
         },
       }),
@@ -66,44 +66,44 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       announcementBar: {
-        id: 'CLI_launch',
-        content: 
-        '<b>🎉 Introducing the Pixee CLI.</b> Bring the power of Pixee\'s <a target="_blank" href="https://codemodder.io/">Codemodder framework</a> to your local development environment. <a target="_blank" href="https://github.com/pixee/pixee-cli">Learn more</a>',
-        backgroundColor: 'fbfafb',
-        textColor: '1c1533',
+        id: "CLI_launch",
+        content:
+          '<b>🎉 Introducing the Pixee CLI.</b> Bring the power of Pixee\'s <a target="_blank" href="https://codemodder.io/">Codemodder framework</a> to your local development environment. <a target="_blank" href="https://github.com/pixee/pixee-cli">Learn more</a>',
+        backgroundColor: "fbfafb",
+        textColor: "1c1533",
         isCloseable: true,
       },
       navbar: {
-        title: 'Pixee',
+        title: "Pixee",
         logo: {
-          alt: 'Pixee',
-          src: 'img/pixee-logo.png',
-          href: 'https://pixee.ai',
+          alt: "Pixee",
+          src: "img/pixee-logo.png",
+          href: "https://pixee.ai",
         },
 
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Docs',
-            className: 'header-routes',
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "Docs",
+            className: "header-routes",
           },
           {
-            to: '/status',
-            label: 'Status',
-            position: 'left',
-            className: 'header-routes',
+            to: "/status",
+            label: "Status",
+            position: "left",
+            className: "header-routes",
           },
           {
-            type: 'html',
-            position: 'right',
+            type: "html",
+            position: "right",
             value:
               '<a href="https://github.com/apps/pixeebot" target="_blank"><div class="header-github-link"></div><a/>',
           },
           {
-            type: 'html',
-            position: 'right',
+            type: "html",
+            position: "right",
             value:
               '<a href="https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA" target="_blank",><div class="header-slack-link"></div><a/>',
           },
@@ -143,7 +143,7 @@ const config = {
 
   scripts: [
     {
-      src: '/js/loadtags.js',
+      src: "/js/loadtags.js",
       async: true,
     },
   ],
