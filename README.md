@@ -16,6 +16,11 @@ $ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Formatting
+
+Uses Prettier to maintain consistent code formatting. Configure your editor to
+use Prettier on save, and/or remember to run `yarn format` to format the source.
+
 ### Build
 
 ```
