@@ -26,7 +26,7 @@ Each party agrees to hold data and confidential information of the other party i
 
 ### How do I know Pixeebot made changes?
 
-Pixeebot works directly with your repositories in GitHub through pull requests, so you decide when and if you want to accept changes suggested by Pixeebot.  You can find suggestions made by Pixeebot in the [Pixeebot Dashboard](https://app.pixee.ai/) as well as your repository's GitHub.com pull requests page. Also, Pixeebot [cryptographically signs every commit](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work), which means changes suggested by Pixeebot are guaranteed to have come from Pixeebot, were not modified after the fact and can be [verified by GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).
+Pixeebot works directly with your repositories in GitHub through pull requests, so you decide when and if you want to accept changes suggested by Pixeebot.  You can find suggestions made by Pixeebot in the [Pixeebot Dashboard](https://app.pixee.ai/) as well as your repository's GitHub.com pull requests page. Also, Pixeebot [cryptographically signs every commit](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work), which means changes suggested by Pixeebot are guaranteed to have come from Pixeebot, were not modified after the fact and are [verified by GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).
 
 ### Where can I learn more and discuss Pixeebot?
 
