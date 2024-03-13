@@ -62,6 +62,22 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          // Redirect from /docs/oldDoc to /integrations
+          {
+            to: '/code-scanning-tools/overview',
+            from: '/integrations'
+          },
+          // You can add more redirects here as needed
+        ],
+      },
+    ]
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
