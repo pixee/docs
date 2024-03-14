@@ -86,6 +86,9 @@ jobs:
   apply-black:
     if: github.event.pull_request.user.login == 'pixeebot[bot]'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
