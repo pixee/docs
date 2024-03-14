@@ -72,15 +72,15 @@ const config = {
             from: '/integrations'
           },
           {
-            to: '/code-scanning-tools/overview/sonar',
+            to: '/code-scanning-tools/sonar',
             from: '/integrations/sonar'
           },
           {
-            to: '/code-scanning-tools/overview/codeql',
+            to: '/code-scanning-tools/codeql',
             from: '/integrations/codeql'
           },
           {
-            to: '/code-scanning-tools/overview/semgrep',
+            to: '/code-scanning-tools/semgrep',
             from: '/integrations/semgrep'
           },
 
