@@ -67,11 +67,23 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          // Redirect from /docs/oldDoc to /integrations
           {
             to: '/code-scanning-tools/overview',
             from: '/integrations'
           },
+          {
+            to: '/code-scanning-tools/overview/sonar',
+            from: '/integrations/sonar'
+          },
+          {
+            to: '/code-scanning-tools/overview/codeql',
+            from: '/integrations/codeql'
+          },
+          {
+            to: '/code-scanning-tools/overview/semgrep',
+            from: '/integrations/semgrep'
+          },
+
           // You can add more redirects here as needed
         ],
       },
