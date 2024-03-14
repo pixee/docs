@@ -133,7 +133,7 @@ const config = {
               {
                 html: `
                 <div class="footerContent">
-                  <div class="copyright"><span>© 2023 Pixee Inc.</span> All rights reserved</div>
+                  <div class="copyright"><span>© 2024 Pixee Inc.</span> All rights reserved</div>
                   <div class="socialIcons">
                   <a href="https://twitter.com/pixeebot" target="_blank"><div class="footer-twitter-link"></div></a>
                   <a href="https://www.linkedin.com/company/pixee/" target="_blank"><div class="footer-linkedin-link"></div></a>
