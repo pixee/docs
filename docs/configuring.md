@@ -93,7 +93,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install black
         run: pip install black
@@ -135,8 +135,8 @@ jobs:
       - name: "Setup JDK"
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: "temurin"
+          java-version: "17"
 
       - name: 🐘Setup Gradle
         uses: gradle/actions/setup-gradle@v3
