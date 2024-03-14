@@ -2,16 +2,17 @@
 title: "Sonar"
 sidebar_position: 1
 ---
+
 # Sonar
 
-Pixeebot can automatically fix issues detected by [Sonar](https://www.sonarsource.com/products/sonarcloud/).  This page explains how to integrate your Sonar results with Pixeebot.
+Pixeebot can automatically fix issues detected by [Sonar](https://www.sonarsource.com/products/sonarcloud/). This page explains how to integrate your Sonar results with Pixeebot.
 
 ## How to Get Started
 
 1. Install [pixeebot Github Application](https://github.com/marketplace/pixeebot-automated-code-fixes)
 2. Install [Sonar Github Application](https://github.com/marketplace/sonarcloud)
-2. Add [Upload Tool Results Github Action](https://github.com/marketplace/actions/upload-tool-results-to-pixeebot)
-3. Start receiving Pull Requests that address Sonar findings.
+3. Add [Upload Tool Results Github Action](https://github.com/marketplace/actions/upload-tool-results-to-pixeebot)
+4. Start receiving Pull Requests that address Sonar findings.
 
 ## More information
 

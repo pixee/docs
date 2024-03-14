@@ -64,30 +64,30 @@ const config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-client-redirects',
+      "@docusaurus/plugin-client-redirects",
       {
         redirects: [
           {
-            to: '/code-scanning-tools/overview',
-            from: '/integrations'
+            to: "/code-scanning-tools/overview",
+            from: "/integrations",
           },
           {
-            to: '/code-scanning-tools/sonar',
-            from: '/integrations/sonar'
+            to: "/code-scanning-tools/sonar",
+            from: "/integrations/sonar",
           },
           {
-            to: '/code-scanning-tools/codeql',
-            from: '/integrations/codeql'
+            to: "/code-scanning-tools/codeql",
+            from: "/integrations/codeql",
           },
           {
-            to: '/code-scanning-tools/semgrep',
-            from: '/integrations/semgrep'
+            to: "/code-scanning-tools/semgrep",
+            from: "/integrations/semgrep",
           },
 
           // You can add more redirects here as needed
         ],
       },
-    ]
+    ],
   ],
 
   themeConfig:
