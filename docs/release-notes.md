@@ -6,6 +6,38 @@ sidebar_position: 8
 
 We're working hard to bring you new features, enhancements, and reliability to the Pixee Platform. We'd ❤️ to hear from you. Drop us a note at [hi@pixee.ai](mailto:hi@pixee.ai)!
 
+## March 15, 2024
+
+> 🛠️
+> **Pixeebot Fixes Sonar Issues:**
+>
+> Pixeebot can now ingest your organization’s Sonar findings and automatically provide PRs to remediate some of them, giving you back development time.
+>
+> Installation is quick and easy. See documentation [here](https://docs.pixee.ai/code-scanning-tools/sonar)
+
+### Pixeebot App + Platform {#2024-03-15---pixeebot-app--platform}
+
+#### 🚀 New Features & Enhancements {#2024-03-15---new-features--enhancements}
+
+- Made enhancements to the platform to speed up feedback delivery
+- Rolled out a new and improved User Dashboard. The User Dashboard on pixee.ai has been updated for easier management of Pixeebot installations and issues across all repositories. Learn more in [this blog post](https://blog.pixee.ai/managing-pixeebot-activity-with-the-new-user-dashboard)
+
+#### 🐛 Bug Fixes {#2024-03-15---bug-fixes}
+
+- Various bug fixes
+
+### Codemodder {#2024-03-15---codemodder}
+
+#### 🐍 Python {#2024-03-15---codemodder-python}
+
+- Updated `fix-deprecated-abstractproperty` codemod to account for `staticmethod` and `classmethod` deprecated properties. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_fix-deprecated-abstractproperty)
+- Updated platform to handle the new CodeTF  `detectionTool` field to ensure consistent presentation for third party tool remediation results.
+
+#### ☕️ Java {#2024-03-15---codemodder-java}
+
+- Updated `switch-literal-first` codemod to account for previous null checks. See codemod documentation [here](https://docs.pixee.ai/codemods/java/pixee_java_switch-literal-first)
+- Updated `harden-process-creation` codemod to ensure that it is not executed when the parameters received are only constant variables or hardcoded values. See codemod documentation [here](https://docs.pixee.ai/codemods/java/pixee_java_harden-process-creation)
+
 ## March 1, 2024
 
 ### Pixeebot App + Platform {#2024-03-01---pixeebot-app--platform}
