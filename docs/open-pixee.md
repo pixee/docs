@@ -29,7 +29,7 @@ Coming soon!
 
 ## Container Images
 
-* [PixeeCLI]()
+* [PixeeCLI](https://hub.docker.com/repository/docker/codemodder/pixee-cli/general)
 * [codemodder-python]()
 * [codemodder-java]()
 
