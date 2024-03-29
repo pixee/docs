@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Pixeebot and Open Pixee
+# Open Pixee
 
 Pixee believes in open source.  We leverage tools from the community and strive to contribute where there are gaps and where we can provide unique solutions.  
 
@@ -24,14 +24,13 @@ Do you want to see Pixee at work in your repository?  We've integrated the Pixee
 
 Coming soon!
 
-* [Gitlab]()
-* [Github]()
+* Gitlab
+* Github
 
 ## Container Images
 
 * [PixeeCLI](https://hub.docker.com/repository/docker/codemodder/pixee-cli/general)
-* [codemodder-python]()
-* [codemodder-java]()
+
 
 ## Want more or something missing? 
 
