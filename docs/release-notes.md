@@ -6,6 +6,38 @@ sidebar_position: 8
 
 We're working hard to bring you new features, enhancements, and reliability to the Pixee Platform. We'd ❤️ to hear from you. Drop us a note at [hi@pixee.ai](mailto:hi@pixee.ai)!
 
+## March 29, 2024
+
+> 🔗
+> **Pixee CLI Bitbucket Integration**
+>
+> You can now put Pixee to work on your Bitbucket repositories using the Pixee Bitbucket pipeline. This integration gives you access to Pixee’s automated code hardening on the Bitbucket platform. Support for GitLab coming soon!
+>
+> For more information, see documentation [here](https://docs.pixee.ai/open-pixee)
+
+### Pixeebot App + Platform {#2024-03-29---pixeebot-app--platform}
+
+#### 🚀 New Features & Enhancements {#2024-03-29---new-features-enhancements}
+
+- Pixeebot now automatically fixes CodeQL and GitHub Advanced Security alerts. No setup required, Pixeebot will automatically work on findings after install. See documentation [here](https://docs.pixee.ai/code-scanning-tools/codeql), and a video walkthrough on our YouTube channel [here](https://youtu.be/DXs8VHsfiIQ)
+
+#### 🐛 Bug Fixes {#2024-03-29---bug-fixes}
+
+- Fixed a bug that prevented available codemods from loading in the the Available table on the User Dashboard
+- Resolved an issue that slowed the loading of analyses counts in the User Dashboard
+
+### Codemodder {#2024-03-29---codemodder}
+
+#### 🐍 Python {#2024-03-29---codemodder-python}
+
+- Updates to improve handling of `requirements.txt` files with `-r` flags
+- Updated `enable-jinja2-autoescape` codemod to better handle cases where the contents of `**kwargs` is unknown. See codemod documentation [here](https://docs.pixee.ai/codemods/python/pixee_python_enable-jinja2-autoescape)
+
+#### ☕️ Java {#2024-03-29---codemodder-java}
+
+- Updated sql-parameterizer codemod to fix additional cases. See codemod documentation [here](https://docs.pixee.ai/codemods/java/pixee_java_sql-parameterizer)
+ 
+
 ## March 15, 2024
 
 > 🛠️
