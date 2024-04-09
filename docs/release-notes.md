@@ -36,7 +36,6 @@ We're working hard to bring you new features, enhancements, and reliability to t
 #### ☕️ Java {#2024-03-29---codemodder-java}
 
 - Updated sql-parameterizer codemod to fix additional cases. See codemod documentation [here](https://docs.pixee.ai/codemods/java/pixee_java_sql-parameterizer)
- 
 
 ## March 15, 2024
 
