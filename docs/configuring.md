@@ -20,9 +20,9 @@ Contains settings related to AI functionality.
 
 #### `allow_llm_access`
 
-Setting to `false` disables Pixeebot features that [rely on generative AI](faqs.md) to analyze your code.
+`true` by default.
 
-> **Note** Pixeebot uses generative AI by default (`true` by default)
+Setting to `false` disables Pixeebot features that [rely on generative AI](faqs.md) to analyze your code.
 
 Example:
 
