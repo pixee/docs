@@ -12,15 +12,6 @@ There are two approaches to configuring Pixeebot:
 2. **Global repository configuration:**
    Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global configuration that applies to multiple repositories.
 
-## YAML
-
-A typical `.yaml` configuration file might look like this:
-
-```yaml
-ai:
-  allow_llm_access: true
-```
-
 ## Properties
 
 ### `ai`
@@ -29,9 +20,46 @@ Contains settings related to AI functionality.
 
 #### `allow_llm_access`
 
-Setting to `true` will enable Pixeebot to [send data to an LLM](faqs.md) while analyzing your code.
+`true` by default.
 
-> **Note** This is the default configuration upon installation.
+Setting to `false` disables Pixeebot features that [rely on generative AI](faqs.md) to analyze your code.
+
+Example:
+
+```yaml
+ai:
+  allow_llm_access: false
+```
+
+### `codemods`
+
+Contains optional settings related to the codemod catalog Pixeebot uses to make changes to repositories.
+
+#### `exclude`
+
+A set of codemods to exclude from the catalog. Each codemod is identified by its codemod ID.
+
+Example:
+
+```yaml
+codemods:
+  exclude:
+    - pixee:python/https-connection
+```
+
+#### `prepend`
+
+A list of non-default codemods to prepend to the codemod catalog. This list is
+ordinal: the continuous improvement campaign will execute the codemods in the
+order given.
+
+Example:
+
+```yaml
+codemods:
+  prepend:
+    - pixee:python/use-walrus-if
+```
 
 ## Configuring automatic assignment
 
