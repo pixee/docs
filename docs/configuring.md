@@ -8,11 +8,11 @@ Pixeebot works immediately after installation without any further configuration.
 
 Users may set Pixeebot preferences at either the organization or repository levels.
 
-1. **Repository Preferences:**
+1. **Repository preferences:**
    Create a `pixeebot.yaml` file in the `.github` directory of the target repository. Preferences in the target repository will take precedence over other preferences.
 
-2. **Organization-Wide preferences:**
-   Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as a global preferences that applies to multiple repositories.
+2. **Organization-wide preferences:**
+   Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as the global preferences that apply to all repositories in this installation.
 
 ## Properties
 
