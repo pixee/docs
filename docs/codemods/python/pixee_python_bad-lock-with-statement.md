@@ -37,5 +37,5 @@ N/A
 
 ## References
 
-- [https://pylint.pycqa.org/en/latest/user_guide/messages/warning/useless-with-lock.](https://pylint.pycqa.org/en/latest/user_guide/messages/warning/useless-with-lock.)
+- [https://pylint.pycqa.org/en/latest/user_guide/messages/warning/useless-with-lock.html](https://pylint.pycqa.org/en/latest/user_guide/messages/warning/useless-with-lock.html)
 - [https://docs.python.org/3/library/threading.html#using-locks-conditions-and-semaphores-in-the-with-statement](https://docs.python.org/3/library/threading.html#using-locks-conditions-and-semaphores-in-the-with-statement)
