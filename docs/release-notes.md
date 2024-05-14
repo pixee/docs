@@ -19,10 +19,10 @@ We're working hard to bring you new features, enhancements, and reliability to t
 
 #### 🚀 New Features & Enhancements {#2024-04-19---new-features-enhancements}
 
-- Users that have configured the Pixeebot <> Sonar integration can now use `workflow_dispatch` as a workflow trigger. For more on using Pixeebot to fix Sonar findings, see documentation [here](https://docs.pixee.ai/code-scanning-tools/sonar)
+- Users that have configured the Pixeebot + Sonar integration can now use `workflow_dispatch` as a workflow trigger. For more on using Pixeebot to fix Sonar findings, see documentation [here](https://docs.pixee.ai/code-scanning-tools/sonar)
 - Refined data displayed on the Activity Dashboard. Additional information on the Pixeebot Activity Dashboard can be found [here](https://blog.pixee.ai/managing-pixeebot-activity-with-the-new-user-dashboard)
 
-#### 🐛 Bug Fixes {#2024-03-29---bug-fixes}
+#### 🐛 Bug Fixes {#2024-04-19---bug-fixes}
 
 - Fixed a bug preventing repo activation and scan status from displaying correctly on the user platform
 
