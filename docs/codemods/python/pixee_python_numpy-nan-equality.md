@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires Scanning Tool |
 | ---------- | -------------------- | ---------------------- |
-| Medium     | Merge Without Review | No                     |
+| Low        | Merge Without Review | No                     |
 
 Comparisons against `numpy.nan` always result in `False`. Thus comparing an expression directly against `numpy.nan` is always unintended. The correct way to compare a value for `NaN` is to use the `numpy.isnan` function.
 

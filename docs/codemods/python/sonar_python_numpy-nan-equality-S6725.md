@@ -7,9 +7,9 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires Scanning Tool |
 | ---------- | -------------------- | ---------------------- |
-| Medium     | Merge Without Review | Yes (Sonar)            |
+| Low        | Merge Without Review | Yes (Sonar)            |
 
-This codemod acts upon the following Sonar rules: 'python:S6725'.
+This codemod acts upon the following Sonar rules: python:S6725.
 
 Comparisons against `numpy.nan` always result in `False`. Thus comparing an expression directly against `numpy.nan` is always unintended. The correct way to compare a value for `NaN` is to use the `numpy.isnan` function.
 
@@ -39,4 +39,4 @@ N/A
 ## References
 
 - [https://numpy.org/doc/stable/reference/constants.html#numpy.nan](https://numpy.org/doc/stable/reference/constants.html#numpy.nan)
-- [https://rules.sonarsource.com/python/type/Bug/RSPEC-6725/](https://rules.sonarsource.com/python/type/Bug/RSPEC-6725/)
+- [Equality checks should not be made against `numpy.nan`](https://rules.sonarsource.com/python/type/Bug/RSPEC-6725/)

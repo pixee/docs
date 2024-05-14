@@ -9,7 +9,7 @@ sidebar_position: 1
 | ---------- | -------------------- | ---------------------- |
 | Low        | Merge Without Review | Yes (Sonar)            |
 
-This codemod acts upon the following Sonar rules: 'python:S3984'.
+This codemod acts upon the following Sonar rules: python:S3984.
 
 This codemod fixes cases where an exception is referenced by itself in a statement without being raised. This most likely indicates a bug: you probably meant to actually raise the exception.
 
@@ -38,4 +38,4 @@ N/A
 ## References
 
 - [https://docs.python.org/3/tutorial/errors.html#raising-exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions)
-- [https://rules.sonarsource.com/python/type/Bug/RSPEC-3984/](https://rules.sonarsource.com/python/type/Bug/RSPEC-3984/)
+- [Exceptions should not be created without being raised](https://rules.sonarsource.com/python/type/Bug/RSPEC-3984/)

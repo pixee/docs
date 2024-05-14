@@ -7,9 +7,9 @@ sidebar_position: 1
 
 | Importance | Review Guidance            | Requires Scanning Tool |
 | ---------- | -------------------------- | ---------------------- |
-| Medium     | Merge After Cursory Review | Yes (Sonar)            |
+| Low        | Merge After Cursory Review | Yes (Sonar)            |
 
-This codemod acts upon the following Sonar rules: 'python:S5905'.
+This codemod acts upon the following Sonar rules: python:S5905.
 
 An assertion on a non-empty tuple will always evaluate to `True`. This means that `assert` statements involving non-empty tuple literals are likely unintentional and should be rewritten. This codemod rewrites the original `assert` statement by creating a new `assert` for each item in the original tuple.
 
@@ -35,4 +35,4 @@ N/A
 
 ## References
 
-- [https://rules.sonarsource.com/python/type/Bug/RSPEC-5905/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5905/)
+- [Assert should not be called on a tuple literal](https://rules.sonarsource.com/python/type/Bug/RSPEC-5905/)

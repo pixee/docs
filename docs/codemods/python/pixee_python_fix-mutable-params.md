@@ -7,7 +7,7 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires Scanning Tool |
 | ---------- | -------------------- | ---------------------- |
-| Medium     | Merge Without Review | No                     |
+| Low        | Merge Without Review | No                     |
 
 Using mutable values for default arguments is not a safe practice.
 Look at the following very simple example code:
