@@ -65,11 +65,11 @@ export default function HomepageFeatures() {
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(4)}>
           <h1>
-            ⚙️ <span>Configuration</span>
+            ⚙️ <span>Preferences</span>
           </h1>
           <p>
-            Understand how and where to configure Pixeebot, view examples and
-            get details about specific properties.
+            Understand how and where to change Pixeebot preferences, view
+            examples and get details about specific properties.
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(5)}>
