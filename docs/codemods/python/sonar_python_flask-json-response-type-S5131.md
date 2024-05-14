@@ -9,7 +9,7 @@ sidebar_position: 1
 | ---------- | -------------------- | ---------------------- |
 | Medium     | Merge Without Review | Yes (Sonar)            |
 
-This codemod acts upon the following Sonar rules: 'pythonsecurity:S5131'.
+This codemod acts upon the following Sonar rules: pythonsecurity:S5131.
 
 The default `mimetype` for `make_response` in Flask is `'text/html'`. This is true even when the response contains JSON data.
 If the JSON contains (unsanitized) user-supplied input, a malicious user may supply HTML code which leaves the application vulnerable to cross-site scripting (XSS).
@@ -44,4 +44,4 @@ N/A
 
 - [https://flask.palletsprojects.com/en/2.3.x/patterns/javascript/#return-json-from-views](https://flask.palletsprojects.com/en/2.3.x/patterns/javascript/#return-json-from-views)
 - [https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding-for-javascript-contexts](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding-for-javascript-contexts)
-- [https://rules.sonarsource.com/python/type/Bug/RSPEC-5131/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5131/)
+- [Endpoints should not be vulnerable to reflected XSS attacks (Flask)](https://rules.sonarsource.com/python/type/Bug/RSPEC-5131/)

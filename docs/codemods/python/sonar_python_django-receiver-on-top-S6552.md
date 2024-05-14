@@ -7,9 +7,9 @@ sidebar_position: 1
 
 | Importance | Review Guidance      | Requires Scanning Tool |
 | ---------- | -------------------- | ---------------------- |
-| Medium     | Merge Without Review | Yes (Sonar)            |
+| Low        | Merge Without Review | Yes (Sonar)            |
 
-This codemod acts upon the following Sonar rules: 'python:S6552'.
+This codemod acts upon the following Sonar rules: python:S6552.
 
 Django uses signals to notify and handle actions that happens elsewhere in the application. You can define a response to a given signal by decorating a function with the `@receiver(signal)` decorator. The order in which the decorators are declared for this function is important. If the `@receiver` decorator is not on top, any decorators before it will be ignored.
 Our changes look something like this:
@@ -41,4 +41,4 @@ N/A
 ## References
 
 - [https://docs.djangoproject.com/en/4.1/topics/signals/](https://docs.djangoproject.com/en/4.1/topics/signals/)
-- [https://rules.sonarsource.com/python/type/Bug/RSPEC-6552/](https://rules.sonarsource.com/python/type/Bug/RSPEC-6552/)
+- [Django signal handler functions should have the `@receiver` decorator on top of all other decorators](https://rules.sonarsource.com/python/type/Bug/RSPEC-6552/)

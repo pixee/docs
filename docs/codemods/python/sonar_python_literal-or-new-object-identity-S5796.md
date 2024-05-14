@@ -9,7 +9,7 @@ sidebar_position: 1
 | ---------- | -------------------- | ---------------------- |
 | Low        | Merge Without Review | Yes (Sonar)            |
 
-This codemod acts upon the following Sonar rules: 'python:S5796'.
+This codemod acts upon the following Sonar rules: python:S5796.
 
 The `is` and `is not` operators only evaluate to `True` when the expressions on each side have the same `id`. In other words, `a is b` is equivalent to `id(a) == id(b)`. With few exceptions, objects and literals have unique identities and thus shouldn't generally be compared by using the `is` or `is not` operators.
 
@@ -36,4 +36,4 @@ N/A
 ## References
 
 - [https://docs.python.org/3/library/stdtypes.html#comparisons](https://docs.python.org/3/library/stdtypes.html#comparisons)
-- [https://rules.sonarsource.com/python/type/Bug/RSPEC-5796/](https://rules.sonarsource.com/python/type/Bug/RSPEC-5796/)
+- [New objects should not be created only to check their identity](https://rules.sonarsource.com/python/type/Bug/RSPEC-5796/)
