@@ -7,7 +7,7 @@ sidebar_position: 2
 
 Pixeebot can automatically fix issues detected by [Semgrep](https://semgrep.dev/).
 
-No setup is required. The codemods listed below support the matching [prebuilt rules](https://registry.semgrep.dev/rule/).
+No setup is required. The codemods listed below support the matching [prebuilt rules](https://semgrep.dev/r/).
 
 ## Codemods
 
