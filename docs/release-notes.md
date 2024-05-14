@@ -6,6 +6,38 @@ sidebar_position: 8
 
 We're working hard to bring you new features, enhancements, and reliability to the Pixee Platform. We'd ❤️ to hear from you. Drop us a note at [hi@pixee.ai](mailto:hi@pixee.ai)!
 
+## April 19, 2024
+
+> ⚡️
+> **Updated Pixeebot App Permissions**
+>
+> In order to propose changes to improve GitHub Actions workflows, we have requested additional GitHub application permissions. **This change increases Pixeebot's access to read and write access to Workflows.**
+>
+> Existing users must update their app permissions and have received an email prompting them to do so. Please reach out to us with any questions!
+
+### Pixeebot App + Platform {#2024-04-19---pixeebot-app--platform}
+
+#### 🚀 New Features & Enhancements {#2024-04-19---new-features-enhancements}
+
+- Users that have configured the Pixeebot + Sonar integration can now use `workflow_dispatch` as a workflow trigger. For more on using Pixeebot to fix Sonar findings, see documentation [here](https://docs.pixee.ai/code-scanning-tools/sonar)
+- Refined data displayed on the Activity Dashboard. Additional information on the Pixeebot Activity Dashboard can be found [here](https://blog.pixee.ai/managing-pixeebot-activity-with-the-new-user-dashboard)
+
+#### 🐛 Bug Fixes {#2024-04-19---bug-fixes}
+
+- Fixed a bug preventing repo activation and scan status from displaying correctly on the user platform
+
+### Codemodder {#2024-04-19---codemodder}
+
+#### 🐍 Python {#2024-04-19---codemodder-python}
+
+- Added detection and processing for external Semgrep SARIF files. This change enables Codemodder to detect Semgrep SARIF provided with the `--sarif` flag
+
+#### ☕️ Java {#2024-04-19---codemodder-java}
+
+- Updated `verbose-request-mapping` codemod to remove unused `RequestMapping` imports after replacing them with shortcut variants. See codemod documentation [here](https://docs.pixee.ai/codemods/java/pixee_java_verbose-request-mapping/)
+- Updated codemod metadata to provide additional context on which findings are associated with which fixes, and reasoning behind any unfixed findings
+- Made improvements to codemods that handle parameterization to prevent unused variables from being included in code fixes
+
 ## March 29, 2024
 
 > 🔗
@@ -35,7 +67,7 @@ We're working hard to bring you new features, enhancements, and reliability to t
 
 #### ☕️ Java {#2024-03-29---codemodder-java}
 
-- Updated sql-parameterizer codemod to fix additional cases. See codemod documentation [here](https://docs.pixee.ai/codemods/java/pixee_java_sql-parameterizer)
+- Updated `sql-parameterizer codemod` to fix additional cases. See codemod documentation [here](https://docs.pixee.ai/codemods/java/pixee_java_sql-parameterizer)
 
 ## March 15, 2024
 
