@@ -36,7 +36,7 @@ We're working hard to bring you new features, enhancements, and reliability to t
 
 - Updated `verbose-request-mapping` codemod to remove unused `RequestMapping` imports after replacing them with shortcut variants. See codemod documentation [here](https://docs.pixee.ai/codemods/java/pixee_java_verbose-request-mapping/)
 - Updated codemod metadata to provide additional context on which findings are associated with which fixes, and reasoning behind any unfixed findings
-- Made improvements to codemods that handle parameterization to prevent unused variables from being included in code fixes 
+- Made improvements to codemods that handle parameterization to prevent unused variables from being included in code fixes
 
 ## March 29, 2024
 
