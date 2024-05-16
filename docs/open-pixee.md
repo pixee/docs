@@ -21,15 +21,12 @@ Learn more in the [README](https://github.com/pixee/pixee-cli#readme)
 Do you want to see Pixee at work in your repository? We've integrated the PixeeCLI into CI scripts for popular platforms.
 
 - [Bitbucket](https://github.com/pixee/pixee-cli/blob/main/ci/bitbucket/README.md)
-
-Coming soon!
-
-- Gitlab
-- Github
+- [Gitlab](https://github.com/pixee/ci/gitlab/README.md)
+- [Github](https://github.com/pixee/ci-integrations/docs/github.md)
 
 ## Container Images
 
-- [PixeeCLI](https://hub.docker.com/repository/docker/codemodder/pixee-cli/general)
+- [PixeeCLI Docker](https://github.com/pixee/pixee-cli#docker-usage)
 
 ## Want more or something missing?
 
