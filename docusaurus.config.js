@@ -58,6 +58,9 @@ const config = {
           trackingID: "G-1M7HM648QD",
           anonymizeIP: true,
         },
+        googleTagManager: {
+          containerID: 'GTM-TSNFBTV',
+        },
       }),
     ],
   ],
