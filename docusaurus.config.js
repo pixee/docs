@@ -55,7 +55,7 @@ const config = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         googleTagManager: {
-          containerId: 'GTM-TSNFBTV',
+          containerId: "GTM-TSNFBTV",
         },
       }),
     ],
