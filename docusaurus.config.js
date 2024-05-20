@@ -59,7 +59,7 @@ const config = {
           anonymizeIP: true,
         },
         googleTagManager: {
-          containerID: "GTM-TSNFBTV",
+          containerId: "GTM-TSNFBTV",
         },
       }),
     ],
