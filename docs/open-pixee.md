@@ -30,4 +30,4 @@ Do you want to see Pixee at work in your repository? We've integrated the PixeeC
 
 ## Want more or something missing?
 
-Join our [community](http://pixeeworks.slack.com) and collaborate in slack or drop us a line at support@pixee.ai.
+Join our [community](http://join.slack.com/t/pixee-community/shared_invite/zt-29qaek3sg-oJA1SkZVV8Jb8FyCoFyu6g) and collaborate in slack or drop us a line at support@pixee.ai.
