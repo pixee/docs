@@ -14,6 +14,22 @@ Users may set Pixeebot preferences at either the organization or repository leve
 2. **Organization-wide preferences:**
    Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as the global preferences that apply to all repositories in this installation.
 
+## Configuring Catalogs
+Pixeebot offers three levels of catalogs for code improvements: less, moderate, and more.
+
+- less: Pixeebot will only suggest improvements for findings identified by a third-party security tool. See the [third-party security tools](code-scanning-tools) page for more information.
+- moderate: In addition to the third-party security tool findings, Suggested fixes will also be provided for security findings identified by Pixeebot.
+- more: Includes everything from the moderate level, along with additional code improvements identified by Pixeebot such as style improvements and best practices.
+
+### Setting the Catalog Value
+
+If no action is taken or not configured, the default catalog value is set to `moderate`.
+
+During Onboarding: You can set the catalog value for your organization during the installation process. Users can access the Pixee Dashboard at any time to update the catalog value. 
+
+Additionally, the catalog value can be configured on a per-repository/per-organization basis by updating the YAML configuration file. See the properties section below for more information.
+
+
 ## Properties
 
 ### `ai`
@@ -61,6 +77,15 @@ Example:
 codemods:
   prepend:
     - pixee:python/use-walrus-if
+```
+
+#### `catalog`
+A string value that determines the catalog level for code improvements. The catalog value can be set to `less`, `moderate`, or `more`.
+
+Example:
+```yaml
+codemods:
+  catalog: more
 ```
 
 ## Configuring automatic assignment
