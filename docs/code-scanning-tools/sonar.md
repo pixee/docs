@@ -1,22 +1,26 @@
 ---
-title: "Sonar"
+title: "SonarCloud"
 sidebar_position: 1
 ---
 
-# Sonar
+# SonarCloud
 
-Pixeebot can automatically fix issues detected by [Sonar](https://www.sonarsource.com/products/sonarcloud/). This page explains how to integrate your Sonar results with Pixeebot.
+Pixeebot can automatically fix issues detected by [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This page explains how to integrate your SonarCloud results with Pixeebot.
+
+:::info
+Looking to fix [SonarQube](https://www.sonarsource.com/products/sonarqube/) issues? See [SonarQube](./sonarqube.md)
+:::
 
 ## How to Get Started
 
-1. Install [pixeebot Github Application](https://github.com/marketplace/pixeebot-automated-code-fixes)
-2. Install [Sonar Github Application](https://github.com/marketplace/sonarcloud)
-3. Add [Upload Tool Results Github Action](https://github.com/marketplace/actions/upload-tool-results-to-pixeebot)
-4. Start receiving Pull Requests that address Sonar findings.
+1. Install [Pixeebot GitHub Application](https://github.com/marketplace/pixeebot-automated-code-fixes)
+2. Install [Sonar GitHub Application](https://github.com/marketplace/sonarcloud)
+3. Add [Upload Tool Results GitHub Action](https://github.com/marketplace/actions/upload-tool-results-to-pixeebot)
+4. Start receiving Pull Requests from Pixeebot that address Sonar findings.
 
-## More information
+## More Information
 
-Pixeebot fixes issues detected by Sonar when repositories have both the Pixeebot and Sonar GitHub Apps installed.
+Pixeebot fixes issues detected by SonarCloud when repositories have both the Pixeebot and SonarCloud GitHub Apps installed.
 
 For public repositories using SonarCloud, Pixeebot retrieves results from sonarcloud.io automatically with no further configuration required from the user.
 
