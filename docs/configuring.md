@@ -197,7 +197,7 @@ name: Update Poetry Lockfile
 on:
   pull_request:
     paths:
-      - 'pyproject.toml'
+      - "pyproject.toml"
 
 jobs:
   update-lock-file:
@@ -212,7 +212,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11' # Specify your Python version here
+          python-version: "3.11" # Specify your Python version here
 
       - name: Install Poetry
         run: pip install poetry
