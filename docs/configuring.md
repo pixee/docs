@@ -182,3 +182,46 @@ jobs:
         with:
           commit_message: ":art: Apply formatting"
 ```
+
+## Configuring Lockfile Updates
+
+Some Pixeebot fixes add dependencies to your project. For package managers that rely on lockfiles, it is important to update the lockfile after adding dependencies. We recommend using a GitHub Action to automatically update lockfiles for Pixeebot PRs.
+
+### Python: Poetry
+
+[Poetry](https://python-poetry.org/) is a popular Python package manager that uses a `pyproject.toml` file to manage dependencies. To automatically update the Poetry lockfile for Pixeebot PRs that add dependencies, add the following GitHub action workflow to your repository:
+
+```yaml
+name: Update Poetry Lockfile
+
+on:
+  pull_request:
+    paths:
+      - 'pyproject.toml'
+
+jobs:
+  update-lock-file:
+    if: github.event.pull_request.user.login == 'pixeebot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11' # Specify your Python version here
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Generate lock file
+        run: poetry update
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: ":lock: Update Poetry lock file"
+```
