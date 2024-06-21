@@ -62,12 +62,6 @@ export default function HomepageFeatures() {
             examples and get details about specific properties.
           </p>
         </div>
-        <div className={styles.item} onClick={() => navigateToDocs(5)}>
-          <h1>
-            ✨️️ <span>Custom codemods</span>
-          </h1>
-          <p>Coming soon!</p>
-        </div>
         <div className={styles.item} onClick={() => navigateToDocs(6)}>
           <h1>
             ❓ <span>FAQs</span>
