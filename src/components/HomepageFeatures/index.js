@@ -53,16 +53,6 @@ export default function HomepageFeatures() {
             <Link to="/category/python">Python</Link>
           </p>
         </div>
-        <div className={styles.item} onClick={() => navigateToDocs(3)}>
-          <h1>
-            💻 <span>Pixee CLI</span>
-          </h1>
-          <p>
-            Try out the power of Pixee codemods locally with our command line
-            interface. See how Pixee can improve and harden your code before
-            installing the GitHub app.
-          </p>
-        </div>
         <div className={styles.item} onClick={() => navigateToDocs(4)}>
           <h1>
             ⚙️ <span>Preferences</span>
