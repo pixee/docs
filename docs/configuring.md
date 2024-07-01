@@ -63,6 +63,22 @@ codemods:
     - pixee:python/use-walrus-if
 ```
 
+### `paths`
+
+Contains optional settings related to the files in the repository being analyzed
+
+#### `exclusions`
+
+A set of paths to files or directories to exclude from pixeebot analysis.
+
+Example:
+
+```yaml
+paths:
+  exclusions:
+    - buildSrc/
+```
+
 ## Configuring automatic assignment
 
 To automatically assign **reviewers** to Pixeebot PRs, consider [setting up a `CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
