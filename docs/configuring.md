@@ -14,6 +14,20 @@ Users may set Pixeebot preferences at either the organization or repository leve
 2. **Organization-wide preferences:**
    Alternatively, you can create the `pixeebot.yaml` file in the `.github` directory of your `.github` repository. This will serve as the global preferences that apply to all repositories in this installation.
 
+## Codemod catalogs
+
+Pixeebot offers three codemod catalogs to choose from in order to tune the type of improvements received.
+
+- **Less**: Pixeebot will only suggest improvements for findings identified by a third-party security tool. See the [third-party security tools](/code-scanning-tools/overview) page for more information.
+- **Moderate**: In addition to third-party security tool findings, Pixeebot will also suggest fixes for its own security findings.
+- **More**: Includes everything from the Less and Moderate catalogs, along with additional suggestions Pixeebot identifies, such as style improvements and best practices.
+
+### Selecting a catalog
+
+During the onboarding process, users will be given the option to select a catalog preference for the organization they are installing on. This will determine the default catalog used for any repositories in that organization. If this step is skipped and no preference is selected, the Moderate catalog will be used by default. At any time, changes can be made by visiting the Pixee dashboard and selecting "View / change default preference" in the User menu.
+
+Additionally, the catalog value can be configured on a per-repository/per-organization basis by updating the YAML configuration file. See the [Properties](#properties) section below for more information.
+
 ## Properties
 
 ### `ai`
@@ -31,6 +45,17 @@ Example:
 ```yaml
 ai:
   allow_llm_access: false
+```
+
+#### `catalog`
+
+A string value that determines the codemod catalog used for code improvements. The value can be set to `less`, `moderate`, or `more`.
+
+Example:
+
+```yaml
+codemods:
+  catalog: more
 ```
 
 ### `codemods`
