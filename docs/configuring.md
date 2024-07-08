@@ -47,9 +47,14 @@ ai:
   allow_llm_access: false
 ```
 
+### `codemods`
+
+Contains optional settings related to the codemod catalog Pixeebot uses to make changes to repositories.
+
 #### `catalog`
 
-A string value that determines the codemod catalog used for code improvements. The value can be set to `less`, `moderate`, or `more`.
+A string value that determines the codemod catalog used for code improvements.
+The value can be set to `less`, `moderate`, or `more`.
 
 Example:
 
@@ -57,10 +62,6 @@ Example:
 codemods:
   catalog: more
 ```
-
-### `codemods`
-
-Contains optional settings related to the codemod catalog Pixeebot uses to make changes to repositories.
 
 #### `exclude`
 
