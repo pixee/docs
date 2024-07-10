@@ -49,7 +49,8 @@ ai:
 
 ### `codemods`
 
-Contains optional settings related to the codemod catalog Pixeebot uses to make changes to repositories.
+Contains optional preferences related to the codemod catalog Pixeebot uses to
+make changes to repositories.
 
 #### `catalog`
 
@@ -65,7 +66,8 @@ codemods:
 
 #### `exclude`
 
-A set of codemods to exclude from the catalog. Each codemod is identified by its codemod ID.
+A set of codemods to exclude from the catalog. Each codemod is identified by its
+codemod ID.
 
 Example:
 
@@ -87,6 +89,25 @@ Example:
 codemods:
   prepend:
     - pixee:python/use-walrus-if
+```
+
+### `paths`
+
+Contains optional preferences for controlling the files and directories that are
+included in Pixeebot analysis.
+
+#### `exclude`
+
+A set of paths to files or directories to exclude from Pixeebot analysis. Each
+path is relative to the root of the repository. Each path in the set may be a
+file, directory, or UNIX glob pattern.
+
+Example:
+
+```yaml
+paths:
+  exclude:
+    - buildSrc/
 ```
 
 ## Configuring automatic assignment
