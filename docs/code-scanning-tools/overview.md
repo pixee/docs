@@ -8,6 +8,11 @@ Pixeebot automatically fixes issues detected by code scanning tools when synced 
 
 # Supported Tools
 
-- [Sonar](/code-scanning-tools/sonar)
+- [Sonar, SonarSource, SonarQube](/code-scanning-tools/sonar)
 - [Semgrep](/code-scanning-tools/semgrep)
 - [CodeQL](/code-scanning-tools/codeql)
+- Snyk
+- Contrast Security
+- HCL AppScan
+- Checkmarx
+- Veracode
