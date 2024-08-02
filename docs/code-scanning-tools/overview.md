@@ -11,3 +11,6 @@ Pixeebot automatically fixes issues detected by code scanning tools when synced 
 - [Sonar](/code-scanning-tools/sonar)
 - [Semgrep](/code-scanning-tools/semgrep)
 - [CodeQL](/code-scanning-tools/codeql)
+- Snyk
+- Contrast Security
+- App Scan
