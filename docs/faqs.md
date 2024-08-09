@@ -39,3 +39,11 @@ See our [Preferences](configuring.md#configuring-automatic-formatting) page for 
 ### Where can I learn more and discuss Pixeebot?
 
 Users can join the Pixee community [on Slack](https://join.slack.com/t/openpixee/shared_invite/zt-1pnk7jqdd-kfwilrfG7Ov4M8rorfOnUA). This channel can be used to engage with peers who are also interested in Pixee. Feel free to email us at help@pixee.ai with any questions or comments.
+
+### Why does pixee sometimes add new dependencies to my project?
+
+We always prefer to use existing controls built into a language, or a control from a well-known and trusted community dependency. When this is not an option, we add our own open source dependency to the project to ensure maximum readability and maintainability. All dependencies utilize permissive open-source licenses.
+
+Learn more about the [Java Security Toolkit (io.github.pixee.java-security-toolkit) on Maven Central](https://central.sonatype.com/artifact/io.github.pixee/java-security-toolkit/overview).
+
+Learn more about the [Python security package on PyPI](https://pypi.org/project/security/).
