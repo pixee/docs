@@ -4,7 +4,20 @@ sidebar_position: 2
 
 # Installing
 
+Pixeebot is available as a GitHub App on the [GitHub Marketplace](https://github.com/apps/pixeebot/).
+We provide a free tier offering that can be installed on any public or private repository. This is a great way to get started with Pixeebot and see how it can help to harden and secure your code.
+
 To install Pixeebot, visit our [GitHub App page](https://github.com/apps/pixeebot/). From there, click **Install** (or **Configure**) and follow the prompts from GitHub. You'll be directed to your Pixee dashboard once the installation process is complete.
+
+## Pixeebot on Premises
+
+Pixeebot can be deployed on-premises for organizations that require additional security or compliance measures. To learn more about Pixeebot on-premises solutions, please [contact us](https://pixee.ai/demo-landing-page).
+
+Also [contact us](https://pixee.ai/demo-landing-page) if you need solutions for other SCMs like GitLab, Bitbucket, etc. We are continuously working on expanding our offerings and have a roadmap for support.
+
+## Tool Connections
+
+Pixeebot can provide fixes "out of the box" for Java and Python repositories. But you'll get the most value out of Pixeebot by [connecting it to your existing code scanning tools and services](/code-scanning-tools/overview). This will allow Pixeebot to provide more accurate and relevant fixes for your codebase.
 
 ## Repository access
 
