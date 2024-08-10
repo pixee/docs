@@ -30,10 +30,11 @@ export default function HomepageFeatures() {
             👋 <span>Introduction</span>
           </h1>
           <p>
-            Welcome to Pixeebot! Learn how Pixeebot can: <ul>
-             <li>Fix security issues reported by your tools</li>
-             <li>Triage security tool findings</li>
-             <li>Harden your code</li>
+            Welcome to Pixeebot! Learn how Pixeebot can:{" "}
+            <ul>
+              <li>Fix security issues reported by your tools</li>
+              <li>Triage security tool findings</li>
+              <li>Harden your code</li>
             </ul>
           </p>
         </div>
@@ -47,14 +48,16 @@ export default function HomepageFeatures() {
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(3)}>
-           <h1>
+          <h1>
             ⬇ <span>Get Started</span>
-           </h1>
-           <p>
-             Pixeebot is available as a{" "}
-             <Link to="https://github.com/apps/pixeebot">GitHub App</Link>.
-             Install it for free to try it out, or <Link to="https://www.pixee.ai/demo-landing-page">contact us</Link> for a demo and on-prem support.
-           </p>
+          </h1>
+          <p>
+            Pixeebot is available as a{" "}
+            <Link to="https://github.com/apps/pixeebot">GitHub App</Link>.
+            Install it for free to try it out, or{" "}
+            <Link to="https://www.pixee.ai/demo-landing-page">contact us</Link>{" "}
+            for a demo and on-prem support.
+          </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(6)}>
           <h1>

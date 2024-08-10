@@ -9,6 +9,8 @@ We provide a free tier offering that can be installed on any public or private r
 
 To install Pixeebot, visit our [GitHub App page](https://github.com/apps/pixeebot/). From there, click **Install** (or **Configure**) and follow the prompts from GitHub. You'll be directed to your Pixee dashboard once the installation process is complete.
 
+See the [Preferences](/configuring) page for information on how to configure Pixeebot to suit your needs.
+
 ## Pixeebot on Premises
 
 Pixeebot can be deployed on-premises for organizations that require additional security or compliance measures. To learn more about Pixeebot on-premises solutions, please [contact us](https://pixee.ai/demo-landing-page).

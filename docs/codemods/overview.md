@@ -4,6 +4,8 @@ sidebar_position: 5
 
 # Core Codemods
 
-Pixeebot currently applies all of the Pixee core codemods for [Java](https://github.com/pixee/codemodder-java/) and [Python](https://github.com/pixee/codemodder-python/), which are maintained as part of the [codemodder project](https://codemodder.io/) to help strengthen your code. More languages are coming soon!
+Pixee uses the open-source [codemodder framework](https://codemodder.io/) to provide automated code improvements. These codemods are continuously updated to ensure Pixee's recommendations align with industry standards and best practices.
 
-This section gives detailed information on those codemods, including how they change the code, how you should consider reviewing their output, and more.
+Pixeebot ships with a set of "core" codemods for [Java](https://github.com/pixee/codemodder-java) and [Python](https://github.com/pixee/codemodder-python) that do not require code scanning tool integration. These core codemods can be applied to your codebase to harden and improve your code in the form of pull requests.
+
+You will get the most value out of Pixee by connecting it to your existing [code scanning tools and services](/code-scanning-tools/overview). This will allow Pixee to provide more accurate and relevant fixes for your codebase and to triage findings from those tools. Tool remediation codemods support a wider set of languages.

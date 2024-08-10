@@ -21,6 +21,8 @@ When triaging and fixing issues detected by code scanning tools, Pixeebot suppor
 
 We are continuously working on expanding our language support. If you need support for a language not listed here, please [contact us](https://pixee.ai/demo-landing-page).
 
+For a list of core codemods that work without code scanning tool integration, see the [Codemods](/codemods/overview) page.
+
 # Supported Tools
 
 - [Sonar, SonarSource, SonarQube](/code-scanning-tools/sonar)
