@@ -40,7 +40,7 @@ Testing with these deliberately insecure applications can give you an idea of ho
 
 For additional details, see the [Installation](/installing) page.
 
-Pixee also supports on-premises deployment for organizations that require additional security or compliance measures. To learn more about Pixee on-premises solutions, please [contact us](https://pixee.ai/demo-landing-page).
+Pixee also supports self-hosted deployments for organizations that require additional security or compliance measures. To learn more about Pixee self-hosted solutions, please [contact us](https://pixee.ai/demo-landing-page).
 
 ### What environment & languages does Pixee support?
 
