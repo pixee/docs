@@ -32,7 +32,7 @@ Pixee can triage and fix a wide range of security issues detected by code scanni
 
 ### How can I test Pixee?
 
-Pixee is most easily tried as a GitHub App on the [GitHub Marketplace](https://github.com/apps/pixeebot/). We provide a free tier on our cloud offering that can be installed on any public or private repository. After adding Pixee, you need to get some code scanning results to show a breadth of fixes avaialble. To do that, try adding [SonarCloud](https://www.sonarsource.com/products/sonarcloud/) to it. This is a great way to get started with Pixee and see how it can help to harden and secure your code, and triage your code scanner alerts.
+Pixee is most easily tried as a GitHub App on the [GitHub Marketplace](https://github.com/apps/pixeebot/). We provide a free tier on our cloud offering that can be installed on any public or private repository. After adding Pixee, you need to get some code scanning results to show a breadth of fixes available. To do that, try adding [SonarCloud](https://www.sonarsource.com/products/sonarcloud/) to it. This is a great way to get started with Pixee and see how it can help to harden and secure your code, and triage your code scanner alerts.
 
 If you need a repository to test with, we recommend trying Pixee out with a deliberately insecure application. Template repositories containing Java and Python test applications are available in PixeeSandbox: [https://github.com/PixeeSandbox](https://github.com/PixeeSandbox).
 
