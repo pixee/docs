@@ -112,12 +112,6 @@ const config = {
             className: "header-routes",
           },
           {
-            to: "/status",
-            label: "Status",
-            position: "left",
-            className: "header-routes",
-          },
-          {
             type: "html",
             position: "right",
             value:

@@ -1,33 +1,23 @@
 ---
 sidebar_position: 5
+title: Open source
 ---
 
-# Open Pixee
+# Open Source
 
 Pixee believes in open source. We leverage tools from the community and strive to contribute where there are gaps and where we can provide unique solutions.
 
-Our product is best experienced via the [GitHub App pixeebot](https://github.com/marketplace/pixeebot-automated-code-fixes/). Powering this pixeebot product experience are several open source projects. See more below and then dig deeper in each project's README.
+## Codemodder
 
-## Pixee CLI
+The fixes we make in Pixee are powered by our open source (and open format!) project called [Codemodder](https://codemodder.io) -- check it out!
 
-The Pixee CLI brings the power of Pixee's [Codemodder framework](https://codemodder.io) to your local development environment. This provides a way for developers to try out Pixee before installing the GitHub app.
+## Contributions
 
-![Pixee CLI Demo](https://github.com/pixee/pixee-cli/raw/main/img/demo.gif)
+We've made contributions to the following OSS projects, either directly or as users of Pixee:
 
-Learn more in the [README](https://github.com/pixee/pixee-cli#readme)
-
-## Integrate Pixee CLI into your CI Environment
-
-Do you want to see Pixee at work in your repository? We've integrated the PixeeCLI into CI scripts for popular platforms.
-
-- [Bitbucket](https://github.com/pixee/pixee-cli/blob/main/ci/bitbucket/README.md)
-- [GitLab](https://github.com/pixee/pixee-cli/blob/main/ci/gitlab/README.md)
-- [GitHub](https://github.com/pixee/ci-integrations/tree/main/docs/github.md)
-
-## Container Images
-
-- [PixeeCLI Docker](https://github.com/pixee/pixee-cli?tab=readme-ov-file#docker-usage)
-
-## Want more or something missing?
-
-Join our [community](http://join.slack.com/t/pixee-community/shared_invite/zt-29qaek3sg-oJA1SkZVV8Jb8FyCoFyu6g) and collaborate in slack or drop us a line at support@pixee.ai.
+* [JavaParser](https://github.com/javaparser/javaparser) (we're a sponsor as well!)
+* [Quarkus](https://github.com/quarkusio/quarkus)
+* [GitHub4j](https://github.com/hub4j/github-api)
+* [JUnit](https://github.com/junit-team)
+* [Spring Framework](https://github.com/spring-projects/spring-framework)
+* [StirlingPDF](https://github.com/Stirling-Tools/Stirling-PDF)

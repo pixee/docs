@@ -30,7 +30,7 @@ export default function HomepageFeatures() {
             👋 <span>Introduction</span>
           </h1>
           <p>
-            Welcome to Pixeebot! Learn how Pixeebot can:{" "}
+            Welcome to Pixee! Learn how Pixee can:{" "}
             <ul>
               <li>Fix security issues reported by your tools</li>
               <li>Triage security tool findings</li>
@@ -43,8 +43,8 @@ export default function HomepageFeatures() {
             🛠️ <span>Supported Tools</span>
           </h1>
           <p>
-            Learn about the code scanning tools Pixeebot supports and how to
-            give Pixeebot access to your tool findings.
+            Learn about the code scanning tools Pixee supports and how to
+            give Pixee access to your tool findings.
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(3)}>
@@ -52,7 +52,7 @@ export default function HomepageFeatures() {
             ⬇ <span>Get Started</span>
           </h1>
           <p>
-            Pixeebot is available as a{" "}
+            Pixeebot is most easily tried as a{" "}
             <Link to="https://github.com/apps/pixeebot">GitHub App</Link>.
             Install it for free to try it out, or{" "}
             <Link to="https://www.pixee.ai/demo-landing-page">contact us</Link>{" "}
@@ -63,7 +63,7 @@ export default function HomepageFeatures() {
           <h1>
             ❓ <span>FAQs</span>
           </h1>
-          <p>Addressing common topics such as data handling and use of LLMs.</p>
+          <p>Addressing common topics such as data handling, our use of AI, on premise offering, etc.</p>
         </div>
       </div>
     </>
