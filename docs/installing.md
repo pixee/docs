@@ -13,7 +13,7 @@ See the [Preferences](/configuring) page for information on how to configure Pix
 
 ## Pixee Enterprise Server
 
-Pixee can be deployed on-premises for organizations that require additional security or compliance measures. To learn more about Pixee on-premises solutions, please [contact us](https://pixee.ai/demo-landing-page).
+Pixee offers self-hosted options for organizations that require additional security or compliance measures. To learn more about Pixee self-hosted solutions, please [contact us](https://pixee.ai/demo-landing-page).
 
 Also [contact us](https://pixee.ai/demo-landing-page) if you want to partner as early customers for other SCMs, including GitLab, Bitbucket, or Azure DevOps.
 
