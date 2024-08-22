@@ -16,6 +16,7 @@ The fixes we make in Pixee are powered by our open source (and open format!) pro
 We've made contributions to the following OSS projects, either directly or as users of Pixee:
 
 - [JavaParser](https://github.com/javaparser/javaparser) (we're a sponsor as well!)
+- [LibCST](https://github.com/Instagram/LibCST/)
 - [Quarkus](https://github.com/quarkusio/quarkus)
 - [GitHub4j](https://github.com/hub4j/github-api)
 - [JUnit](https://github.com/junit-team)
