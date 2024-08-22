@@ -6,7 +6,7 @@ sidebar_position: 8
 
 ### What are Pixee's AI features?
 
-We utilize Large Language Models (LLMs) in to provide some context-aware code fixes and to add code-specific comments, helping developers understand why a change is being recommended. Our triage features use LLMs to gather facts about the vulnerable code flow, wider technical context, in combination with deterministic analysis, to feed an expert recommendation system that produces our results. 
+We utilize Large Language Models (LLMs) in to provide some context-aware code fixes and to add code-specific comments, helping developers understand why a change is being recommended. Our triage features use LLMs to gather facts about the vulnerable code flow, wider technical context, in combination with deterministic analysis, to feed an expert recommendation system that produces our results.
 
 ### What is Pixee's AI policy?
 

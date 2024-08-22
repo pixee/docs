@@ -43,8 +43,8 @@ export default function HomepageFeatures() {
             🛠️ <span>Supported Tools</span>
           </h1>
           <p>
-            Learn about the code scanning tools Pixee supports and how to
-            give Pixee access to your tool findings.
+            Learn about the code scanning tools Pixee supports and how to give
+            Pixee access to your tool findings.
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(3)}>
@@ -63,7 +63,10 @@ export default function HomepageFeatures() {
           <h1>
             ❓ <span>FAQs</span>
           </h1>
-          <p>Addressing common topics such as data handling, our use of AI, on premise offering, etc.</p>
+          <p>
+            Addressing common topics such as data handling, our use of AI, on
+            premise offering, etc.
+          </p>
         </div>
       </div>
     </>
