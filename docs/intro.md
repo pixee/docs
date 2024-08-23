@@ -2,41 +2,50 @@
 sidebar_position: 1
 ---
 
-# Introducing Pixeebot 👋
+# Introducing Pixee 👋
 
-Pixeebot is a [GitHub app](https://github.com/apps/pixeebot/) that automatically improves your code. It acts like a developer on your team by reviewing your code, and recommending changes to enhance code quality, performance, and security. Pixeebot opens merge-ready pull requests (PRs) for each recommendation, so all you have to do is review and merge.
+Pixee is your automated product security engineer.
 
-Pixeebot is powered by our open source toolkit [codemodder](https://codemodder.io/), a pluggable framework for building expressive codemods. These codemods help power Pixeebot’s recommendations, and are continuously updated to ensure Pixeebot’s recommendations align with industry standards and best practices.
+Pixee triages and fixes issues detected by your [code scanning tools](/code-scanning-tools/overview). To make the fix, we'll send you a pull request.
 
-### How does Pixeebot help me?
+Pixee is powered by the open-source [codemodder framework](https://codemodder.io/). These codemods power Pixee's fixes, and are continuously updated to ensure Pixee's recommendations align with industry standards and best practices.
 
-Pixeebot monitors your repositories and provides fixes in two different ways:
+### How does Pixee help me?
 
-1. :on: **Continuous Improvement:** monitors your default branch and sends you pull requests with fixes.
+1. 🗃️ **Continuous Improvement:** works down your backlog of issues and keeps your codebase secure.
 2. :seedling: **PR Improvement:** checks each new pull request (PR) and recommends improvements.
+3. 🔎 **Triage**: identifies false positives and prioritizes issues that need fixing.
 
-### What types of recommendations does Pixeebot make?
+### What types of issues can Pixee triage and fix?
 
-Pixeebot is built to find and fix a variety of problems, whether they are performance and quality issues or known security vulnerabilities. Here are a few of the most common issues Pixeebot resolves:
+Pixee can triage and fix a wide range of security issues detected by code scanning tools. Many of these issues are common across tools and languages, such as:
 
-- NullPointerExceptions
-- Cross Site Scripting (XSS) and XML External Entity (XXE) attack vulnerabilities
-- Denial of Service (DoS) attack vulnerabilities
-- SQL injection vulnerailities
-- Removal of unnecessary F-strings
+- SQL Injection
+- Cross-Site Scripting (XSS)
+- Insecure Deserialization
+- Insecure Randomness
+- XML External Entities (XXE)
+- Insecure Cookie Handling
+- Command Injection
+- Insecure Configuration
+- ... and many more!
 
-### How can I test Pixeebot?
+### How can I test Pixee?
 
-Pixeebot is quick to install and starts working immediately upon activation. While Pixeebot is designed for repositories of all sizes, it is most effective at identifying vulnerabilities in active medium to large-sized projects.
+Pixee is most easily tried as a GitHub App on the [GitHub Marketplace](https://github.com/apps/pixeebot/). We provide a free tier on our cloud offering that can be installed on any public or private repository. After adding Pixee, you need to get some code scanning results to show a breadth of fixes available. To do that, try adding [SonarCloud](https://www.sonarsource.com/products/sonarcloud/) to it. This is a great way to get started with Pixee and see how it can help to harden and secure your code, and triage your code scanner alerts.
 
-If you need a repository to test with, we recommend trying Pixeebot out with a deliberately insecure application. Template repositories containing Java and Python test applications are available in PixeeSandbox: [https://github.com/PixeeSandbox](https://github.com/PixeeSandbox)
+If you need a repository to test with, we recommend trying Pixee out with a deliberately insecure application. Template repositories containing Java and Python test applications are available in PixeeSandbox: [https://github.com/PixeeSandbox](https://github.com/PixeeSandbox).
 
-Testing with these deliberately insecure applications can give you an idea of how Pixeebot works, before installing it directly on your personal or professional repositories.
+Testing with these deliberately insecure applications can give you an idea of how Pixee works, before installing it directly on your personal or professional repositories.
 
-### What environment & languages does Pixeebot support?
+For additional details, see the [Installation](/installing) page.
 
-Pixeebot is currently available for Java and Python repositories on GitHub, with support for additional languages coming soon. Have a language you’d like to see supported? Let us know in an email to [hi@pixee.ai](mailto:hi@pixee.ai). We’d love to hear from you!
+Pixee also supports self-hosted deployments for organizations that require additional security or compliance measures. To learn more about Pixee self-hosted solutions, please [contact us](https://pixee.ai/demo-landing-page).
 
-### What does Pixeebot cost?
+### What environment & languages does Pixee support?
 
-Please see https://www.pixee.ai/pricing
+Pixee supports a wide variety of languages and code scanning tools. For a full list of supported languages, tools, and rules, see the [Code Scanning Tools](/code-scanning-tools/overview) page.
+
+### What does Pixee cost?
+
+Please see https://www.pixee.ai/pricing.

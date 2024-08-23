@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # Preferences
 
-Pixeebot works immediately after installation without any further configuration. Yet, Pixeebot exposes preferences for users to tailor its behavior when desirable.
+Pixee works immediately after installation without any further configuration. Yet, Pixee exposes preferences for users to tailor its behavior when desirable.
 
-Users may set Pixeebot preferences at either the organization or repository levels.
+Users may set Pixee preferences at either the organization or repository levels.
 
 1. **Repository preferences:**
    Create a `pixeebot.yaml` file in the `.github` directory of the target repository. Preferences in the target repository will take precedence over other preferences.
@@ -16,11 +16,11 @@ Users may set Pixeebot preferences at either the organization or repository leve
 
 ## Codemod catalogs
 
-Pixeebot offers three codemod catalogs to choose from in order to tune the type of improvements received.
+Pixee offers three codemod catalogs to choose from in order to tune the type of improvements received.
 
-- **Less**: Pixeebot will only suggest improvements for findings identified by a third-party security tool. See the [third-party security tools](/code-scanning-tools/overview) page for more information.
-- **Moderate**: In addition to third-party security tool findings, Pixeebot will also suggest fixes for its own security findings.
-- **More**: Includes everything from the Less and Moderate catalogs, along with additional suggestions Pixeebot identifies, such as style improvements and best practices.
+- **Less**: Pixee will only suggest improvements for findings identified by a third-party security tool. See the [third-party security tools](/code-scanning-tools/overview) page for more information.
+- **Moderate**: In addition to third-party security tool findings, Pixee will also suggest fixes for its own security findings.
+- **More**: Includes everything from the Less and Moderate catalogs, along with additional suggestions Pixee identifies, such as style improvements and best practices.
 
 ### Selecting a catalog
 
@@ -38,7 +38,7 @@ Contains settings related to AI functionality.
 
 `true` by default.
 
-Setting to `false` disables Pixeebot features that [rely on generative AI](faqs.md) to analyze your code.
+Setting to `false` disables Pixee features that [rely on generative AI](faqs.md) to analyze your code.
 
 Example:
 
@@ -49,7 +49,7 @@ ai:
 
 ### `codemods`
 
-Contains optional preferences related to the codemod catalog Pixeebot uses to
+Contains optional preferences related to the codemod catalog Pixee uses to
 make changes to repositories.
 
 #### `catalog`
@@ -94,11 +94,11 @@ codemods:
 ### `paths`
 
 Contains optional preferences for controlling the files and directories that are
-included in Pixeebot analysis.
+included in Pixee analysis.
 
 #### `exclude`
 
-A set of paths to files or directories to exclude from Pixeebot analysis. Each
+A set of paths to files or directories to exclude from Pixee analysis. Each
 path is relative to the root of the repository. Each path in the set may be a
 file, directory, or UNIX glob pattern.
 
@@ -112,9 +112,9 @@ paths:
 
 ## Configuring automatic assignment
 
-To automatically assign **reviewers** to Pixeebot PRs, consider [setting up a `CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+To automatically assign **reviewers** to Pixee PRs, consider [setting up a `CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
-To automatically assign **users** to Pixeebot PRs, consider creating a GitHub action. Below is an example action that will assign all Pixeebot PRs to the user Octocat:
+To automatically assign **users** to Pixee PRs, consider creating a GitHub action. Below is an example action that will assign all Pixee PRs to the user Octocat:
 
 ```yaml
 on:
@@ -146,11 +146,11 @@ Please contact us at help@pixee.ai with any questions, or if you would like more
 
 ## Configuring Automatic Formatting
 
-Many projects enforce a consistent code style by using automatic code formatters. This section contains instructions for configuring GitHub Actions to automatically format PRs that are created by Pixeebot.
+Many projects enforce a consistent code style by using automatic code formatters. This section contains instructions for configuring GitHub Actions to automatically format PRs that are created by Pixee.
 
 ### Python
 
-The most popular Python code formatter is [Black](https://black.readthedocs.io/en/stable/). To automatically format PRs created by Pixeebot using Black, add the following GitHub action workflow to your repository:
+The most popular Python code formatter is [Black](https://black.readthedocs.io/en/stable/). To automatically format PRs created by Pixee using Black, add the following GitHub action workflow to your repository:
 
 ```yaml
 name: Format Pixeebot PRs
@@ -193,7 +193,7 @@ Note that it may be necessary to pin the version of Black to ensure that the for
 
 ### Java
 
-For Java projects it is common to use a tool such as [Spotless](https://github.com/diffplug/spotless) to enforce code formatting. To automatically format PRs created by Pixeebot using Gradle to apply Spotless, add the following GitHub action workflow to your repository:
+For Java projects it is common to use a tool such as [Spotless](https://github.com/diffplug/spotless) to enforce code formatting. To automatically format PRs created by Pixee using Gradle to apply Spotless, add the following GitHub action workflow to your repository:
 
 ```yaml
 name: Format Pixeebot PRs
@@ -232,11 +232,11 @@ jobs:
 
 ## Configuring Lockfile Updates
 
-Some Pixeebot fixes add dependencies to your project. For package managers that rely on lockfiles, it is important to update the lockfile after adding dependencies. We recommend using a GitHub Action to automatically update lockfiles for Pixeebot PRs.
+Some Pixee fixes add dependencies to your project. For package managers that rely on lockfiles, it is important to update the lockfile after adding dependencies. We recommend using a GitHub Action to automatically update lockfiles for Pixee PRs.
 
 ### Python: Poetry
 
-[Poetry](https://python-poetry.org/) is a popular Python package manager that uses a `pyproject.toml` file to manage dependencies. To automatically update the Poetry lockfile for Pixeebot PRs that add dependencies, add the following GitHub action workflow to your repository:
+[Poetry](https://python-poetry.org/) is a popular Python package manager that uses a `pyproject.toml` file to manage dependencies. To automatically update the Poetry lockfile for Pixee PRs that add dependencies, add the following GitHub action workflow to your repository:
 
 ```yaml
 name: Update Poetry Lockfile

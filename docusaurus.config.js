@@ -106,16 +106,9 @@ const config = {
 
         items: [
           {
-            type: "doc",
-            docId: "intro",
             position: "left",
             label: "Docs",
-            className: "header-routes",
-          },
-          {
-            to: "/status",
-            label: "Status",
-            position: "left",
+            to: "/",
             className: "header-routes",
           },
           {

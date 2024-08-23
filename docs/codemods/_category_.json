@@ -1,8 +1,0 @@
-{
-  "label": "Core Codemods",
-  "position": 4,
-  "link": {
-    "type": "doc",
-    "id": "codemods/overview"
-  }
-}
