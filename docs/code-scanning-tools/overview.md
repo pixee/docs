@@ -4,13 +4,13 @@ sidebar_position: 4
 
 # Code Scanning Tool Fixes
 
-Pixeebot automatically triages and fixes issues detected by code scanning tools when synced with the results of those scans. This page explains how to integrate code scanning tools with Pixeebot, so that Pixeebot may triage and fix the issues those tools find.
+Pixee automatically triages and fixes issues detected by code scanning tools when synced with the results of those scans. This page explains how to integrate code scanning tools with Pixee, so that Pixee may triage and fix the issues those tools find.
 
 # Supported Languages
 
-Pixeebot can fix issues in Java and Python repositories "out of the box" without a code scanner integration. But, you'll get the most value out of Pixeebot by connecting it to your existing code scanning tools and services. This will allow Pixeebot to provide more accurate and relevant fixes for your codebase and to triage findings from those tools.
+Pixee can fix issues in Java and Python repositories "out of the box" without a code scanner integration. But, you'll get the most value out of Pixee by connecting it to your existing code scanning tools and services. This will allow Pixee to provide more accurate and relevant fixes for your codebase and to triage findings from those tools.
 
-When triaging and fixing issues detected by code scanning tools, Pixeebot supports the following languages:
+When triaging and fixing issues detected by code scanning tools, Pixee supports the following languages:
 
 - Java
 - Python
