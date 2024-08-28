@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Release notes
 
-We're working hard to bring you new features, enhancements, and reliability to Pixee. But, we've made some changes to how we do releases, and aren't recording our release notes here anymore, but we have left this here for posterity! We hope to bring our release notes back here soon.
+We're working hard to bring you new features, enhancements, and reliability to Pixee. But, we've made some changes to how we do releases, and aren't recording our release notes here anymore. We have left this here for posterity! We hope to bring our release notes back here soon.
 
 ## April 19, 2024
 
