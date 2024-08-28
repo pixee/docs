@@ -5,6 +5,8 @@ sidebar_position: 4
 
 # CodeQL
 
-Pixee can automatically fix issues detected by [CodeQL](https://codeql.github.com/).
+Pixee can automatically fix and triage issues detected by [CodeQL](https://codeql.github.com/).
 
-No setup is required for GitHub Advanced Security users to receive fixes from CodeQL results that are uploaded as Code Scanning alerts.
+# GitHub Advanced Security
+
+No setup is required for GitHub Advanced Security (GHAS) users to receive fixes from CodeQL results that are uploaded as Code Scanning alerts. Triage capability is limited in GHAS, so triage is best experienced through [our dashboard](https://app.pixee.ai).

@@ -11,13 +11,13 @@ To try Pixee, visit our [GitHub App page](https://github.com/apps/pixeebot/). Fr
 
 See the [Preferences](/configuring) page for information on how to configure Pixee to suit your needs.
 
-## Pixee Enterprise Server
+## Self-Hosted
 
-Pixee offers self-hosted options for organizations that require additional security or compliance measures. To learn more about Pixee self-hosted solutions, please [contact us](https://pixee.ai/demo-landing-page).
+Pixee offers a self-hosted Pixee Enterprise Server for organizations that require additional security or compliance measures. To learn more about Pixee self-hosted solutions, please [contact us](https://pixee.ai/demo-landing-page).
 
 Also [contact us](https://pixee.ai/demo-landing-page) if you want to partner as early customers for other SCMs, including GitLab, Bitbucket, or Azure DevOps.
 
-## Tool Connections
+## Tool connections
 
 Pixee can provide fixes "out of the box" for Java and Python repositories. But you'll get the most value out of Pixee by [connecting it to your existing code scanning tools and services](/code-scanning-tools/overview). This will allow Pixee to provide more accurate and relevant fixes for your codebase.
 
