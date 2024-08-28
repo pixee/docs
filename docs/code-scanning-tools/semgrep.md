@@ -14,4 +14,3 @@ No setup is required for GitHub Advanced Security (GHAS) users to receive fixes 
 # Others
 
 Use the [pixee/upload-tool-results-action](https://github.com/pixee/upload-tool-results-action) GitHub Action to synchronize Semgrep findings with Pixee.
-
