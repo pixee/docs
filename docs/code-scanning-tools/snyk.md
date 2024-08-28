@@ -9,7 +9,7 @@ Pixee can automatically fix and triage issues detected by [Snyk Code](https://sn
 
 # GitHub Advanced Security
 
-No setup is required for GitHub Advanced Security (GHAS) users to receive fixes from Snyk results that are uploaded as Code Scanning alerts. Triage capability is limited in GHAS, so triage is best experienced through [our dashboard](https://app.pixee.ai).
+No setup is required for GitHub Advanced Security (GHAS) users to receive fixes from Snyk results that are uploaded as Code Scanning alerts. Triage for GHAS is best experienced through [our dashboard](https://app.pixee.ai).
 
 # Others
 
