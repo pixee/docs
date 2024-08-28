@@ -5,7 +5,7 @@ title: Open source
 
 # Open Source
 
-Pixee believes in open source. We leverage tools from the community and strive to contribute where there are gaps and where we can provide unique solutions.
+Pixee believes in open source! We leverage tools from the community and strive to give back when possible.
 
 ## Codemodder
 
@@ -13,7 +13,7 @@ The fixes we make in Pixee are powered by our open source (and open format!) pro
 
 ## Contributions
 
-We've made contributions to the following OSS projects, either directly or as users of Pixee:
+We've made contributions to the following OSS projects, either directly, or as part of being Pixee free tier users:
 
 - [JavaParser](https://github.com/javaparser/javaparser) (we're a sponsor as well!)
 - [LibCST](https://github.com/Instagram/LibCST/)
@@ -22,3 +22,4 @@ We've made contributions to the following OSS projects, either directly or as us
 - [JUnit](https://github.com/junit-team)
 - [Spring Framework](https://github.com/spring-projects/spring-framework)
 - [StirlingPDF](https://github.com/Stirling-Tools/Stirling-PDF)
+- ... and more!

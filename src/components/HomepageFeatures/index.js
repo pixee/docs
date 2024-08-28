@@ -69,6 +69,8 @@ export default function HomepageFeatures() {
           </p>
         </div>
       </div>
+      <br />
+      <br />
     </>
   );
 }

@@ -6,9 +6,7 @@ sidebar_position: 1
 
 Pixee is your automated product security engineer.
 
-Pixee triages and fixes issues detected by your [code scanning tools](/code-scanning-tools/overview). To make the fix, we'll send you a pull request.
-
-Pixee is powered by the open-source [codemodder framework](https://codemodder.io/). These codemods power Pixee's fixes, and are continuously updated to ensure Pixee's recommendations align with industry standards and best practices.
+Pixee triages and fixes issues detected by your [code scanning tools](/code-scanning-tools/overview). To make the fixes, we send you pull requests, just like your other team members.
 
 ### How does Pixee help me?
 
@@ -27,12 +25,14 @@ Pixee can triage and fix a wide range of security issues detected by code scanni
 - XML External Entities (XXE)
 - Insecure Cookie Handling
 - Command Injection
+- JNDI Injection
+- Reflection Injection
 - Insecure Configuration
 - ... and many more!
 
 ### How can I test Pixee?
 
-Pixee is most easily tried as a GitHub App on the [GitHub Marketplace](https://github.com/apps/pixeebot/). We provide a free tier on our cloud offering that can be installed on any public or private repository. After adding Pixee, you need to get some code scanning results to show a breadth of fixes available. To do that, try adding [SonarCloud](https://www.sonarsource.com/products/sonarcloud/) to it. This is a great way to get started with Pixee and see how it can help to harden and secure your code, and triage your code scanner alerts.
+Pixee is most easily tried as a GitHub App on the [GitHub Marketplace](https://github.com/apps/pixeebot/). We provide a free tier on our cloud offering that can be installed on any public or private repository. After adding Pixee, you need to get some code scanning results to show the breadth of fixes available. To do that, try adding [SonarCloud](https://www.sonarsource.com/products/sonarcloud/) to it. This is a great way to get started with Pixee and see how it can help to harden and secure your code, and triage your code scanner alerts.
 
 If you need a repository to test with, we recommend trying Pixee out with a deliberately insecure application. Template repositories containing Java and Python test applications are available in PixeeSandbox: [https://github.com/PixeeSandbox](https://github.com/PixeeSandbox).
 
@@ -41,10 +41,6 @@ Testing with these deliberately insecure applications can give you an idea of ho
 For additional details, see the [Installation](/installing) page.
 
 Pixee also supports self-hosted deployments for organizations that require additional security or compliance measures. To learn more about Pixee self-hosted solutions, please [contact us](https://pixee.ai/demo-landing-page).
-
-### What environment & languages does Pixee support?
-
-Pixee supports a wide variety of languages and code scanning tools. For a full list of supported languages, tools, and rules, see the [Code Scanning Tools](/code-scanning-tools/overview) page.
 
 ### What does Pixee cost?
 
