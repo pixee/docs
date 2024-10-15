@@ -12,8 +12,8 @@ Pixee automatically triages and fixes issues detected by code scanning tools whe
 - [Semgrep](/code-scanning-tools/semgrep)
 - [CodeQL](/code-scanning-tools/codeql)
 - [Snyk](/code-scanning-tools/snyk)
-- [Contrast Security](/code-scanning-tools/codeql)
-- [HCL AppScan](/code-scanning-tools/codeql)
+- [Contrast Security](/code-scanning-tools/contrast)
+- HCL AppScan
 - Checkmarx (beta)
 
 # Supported Rules
