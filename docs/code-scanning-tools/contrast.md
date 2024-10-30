@@ -1,9 +1,9 @@
 ---
-title: "Contrast (IAST)"
+title: "Contrast Security (IAST)"
 sidebar_position: 4
 ---
 
-# Snyk Code
+# Contrast Security Assess (IAST)
 
 Pixee can automatically fix and triage issues detected by [Contrast Assess (IAST)](https://contrastsecurity.com/).
 
