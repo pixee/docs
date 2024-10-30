@@ -42,7 +42,7 @@ Pixee can triage (T) and/or fix (F) a wide range of security issues detected by 
 
 In addition, Pixee can triage and fix a variety of tool-specific, language-specific and code quality issues, too!
 
-Note that we won't claim support for a code scanner until we offer significant rule coverage, and we will then continue to mature our offering until complete. In this sense, we are "always playing catch up" with our rule coverage on all tools as we continue adding more triage and fix capabilities.
+Note that we won't claim support for a code scanner until we offer significant rule coverage, and we will then continue to mature our offering until complete. In this sense, we are always improving and expanding our rule coverage on all tools as we continue adding more triage and fix capabilities.
 
 # GitHub Action
 
