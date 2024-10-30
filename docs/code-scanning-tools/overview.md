@@ -14,27 +14,35 @@ Pixee automatically triages and fixes issues detected by code scanning tools whe
 - [Snyk](/code-scanning-tools/snyk)
 - [Contrast Security](/code-scanning-tools/contrast)
 - HCL AppScan
-- Checkmarx (beta)
+- Checkmarx
 
 # Supported Rules
 
-Pixee can triage and fix a wide range of security issues detected by code scanning tools. Many of these issues are common across tools and languages, such as:
+Pixee can triage (T) and/or fix (F) a wide range of security issues detected by code scanning tools. Many of these issues are common across tools and languages, such as:
 
-- SQL Injection
-- Cross-Site Scripting (XSS)
-- Insecure Deserialization
-- Insecure Randomness
-- XML External Entity (XXE)
-- Insecure Cookie Handling
-- Command Injection
-- Insecure Configuration
-- Sensitive Data Logging
-- Detailed Error Messages
-- ... and many more!
+- SQL Injection (T+F)
+- Cross-Site Scripting (XSS) (T+F)
+- Insecure Deserialization (T+F)
+- Insecure Randomness (T+F)
+- XML External Entity (XXE) (F)
+- Insecure Cookie Handling (F)
+- Command Injection (T+F)
+- Insecure Configuration (T)
+- Sensitive Data Logging (T)
+- Resource Leak (F)
+- Detailed Error Messages (T+F)
+- SSRF (T+F)
+- Hardcoded Passwords (T)
+- XPath Injection (T+F)
+- HTTP Response Splitting / Response Smuggling / Header Injection (T+F)
+- Log Forging (T+F)
+- Path Traversal (T)
+- Open Redirect (T)
+- ... and more!
 
-In addition, Pixee can triage and fix a variety of language-specific and code quality issues, too!
+In addition, Pixee can triage and fix a variety of tool-specific, language-specific and code quality issues, too!
 
-For detailed information about supported rules, or to request additional rule coverage, please [contact us](https://pixee.ai/demo-landing-page).
+Note that we won't claim support for a code scanner until we offer significant rule coverage, and we will then continue to mature our offering until complete. In this sense, we are always improving and expanding our rule coverage on all tools as we continue adding more triage and fix capabilities.
 
 # GitHub Action
 
