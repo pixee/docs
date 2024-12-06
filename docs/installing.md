@@ -19,7 +19,9 @@ Also [contact us](https://pixee.ai/demo-landing-page) if you want to partner as 
 
 ## Tool connections
 
-Pixee can provide fixes "out of the box" for Java and Python repositories. But you'll get the most value out of Pixee by [connecting it to your existing code scanning tools and services](/code-scanning-tools/overview). This will allow Pixee to provide more accurate and relevant fixes for your codebase.
+Pixee fixes problems detected by [your existing code scanning tools and
+services](/code-scanning-tools/overview). Therefore, you will need to connect
+Pixee to your code scanning tools and services, before Pixee sends fixes.
 
 ## Repository access
 
