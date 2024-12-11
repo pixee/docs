@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ## Continuous improvement
 
-Once installed, Pixee will begin opening pull requests against your repositories immediately. There is no need to summon Pixee manually - all of your improvements will come automatically at a manageable weekly cadence.
+After installing Pixee and connecting it to your code scanning services, Pixee will begin opening pull requests against your repositories. There is no need to summon Pixee manually - all of your improvements will come automatically at a manageable weekly cadence.
 
 ## Summoning Pixee
 
