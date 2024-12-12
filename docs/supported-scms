@@ -1,0 +1,24 @@
+| ![GitHub Icon](/img/github-icon.png) | ![GitLab Icon](/img/gitlab-icon.png) | ![Azure DevOps Icon](/img/ado-icon.png) | ![Bitbucket Icon](/img/bitbucket-icon.png) |
+| :----------------------------------: | :----------------------------------: | :-------------------------------------: | :----------------------------------------: |
+|              **GitHub**              |              **GitLab**              |            **Azure DevOps**             |               **Bitbucket**                |
+
+Pixee integrates with the following Source Control Management (SCM) platforms:
+
+### GitHub
+Fully supported for PR hardening, automated triage, and automated fixes in both public and private repositories.
+**How to Get Started:** Install Pixee from the [GitHub Marketplace](https://github.com/apps/pixeebot/).
+
+Reach out to us at [hi@pixee.ai](mailto:support@pixeebot.com) if you want to partner as early customers for any of the following additional platforms:
+
+**GitLab**
+Early access available for GitLab projects.
+
+**Azure DevOps**
+Early access available for Azure DevOps organizations.
+
+**Bitbucket**
+Early access available for Bitbucket repositories and projects.
+
+### Don't See Your Platform?
+
+Reach out to us at [hi@pixee.ai](mailto:support@pixeebot.com) to discuss support for additional SCM platforms.
