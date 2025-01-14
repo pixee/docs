@@ -32,7 +32,7 @@ With the tool properly configured, the next step is to install Pixee.
 1. Go to our [GitHub App page](https://github.com/apps/pixeebot/).
 2. Click `Install` (or `Configure`) and follow the prompts from GitHub. You'll be directed to your Pixee dashboard once the installation process is complete.
 
-## Step 3: See fixes available
+## Step 4: See fixes available
 
 1. Wait a few minutes for Pixee to process the results associated with the default branch.
 2. There should be a new issue that shows which fixes are currently available.
