@@ -58,7 +58,7 @@ jobs:
 This workflow:
 
 1. Runs Semgrep OSS on the project and stores the results in a standard SARIF file.
-3. Runs the pixee/upload-tool-results-action that sends the SARIF file to Pixee.
+2. Runs the pixee/upload-tool-results-action that sends the SARIF file to Pixee.
 
 Once Pixee receives the Semgrep OSS vulnerabilities, it recalls them on its next analysis of this commit.
 

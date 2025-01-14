@@ -8,7 +8,7 @@ This page describes how to help set up Pixee on a public GitHub repository that 
 
 ## Step 1: Choose and set up your repository
 
-On the repository you want to secure, enable GitHub *Issues* so you can see the Pixee dashboard. You can always disable this later if, after you review, you prefer using our dashboard.
+On the repository you want to secure, enable GitHub _Issues_ so you can see the Pixee dashboard. You can always disable this later if, after you review, you prefer using our dashboard.
 
 ## Step 2: Choose CodeQL or SonarQube Cloud
 
@@ -21,7 +21,7 @@ For ease of integration, we suggest picking either CodeQL (through GitHub Advanc
 ### CodeQL through GitHub Advanced Security (GHAS)
 
 1. In your repository, go to `Settings` > `Code Security`.
-2. Under the `Tools` > `CodeQL analysis`, hit `Set up`, then `Default`.  
+2. Under the `Tools` > `CodeQL analysis`, hit `Set up`, then `Default`.
 
 You may want to wait until the first scan finishes before moving onto the next step. You can see when it finishes by going to `Actions` and watching the progress of the recently-run CodeQL job.
 
@@ -41,6 +41,6 @@ import IssueDashboard from '/img/issue-dashboard.png';
 
 <img src={IssueDashboard} alt="Issue dashboard" style={{width: 400}} />
 
-You can use this dashboard to see what fixes are available, coming soon or summon Pixee to issue the fixes. 
+You can use this dashboard to see what fixes are available, coming soon or summon Pixee to issue the fixes.
 
 > Note: This GitHub-led experience will only show output from our AutoTriage AI agent when you make PRs that have security issues. To take advantage of this feature at scale, [contact us](https://pixee.ai/demo-landing-page)!
