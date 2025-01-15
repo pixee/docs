@@ -9,6 +9,7 @@ This page describes how to help set up Pixee on a public GitHub repository that 
 ## Step 1: Choose and set up your repository
 
 On the repository you want to secure, enable GitHub _Issues_ so you can see the Pixee dashboard. You can always disable this later if, after you review, you prefer using our dashboard.
+
 1. In your repository, go to `Settings` > `General`.
 2. Under the `Features`, select `Issues`.
 
