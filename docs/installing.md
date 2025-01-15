@@ -19,7 +19,11 @@ Also [contact us](https://pixee.ai/demo-landing-page) if you want to partner as 
 
 ## Tool connections
 
-Pixee can provide fixes "out of the box" for Java and Python repositories. But you'll get the most value out of Pixee by [connecting it to your existing code scanning tools and services](/code-scanning-tools/overview). This will allow Pixee to provide more accurate and relevant fixes for your codebase.
+Pixee fixes problems detected by [your existing code scanning tools and services](/code-scanning-tools/overview).
+
+If you use GitHub Advanced Security (GHAS), then installing the Pixeebot GitHub App is sufficient for connecting Pixee to your GHAS results.
+
+Otherwise, you will need to connect Pixee to your code scanning tools and services, before Pixee can send fixes. If your repository does not use any code scanning tools and services, but you still want to try Pixee, see our guide for [adding Semgrep CLI and Pixee to your GitHub repository](./code-scanning-tools/semgrep.md).
 
 ## Repository access
 
