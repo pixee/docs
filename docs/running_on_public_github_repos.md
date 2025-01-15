@@ -9,10 +9,12 @@ This page describes how to help set up Pixee on a public GitHub repository that 
 ## Step 1: Choose and set up your repository
 
 On the repository you want to secure, enable GitHub _Issues_ so you can see the Pixee dashboard. You can always disable this later if, after you review, you prefer using our dashboard.
+1. In your repository, go to `Settings` > `General`.
+2. Under the `Features`, select `Issues`.
 
 ## Step 2: Choose CodeQL or SonarQube Cloud
 
-For ease of integration, we suggest picking either CodeQL (through GitHub Advanced Security) or SonarQube Cloud, which both can be used to find vulnerabilities in your code, are free for public repositories, and offer simple onboarding. CodeQL is more focused on security than quality, but Sonar has a large rule based and is trusted by developers all over the world. Both are great choices.
+For ease of integration, we suggest picking either CodeQL (through GitHub Advanced Security) or SonarQube Cloud. Both can be used to find vulnerabilities in your code, are free for public repositories, and offer simple onboarding. CodeQL is more focused on security than quality, but Sonar has a large rule based and is trusted by developers all over the world. Both are great choices.
 
 ### SonarQube Cloud
 
