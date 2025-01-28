@@ -9,8 +9,6 @@ We provide a free tier offering that can be installed on any public or private r
 
 To try Pixee, visit our [GitHub App page](https://github.com/apps/pixeebot/). From there, click **Install** (or **Configure**) and follow the prompts from GitHub. You'll be directed to your Pixee dashboard once the installation process is complete.
 
-See the [Preferences](/configuring) page for information on how to configure Pixee to suit your needs.
-
 ## Self-Hosted
 
 Pixee offers a self-hosted Pixee Enterprise Server for organizations that require additional security or compliance measures. To learn more about Pixee self-hosted solutions, please [contact us](https://pixee.ai/demo-landing-page).
