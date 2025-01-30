@@ -74,7 +74,6 @@ jobs:
             })
 ```
 
-
 ### Configuring Automatic Formatting
 
 Many projects enforce a consistent code style by using automatic code formatters. This section contains instructions for configuring GitHub Actions to automatically format PRs that are created by Pixee.
