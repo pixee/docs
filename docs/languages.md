@@ -12,12 +12,9 @@ When triaging and fixing issues detected by code scanning tools, Pixee supports 
 - JavaScript
 - TypeScript
 - Node.js
-- Ruby 
+- Ruby
 - Go
-- PHP 
+- PHP
 - Kotlin
-
-
-
 
 We are continuously working on expanding our language support. If you need support for a language not listed here, please [contact us](https://pixee.ai/demo-landing-page).
