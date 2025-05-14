@@ -15,6 +15,9 @@ Pixee automatically triages and fixes issues detected by code scanning tools whe
 - [Contrast Security](/code-scanning-tools/contrast)
 - HCL AppScan
 - Checkmarx
+- GitLab SAST
+- Veracode
+- Coverity on Polaris
 
 # Supported Rules
 
