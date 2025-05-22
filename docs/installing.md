@@ -11,8 +11,6 @@ Installation steps vary depending on the SCM and code scanning tools in use.
 
 Pixee Enterprise Server enables self-hosted deployment for organizations with additional security or compliance requirements. Documentation is available upon request. To learn more about self-hosted solutions, please [contact us](https://pixee.ai/demo-landing-page).
 
-Also [contact us](https://pixee.ai/demo-landing-page) if you want to partner as early customers for other SCMs, including GitLab, Bitbucket, or Azure DevOps.
-
 ## Tool connections
 
 Pixee fixes problems detected by [your existing code scanning tools and services](/code-scanning-tools/overview).
