@@ -53,8 +53,8 @@ export default function HomepageFeatures() {
           </h1>
           <p>
             Reach out to us to{" "}
-            <Link to="https://www.pixee.ai/demo-landing-page">learn more</Link>{" "}
-            see a demo and get a free trial.
+            <Link to="https://www.pixee.ai/demo-landing-page">learn more,</Link>{" "}
+            see a demo, and get a free trial.
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(6)}>
