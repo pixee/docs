@@ -52,11 +52,9 @@ export default function HomepageFeatures() {
             ⬇ <span>Get Started</span>
           </h1>
           <p>
-            Pixeebot is most easily tried as a{" "}
-            <Link to="https://github.com/apps/pixeebot">GitHub App</Link>.
-            Install it for free to try it out, or{" "}
-            <Link to="https://www.pixee.ai/demo-landing-page">contact us</Link>{" "}
-            for a demo and on-prem support.
+            Reach out to us to{" "}
+            <Link to="https://www.pixee.ai/demo-landing-page">learn more</Link>{" "}
+            see a demo and get a free trial.
           </p>
         </div>
         <div className={styles.item} onClick={() => navigateToDocs(6)}>
