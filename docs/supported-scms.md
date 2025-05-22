@@ -30,18 +30,15 @@ sidebar_position: 1.5
 
 ### GitHub
 
-Fully supported for PR hardening, automated triage, and automated fixes in both public and private repositories. To get started, install Pixee from the [GitHub Marketplace](https://github.com/apps/pixeebot/).
-
-:::tip Reach out to us at [hi@pixee.ai](mailto:support@pixeebot.com) if you want to partner as early customers for any of the following additional platforms:
-:::
+Fully supported for PR improvements, automated triage, and automated fixes in both public and private repositories.
 
 ### GitLab
 
-Early access available for GitLab projects.
+Fully supported for PR improvements, automated triage, and automated fixes in both public and private repositories.
 
 ### Azure DevOps
 
-Early access available for Azure DevOps organizations.
+Fully supported for PR improvements, automated triage, and automated fixes in both public and private repositories.
 
 ### Bitbucket
 
