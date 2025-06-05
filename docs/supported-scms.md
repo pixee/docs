@@ -42,7 +42,7 @@ Fully supported for PR improvements, automated triage, and automated fixes in bo
 
 ### Bitbucket
 
-Early access available for Bitbucket repositories and projects.
+Fully supported for PR improvements, automated triage, and automated fixes in both public and private repositories.
 
 ## Don't See Your Platform?
 
