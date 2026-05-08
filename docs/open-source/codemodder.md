@@ -121,7 +121,7 @@ Codemodder powers the deterministic remediation layer of the Pixee platform. The
 
 - **MagicMods** -- AI-powered fixes for patterns that deterministic rules cannot reach (custom framework wrappers, multi-file dataflows, context-dependent sanitization)
 - **Triage Automation** -- false positive reduction before fixes are generated
-- **Scanner integration** -- 13 native scanner integrations plus universal SARIF support
+- **Scanner integration** -- natively integrated scanners plus universal SARIF support
 - **PR workflow** -- fixes delivered as pull requests through GitHub, GitLab, Azure DevOps, or Bitbucket
 
 Codemodder handles the known, well-understood vulnerability patterns. MagicMods extend coverage to the long tail. Both produce fixes that pass through the same quality evaluation before reaching a developer.

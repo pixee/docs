@@ -10,6 +10,8 @@ sidebar_position: 7
 
 Pixee's security architecture is built on three principles: minimize data exposure (send only relevant code snippets to LLM inference, never entire repositories), preserve human authority (PR-only workflow, never direct commits), and isolate analysis (stateless inference calls that cannot persist or affect other analyses). This page details data flow, access control, credential management, and AI governance for enterprise deployments.
 
+For Pixee's latest security certifications, audit reports, and data processing policies, visit the [Pixee Trust Center](https://trust.pixee.ai).
+
 Security teams evaluating Pixee should read this page alongside [Compliance](/enterprise/compliance). Together, they cover the technical architecture and the compliance mapping that enterprise reviews require.
 
 ## Security Principles

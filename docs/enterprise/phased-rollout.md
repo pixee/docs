@@ -39,9 +39,9 @@ Phase 1 is where most readers will start and where the most specific guidance ma
 
 ### Security Engineer Execution Track
 
-**Installation.** Connect Pixee to the pilot repositories. See the Getting Started guides for [GitHub](/getting-started/github), [GitLab](/getting-started/gitlab), [Azure DevOps](/getting-started/azure-devops), or [Bitbucket](/getting-started/bitbucket).
+**Installation.** Connect Pixee to the pilot repositories. See [Connect Source Control](/getting-started/source-control) for a platform-by-platform quick-start guide.
 
-**Scanner connection.** Connect your existing scanners to Pixee so it can triage and remediate findings from your current tooling. Pixee works with 13 native scanner integrations and any SARIF-producing scanner.
+**Scanner connection.** Connect your existing scanners to Pixee so it can triage and remediate findings from your current tooling. Pixee works with natively integrated scanners and any SARIF-producing scanner.
 
 **First fix review.** Walk through the first Pixee PR with the development team. Explain what changed, why it changed, and the quality scores.
 

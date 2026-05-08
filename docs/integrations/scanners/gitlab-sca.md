@@ -46,18 +46,11 @@ GitLab shows dependency findings in the merge request security widget and vulner
 
 Pixee's SCA remediation is deterministic: for each TRUE_POSITIVE with a fix available, Pixee opens an MR that updates the dependency to the lowest version in the fixed range, runs lockfile updates, and includes the CVE rationale in the MR description. Multi-vulnerability fixes can be batched per dependency to minimize MR churn.
 
-## Finding Types
-
-| Category                   | Examples                                               | Fix Mode                      |
-| -------------------------- | ------------------------------------------------------ | ----------------------------- |
-| Direct dependency CVEs     | Known vulnerability in a top-level declared dependency | Deterministic (version bump)  |
-| Transitive dependency CVEs | Vulnerable package pulled in by another dependency     | Deterministic (lockfile bump) |
-| Multi-CVE per dependency   | Multiple CVEs fixed by the same target version         | Deterministic (batched)       |
-| No-fix CVEs                | CVEs without a published fixed version                 | WONT_FIX with rationale       |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 
-1. **Connect GitLab to Pixee** — follow the [GitLab Setup](/getting-started/gitlab) guide to install the Pixee integration.
+1. **Connect GitLab to Pixee** — follow the [GitLab quick-start](/getting-started/source-control#gitlab) guide to install the Pixee integration.
 2. **Ensure Dependency Scanning is enabled** — verify your `.gitlab-ci.yml` includes the `Dependency-Scanning.gitlab-ci.yml` template (or your own equivalent that runs `gemnasium-dependency_scanning`).
 3. **Pixee ingests findings automatically** — when Dependency Scanning runs in your pipeline, Pixee receives the findings via the GitLab API.
 4. **Review triage results and merge fixes** — Pixee opens MRs for remediable findings in your existing GitLab workflow.

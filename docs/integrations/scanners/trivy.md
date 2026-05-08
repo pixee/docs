@@ -35,18 +35,11 @@ Trivy's breadth is its strength and its challenge. Container image scans can sur
 
 Trivy identifies vulnerabilities but does not generate code fixes. Pixee delivers fixes as pull requests — updating dependency versions, fixing IaC misconfigurations, and remediating code-level findings using both deterministic codemods and AI-powered generation.
 
-## Finding Types
-
-| Category                   | Examples                                              | Fix Mode                      |
-| -------------------------- | ----------------------------------------------------- | ----------------------------- |
-| Dependency vulnerabilities | CVEs in direct and transitive dependencies            | Deterministic (version bumps) |
-| IaC misconfigurations      | Insecure Dockerfile directives, K8s security contexts | Deterministic + AI            |
-| Code-level SAST findings   | Injection, XSS (via Trivy's fs scanning)              | Deterministic + AI            |
-| Secret detection           | Hardcoded credentials, API keys                       | AI                            |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 
-1. **Install Pixee** for your platform ([GitHub](/getting-started/github), [GitLab](/getting-started/gitlab), [Azure DevOps](/getting-started/azure-devops), or [Bitbucket](/getting-started/bitbucket)).
+1. **Install Pixee** for your platform — see [Connect Source Control](/getting-started/source-control) for GitHub, GitLab, Azure DevOps, and Bitbucket.
 2. **Configure Trivy to output SARIF** — add `--format sarif` to your Trivy command or CI pipeline step.
 3. **Upload SARIF to Pixee** — configure SARIF upload in your CI pipeline or use the Pixee integration endpoint.
 4. **Review and merge** — Pixee triages findings and opens PRs for remediable issues.
@@ -65,6 +58,6 @@ Trivy container scans often surface hundreds of CVEs in OS packages. Pixee's tri
 
 ### Does Trivy need to output SARIF for this integration?
 
-Yes. Configure Trivy with `--format sarif` to produce SARIF 2.1.0 output. Pixee also supports Trivy's native JSON format through the dedicated Trivy handler.
+Yes. Configure Trivy with `--format sarif` to produce SARIF output. Pixee also supports Trivy's native JSON format through the dedicated Trivy handler.
 
 See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

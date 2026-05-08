@@ -90,7 +90,7 @@ If you do not see a PR within an hour of installation:
 
 Once the workflow is proven:
 
-- **Connect additional scanners** to expand coverage. Pixee works with 13 natively integrated scanners and any SARIF-producing tool.
+- **Connect additional scanners** to expand coverage. Pixee works with natively integrated scanners and any SARIF-producing tool.
 - **Roll out to more repositories** as confidence builds.
 - **Track your merge rate** — see [Security & Trust](/platform/security) for merge rate data and context.
 

@@ -50,13 +50,7 @@ Pixee generates fixes using a combination of deterministic codemods and AI-power
 - Fixes match your team's code conventions -- naming patterns, preferred libraries, existing security utilities
 - Developers review and merge Pixee PRs through the standard GitHub workflow
 
-## Finding Types
-
-| Category                         | Examples                           | codeFlows Extraction              |
-| -------------------------------- | ---------------------------------- | --------------------------------- |
-| Dataflow vulnerabilities         | SQL injection, XSS, path traversal | Yes -- full source-to-sink traces |
-| Security misconfigurations       | Insecure defaults, missing headers | No (location-based findings)      |
-| Code quality (security-relevant) | CodeQL query suite findings        | Varies by rule                    |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

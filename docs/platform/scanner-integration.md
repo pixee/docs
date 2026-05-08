@@ -3,12 +3,12 @@ title: Scanner Integration
 slug: /platform/scanner-integration
 track: both
 content_type: guide
-seo_title: "Scanner Integration | 13 Native Scanners + Universal SARIF"
-description: How Pixee integrates with 13 native scanners and any SARIF-producing tool. Two-tier integration architecture and metadata extraction.
+seo_title: "Scanner Integration | Native Scanners + Universal SARIF"
+description: How Pixee integrates with natively supported scanners and any SARIF-producing tool. Two-tier integration architecture and metadata extraction.
 sidebar_position: 7
 ---
 
-Pixee integrates with 13 natively supported scanners and any SARIF-producing tool through a two-tier architecture. Dedicated handlers extract scanner-specific metadata from tools like CodeQL, Semgrep, and Checkmarx for maximum triage accuracy. Universal SARIF ingestion handles everything else — including proprietary and internal scanners — with zero pre-built integration required.
+Pixee integrates with a growing list of natively supported scanners and any SARIF-producing tool through a two-tier architecture. Dedicated handlers extract scanner-specific metadata from tools like CodeQL, Semgrep, and Checkmarx for maximum triage accuracy. Universal SARIF ingestion handles everything else — including proprietary and internal scanners — with zero pre-built integration required.
 
 Pixee does not replace your scanners. It sits downstream of them. Your existing SAST tools continue to scan your code exactly as they do today. Pixee consumes each tool's output, triages every finding, and delivers remediation as pull requests for confirmed vulnerabilities.
 
@@ -56,7 +56,7 @@ Both tiers feed into the same downstream [triage](/platform/triage) and [remedia
 | **Trivy** | GA | SARIF pipeline with MagicMod dispatcher support |
 | **DefectDojo** | GA | SARIF pipeline (aggregates findings from multiple scanners) |
 
-All 13 named scanners are GA. See individual scanner integration pages under [Integrations](/integrations/overview) for per-tool setup guides.
+All named scanner integrations are GA. See individual scanner integration pages under [Integrations](/integrations/overview) for per-tool setup guides.
 
 ## Universal SARIF Support
 

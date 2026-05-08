@@ -4,13 +4,13 @@ slug: /integrations/sarif-universal
 track: both
 content_type: guide
 seo_title: Universal SARIF Integration with Pixee
-description: Connect any SARIF-producing scanner to Pixee for automated triage and remediation. Covers SARIF 2.1.0 requirements and upload methods.
+description: Connect any SARIF-producing scanner to Pixee for automated triage and remediation. Covers SARIF format requirements and upload methods.
 sidebar_position: 2
 ---
 
 # Universal SARIF Integration
 
-Pixee's Universal SARIF integration accepts findings from any security scanner that produces SARIF 2.1.0 output. This means you are not limited to Pixee's 13 natively integrated scanners — if your tool can export SARIF, Pixee can triage and remediate its findings. Universal SARIF is how Pixee stays scanner-agnostic: your choice of detection tools is independent of your choice of resolution platform.
+Pixee's Universal SARIF integration accepts findings from any security scanner that produces SARIF output. This means you are not limited to Pixee's natively integrated scanners — if your tool can export SARIF, Pixee can triage and remediate its findings. Universal SARIF is how Pixee stays scanner-agnostic: your choice of detection tools is independent of your choice of resolution platform.
 
 This page covers the SARIF format requirements, upload methods, what metadata Pixee extracts, and the differences between Universal SARIF and native integrations.
 
@@ -25,15 +25,15 @@ Use Universal SARIF when:
 
 Use a native integration when available — native integrations extract richer metadata and provide deeper triage context than Universal SARIF.
 
-## SARIF 2.1.0 Requirements
+## SARIF Requirements
 
-Pixee supports SARIF version 2.1.0 (the OASIS standard). Your SARIF file must include:
+Pixee supports the current SARIF standard (OASIS SARIF). Your SARIF file must include:
 
 ### Required Fields
 
 | Field          | Path                                     | Description                            |
 | -------------- | ---------------------------------------- | -------------------------------------- |
-| Schema version | `$schema`                                | Must reference SARIF 2.1.0 schema      |
+| Schema version | `$schema`                                | Must reference a valid SARIF schema      |
 | Tool info      | `runs[].tool.driver.name`                | Scanner name                           |
 | Results        | `runs[].results[]`                       | Array of findings                      |
 | Rule ID        | `results[].ruleId`                       | Unique identifier for the finding type |
@@ -103,7 +103,7 @@ For evaluation or one-time use, upload SARIF files through the Pixee dashboard.
 
 ## Supported SARIF Producers
 
-Any scanner producing valid SARIF 2.1.0 output works with Universal SARIF. Scanners known to produce compatible output include:
+Any scanner producing valid SARIF output works with Universal SARIF. Scanners known to produce compatible output include:
 
 - ESLint (with SARIF formatter)
 - Psalm

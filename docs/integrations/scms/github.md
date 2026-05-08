@@ -28,7 +28,7 @@ Pixee connects to GitHub through a first-class GitHub App -- the same integratio
 
 ## What Developers See
 
-Fixes arrive as standard GitHub pull requests — no new tools, no new dashboards. Existing branch protection rules, required reviewers, and CI checks apply to Pixee PRs exactly as they would to any other PR. See [GitHub Setup → What You'll See](/getting-started/github#what-youll-see) for the full PR contents and review/merge/reject flow.
+Fixes arrive as standard GitHub pull requests — no new tools, no new dashboards. Existing branch protection rules, required reviewers, and CI checks apply to Pixee PRs exactly as they would to any other PR. See [Connect Source Control → GitHub](/getting-started/source-control#github) for the quick-start steps, or [Your First Fix](/getting-started/first-fix) for what a Pixee PR looks like.
 
 ## Scanner Integration via GitHub
 
@@ -55,7 +55,7 @@ There is no need to modify existing `.github/workflows/` files. Pixee operates a
 4. **Configure preferences** in `PIXEE.yaml` (optional) to tune triage behavior and fix scope.
 5. **Review and merge** your first Pixee PR.
 
-For a detailed walkthrough, see [Getting Started with GitHub](/getting-started/github).
+For a quick-start walkthrough, see [Connect Source Control → GitHub](/getting-started/source-control#github).
 
 ### Required Permissions
 

@@ -21,7 +21,7 @@ Pixee adds triage, remediation, and delivery layers on top of your existing dete
 | **3. Remediation** | Generate validated code fixes | Pixee — deterministic + AI hybrid. See [Remediation](/platform/remediation) |
 | **4. Delivery** | Ship fixes through existing workflow | Pixee — PRs in GitHub, GitLab, ADO, Bitbucket |
 
-Pixee integrates natively with 13 scanners and accepts any SARIF-producing tool. No changes to your detection stack are required.
+Pixee integrates natively with a growing list of scanners and accepts any SARIF-producing tool. No changes to your detection stack are required.
 
 ## Two Co-Equal Capabilities
 

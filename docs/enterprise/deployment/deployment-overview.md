@@ -5,7 +5,7 @@ track: leader
 content_type: guide
 seo_title: Deployment Options - SaaS, Self-Hosted, and Air-Gapped Security Automation
 description: "Compare Pixee deployment models: cloud SaaS, embedded cluster, Helm/BYO Kubernetes, and air-gapped. Includes data flow tables and infrastructure requirements."
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 Pixee offers four deployment models: cloud SaaS, a turnkey embedded cluster for organizations without Kubernetes, a standard Helm chart for existing EKS/GKE/AKS clusters, and a fully air-gapped deployment with private LLM endpoints. Every model delivers the same triage and remediation engine. The only difference is where the infrastructure runs and how data flows through your network.
@@ -22,7 +22,7 @@ Pixee manages all infrastructure. The customer installs a GitHub App, GitLab PAT
 
 ### Embedded Cluster Architecture
 
-A single Linux VM hosts the complete Pixee platform as a turnkey appliance. The installer provisions K3s (Kubernetes 1.32), storage, authentication, and observability automatically. The KOTS admin console provides a form-based UI for configuration. No Kubernetes expertise is required.
+A single Linux VM hosts the complete Pixee platform as a turnkey appliance. The installer provisions K3s (current stable Kubernetes), storage, authentication, and observability automatically. The KOTS admin console provides a form-based UI for configuration. No Kubernetes expertise is required.
 
 **Component layout:** Customer VM runs Pixee platform, analysis service, and user platform. LLM inference routes to the customer's chosen provider (OpenAI, Azure AI Foundry, Anthropic, or Azure Anthropic) from within the customer network. SCM integration connects to internal or cloud-hosted SCM. Admin console runs on port 30000.
 
@@ -67,8 +67,8 @@ This table answers the question security teams ask first: "What data leaves my n
 | **Compute**          | 8 vCPU, 32 GB RAM                                           | 8+ vCPU, 32+ GB RAM                                   |
 | **Storage**          | 100 GB+ SSD/NVMe (under 10 ms write latency)                | 100 GB+ SSD/NVMe                                      |
 | **Operating system** | Ubuntu 24.04+ (recommended), RHEL 9, Rocky Linux, AlmaLinux | N/A (Kubernetes cluster)                              |
-| **Kubernetes**       | K3s bundled (v1.32)                                         | EKS, GKE, AKS, or self-managed                        |
-| **Helm CLI**         | N/A                                                         | v3.15+                                                |
+| **Kubernetes**       | K3s bundled (current stable)                                | EKS, GKE, AKS, or self-managed                        |
+| **Helm CLI**         | N/A                                                         | Current stable version                                |
 | **Network**          | Port 443 (HTTPS), Port 30000 (admin console)                | Port 443 (HTTPS)                                      |
 | **Internet**         | Required for initial install; proxy support available       | Required for initial install; proxy support available |
 

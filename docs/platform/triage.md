@@ -8,7 +8,7 @@ description: How Pixee's three-tier triage engine classifies every vulnerability
 sidebar_position: 3
 ---
 
-Pixee's triage engine classifies every vulnerability finding as true positive, false positive, or won't-fix through codebase-aware exploitability analysis. The three-tier progressive architecture handles known patterns at sub-second speed, investigates ambiguous cases via AI agents, and generates custom analyzers for novel vulnerability types. The result: up to 98% false positive reduction with structured evidence on every verdict, across findings from 13 native scanner integrations.
+Pixee's triage engine classifies every vulnerability finding as true positive, false positive, or won't-fix through codebase-aware exploitability analysis. The three-tier progressive architecture handles known patterns at sub-second speed, investigates ambiguous cases via AI agents, and generates custom analyzers for novel vulnerability types. The result: up to 98% false positive reduction with structured evidence on every verdict, across findings from natively integrated scanners.
 
 Triage is co-equal with [remediation](/platform/remediation). Together they close the loop from "scanner found something" to "vulnerability is fixed."
 
@@ -89,7 +89,7 @@ Every triage verdict is a structured, machine-processable artifact.
 
 Triage works across any SARIF-producing scanner. Customers with heterogeneous stacks — multiple commercial scanners plus custom rules — get a single triage layer that handles all of it.
 
-- **13 native integrations** with scanner-specific metadata extraction (CodeQL, SonarQube, Checkmarx, Veracode, Snyk Code, Semgrep, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy)
+- **Natively integrated scanners** with scanner-specific metadata extraction (CodeQL, SonarQube, Checkmarx, Veracode, Snyk Code, Semgrep, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy, and others)
 - **Universal SARIF ingestion** for any additional scanner (50+ validated)
 - **Custom rule coverage** — proprietary Semgrep rules, internal CodeQL queries, and custom scanner rulesets are handled by Tier 2 and Tier 3 without vendor integration work
 - **Cross-tool deduplication** — when multiple scanners flag the same finding, the system eliminates duplicates

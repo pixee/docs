@@ -32,15 +32,7 @@ The Coverity engine is known for thorough, conservative analysis. This thoroughn
 
 Polaris provides findings and remediation guidance but does not generate automated code fixes or pull requests. Pixee closes this gap. True positive findings are automatically fixed using deterministic codemods and AI-powered MagicMods. Fixes are delivered as pull requests matching the team's code conventions.
 
-## Finding Types
-
-| Category                           | Examples                                | Fix Mode           |
-| ---------------------------------- | --------------------------------------- | ------------------ |
-| Dataflow vulnerabilities           | SQL injection, XSS, path traversal      | Deterministic + AI |
-| Buffer overflows and memory safety | Buffer overruns, use-after-free (C/C++) | AI                 |
-| Concurrency issues                 | Race conditions, deadlocks              | AI                 |
-| Cryptographic issues               | Weak algorithms, insecure random        | Deterministic      |
-| Security misconfigurations         | Insecure defaults, missing headers      | Deterministic      |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

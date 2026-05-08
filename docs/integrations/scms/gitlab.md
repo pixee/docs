@@ -62,7 +62,7 @@ Pixee works alongside existing GitLab CI/CD pipelines without requiring modifica
 4. **Configure repository access** — either grant the service account access to all relevant projects, or use `member_projects_only` for explicit per-project membership.
 5. **Pixee begins monitoring** projects, ingesting scanner findings, and generating remediation MRs.
 
-For the install-time walkthrough, see [Getting Started with GitLab](/getting-started/gitlab).
+For the quick-start walkthrough, see [Connect Source Control → GitLab](/getting-started/source-control#gitlab).
 
 ### Webhook Configuration
 

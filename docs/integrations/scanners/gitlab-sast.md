@@ -40,18 +40,11 @@ GitLab shows SAST findings in the merge request security widget and vulnerabilit
 
 GitLab SAST findings often lack the contextual detail needed for efficient manual remediation. Pixee's fix generation adds the missing context — vulnerability explanation, fix rationale, and quality scores — directly in the MR.
 
-## Finding Types
-
-| Category                   | Examples                                    | Analyzers               |
-| -------------------------- | ------------------------------------------- | ----------------------- |
-| Injection vulnerabilities  | SQL injection, XSS, command injection       | Semgrep, SpotBugs       |
-| Authentication weaknesses  | Insecure session handling, weak credentials | Semgrep, Bandit         |
-| Security misconfigurations | Insecure defaults, missing headers          | Multiple analyzers      |
-| Language-specific patterns | Java deserialization, Python eval()         | SpotBugs, Bandit, Gosec |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 
-1. **Connect GitLab to Pixee** — follow the [GitLab Setup](/getting-started/gitlab) guide to install the Pixee integration
+1. **Connect GitLab to Pixee** — follow the [GitLab quick-start](/getting-started/source-control#gitlab) guide to install the Pixee integration
 2. **Ensure GitLab SAST is enabled** — GitLab SAST runs via CI/CD pipeline templates. Verify your `.gitlab-ci.yml` includes the SAST template
 3. **Pixee ingests findings automatically** — when GitLab SAST runs in your pipeline, Pixee receives the findings via the GitLab API
 4. **Review triage results and merge fixes** — Pixee opens MRs for remediable findings in your existing GitLab workflow

@@ -78,10 +78,10 @@ const config = {
           { from: "/open-pixee", to: "/open-source/overview" },
           {
             from: "/running_on_public_github_repos",
-            to: "/getting-started/github",
+            to: "/getting-started/source-control",
           },
-          { from: "/supported-scms", to: "/" },
-          { from: "/using-pixeebot", to: "/getting-started/github" },
+          { from: "/supported-scms", to: "/getting-started/source-control" },
+          { from: "/using-pixeebot", to: "/getting-started/source-control" },
           { from: "/getting-started", to: "/" },
           {
             from: "/configuration/scheduling",

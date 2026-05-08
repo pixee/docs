@@ -189,4 +189,3 @@ For full setup guides per scanner, see [Integrations Overview](/integrations/ove
 - [Universal SARIF Integration](/integrations/sarif-universal) -- Setup guide for SARIF ingestion
 - [Integrations Overview](/integrations/overview) -- All supported scanners
 - [Scanner Integration](/platform/scanner-integration) -- Technical depth on scanner normalization
-- [Changelog](/api/changelog) -- API and format version history

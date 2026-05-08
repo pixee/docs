@@ -4,7 +4,7 @@ slug: /integrations/overview
 track: both
 content_type: guide
 seo_title: "Pixee Integrations: Scanners, SCMs, and Universal SARIF"
-description: Coverage matrix for Pixee integrations. 13 named scanners, 4 SCM platforms, and universal SARIF support.
+description: Coverage matrix for Pixee integrations. Natively integrated scanners, 4 SCM platforms, and universal SARIF support.
 sidebar_position: 1
 ---
 
@@ -20,14 +20,14 @@ Pixee delivers remediation as pull requests (or merge requests) on the four majo
 
 | Platform                                        | PR/MR Delivery        | Authentication        | Setup Guide                                  |
 | ----------------------------------------------- | --------------------- | --------------------- | -------------------------------------------- |
-| [GitHub](/integrations/scms/github)             | Native pull requests  | GitHub App            | [Get started](/getting-started/github)       |
-| [GitLab](/integrations/scms/gitlab)             | Native merge requests | Personal access token | [Get started](/getting-started/gitlab)       |
-| [Azure DevOps](/integrations/scms/azure-devops) | Native pull requests  | PAT + webhooks        | [Get started](/getting-started/azure-devops) |
-| [Bitbucket](/integrations/scms/bitbucket)       | Native pull requests  | API token             | [Get started](/getting-started/bitbucket)    |
+| [GitHub](/integrations/scms/github)             | Native pull requests  | GitHub App            | [Get started](/getting-started/source-control#github)       |
+| [GitLab](/integrations/scms/gitlab)             | Native merge requests | Personal access token | [Get started](/getting-started/source-control#gitlab)       |
+| [Azure DevOps](/integrations/scms/azure-devops) | Native pull requests  | PAT + webhooks        | [Get started](/getting-started/source-control#azure-devops) |
+| [Bitbucket](/integrations/scms/bitbucket)       | Native pull requests  | API token             | [Get started](/getting-started/source-control#bitbucket)    |
 
 ## Scanner Coverage Matrix
 
-Pixee provides 13 named scanner integrations plus universal SARIF support for any other tool. Every scanner's findings flow through the same triage and remediation pipeline; the only difference is the depth of metadata extraction.
+Pixee provides a growing list of named scanner integrations plus universal SARIF support for any other tool. Every scanner's findings flow through the same triage and remediation pipeline; the only difference is the depth of metadata extraction.
 
 | Scanner                                                               | Integration Tier | Finding Types  | Triage | Remediation | Input Method     |
 | --------------------------------------------------------------------- | ---------------- | -------------- | ------ | ----------- | ---------------- |
@@ -72,7 +72,7 @@ Scanner runs > SARIF output > Pixee ingests > Triage pipeline > TP / FP / WONT_F
 
 The result: one triage and remediation pipeline across every scanner in your stack, from CodeQL to your internal proprietary scanner — all through the same workflow.
 
-**Why SARIF matters.** SARIF (Static Analysis Results Interchange Format) is the OASIS open standard for static analysis results. Most modern SAST, SCA, and secret-scanning tools produce SARIF output natively or via converters. By standardizing on SARIF as the ingestion format, Pixee ensures that any scanner — commercial, open source, or proprietary — can feed into the triage and remediation pipeline without custom integration work.
+**Why SARIF matters.** SARIF (Static Analysis Results Interchange Format) is the OASIS open standard for static analysis results. Pixee supports the current SARIF standard. Most modern SAST, SCA, and secret-scanning tools produce SARIF output natively or via converters. By standardizing on SARIF as the ingestion format, Pixee ensures that any scanner — commercial, open source, or proprietary — can feed into the triage and remediation pipeline without custom integration work.
 
 **What this means in practice:**
 

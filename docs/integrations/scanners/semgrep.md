@@ -51,14 +51,7 @@ Pixee generates fixes using deterministic codemods and AI-powered MagicMods. The
 - Semgrep identifies what is wrong; Pixee delivers the fix as a PR
 - Developers review Pixee PRs through the same workflow they use for all code changes
 
-## Finding Types
-
-| Category                         | Examples                                  | Coverage               |
-| -------------------------------- | ----------------------------------------- | ---------------------- |
-| OWASP Top 10                     | SQL injection, XSS, broken authentication | OSS + Pro rules        |
-| Language-specific security       | Framework misuse, insecure defaults       | Per-language rule sets |
-| Custom organizational rules      | Team-specific patterns and policies       | Custom Semgrep rules   |
-| Code quality (security-relevant) | Hardcoded secrets, weak crypto            | OSS + Pro rules        |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

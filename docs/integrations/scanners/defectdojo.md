@@ -32,13 +32,7 @@ DefectDojo aggregates findings from multiple scanners, but triaging is still man
 
 DefectDojo tracks vulnerability status but does not generate code fixes. Pixee delivers fixes as pull requests for confirmed vulnerabilities, moving findings from "open" to "mitigated" with actual code changes.
 
-## Finding Types
-
-| Category                   | Examples                    | Fix Mode                      |
-| -------------------------- | --------------------------- | ----------------------------- |
-| SAST findings (aggregated) | Injection, XSS, auth issues | Deterministic + AI            |
-| SCA findings (aggregated)  | Dependency CVEs             | Deterministic (version bumps) |
-| Custom scanner findings    | Organization-specific rules | AI                            |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

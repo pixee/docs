@@ -42,15 +42,7 @@ True positive findings receive automated code fixes delivered as pull requests. 
 
 Fixes use deterministic codemods and AI-powered MagicMods.
 
-## Finding Types
-
-| Category                 | Examples                                         | Fix Mode           |
-| ------------------------ | ------------------------------------------------ | ------------------ |
-| Injection flaws          | SQL injection, command injection, LDAP injection | Deterministic + AI |
-| Cross-site scripting     | Reflected XSS, stored XSS                        | Deterministic + AI |
-| Authentication issues    | Broken authentication, credential exposure       | AI                 |
-| Cryptographic weaknesses | Weak algorithms, insecure key management         | Deterministic      |
-| API security             | Insecure API configurations, missing validation  | AI                 |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

@@ -42,15 +42,7 @@ Snyk's "DeepCode AI Fix" provides remediation suggestions within the Snyk UI. Pi
 
 Fixes are generated using deterministic codemods and AI-powered MagicMods for complex scenarios. Every fix matches the team's code conventions -- naming patterns, preferred libraries, and existing security utilities.
 
-## Finding Types
-
-| Category                  | Examples                                         | Fix Mode           |
-| ------------------------- | ------------------------------------------------ | ------------------ |
-| Injection flaws           | SQL injection, XSS, command injection            | Deterministic + AI |
-| Authentication issues     | Broken authentication, session weaknesses        | AI                 |
-| Cryptographic weaknesses  | Weak algorithms, insecure random, hardcoded keys | Deterministic      |
-| Secrets detection         | Hardcoded credentials, API keys, tokens          | Deterministic      |
-| Data flow vulnerabilities | Taint tracking findings, unsanitized inputs      | Deterministic + AI |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

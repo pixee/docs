@@ -24,7 +24,7 @@ Both capabilities work together. Triage eliminates the noise. Remediation fixes 
 
 | Capability | What It Does | Proof Point |
 |---|---|---|
-| Triage | Exploitability analysis across 13 native scanner integrations | Up to 98% false positive reduction |
+| Triage | Exploitability analysis across natively integrated scanners | Up to 98% false positive reduction |
 | Remediation | Context-aware fixes as pull requests | 76% merge rate on production deployments |
 | Delivery | Standard PRs in GitHub, GitLab, ADO, Bitbucket | Native platform integration |
 
@@ -34,7 +34,7 @@ Setting up Pixee takes three steps:
 
 | Step | Page | Time |
 |---|---|---|
-| 1. Install the platform integration | [GitHub](/getting-started/github), [GitLab](/getting-started/gitlab), [Azure DevOps](/getting-started/azure-devops), or [Bitbucket](/getting-started/bitbucket) | 3-5 min |
+| 1. Connect your source control platform | [Connect Source Control](/getting-started/source-control) | 3-5 min |
 | 2. Connect your scanners | See below — required | 5-10 min |
 | 3. Review and merge your first fix | [Your First Fix](/getting-started/first-fix) | 5 min |
 
@@ -49,16 +49,11 @@ Pixee requires scanner findings to perform triage and generate fixes. Without co
 - For scanners that write to your SCM's code-scanning surface (GitHub Code Scanning, GitLab Security Dashboard, etc.), Pixee ingests findings automatically through the SCM integration — no additional step required.
 - For scanners that don't write to the SCM's code-scanning surface, upload SARIF results to the SCM's code-scanning API as a CI step. Pixee then ingests them through the SCM integration.
 
-Pixee integrates natively with 13 scanners: CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy. Any SARIF-producing scanner also works. See [Scanner Integration](/platform/scanner-integration) for the full list and [CI/CD Integration](/integrations/ci-cd) for pipeline setup examples.
+Pixee integrates natively with a growing list of scanners including CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy. Any SARIF-producing scanner also works. See [Scanner Integration](/platform/scanner-integration) for the full list and [CI/CD Integration](/integrations/ci-cd) for pipeline setup examples.
 
 ## Choose Your Platform
 
-| Platform | Setup Time | Guide |
-|---|---|---|
-| **GitHub** | ~3 minutes | [GitHub Setup →](/getting-started/github) |
-| **GitLab** | ~5 minutes | [GitLab Setup →](/getting-started/gitlab) |
-| **Azure DevOps** | ~5 minutes | [Azure DevOps Setup →](/getting-started/azure-devops) |
-| **Bitbucket** | ~5 minutes | [Bitbucket Setup →](/getting-started/bitbucket) |
+See [Connect Source Control](/getting-started/source-control) for a quick-start summary of all four platforms (GitHub, GitLab, Azure DevOps, Bitbucket) with connection requirements and step summaries. Full setup guides live under [Integrations → Source Control](/integrations/overview).
 
 Need enterprise deployment (self-hosted, air-gapped, BYOM)? Start with [Enterprise Deployment Options](/enterprise/deployment).
 

@@ -48,16 +48,7 @@ True-positive findings receive automated code fixes delivered as pull requests, 
 
 Developers review and merge Pixee PRs through the standard development workflow.
 
-## Finding Types
-
-| Category                    | Examples                          | Fix Mode                        |
-| --------------------------- | --------------------------------- | ------------------------------- |
-| Injection flaws             | SQL, command, LDAP, NoSQL         | Deterministic + AI              |
-| Cross-site scripting        | Reflected, stored, DOM-based      | Deterministic + AI              |
-| Authentication / session    | Weak randomness, insecure cookies | Deterministic                   |
-| Insecure deserialization    | Java/JS deserialization sinks     | AI                              |
-| Cryptographic weaknesses    | Weak algorithms, hardcoded keys   | Deterministic                   |
-| Open-source vulnerabilities | Contrast SCA findings             | Deterministic (version updates) |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

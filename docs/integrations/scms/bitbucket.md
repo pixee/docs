@@ -56,7 +56,7 @@ Bitbucket Pipelines is one option for running scanners, but many teams use Jenki
 3. **Configure Pixee** with the username, email address, and API token. For Pixee Enterprise (Helm), the values live under `platform.scm.bitbucket.{username, emailAddress, apiToken}`. For SaaS, use the settings UI. For embedded-cluster Enterprise, the admin console exposes these fields under **Config → Development Platforms → BitBucket**.
 4. **Pixee begins monitoring** for scanner findings and generating remediation PRs.
 
-For the install-time walkthrough, see [Getting Started with Bitbucket](/getting-started/bitbucket).
+For the quick-start walkthrough, see [Connect Source Control → Bitbucket](/getting-started/source-control#bitbucket).
 
 ## Bitbucket Server / Data Center
 

@@ -145,7 +145,7 @@ for fix in fixes["data"]:
 
 ## Input format
 
-Pixee consumes scanner output in **SARIF** -- the OASIS standard for static analysis results -- from 13 native scanner integrations and any SARIF-producing tool. See the [SARIF Reference](/api/sarif).
+Pixee consumes scanner output in **SARIF** -- the OASIS standard for static analysis results -- from natively integrated scanners and any SARIF-producing tool. See the [SARIF Reference](/api/sarif).
 
 ## SDKs and OpenAPI specification
 
@@ -171,6 +171,5 @@ npx @openapitools/openapi-generator-cli generate \
 
 - [SARIF Reference](/api/sarif) -- How Pixee consumes SARIF from scanners
 - [Webhooks](/api/webhooks) -- Event-driven integration for CI/CD and automation
-- [Changelog](/api/changelog) -- API version history and release notes
 - [CI/CD Integration](/integrations/ci-cd) -- Common API consumer patterns
 - [Configuration Overview](/configuration/overview) -- Repository management

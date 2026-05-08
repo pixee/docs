@@ -24,11 +24,11 @@ Compared to legacy on-premises AppSec products that ship as VM images, a native 
 
 | Requirement    | Specification                           |
 | -------------- | --------------------------------------- |
-| **Kubernetes** | EKS, GKE, AKS, or self-managed (v1.32+) |
+| **Kubernetes** | EKS, GKE, AKS, or self-managed (current stable) |
 | **CPU**        | 8+ vCPU                                 |
 | **RAM**        | 32+ GB                                  |
 | **Storage**    | 100 GB+ SSD/NVMe                        |
-| **Helm CLI**   | v3.15+                                  |
+| **Helm CLI**   | Current stable version                  |
 | **Network**    | Port 443 (HTTPS)                        |
 
 **Namespace isolation.** Pixee runs in a dedicated namespace. The Helm chart does not require cluster-admin privileges for day-to-day operation. Installation requires namespace creation and secret management permissions.

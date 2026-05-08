@@ -41,7 +41,7 @@ The VM can run on any infrastructure: physical servers, VMware, Hyper-V, cloud V
 
 ## Installation
 
-The embedded cluster installs with a single command on a Linux VM meeting the prerequisites above. The installer provisions K3s (Kubernetes 1.32), deploys the Pixee platform, and starts a KOTS-powered admin console on port 30000. The admin console provides a form-based UI for all configuration -- domain, TLS, authentication, LLM provider, and SCM connections. No YAML editing or manual Kubernetes configuration is required at any point. For the current installer command and step-by-step walkthrough, see the [deployment guide](https://app.pixee.ai/docs/deploy).
+The embedded cluster installs with a single command on a Linux VM meeting the prerequisites above. The installer provisions K3s (current stable Kubernetes), deploys the Pixee platform, and starts a KOTS-powered admin console on port 30000. The admin console provides a form-based UI for all configuration -- domain, TLS, authentication, LLM provider, and SCM connections. No YAML editing or manual Kubernetes configuration is required at any point. For the current installer command and step-by-step walkthrough, see the [deployment guide](https://app.pixee.ai/docs/deploy).
 
 **Configuration options available in the admin console:**
 

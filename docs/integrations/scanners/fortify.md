@@ -36,14 +36,7 @@ Fortify's rich dataflow analysis provides source-to-sink traces that Pixee's tri
 
 Fortify identifies vulnerabilities but does not generate automated code fixes. Pixee delivers remediation as pull requests, applying deterministic codemods for known vulnerability patterns and AI-powered generation for complex scenarios.
 
-## Finding Types
-
-| Category                  | Examples                              | Fix Mode           |
-| ------------------------- | ------------------------------------- | ------------------ |
-| Injection vulnerabilities | SQL injection, XSS, command injection | Deterministic      |
-| Authentication weaknesses | Insecure session management           | Deterministic + AI |
-| Cryptographic issues      | Weak algorithms, hardcoded keys       | Deterministic      |
-| Dataflow vulnerabilities  | Taint propagation across functions    | AI                 |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

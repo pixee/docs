@@ -56,15 +56,7 @@ Beyond these dedicated codemods, Pixee's general-purpose codemod library and AI-
 - Fixes match your team's code conventions
 - Developers review and merge Pixee PRs through their standard workflow
 
-## Finding Types
-
-| Category             | Examples                          | Checkmarx-Specific Codemods |
-| -------------------- | --------------------------------- | --------------------------- |
-| SQL injection        | Parameterized query fixes         | .NET SQL, JavaScript SQL    |
-| NoSQL injection      | Parameterized NoSQL fixes         | JavaScript NoSQL            |
-| XSS                  | Output encoding, sanitization     | General codemods            |
-| Path traversal       | Input validation                  | General codemods            |
-| Authentication flaws | Session and auth misconfiguration | General codemods            |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 

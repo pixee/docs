@@ -44,7 +44,7 @@ Pixee works with any scanner that produces SARIF output run from Azure Pipelines
 4. **(Optional) Set up Azure DevOps webhooks** to deliver repository and PR events to your Pixee endpoint, using HTTP Basic auth with the credentials from step 2.
 5. **Pixee begins monitoring** for scanner findings and generating remediation PRs.
 
-For the install-time walkthrough, see [Getting Started with Azure DevOps](/getting-started/azure-devops).
+For the quick-start walkthrough, see [Connect Source Control → Azure DevOps](/getting-started/source-control#azure-devops).
 
 ## Azure DevOps Server (On-Premises)
 

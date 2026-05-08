@@ -40,13 +40,7 @@ SonarQube shows what is wrong but does not generate fixes. Pixee fills this gap 
 
 Fixes match your team's code conventions.
 
-## Finding Types
-
-| Category                         | Examples                                                       | Fix Mode           |
-| -------------------------------- | -------------------------------------------------------------- | ------------------ |
-| Security vulnerabilities         | SQL injection, XSS, path traversal, insecure crypto            | Deterministic + AI |
-| Security hotspots                | Hardcoded credentials, weak hashing, CSRF-related patterns     | AI                 |
-| Code quality (security-relevant) | Null pointer dereferences, resource leaks with security impact | AI                 |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Supported Languages
 

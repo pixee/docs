@@ -49,10 +49,10 @@ This is the question teams ask first, and the answer depends on your deployment 
 
 | Platform                | Common Pattern                                                                                                                              | Setup Time | Prerequisites                                                                      |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------- |
-| **GitHub Actions**      | Scanner publishes SARIF to GitHub Code Scanning; GHAS-native scanners (CodeQL) need no extra step                                           | ~5 min     | Pixee GitHub App installed ([setup guide](/getting-started/github))                |
-| **GitLab CI**           | GitLab SAST + Dependency Scanning are ingested natively; external scanners upload SARIF to GitLab's vulnerability API                       | ~10 min    | GitLab integration configured ([setup guide](/getting-started/gitlab))             |
-| **Azure Pipelines**     | Scanner runs in pipeline; SARIF is uploaded via Azure DevOps Code Scanning or directly to Pixee                                             | ~10 min    | Azure DevOps integration configured ([setup guide](/getting-started/azure-devops)) |
-| **Bitbucket Pipelines** | Scanner runs in pipeline; SARIF is uploaded to Pixee                                                                                        | ~10 min    | Bitbucket connector configured ([setup guide](/getting-started/bitbucket))         |
+| **GitHub Actions**      | Scanner publishes SARIF to GitHub Code Scanning; GHAS-native scanners (CodeQL) need no extra step                                           | ~5 min     | Pixee GitHub App installed ([setup guide](/getting-started/source-control#github))                |
+| **GitLab CI**           | GitLab SAST + Dependency Scanning are ingested natively; external scanners upload SARIF to GitLab's vulnerability API                       | ~10 min    | GitLab integration configured ([setup guide](/getting-started/source-control#gitlab))             |
+| **Azure Pipelines**     | Scanner runs in pipeline; SARIF is uploaded via Azure DevOps Code Scanning or directly to Pixee                                             | ~10 min    | Azure DevOps integration configured ([setup guide](/getting-started/source-control#azure-devops)) |
+| **Bitbucket Pipelines** | Scanner runs in pipeline; SARIF is uploaded to Pixee                                                                                        | ~10 min    | Bitbucket connector configured ([setup guide](/getting-started/source-control#bitbucket))         |
 | **Jenkins / other CI**  | Scanner runs anywhere; the SCM-native path still applies if your scanner publishes to GitHub Code Scanning, GitLab Security Dashboard, etc. | varies     | One of the four SCM integrations configured                                        |
 
 Setup times are wall-clock time from "I have a pipeline" to "Pixee is processing scanner results." This does not include scanner setup — that is your existing infrastructure.
@@ -94,7 +94,7 @@ For scanners that don't write to Code Scanning natively, upload the SARIF afterw
     sarif_file: results.sarif
 ```
 
-**Prerequisites:** Install the Pixee GitHub App ([GitHub Setup](/getting-started/github)).
+**Prerequisites:** Install the Pixee GitHub App ([GitHub Setup](/getting-started/source-control#github)).
 
 ## GitLab CI
 
@@ -113,7 +113,7 @@ stages:
 
 For external scanners, run them in CI and emit GitLab-compatible reports (or upload SARIF to GitLab's security dashboard via the security report artifacts). Pixee picks them up through the same GitLab integration.
 
-**Prerequisites:** Configure the GitLab integration with a service-account PAT ([GitLab Setup](/getting-started/gitlab)).
+**Prerequisites:** Configure the GitLab integration with a service-account PAT ([GitLab Setup](/getting-started/source-control#gitlab)).
 
 **Self-hosted GitLab:** supported. Configure the custom base URI in the Pixee integration settings.
 
@@ -142,7 +142,7 @@ steps:
 
 After the scanner publishes results to your repository's code-scanning surface (or to Pixee directly), the Pixee Azure DevOps integration ingests them and opens fix PRs.
 
-**Prerequisites:** Configure the Azure DevOps integration ([Azure DevOps Setup](/getting-started/azure-devops)).
+**Prerequisites:** Configure the Azure DevOps integration ([Azure DevOps Setup](/getting-started/source-control#azure-devops)).
 
 **Work-item linking:** If your organization requires linked work items on PRs, configure the work item ID in the Pixee integration settings.
 
@@ -170,7 +170,7 @@ pipelines:
 
 After the scan step, the SARIF file is available to the Pixee Bitbucket connector. Configuration of the upload step depends on your scanner — check the per-scanner integration page for specifics.
 
-**Prerequisites:** Configure the Bitbucket connector ([Bitbucket Setup](/getting-started/bitbucket)). Supports Bitbucket Cloud and Bitbucket Server.
+**Prerequisites:** Configure the Bitbucket connector ([Bitbucket Setup](/getting-started/source-control#bitbucket)). Supports Bitbucket Cloud and Bitbucket Server.
 
 ## Jenkins and Other CI Systems
 
@@ -202,15 +202,15 @@ Pixee accepts scanner results through three paths:
 
 1. **SCM-native APIs.** GitHub Code Scanning, GitLab vulnerability reports, Azure DevOps Code Scanning, Bitbucket reports. Pixee reads findings through the SCM integration.
 2. **Direct SARIF upload to Pixee.** Use the [Pixee CLI](/api/cli) (`pixee api`) or an HTTP client. Useful when your CI system doesn't have a clean upload path to the SCM.
-3. **Native scanner integrations.** For 13 named scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy) Pixee uses dedicated handlers that extract scanner-specific metadata for richer triage. See the per-scanner pages under [Integrations](/integrations/overview).
+3. **Native scanner integrations.** For named scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy, and others) Pixee uses dedicated handlers that extract scanner-specific metadata for richer triage. See the per-scanner pages under [Integrations](/integrations/overview).
 
-**Universal SARIF.** Any SARIF 2.1.0–producing scanner works through the universal SARIF integration. See [Universal SARIF Integration](/integrations/sarif-universal).
+**Universal SARIF.** Any SARIF-producing scanner works through the universal SARIF integration. See [Universal SARIF Integration](/integrations/sarif-universal).
 
 ## Troubleshooting
 
 **Scanner findings not reaching Pixee.** Verify the SCM integration's read access to code-scanning results. For GitHub, confirm the App has `code_scanning_alerts: read`. For GitLab, confirm the PAT has `read_api`. For Azure DevOps and Bitbucket, confirm the credentials authorize reading the security/reports endpoints.
 
-**SARIF parsing errors.** Confirm the SARIF file conforms to SARIF 2.1.0 and is valid JSON. Most scanner export options include a SARIF format flag — check your scanner's documentation.
+**SARIF parsing errors.** Confirm the SARIF file is valid and conforms to the SARIF standard. Validate it is valid JSON. Most scanner export options include a SARIF format flag — check your scanner's documentation.
 
 **Fix PRs not appearing.** Check that the Pixee integration has write access to the target repository. For GitHub, the App needs `pull_requests: write`. Fix generation is asynchronous — allow a few minutes after findings are ingested.
 

@@ -26,7 +26,7 @@ A codemod is a deterministic code transformation rule that rewrites source code 
 
 ### What scanners does Pixee work with?
 
-Pixee integrates natively with 13 scanners: CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy. Any scanner that produces SARIF output can also connect through the Universal SARIF integration — over 50 additional scanners validated. You do not need to change your detection stack.
+Pixee integrates natively with a growing list of scanners including CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy. Any scanner that produces SARIF output can also connect through the Universal SARIF integration — over 50 additional scanners validated. You do not need to change your detection stack.
 
 ### Does Pixee replace my existing scanners?
 
@@ -42,7 +42,7 @@ Yes. SCA findings flow through the same triage and remediation pipeline as SAST 
 
 ### What is the difference between Pixee and GitHub Copilot Autofix?
 
-Copilot Autofix is limited to GitHub Advanced Security (CodeQL) findings on GitHub. Pixee works with 13 natively integrated scanners across GitHub, GitLab, Azure DevOps, and Bitbucket. Pixee also provides triage automation, which Copilot Autofix does not offer. Pixee uses deterministic codemods alongside constrained AI, while Copilot Autofix relies on general-purpose AI code generation. Pixee also supports self-hosted and air-gapped deployment with Bring Your Own Model (BYOM).
+Copilot Autofix is limited to GitHub Advanced Security (CodeQL) findings on GitHub. Pixee works with a growing list of natively integrated scanners across GitHub, GitLab, Azure DevOps, and Bitbucket. Pixee also provides triage automation, which Copilot Autofix does not offer. Pixee uses deterministic codemods alongside constrained AI, while Copilot Autofix relies on general-purpose AI code generation. Pixee also supports self-hosted and air-gapped deployment with Bring Your Own Model (BYOM).
 
 ### How long does it take to set up Pixee?
 
@@ -142,14 +142,14 @@ Most likely cause: no scanner findings exist for the connected repository. **Con
 
 1. Connect at least one scanner. See the [Integrations Overview](/integrations/overview) for setup instructions.
 2. Verify the scanner has produced findings for the repository.
-3. For custom or unsupported scanners, verify findings are in SARIF 2.1.0 format and are being uploaded correctly.
+3. For custom or unsupported scanners, verify findings are in SARIF format and are being uploaded correctly.
 
 ### Why are scanner findings not showing up in Pixee?
 
 Three common causes, in order of likelihood:
 
 1. **Integration not configured.** Each scanner requires its own integration configuration.
-2. **Format mismatch.** Scanner output does not match the expected specification. Verify SARIF 2.1.0 compliance for custom scanners.
+2. **Format mismatch.** Scanner output does not match the expected specification. Verify SARIF compliance for custom scanners.
 3. **Upload path incorrect.** Scanner results are not being delivered to the correct endpoint. Check the integration documentation for the expected delivery method.
 
 ### Scanner findings appear in Pixee but no fixes are generated. Why?

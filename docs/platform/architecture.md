@@ -28,9 +28,9 @@ SAST and SCA findings both flow through this same pipeline. There is no separate
 
 ## Scan Ingestion
 
-Findings arrive from 13 native scanner integrations or any SARIF-producing tool:
+Findings arrive from natively integrated scanners or any SARIF-producing tool:
 
-**Native integrations with dedicated handlers:** CodeQL (GitHub Advanced Security), SonarQube/SonarCloud, Checkmarx, Veracode, Snyk Code, Semgrep, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy — 13 named scanners.
+**Native integrations with dedicated handlers:** CodeQL (GitHub Advanced Security), SonarQube/SonarCloud, Checkmarx, Veracode, Snyk Code, Semgrep, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy.
 
 Each native integration has a tool-specific handler that extracts maximum metadata from the scanner's output format. CodeQL findings include codeFlows and help documentation. Semgrep findings carry full rule descriptions. Metadata-poor tools like Checkmarx use rule-ID-based strategies to compensate for sparse SARIF output.
 

@@ -40,16 +40,7 @@ True positive findings receive automated code fixes delivered as pull requests. 
 
 Veracode's own "Veracode Fix" provides AI-assisted remediation suggestions, but it does not deliver merged pull requests at scale. Pixee closes that gap: findings move from classification to fix to developer review in one pipeline. Developers review and merge Pixee PRs through their standard workflow.
 
-## Finding Types
-
-| Category                   | Examples                                         | Fix Mode           |
-| -------------------------- | ------------------------------------------------ | ------------------ |
-| Injection flaws            | SQL injection, command injection, LDAP injection | Deterministic + AI |
-| Cross-site scripting       | Reflected XSS, stored XSS, DOM-based XSS         | Deterministic + AI |
-| Authentication and session | Broken authentication, session fixation          | AI                 |
-| Cryptographic issues       | Weak algorithms, hardcoded keys                  | Deterministic      |
-| Path traversal             | Directory traversal, file inclusion              | Deterministic + AI |
-| Security misconfigurations | Insecure defaults, missing headers               | Deterministic      |
+For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 
 ## Setup
 
