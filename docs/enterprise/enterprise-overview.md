@@ -63,7 +63,7 @@ Track these metrics from the Pixee reporting dashboard to evaluate operational i
 | **Compliance window adherence** | Critical/high findings remediated within required timeframes      | Pixee reporting + compliance tool     |
 | **Finding volume trend**        | Total open findings over time                                     | Pixee dashboard: backlog view         |
 
-See [Fix Safety](/how-it-works/fix-safety) for production metrics on fix quality and validation.
+See [Security & Trust](/platform/security) for production metrics on fix quality and validation.
 
 ## What's Next
 
@@ -73,24 +73,3 @@ See [Fix Safety](/how-it-works/fix-safety) for production metrics on fix quality
 
 **Reviewing compliance requirements?** The [Compliance](/enterprise/compliance) page maps Pixee capabilities to SOC 2, HIPAA, FedRAMP, PCI-DSS, NIST 800-53, and ISO 27001.
 
-## Frequently Asked Questions
-
-### Does Pixee support self-hosted deployment?
-
-Yes. Pixee offers three self-hosted deployment models: a turnkey embedded cluster (single Linux VM, no Kubernetes expertise needed), a standard Helm chart for existing Kubernetes clusters (EKS, GKE, AKS), and a fully air-gapped deployment with your own private LLM endpoint. See [Deployment Options](/enterprise/deployment) for details.
-
-### What metrics does Pixee track?
-
-The reporting dashboard tracks merge rate, triage reduction, MTTR, compliance window adherence, and finding volume trends. See the Measuring Success section above for details.
-
-### What compliance frameworks does Pixee support?
-
-Pixee maps to SOC 2, HIPAA, FedRAMP, PCI-DSS, NIST 800-53, and ISO 27001 control requirements. See the [Compliance](/enterprise/compliance) page for detailed framework mapping.
-
-### How long does enterprise deployment take?
-
-Embedded cluster and Helm deployments typically complete in under one hour. Air-gapped deployments take longer due to private LLM endpoint configuration and network verification. See [Deployment Options](/enterprise/deployment) for infrastructure requirements.
-
-### Can I use Pixee across multiple SCM platforms?
-
-Yes. A single Pixee Enterprise deployment supports GitHub, GitLab, Azure DevOps, and Bitbucket simultaneously. All four platforms receive the same triage and remediation capabilities.

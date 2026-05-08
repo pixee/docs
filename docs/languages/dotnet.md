@@ -10,7 +10,7 @@ sidebar_position: 5
 
 Pixee remediates .NET vulnerabilities automatically using deterministic codemods and AI-powered fixes for custom patterns. Coverage includes ASP.NET Core and Blazor applications with fixes for injection vulnerabilities, insecure cryptography, and dependency vulnerabilities. Pixee uses full AST analysis for C# source code and manages dependency upgrades across both .csproj and packages.config formats, delivering fixes as pull requests that match your codebase conventions.
 
-.NET support uses Pixee's full AST parsing tier, providing deep cross-file analysis on par with Java and Python. Deterministic codemod coverage is growing alongside comprehensive AI-powered MagicMod support. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
+.NET support uses Pixee's full AST parsing tier, providing deep cross-file analysis on par with Java and Python. Deterministic codemod coverage is growing alongside comprehensive AI-powered MagicMod support. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
 
 ## What Pixee Fixes in .NET
 
@@ -127,20 +127,3 @@ Any scanner that produces SARIF output can feed .NET findings to Pixee through t
 | Code hosting    | GitHub, GitLab, Azure DevOps, Bitbucket                      |
 | Frameworks      | ASP.NET Core, Blazor Server                                  |
 
-## FAQ
-
-**Does Pixee support .NET?**
-
-Yes. Pixee remediates .NET vulnerabilities automatically using deterministic codemods and AI-powered fixes with full AST analysis for C# source code. Fixes are delivered as pull requests.
-
-**Does Pixee work with ASP.NET Core applications?**
-
-Yes. Pixee recognizes ASP.NET Core controllers, middleware, Entity Framework Core patterns, and Razor views for targeted security fixes. Fixes respect ASP.NET Core conventions and use framework-native security patterns.
-
-**How does Pixee handle NuGet dependency vulnerabilities?**
-
-Pixee upgrades vulnerable packages in .csproj and packages.config files, coordinating version bumps with required source-file changes in a single PR.
-
-**What .NET scanners does Pixee work with?**
-
-Pixee remediates findings from CodeQL, SonarQube, Checkmarx, Veracode, Fortify, and any SARIF-producing scanner. Enterprise .NET shops using Microsoft-stack tooling can connect through the universal SARIF integration.

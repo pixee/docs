@@ -68,18 +68,4 @@ Veracode's own "Veracode Fix" provides AI-assisted remediation suggestions, but 
 - **Test code at production severity:** Pixee distinguishes test fixtures, example code, and documentation snippets from production code
 - **Framework-mitigated findings:** Code protected by framework-level security controls (Spring Security, Django middleware) that Veracode's static analysis cannot resolve
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
-
-## FAQ
-
-### Does Pixee replace Veracode?
-
-No. Pixee complements Veracode by adding automated triage and remediation on top of your existing deployment. Veracode continues scanning as before. Pixee processes the output, classifies findings, and delivers fixes as pull requests.
-
-### How does Pixee compare to Veracode Fix?
-
-Veracode Fix provides AI-assisted remediation suggestions within the Veracode UI. Pixee delivers complete, context-aware fixes as pull requests that developers review and merge through their standard code review workflow. Pixee also adds independent triage before remediation -- classifying each finding before generating a fix.
-
-### Does Pixee work with Veracode SCA findings as well as SAST?
-
-Pixee's Veracode integration processes SAST findings through the triage and remediation pipeline. For SCA-specific remediation (dependency version updates), see the [SCA pipeline](/how-it-works/sca-pipeline) documentation.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

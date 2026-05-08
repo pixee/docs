@@ -75,18 +75,4 @@ Pixee generates fixes using a combination of deterministic codemods and AI-power
 - **Test code at production severity:** Findings in test fixtures, example code, and documentation snippets flagged at production severity levels
 - **Low-precision rules in specific contexts:** Rules with high recall but low precision in certain language or framework configurations
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
-
-## FAQ
-
-### Does Pixee replace CodeQL or GitHub Advanced Security?
-
-No. Pixee complements CodeQL by adding automated triage and remediation on top of your existing GHAS deployment. CodeQL continues scanning exactly as before. Pixee processes the output.
-
-### What is codeFlows extraction?
-
-CodeQL SARIF includes multi-step dataflow traces showing how data moves from source to sink. Pixee's dedicated handler extracts these traces to give the triage engine full context -- the complete data journey, not just the flagged line. This leads to more accurate triage decisions, especially for injection-class vulnerabilities.
-
-### Do I need to export CodeQL results manually?
-
-No. Pixee's GitHub integration ingests CodeQL findings automatically via the GHAS API. If you prefer, you can also upload CodeQL SARIF directly. Either path feeds into the same triage and remediation pipeline.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

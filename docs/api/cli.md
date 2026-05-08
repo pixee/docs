@@ -1,6 +1,6 @@
 ---
 title: Pixee CLI
-slug: /getting-started/cli
+slug: /api/cli
 track: dev
 content_type: tutorial
 seo_title: "Pixee CLI | Command-Line Client for the Pixee Platform"
@@ -144,30 +144,5 @@ pixee scan list --repo "$REPO" --branch main --tool codeql --json
 pixee workflow create new-scan --repo "$REPO" --tool codeql ...
 ```
 
-The CLI does not run analysis or generate fixes — those happen on the platform, triggered by your SCM integration. See [CI/CD Integration](/getting-started/ci-cd) for the end-to-end pipeline patterns.
+The CLI does not run analysis or generate fixes — those happen on the platform, triggered by your SCM integration. See [CI/CD Integration](/integrations/ci-cd) for the end-to-end pipeline patterns.
 
-## Frequently Asked Questions
-
-### Does the Pixee CLI generate fixes locally?
-
-No. The CLI is a client for the Pixee platform. Triage and remediation run on the platform; the CLI lets you inspect, query, and configure that platform from the command line.
-
-### Do I need a Pixee account to use the CLI?
-
-Yes. The CLI authenticates against a specific Pixee deployment using an API token. It is intended for Pixee customers.
-
-### Where is the source code?
-
-The distributed binaries are published from [github.com/pixee/pixee-cli](https://github.com/pixee/pixee-cli). Source code lives in a private repository (`pixee-cli-private`); the public repo distributes the compiled binaries, the container image, and the coding-agent skills.
-
-### How do I authenticate in CI without storing a config file?
-
-Set `PIXEE_TOKEN` and `PIXEE_SERVER` as environment variables. The CLI resolves credentials from env vars before falling back to the stored config file, so no `pixee auth login` step is required in pipelines.
-
-### What happens when I get exit code 2?
-
-Exit code 2 means authentication failed. Run `pixee auth status` to see which server and token are configured. If the server is wrong, re-run `pixee auth login --server <correct-url>`. If the token is invalid, generate a new one in the admin console.
-
-### Is there a Docker image?
-
-Yes. The `pixee/pixee-cli` container image is published alongside each release; pull `pixee/pixee-cli:latest` or pin to a specific version tag.

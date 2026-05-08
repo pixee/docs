@@ -86,20 +86,3 @@ All Pixee open source projects are released under the **Apache License 2.0**. Yo
 
 ---
 
-## Frequently Asked Questions
-
-### Is Pixee open source?
-
-Pixee's deterministic codemod engines (codemodder-java, codemodder-python) are open source on GitHub under Apache 2.0. The full Pixee platform -- including AI-powered MagicMods, triage automation, and enterprise features -- is a commercial product built on these open source foundations.
-
-### What is the Codemodder framework?
-
-[Codemodder](/open-source/codemodder) is Pixee's open source framework for building language-specific, security-focused code transformations (codemods). It powers codemodder-java and codemodder-python, and you can use it to build custom codemods for your own security patterns.
-
-### Can I use Pixee's open source codemods without the platform?
-
-Yes. The open source codemod engines can be run locally or in CI/CD to apply deterministic security fixes without requiring the Pixee platform. The platform adds AI-powered fixes, triage, scanner integration, and enterprise features.
-
-### How do I contribute to Pixee's open source projects?
-
-See the [Contributing](/open-source/contributing) guide for the contribution workflow, quality standards, and community guidelines. Issues tagged `good first issue` are a great starting point.

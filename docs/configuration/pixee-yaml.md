@@ -254,20 +254,3 @@ Check the Pixee dashboard for your repository. The configuration status indicate
 | Codemod still running after disabling | Codemod name typo                                   | Verify the exact codemod identifier in the Pixee dashboard      |
 | Labels not appearing on PRs           | SCM permissions                                     | Ensure the Pixee integration has permission to apply labels     |
 
-## FAQ
-
-### How do I exclude files or directories from Pixee?
-
-Add path patterns to the `excludes.paths` section of PIXEE.yaml. Standard glob patterns are supported. For example, `"tests/**"` excludes everything under the `tests/` directory.
-
-### Can I disable specific fix types?
-
-Yes. The `fixes` section lets you enable or disable specific codemods by name or entire fix categories (SAST, SCA) with a single toggle.
-
-### What happens if my PIXEE.yaml has a syntax error?
-
-Pixee falls back to organization defaults and logs a validation warning. No analysis is skipped -- the file is simply ignored until corrected. Check the Pixee dashboard for validation status.
-
-### Does PIXEE.yaml work with all SCM platforms?
-
-Yes. PIXEE.yaml is read from the repository root on GitHub, GitLab, Azure DevOps, and Bitbucket.

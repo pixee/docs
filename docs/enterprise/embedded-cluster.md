@@ -98,20 +98,3 @@ The embedded cluster is the right choice for most organizations without existing
 
 Both deployment models deliver the same triage and remediation capabilities. The choice is about infrastructure preference, not product functionality.
 
-## Frequently Asked Questions
-
-### Do I need Kubernetes experience to deploy Pixee?
-
-No. The embedded cluster deployment handles all Kubernetes components automatically. The admin console is a form-based UI for all configuration -- no YAML editing, no kubectl commands, no cluster management.
-
-### What Kubernetes distribution does the embedded cluster use?
-
-The embedded cluster is built on K3s (Kubernetes 1.32) distributed via Replicated Embedded Cluster.
-
-### Can I run the embedded cluster in a VM on my existing infrastructure?
-
-Yes. The embedded cluster runs on any Linux VM that meets the prerequisites -- physical servers, VMware, Hyper-V, cloud VMs (EC2, Azure VMs, GCE), or any other virtualization platform.
-
-### How do I upgrade the embedded cluster?
-
-Upgrades are managed through the KOTS admin console. New versions are delivered as single-step upgrades with rollback support. No manual Kubernetes operations are required.

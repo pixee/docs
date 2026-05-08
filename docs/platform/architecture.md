@@ -28,9 +28,9 @@ SAST and SCA findings both flow through this same pipeline. There is no separate
 
 ## Scan Ingestion
 
-Findings arrive from 12 native scanner integrations or any SARIF-producing tool:
+Findings arrive from 13 native scanner integrations or any SARIF-producing tool:
 
-**Native integrations with dedicated handlers:** CodeQL (GitHub Advanced Security), SonarQube/SonarCloud, Checkmarx, Veracode, Snyk, Semgrep, AppScan, Polaris, GitLab SAST, Trivy, Datadog SAST, and Arnica SAST.
+**Native integrations with dedicated handlers:** CodeQL (GitHub Advanced Security), SonarQube/SonarCloud, Checkmarx, Veracode, Snyk Code, Semgrep, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy — 13 named scanners.
 
 Each native integration has a tool-specific handler that extracts maximum metadata from the scanner's output format. CodeQL findings include codeFlows and help documentation. Semgrep findings carry full rule descriptions. Metadata-poor tools like Checkmarx use rule-ID-based strategies to compensate for sparse SARIF output.
 
@@ -54,13 +54,13 @@ A shared context-aware intelligence layer enriches every tier with codebase sign
 
 For false positive reduction data, see [Triage Capabilities](/platform/triage).
 
-For full triage details, see [Triage Capabilities](/platform/triage) and [How the Triage Engine Works](/how-it-works/triage-engine).
+For full triage details, see [Triage](/platform/triage).
 
 ## Remediation Engine
 
 The remediation engine uses a hybrid-intelligence model: deterministic codemods handle known vulnerability patterns, and AI-powered MagicMods handle everything else.
 
-**Deterministic codemods:** Pre-built, rule-based transformations for known OWASP/SANS security patterns. Same input, same output, every time. Zero LLM involvement. Zero hallucination risk. Open-source engines (codemodder-java, codemodder-python) are publicly inspectable. See [Fix Generation](/how-it-works/fix-generation) for the full codemod library.
+**Deterministic codemods:** Pre-built, rule-based transformations for known OWASP/SANS security patterns. Same input, same output, every time. Zero LLM involvement. Zero hallucination risk. Open-source engines (codemodder-java, codemodder-python) are publicly inspectable. See [Remediation](/platform/remediation) for the full codemod library.
 
 **AI-powered MagicMods:** Handle custom frameworks, multi-file dataflow vulnerabilities, and novel patterns where deterministic rules cannot reach. Scanner-aware dispatchers for 8+ tools ensure the AI receives the right context for each scanner's output format.
 
@@ -68,9 +68,9 @@ The remediation engine uses a hybrid-intelligence model: deterministic codemods 
 
 **Independent fix evaluation:** Every generated fix passes through a separate quality gate scoring Safety (no breaking changes), Effectiveness (resolves the vulnerability), and Cleanliness (code quality). The evaluator runs as a separate inference call -- the generator does not grade its own work. Fixes that fail evaluation are retried with structured feedback or suppressed entirely.
 
-For merge rate data, see [Fix Safety](/how-it-works/fix-safety).
+For merge rate data and trust details, see [Security & Trust](/platform/security).
 
-For full remediation details, see [Remediation Capabilities](/platform/remediation) and [How Fix Generation Works](/how-it-works/fix-generation).
+For full remediation details, see [Remediation](/platform/remediation).
 
 ## PR Delivery
 
@@ -115,24 +115,3 @@ For air-gapped deployments, a customer-hosted LLM is required. No code leaves th
 
 The Analysis Service handles the computationally intensive work -- triage decisions, fix generation, and quality evaluation. The Backend Platform manages the integration surface: scanner webhooks, SCM platform APIs, and PR lifecycle. The User Platform provides visibility into triage outcomes, remediation activity, and configuration.
 
-## Frequently Asked Questions
-
-### What technology stack does Pixee use?
-
-Pixee is built on three components: a Java/Quarkus backend for platform orchestration, a Python/FastAPI analysis service for triage and remediation, and a React/TypeScript frontend for user interaction. LLM orchestration supports OpenAI, Azure OpenAI, Anthropic Claude, and any OpenAI-compatible endpoint.
-
-### Can Pixee work with my existing scanners?
-
-Yes. Pixee ingests findings from 12 natively integrated scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk, SonarQube, and others) plus any tool that produces SARIF output.
-
-### How does Pixee deliver fixes?
-
-Every fix is delivered as a pull request on your existing platform (GitHub, GitLab, Azure DevOps, or Bitbucket). There is no direct commit mode. Your existing code review, CI/CD, and branch protection rules all apply.
-
-### Can Pixee run in an air-gapped environment?
-
-Yes. Pixee supports fully air-gapped deployment with a customer-hosted LLM. No code leaves the customer's environment. The only outbound connection is license validation, which can be routed through a proxy.
-
-### What happens if I stop using Pixee?
-
-All previously merged fixes remain as standard code in your repositories. There is no runtime dependency on Pixee. Removing Pixee does not affect any code that has already been merged.

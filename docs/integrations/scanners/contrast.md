@@ -80,18 +80,4 @@ Pixee ingests Contrast findings via the [pixee/upload-tool-results-action](https
 - **Sanitized sinks:** Runtime-observed flows that terminate in sinks with framework-level sanitization Contrast does not always resolve
 - **Severity inflation:** Findings flagged at high severity that are gated behind authentication, internal APIs, or otherwise reduced-impact contexts
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
-
-## FAQ
-
-### Does Pixee replace Contrast Security?
-
-No. Pixee processes findings produced by Contrast and other scanners. Contrast continues running as your IAST source. Pixee adds triage and automated code fixes on top.
-
-### Does Pixee require a specific Contrast deployment model?
-
-Pixee works with findings from any Contrast Assess deployment. The integration uses the [pixee/upload-tool-results-action](https://github.com/pixee/upload-tool-results-action) to ingest exported findings -- the path Contrast takes to produce them does not matter to Pixee.
-
-### How does runtime-detected differ from statically-detected for triage?
-
-Runtime-confirmed findings carry a higher prior toward true-positive classification because the vulnerability has been observed during execution. Pixee still validates each finding in code context to confirm reachability in production paths and identify effective remediations.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

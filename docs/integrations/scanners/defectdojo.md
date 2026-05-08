@@ -49,18 +49,4 @@ DefectDojo tracks vulnerability status but does not generate code fixes. Pixee d
 
 **Prerequisites:** DefectDojo instance with findings imported, Pixee platform integration configured.
 
-## FAQ
-
-### Does Pixee replace DefectDojo?
-
-No. DefectDojo is a vulnerability management platform that tracks and organizes findings. Pixee is a resolution platform that triages and fixes them. They serve different functions and work together.
-
-### How do findings flow between DefectDojo and Pixee?
-
-Findings are exported from DefectDojo in SARIF format and ingested by Pixee for triage and remediation. When Pixee generates a fix, the resulting PR can be tracked back in DefectDojo as a mitigation action.
-
-### Can Pixee update DefectDojo finding status automatically?
-
-Integration capabilities between Pixee and DefectDojo depend on your deployment configuration. Contact the Pixee team for current webhook and API integration options.
-
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

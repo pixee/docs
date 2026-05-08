@@ -63,7 +63,7 @@ Categories are omitted when a release has no entries of that type.
 
 ### Added
 
-- **Datadog SAST integration.** Native scanner handler for Datadog SAST findings. Pixee now ingests SARIF from Datadog alongside the existing 11 native scanner integrations. See [Integrations Overview](/integrations/overview).
+- **Datadog SAST integration.** Native scanner handler for Datadog SAST findings. See [Integrations Overview](/integrations/integrations-overview).
 - **Activity feed with SSE streaming.** Triage outcomes and remediation activity are now streamed in real time via Server-Sent Events to the Pixee dashboard. Includes drawer auto-transition and outcome banners.
 
 ### Changed
@@ -77,7 +77,7 @@ Categories are omitted when a release has no entries of that type.
 ### Added
 
 - **Decision-tree triage analyzer.** New triage strategy option (`decision-tree`) for deterministic, rules-based triage routing. Complements existing ReACT and agent-based strategies.
-- **Arnica SAST integration.** Native scanner handler for Arnica SAST findings. See [Integrations Overview](/integrations/overview).
+- **Arnica SAST integration.** Native scanner handler for Arnica SAST findings. See [Integrations Overview](/integrations/integrations-overview).
 - **Anthropic-optimized triage prompts.** Provider-family-aware prompting for Anthropic LLM providers. Triage prompts are now optimized per provider family rather than using a lowest-common-denominator approach.
 - **Authentik IdP federation and RP-Initiated Logout.** Embedded Authentik OIDC provider now federates to upstream corporate identity providers (Google Workspace, Microsoft Entra ID, Okta) with auto-redirect and direct login. RP-Initiated Logout enables clean session termination.
 - **Bring-your-own database secret support.** CloudNativePG now supports `existingSecret` for external secret managers (Vault, External Secrets Operator, SOPS). See [Enterprise Deployment](/enterprise/deployment).
@@ -145,21 +145,7 @@ Non-breaking additions (new fields in response bodies, new event types, new endp
 
 ## Related pages
 
-- [API Overview](/api/overview) -- Endpoint reference and authentication
+- [API Overview](/api/api-overview) -- Endpoint reference and authentication
 - [Enterprise Deployment](/enterprise/deployment) -- Upgrade procedures
 - [Enterprise Troubleshooting](/enterprise/troubleshooting) -- Version-specific issues
-- [Integrations Overview](/integrations/overview) -- Scanner integration details
-
-## FAQ
-
-### How often does Pixee release updates?
-
-Pixee has shipped approximately 25 releases in the past 6 months across the enterprise server Helm chart, with regular updates to the cloud platform. Release cadence varies based on feature scope and customer needs.
-
-### How do I know which version I am running?
-
-For embedded cluster deployments, check the version in the KOTS admin console. For Helm deployments, run `helm list -n pixee` to see the deployed chart version. Cloud (SaaS) users are always on the latest version.
-
-### Do I need to update my API integration when Pixee releases a new version?
-
-Non-breaking additions (new response fields, new event types, new endpoints) do not require changes to existing integrations. Breaking changes ship under a new API version prefix with a documented migration period. Pin your integration to the current API version (`v1`) for stability.
+- [Integrations Overview](/integrations/integrations-overview) -- Scanner integration details

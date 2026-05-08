@@ -62,26 +62,4 @@ For the install-time walkthrough, see [Getting Started with Bitbucket](/getting-
 
 Bitbucket Server (formerly Data Center) is a separate Atlassian product from Bitbucket Cloud. The integration mechanics — credentials, scopes, and configuration paths — differ. For Bitbucket Server deployments running on Pixee Enterprise, see the [enterprise deployment documentation](/enterprise/deployment) for the supported connection model and current configuration details.
 
-## FAQ
-
-### Why does Pixee need both my username and my email address?
-
-Bitbucket Cloud API tokens authenticate via email address, but Git operations require the workspace username. Pixee uses both — email for API calls, username for the actual `git push` of fix branches. Configuring only one will produce authentication failures.
-
-### Does Pixee work with Bitbucket Server / Data Center?
-
-Bitbucket Server is supported on Pixee Enterprise, but the connection details differ from Bitbucket Cloud. See the [enterprise deployment documentation](/enterprise/deployment) for the current Bitbucket Server configuration model.
-
-### Do I need Bitbucket Pipelines?
-
-No. Pixee works with any scanner that produces SARIF, regardless of where the scanner runs. Many teams use Bitbucket Pipelines, but Jenkins or other CI systems work equally well.
-
-### Are app passwords still supported?
-
-API tokens are the current authentication method. App passwords are deprecated by Atlassian; we recommend API tokens for new integrations and migration for existing ones.
-
-### Do developers need to install anything?
-
-No. The integration is configured at the workspace level by an administrator. Developers interact with Pixee through standard pull requests.
-
-See [Integrations Overview](/integrations/overview) for the full integration coverage matrix.
+See [Integrations Overview](/integrations/integrations-overview) for the full integration coverage matrix.

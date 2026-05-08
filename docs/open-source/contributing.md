@@ -125,22 +125,3 @@ If this is your first contribution to Pixee:
 
 Every codemod contributed expands the number of vulnerabilities the community can fix automatically. Your contribution matters.
 
----
-
-## Frequently Asked Questions
-
-### How do I contribute to Pixee's open source projects?
-
-Fork the repository, create a feature branch, implement your change with tests, and submit a pull request. Browse issues tagged `good first issue` for beginner-friendly contributions. New codemod contributions have the highest impact on the project.
-
-### What license are Pixee's open source projects under?
-
-Pixee's open source projects (codemodder-java, codemodder-python) are licensed under Apache 2.0. All contributions must be submitted under the same license.
-
-### What makes a good first contribution?
-
-Issues tagged `good first issue` are specifically scoped for new contributors with clear requirements. Bug fixes with reproduction steps and documentation improvements are also good starting points. Building a new codemod requires more familiarity with the Codemodder framework, so review the [Custom Codemods](/open-source/custom-codemods) tutorial first.
-
-### Where do I ask questions about contributing?
-
-Use GitHub Discussions in the relevant repository for questions, ideas, and conversation. Use GitHub Issues for specific bugs, feature requests, or codemod proposals. Maintainers are active in both channels.

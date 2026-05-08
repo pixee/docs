@@ -64,28 +64,4 @@ Pixee's SCA remediation is deterministic: for each TRUE_POSITIVE with a fix avai
 
 **Prerequisites:** GitLab Ultimate license (Dependency Scanning is part of GitLab's Secure category, which requires Ultimate), Pixee GitLab integration installed.
 
-See the [SCA pipeline](/how-it-works/sca-pipeline) for details on how Pixee handles dependency findings end-to-end.
-
-## FAQ
-
-### Does Pixee replace GitLab Dependency Scanning?
-
-No. GitLab Dependency Scanning continues running in your CI/CD pipeline and continues populating the GitLab vulnerability dashboard. Pixee sits downstream, triaging the findings for reachability and opening fix MRs for the ones that matter.
-
-### Do I need GitLab Ultimate?
-
-GitLab Dependency Scanning requires GitLab Ultimate (it is part of GitLab's Secure tier). If you use GitLab Free or Premium, you can still get SCA coverage with Pixee by running an external SCA scanner (e.g., Trivy) and uploading SARIF — see [Trivy Integration](/integrations/scanners/trivy) and [Universal SARIF](/integrations/sarif-universal).
-
-### How does Pixee decide which dependency CVEs are reachable?
-
-Pixee's reachability analysis examines whether your code (directly or via the dependency graph) actually calls the vulnerable function or class identified by the CVE. CVEs in dependencies whose vulnerable code paths are never exercised in your codebase are classified FALSE_POSITIVE with an explanation.
-
-### What happens for CVEs without a fixed version?
-
-Findings without a published fix are classified WONT_FIX (no remediation possible without an upstream fix) along with the CVE details so your team can track and apply mitigations manually if needed.
-
-### Does Pixee batch multiple CVE fixes into one MR?
-
-When several CVEs in the same dependency can be resolved by a single version bump, Pixee batches them into one MR rather than opening one MR per CVE.
-
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
+See the [SCA](/platform/sca) page for details on how Pixee handles dependency findings end-to-end. See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

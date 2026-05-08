@@ -84,22 +84,4 @@ Beyond these dedicated codemods, Pixee's general-purpose codemod library and AI-
 - **Test code at production severity:** Test fixtures and example files flagged alongside production code
 - **Context-poor findings:** Findings where Checkmarx's sparse SARIF metadata makes manual review difficult -- Pixee re-derives context from the actual codebase
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
-
-## FAQ
-
-### Does Pixee replace Checkmarx?
-
-No. Pixee complements Checkmarx by adding automated triage and remediation. Keep CxSAST or CxOne scanning exactly as it runs today. Pixee processes Checkmarx output and delivers classified findings and fixes.
-
-### How does Pixee handle Checkmarx's sparse SARIF output?
-
-Pixee's dedicated Checkmarx handler uses an adaptive strategy that re-derives context directly from the codebase when scanner metadata is minimal. Instead of depending on the scanner to explain the finding, Pixee examines the code itself. Triage accuracy does not degrade with sparse input.
-
-### What Checkmarx-specific fixes does Pixee provide?
-
-Pixee includes three dedicated codemods for Checkmarx findings: SQL parameterization for .NET, SQL parameterization for JavaScript, and NoSQL parameterization for JavaScript. Additional fixes are available through the general-purpose codemod library and AI-powered MagicMods.
-
-### Does Pixee work with both CxSAST and CxOne?
-
-Yes. Pixee ingests Checkmarx findings in SARIF format from both CxSAST and CxOne. The same triage and remediation pipeline processes findings regardless of which Checkmarx product generated them.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

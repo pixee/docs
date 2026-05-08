@@ -17,7 +17,7 @@ Before you start, confirm the following:
 - **GitLab permissions.** You need Maintainer or Owner role on the target projects. For group-level setup, you need Owner on the parent group.
 - **GitLab instance.** GitLab SaaS (gitlab.com) or a self-managed GitLab instance. For self-managed, you will provide your instance URL during setup.
 - **Supported language.** At least one project with code in Java, Python, JavaScript/TypeScript, .NET, Go, or PHP.
-- **Scanner results (optional).** If you run GitLab SAST, Semgrep, Checkmarx, or other scanners through GitLab CI, Pixee can ingest those findings. This is additive — Pixee also runs its own analysis.
+- **Scanner results (required).** Pixee needs scanner findings to perform triage and generate fixes. If you run GitLab SAST, Semgrep, Checkmarx, or other scanners through GitLab CI, Pixee ingests those findings automatically.
 
 No agents to install. No runner configuration changes. No `.gitlab-ci.yml` edits needed to start.
 
@@ -27,7 +27,7 @@ Create a GitLab personal access token for a dedicated service account, then conn
 
 After connecting, choose which GitLab projects Pixee should analyze -- all projects, member projects only, or specific projects. Pixee analyzes the default branch of each connected project. You can customize branch targeting and other behavior later via a [PIXEE.yaml](/configuration/pixee-yaml) file in the project root.
 
-**Scanner integration:** Pixee natively integrates with 12 scanners. If your `.gitlab-ci.yml` includes the GitLab SAST template, Pixee ingests those findings directly. Third-party scanners producing SARIF output can be connected through Pixee's [Integrations](/integrations/overview) page. Pixee also runs its own analysis independently, so external scanners are additive, not required.
+**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your `.gitlab-ci.yml` includes the GitLab SAST template, Pixee ingests those findings directly. Third-party scanners producing SARIF output can be connected through Pixee's [Integrations](/integrations/integrations-overview) page.
 
 After setup, Pixee begins its initial analysis and opens merge requests for actionable findings within the first hour. If no MRs appear, verify PAT scopes, network connectivity (for self-managed instances), and supported language coverage.
 
@@ -55,7 +55,7 @@ When Pixee identifies a fixable vulnerability, it opens a standard GitLab merge 
 
 **CI pipeline behavior:** Pixee-generated MRs trigger your existing GitLab CI pipeline like any other merge request. If your pipeline includes SAST, tests, or linting stages, those run against the Pixee fix branch automatically.
 
-For merge rate data, see [Fix Safety](/how-it-works/fix-safety).
+For merge rate data, see [Security & Trust](/platform/security).
 
 ## What Data Leaves Your Network
 
@@ -72,16 +72,3 @@ For teams that require code to remain within their own infrastructure, Pixee off
 
 Self-managed GitLab is supported. See [GitLab Integration → Self-Hosted GitLab](/integrations/scms/gitlab#self-hosted-gitlab) for the connection model and network requirements, and [Enterprise Deployment Options](/enterprise/deployment) for air-gapped and on-prem Pixee deployments.
 
-## Frequently Asked Questions
-
-### Does Pixee work with GitLab CI/CD?
-
-Yes. Pixee-generated merge requests run through your existing GitLab CI pipeline like any other MR — including SAST stages, test suites, and approval rules. You can also configure Pixee to ingest scanner results produced by your CI pipeline.
-
-### What scanners does Pixee support on GitLab?
-
-Pixee natively integrates with 12 scanners including GitLab SAST, Semgrep, Checkmarx, Snyk Code, SonarQube, and any scanner producing SARIF output. Pixee triages findings from these scanners and generates fixes for confirmed vulnerabilities.
-
-### Do I need to modify my `.gitlab-ci.yml` to use Pixee?
-
-No. Pixee connects through a personal access token and operates independently of your CI pipeline configuration. No changes to `.gitlab-ci.yml` are required to start. If you want Pixee to ingest scanner results from your pipeline, that configuration is handled in the Pixee integration settings, not in your CI file.

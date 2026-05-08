@@ -10,7 +10,7 @@ sidebar_position: 4
 
 Pixee remediates JavaScript and TypeScript vulnerabilities automatically using deterministic codemods and AI-powered fixes. Coverage spans Express, React, and Node.js applications with fixes for injection vulnerabilities, prototype pollution, insecure dependencies, and OWASP Top 10 patterns. Pixee uses full AST analysis for deep cross-file dataflow tracking and manages package.json dependency upgrades coordinated with source-file refactoring in a single pull request.
 
-JavaScript/TypeScript support is actively expanding. Deterministic codemod coverage is growing alongside comprehensive AI-powered MagicMod support. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
+JavaScript/TypeScript support is actively expanding. Deterministic codemod coverage is growing alongside comprehensive AI-powered MagicMod support. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
 
 ## What Pixee Fixes in JavaScript/TypeScript
 
@@ -138,24 +138,3 @@ npm audit findings can be exported in SARIF format and consumed through the [uni
 | Dependency manifests | package.json                                                 |
 | Frameworks           | Express, React, Next.js, Node.js standard library            |
 
-## FAQ
-
-**What JavaScript/Node.js vulnerabilities can Pixee fix?**
-
-Pixee fixes injection vulnerabilities, prototype pollution, XSS, SSRF, insecure dependencies, and OWASP Top 10 patterns in JavaScript and TypeScript applications. Coverage is expanding with growing deterministic codemods and comprehensive AI-powered MagicMods.
-
-**Does Pixee support TypeScript?**
-
-Yes. Pixee analyzes TypeScript files with full type awareness and preserves type annotations in generated fixes. Both `.ts` and `.tsx` files are supported.
-
-**How does Pixee handle npm dependency vulnerabilities?**
-
-Pixee upgrades vulnerable packages in package.json and coordinates version bumps with source-file refactoring in a single PR. Breaking API changes from the upgrade are addressed in the same pull request.
-
-**Does Pixee work with Express applications?**
-
-Yes. Pixee recognizes Express route handlers, middleware chains, and request validation patterns for targeted security fixes.
-
-**What JavaScript scanners does Pixee work with?**
-
-Pixee remediates findings from CodeQL, Semgrep, SonarQube, Snyk Code, and any SARIF-producing scanner including npm audit.

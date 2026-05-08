@@ -76,7 +76,7 @@ The recommended approach is progressive expansion:
 
 1. **Start conservative.** Enable deterministic codemods only. Review merge rates and fix quality.
 2. **Expand by category.** Enable MagicMods for specific CWE categories where your team sees high fix quality.
-3. **Broaden over time.** As confidence builds (tracked via merge rate and quality scores in [Reporting](/configuration/operations)), expand the scope of AI-powered fixes.
+3. **Broaden over time.** As confidence builds (tracked via merge rate and quality scores in [Reporting](/configuration/operations-config)), expand the scope of AI-powered fixes.
 
 The [Phased Rollout Guide](/enterprise/phased-rollout) covers this progression in detail.
 
@@ -90,16 +90,3 @@ Self-hosted Pixee deployments have additional AI configuration beyond the behavi
 
 These infrastructure-level settings are managed through the admin console or Helm values, not through the Pixee dashboard's AI settings page.
 
-## FAQ
-
-### What is the difference between security gates and guardrails?
-
-Security gates block deployments when thresholds are exceeded. Guardrails guide behavior without blocking. Pixee's AI settings act as guardrails that tune how aggressively triage and remediation operate, while your existing CI/CD gates remain in control of deployment decisions.
-
-### Can I disable AI-powered fixes and use only deterministic codemods?
-
-Yes. You can configure Pixee to use only deterministic code transformations and disable AI-powered fix generation (MagicMods) for specific or all finding categories. See [Codemodder](/open-source/codemodder) for the full codemod catalog.
-
-### How do I increase automation gradually?
-
-Start with conservative triage settings and a narrow set of fix categories. As your team builds confidence with merge rates and quality scores, expand the scope. The [Phased Rollout Guide](/enterprise/phased-rollout) covers this progression in detail.

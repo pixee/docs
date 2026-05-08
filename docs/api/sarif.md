@@ -181,26 +181,12 @@ Native scanner integrations handle SARIF automatically. These notes apply when y
 | **Snyk**      | Use `snyk code test --sarif` for SAST results.                                                                                                              |
 | **Trivy**     | Use `trivy fs --format sarif` for filesystem scanning results.                                                                                              |
 
-For full setup guides per scanner, see [Integrations Overview](/integrations/overview).
+For full setup guides per scanner, see [Integrations Overview](/integrations/integrations-overview).
 
 ## Related pages
 
-- [API Overview](/api/overview) -- Authentication and endpoint reference
+- [API Overview](/api/api-overview) -- Authentication and endpoint reference
 - [Universal SARIF Integration](/integrations/sarif-universal) -- Setup guide for SARIF ingestion
-- [Integrations Overview](/integrations/overview) -- All supported scanners
-- [How Scanner Integration Works](/how-it-works/scanner-integration) -- Technical depth on scanner normalization
+- [Integrations Overview](/integrations/integrations-overview) -- All supported scanners
+- [Scanner Integration](/platform/scanner-integration) -- Technical depth on scanner normalization
 - [Changelog](/api/changelog) -- API and format version history
-
-## FAQ
-
-### What is the SARIF format for security findings?
-
-SARIF (Static Analysis Results Interchange Format) is an OASIS open standard for representing static analysis tool output in a structured JSON format. It includes finding locations, rule metadata, severity levels, and dataflow information. Pixee uses SARIF as the universal input format for ingesting security findings from any scanner.
-
-### Does Pixee support SARIF format?
-
-Yes. Pixee natively consumes SARIF from 12 scanner integrations (CodeQL, Semgrep, SonarQube, Checkmarx, Veracode, Snyk, AppScan, Polaris, GitLab SAST, Trivy, Datadog SAST, Arnica SAST) and accepts SARIF uploads from any SARIF-producing tool via the Universal SARIF integration or API.
-
-### What SARIF fields does Pixee require?
-
-At minimum: `tool.driver.name`, `results[].ruleId`, `results[].message.text`, and `results[].locations[]` with file path and line number. Dataflow information (`codeFlows` and `threadFlows`) is recommended for higher-quality triage and fixes. See the field reference table above for the complete mapping.

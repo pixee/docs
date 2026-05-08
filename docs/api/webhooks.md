@@ -299,21 +299,7 @@ if event["type"] == "triage.completed":
 
 ## Related pages
 
-- [API Overview](/api/overview) -- Authentication and endpoint reference
+- [API Overview](/api/api-overview) -- Authentication and endpoint reference
 - [SARIF Reference](/api/sarif) -- Input format that triggers scan events
-- [CI/CD Integration](/getting-started/ci-cd) -- Common webhook consumer patterns
+- [CI/CD Integration](/integrations/ci-cd) -- Common webhook consumer patterns
 - [Changelog](/api/changelog) -- Webhook event version history
-
-## FAQ
-
-### How do I set up webhooks for Pixee?
-
-Register a webhook endpoint URL in your Pixee organization settings or via the API. Provide an HTTPS URL, select the event types you want to receive, and configure an HMAC secret for signature verification. Test with the ping endpoint before going live.
-
-### What events can Pixee webhooks notify on?
-
-Pixee webhooks notify on six event types: `fix.generated`, `pr.opened`, `pr.merged`, `pr.closed`, `triage.completed`, and `scan.completed`. Subscribe to individual events or use `*` for all events.
-
-### How do I verify Pixee webhook payloads?
-
-Pixee signs every payload with HMAC-SHA256 using your webhook secret. Compute the HMAC-SHA256 hex digest of the raw request body using your secret and compare it to the value in the `X-Pixee-Signature` header. Use constant-time comparison to prevent timing attacks.

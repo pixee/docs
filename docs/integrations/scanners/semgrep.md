@@ -78,22 +78,4 @@ Pixee generates fixes using deterministic codemods and AI-powered MagicMods. The
 - **Test code flagged at production severity:** Test fixtures, example code, and mock data triggering rules intended for production code
 - **Stale API warnings:** Generic rules that lack language-version awareness, flagging deprecated API usage on code that has already been migrated
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
-
-## FAQ
-
-### Does Pixee replace Semgrep?
-
-No. Pixee complements Semgrep by adding automated triage and remediation. Keep running Semgrep exactly as you do today. Pixee processes Semgrep's output and delivers classified findings and fixes.
-
-### Does Pixee work with both Semgrep OSS and Semgrep Pro?
-
-Yes. Pixee's dedicated Semgrep handler supports both Semgrep OSS and Pro rule output. Findings from either rule set are processed through the same triage and remediation pipeline.
-
-### What about my custom Semgrep rules?
-
-Custom Semgrep rules that produce SARIF output work with Pixee automatically. Findings from custom rules are triaged and remediated through the same pipeline as standard rules. No additional configuration is needed.
-
-### How does Pixee handle Semgrep's high-volume output?
-
-Pixee's triage engine classifies each finding with a code-level justification and confidence score. Findings classified as false positives or won't-fix are separated from true positives, so developers see only actionable findings with fixes ready for review. The volume problem becomes a solved problem.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

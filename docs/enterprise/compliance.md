@@ -84,26 +84,4 @@ The architecture provides verifiable answers to common governance questions:
 - **Narrow scope** -- security fixes only (1-5 lines applying OWASP/SANS patterns), not general-purpose code generation
 - **Deterministic floor** -- deterministic codemods use zero LLM involvement with zero hallucination risk (see [Codemodder](/open-source/codemodder) for the full catalog)
 
-For the full technical trust framework, see [Security & Trust](/platform/security) and [Fix Safety & Validation](/how-it-works/fix-safety).
-
-## Frequently Asked Questions
-
-### How does Pixee help with SOC 2 compliance?
-
-Pixee provides audit-ready evidence for vulnerability management controls: timestamped triage decisions with reasoned justification, PR-based remediation with full change tracking, and exportable reports for control sampling. Every disposition is persisted for the lifetime of the deployment.
-
-### Is Pixee SOC 2 Type II certified?
-
-Contact the Pixee team for the current status of SOC 2 certification.
-
-### Does Pixee support FedRAMP requirements?
-
-Pixee supports FedRAMP-relevant controls through air-gapped deployment (no source code leaves your network), audit event logging, and configuration change documentation. See [Air-Gapped Deployment](/enterprise/air-gap) for disconnected environment details and known limitations.
-
-### How does Pixee handle data residency requirements?
-
-Self-hosted deployments keep all data in the customer's network. LLM inference uses the customer's chosen provider in the customer's chosen region. The only outbound connection is license validation, which can be proxied.
-
-### Can Pixee generate compliance reports automatically?
-
-Yes. Pixee's reporting API exports triage decisions, fix outcomes, and audit trails in CSV and JSON formats for integration with compliance platforms and GRC tools.
+For the full technical trust framework, see [Security & Trust](/platform/security).

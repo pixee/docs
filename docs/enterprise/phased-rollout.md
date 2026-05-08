@@ -12,7 +12,7 @@ Pixee deploys in phases: single repository, team, org unit, enterprise. Each pha
 
 ## Overview
 
-Pixee deploys in phases to validate triage accuracy and fix quality on a controlled scope before expanding. Each phase generates metrics that inform the next expansion decision. Phase 1 data feeds the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success).
+Pixee deploys in phases to validate triage accuracy and fix quality on a controlled scope before expanding. Each phase generates metrics that inform the next expansion decision. Phase 1 data feeds the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success).
 
 ## Phase Model Overview
 
@@ -41,7 +41,7 @@ Phase 1 is where most readers will start and where the most specific guidance ma
 
 **Installation.** Connect Pixee to the pilot repositories. See the Getting Started guides for [GitHub](/getting-started/github), [GitLab](/getting-started/gitlab), [Azure DevOps](/getting-started/azure-devops), or [Bitbucket](/getting-started/bitbucket).
 
-**Scanner connection.** Connect your existing scanners to Pixee so it can triage and remediate findings from your current tooling. Pixee works with 12 native scanner integrations and any SARIF-producing scanner.
+**Scanner connection.** Connect your existing scanners to Pixee so it can triage and remediate findings from your current tooling. Pixee works with 13 native scanner integrations and any SARIF-producing scanner.
 
 **First fix review.** Walk through the first Pixee PR with the development team. Explain what changed, why it changed, and the quality scores.
 
@@ -62,7 +62,7 @@ Phase 1 is where most readers will start and where the most specific guidance ma
 
 Expand from champion repositories to team-wide deployment. Set team-level merge rate targets based on Phase 1 data. Establish fix review norms: who reviews Pixee PRs, what response time is expected.
 
-Use Phase 1 metrics to evaluate whether expansion is warranted. The metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success) provide the data points for Phase 3 decision-making.
+Use Phase 1 metrics to evaluate whether expansion is warranted. The metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success) provide the data points for Phase 3 decision-making.
 
 ### Security Engineer Execution Track
 
@@ -84,7 +84,7 @@ Build the executive reporting dashboard for Phase 4 approval. Present triage red
 
 ### Security Engineer Execution Track
 
-Scale repository configuration across teams using PIXEE.yaml. Verify language coverage across the org unit (see [Languages > Overview](/languages/overview)). Integrate Pixee reporting with existing CI/CD pipelines and dashboards. Set up observability (see [Observability](/enterprise/observability)) if running a self-hosted deployment.
+Scale repository configuration across teams using PIXEE.yaml. Verify language coverage across the org unit (see [Languages > Overview](/languages/languages-overview)). Integrate Pixee reporting with existing CI/CD pipelines and dashboards. Set up observability (see [Observability](/enterprise/observability)) if running a self-hosted deployment.
 
 ### Decision Gate
 
@@ -94,7 +94,7 @@ Consistent metrics across all enrolled teams, compliance team sign-off on audit 
 
 ### Security Leader Planning Track
 
-Executive sign-off requires presenting Phase 3 results with the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success): merge rate, triage reduction, MTTR, and compliance window adherence.
+Executive sign-off requires presenting Phase 3 results with the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success): merge rate, triage reduction, MTTR, and compliance window adherence.
 
 Make enterprise deployment model decisions at this stage -- cloud SaaS, embedded cluster, Helm, or air-gapped based on compliance requirements. See [Deployment Options](/enterprise/deployment).
 
@@ -119,7 +119,7 @@ Disabling Pixee at any phase does not affect existing code. Previously merged fi
 
 A champion is a developer who actively uses Pixee PRs during the pilot phase and can support other teams during expansion. Typical indicators: merges Pixee PRs early, reviews PR descriptions and quality scores in detail, and asks about framework coverage.
 
-**Enablement:** Share the [Languages > Overview](/languages/overview) page (coverage matrix) and this rollout guide. Provide access to the metrics from [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success).
+**Enablement:** Share the [Languages > Overview](/languages/languages-overview) page (coverage matrix) and this rollout guide. Provide access to the metrics from [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success).
 
 ## Multi-Business-Unit Rollout
 
@@ -166,24 +166,3 @@ severity:
 
 Each business unit or team can use a different configuration during rollout. As confidence builds, adjust the severity threshold downward and remove directory exclusions. See [PIXEE.yaml Reference](/configuration/pixee-yaml) for the complete configuration reference.
 
-## Frequently Asked Questions
-
-### How long does it take to roll out Pixee across an enterprise?
-
-Most teams complete a single-repo pilot in one week and reach org-unit deployment in 30-45 days. Full enterprise rollout depends on team size, approval processes, and deployment model. The phased approach lets you move at your organization's pace with evidence at each step.
-
-### What if Pixee does not work for a specific repository or team?
-
-Pixee is additive -- disabling it means PRs stop being opened. No existing code is modified. You can disable Pixee per-repository or per-team without affecting other deployments. All historical triage and fix data is preserved.
-
-### What merge rate should I expect in Phase 1?
-
-Most pilots see merge rates above 50% in the first week, trending higher as developers become familiar with the PR format. See [Fix Safety](/how-it-works/fix-safety) for production metrics. Initial rates vary by team, language, and fix complexity.
-
-### What metrics inform the expansion decision?
-
-The metrics tracked in [Measuring Success](/enterprise/overview#measuring-success) -- merge rate, triage reduction, MTTR, and compliance window adherence -- are collected during each phase.
-
-### Do I need enterprise deployment for the pilot?
-
-No. Phase 1 can run on cloud SaaS. Enterprise deployment (self-hosted, air-gapped) is typically introduced in Phase 3 or Phase 4 based on compliance requirements.

@@ -10,7 +10,7 @@ sidebar_position: 2
 
 Pixee remediates Java vulnerabilities automatically using 51+ deterministic codemods and AI-powered fixes for custom patterns. Coverage spans Spring Boot, Jakarta EE, and Micronaut applications with fixes for SQL injection, SSRF, insecure deserialization, weak cryptography, and dependency vulnerabilities. Pixee analyzes Java source code using full AST parsing for deep cross-file dataflow analysis, delivering fixes as pull requests.
 
-Java is Pixee's most mature language ecosystem. The open-source [codemodder-java](https://github.com/pixee/codemodder-java) engine is publicly inspectable, and deterministic codemods cover the broadest range of vulnerability types. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
+Java is Pixee's most mature language ecosystem. The open-source [codemodder-java](https://github.com/pixee/codemodder-java) engine is publicly inspectable, and deterministic codemods cover the broadest range of vulnerability types. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
 
 ## What Pixee Fixes in Java
 
@@ -157,24 +157,3 @@ Any scanner that produces SARIF output can feed Java findings to Pixee through t
 | Code hosting         | GitHub, GitLab, Azure DevOps, Bitbucket                      |
 | Dependency manifests | pom.xml, build.gradle                                        |
 
-## FAQ
-
-**Does Pixee fix Java vulnerabilities automatically?**
-
-Yes. Pixee uses 51+ deterministic codemods and AI-powered MagicMods to automatically remediate Java SAST and SCA findings. Fixes are delivered as pull requests.
-
-**Does Pixee support Spring Boot applications?**
-
-Yes. Pixee recognizes Spring Boot annotations, controller patterns, and service layer conventions. Fixes use your existing Spring Security configurations and preferred libraries.
-
-**What Java scanners does Pixee work with?**
-
-Pixee remediates findings from CodeQL, Semgrep, Checkmarx, SonarQube, Snyk Code, Veracode, Fortify, AppScan, and any SARIF-producing scanner.
-
-**Can Pixee handle Java dependency vulnerabilities?**
-
-Yes. Pixee upgrades vulnerable dependencies in pom.xml and build.gradle, coordinating the version bump with any required source-file refactoring in a single PR.
-
-**Is the Java codemod engine open source?**
-
-Yes. [codemodder-java](https://github.com/pixee/codemodder-java) is open source and publicly inspectable on GitHub. Customers and auditors can review the fix rules before trusting automated changes.

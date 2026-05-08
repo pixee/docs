@@ -17,7 +17,7 @@ Before you start, confirm the following:
 - **Azure DevOps permissions.** You need Project Administrator or Project Collection Administrator permissions on the target projects. Organization-level settings may require Organization Administrator access.
 - **Azure DevOps instance.** Azure DevOps Services (cloud, dev.azure.com) or Azure DevOps Server (on-premises). For on-premises, see [Azure DevOps Server (On-Premises)](#azure-devops-server-on-premises) below.
 - **Supported language.** At least one repository in Azure Repos with code in Java, Python, JavaScript/TypeScript, .NET, Go, or PHP.
-- **Scanner results (optional).** If you run scanners through Azure Pipelines (CodeQL, Checkmarx, SonarQube, or others), Pixee can ingest those results. This is additive — Pixee also runs its own analysis.
+- **Scanner results (required).** Pixee needs scanner findings to perform triage and generate fixes. If you run scanners through Azure Pipelines (CodeQL, Checkmarx, SonarQube, or others), Pixee can ingest those results.
 
 No extensions to install from the Visual Studio Marketplace. No pipeline YAML changes needed to start.
 
@@ -27,7 +27,7 @@ Create an Azure DevOps personal access token for a dedicated service account wit
 
 After connecting, choose which projects and repositories Pixee should analyze -- at the organization, project, or individual repository level. Pixee targets the default branch of each connected repository. You can customize branch targeting and other behavior later via a [PIXEE.yaml](/configuration/pixee-yaml) file in the repository root.
 
-**Scanner integration:** Pixee natively integrates with 12 scanners. If your Azure Pipelines run security scanners, Pixee can ingest findings from those pipeline runs. Any scanner producing SARIF output can also be connected through Pixee's [Integrations](/integrations/overview) page. Pixee runs its own analysis independently, so external scanners are additive, not required.
+**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your Azure Pipelines run security scanners, Pixee can ingest findings from those pipeline runs. Any scanner producing SARIF output can also be connected through Pixee's [Integrations](/integrations/integrations-overview) page.
 
 After setup, Pixee begins its initial analysis and opens pull requests for actionable findings within the first hour. If no PRs appear, verify PAT scopes, organization-level admin consent, and supported language coverage.
 
@@ -56,7 +56,7 @@ When Pixee identifies a fixable vulnerability, it opens a standard pull request 
 
 **Build validation:** Pixee-generated PRs trigger your existing Azure Pipelines build validation policies like any other PR. If your branch policies require a successful build before completion, the Pixee fix branch goes through the same gates.
 
-For merge rate data, see [Fix Safety](/how-it-works/fix-safety).
+For merge rate data, see [Security & Trust](/platform/security).
 
 ## What Data Leaves Your Network
 
@@ -73,12 +73,3 @@ For teams that require code to remain within their own infrastructure, Pixee off
 
 Azure DevOps Server is supported. See [Azure DevOps Integration → Azure DevOps Server (On-Premises)](/integrations/scms/azure-devops#azure-devops-server-on-premises) for the connection model and Entra ID notes, and [Enterprise Deployment Options](/enterprise/deployment) for air-gapped and on-prem Pixee deployments.
 
-## Frequently Asked Questions
-
-### Does Pixee work with Azure Pipelines?
-
-Yes. Pixee-generated pull requests trigger your existing Azure Pipelines build validation policies like any other PR. You can also configure Pixee to ingest scanner results from your pipeline runs — no changes to your pipeline YAML required.
-
-### Does Pixee require pipeline secrets?
-
-No. Pixee does not access Azure Pipelines variable groups, service connections, key vaults, or deployment gate configurations. The PAT scopes are limited to code, pull requests, work items (when linking is configured), and project metadata.

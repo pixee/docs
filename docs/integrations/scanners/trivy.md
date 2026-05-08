@@ -67,4 +67,4 @@ Trivy container scans often surface hundreds of CVEs in OS packages. Pixee's tri
 
 Yes. Configure Trivy with `--format sarif` to produce SARIF 2.1.0 output. Pixee also supports Trivy's native JSON format through the dedicated Trivy handler.
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

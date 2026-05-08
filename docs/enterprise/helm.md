@@ -96,20 +96,3 @@ Approximately 25 releases have shipped in the last 6 months. The platform is act
 
 Before upgrading, back up your current `values.yaml` file. If an upgrade introduces an issue, roll back to the previous Helm release using standard Helm rollback commands.
 
-## Frequently Asked Questions
-
-### Can I use my own PostgreSQL database?
-
-Yes. Disable the embedded CloudNativePG subchart and provide connection details for your external PostgreSQL 15+ instance. BYO database-secret support is available for external secret managers.
-
-### Does Pixee support pod identity (IRSA, Workload Identity)?
-
-Yes. The Helm chart supports IRSA (AWS), Workload Identity (GCP), and Managed Identity (Azure) for object store credentials, alongside static key configuration.
-
-### Can I route Pixee observability to my existing Grafana?
-
-Yes. Disable the embedded observability subcharts and configure Pixee to emit metrics to your existing VictoriaMetrics, Prometheus, or Grafana Cloud instance. Optional Grafana Cloud Private Data Connector integration is also supported. See [Observability](/enterprise/observability) for details.
-
-### What Helm chart version should I use?
-
-The latest stable release. Check the changelog for release notes before upgrading. Pixee maintains backward compatibility across minor releases.

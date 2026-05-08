@@ -80,24 +80,3 @@ When an LLM provider is unavailable, Pixee handles the degradation:
 
 This resilience architecture means an LLM outage degrades Pixee's capability without halting it entirely.
 
-## Frequently Asked Questions
-
-### Can I bring my own LLM model with Pixee?
-
-Yes. Pixee supports four LLM provider families: OpenAI, Azure AI Foundry, Anthropic, and Azure Anthropic. You configure your API keys and endpoint, and Pixee routes all AI inference through your account.
-
-### Can I use different models for different tasks?
-
-Yes. Seven named LLM tiers let you assign different models to triage, remediation, classification, research, and other workflow stages. This lets you balance cost, quality, and latency per task type.
-
-### Does Pixee use Anthropic-optimized prompts for Anthropic models?
-
-Yes. Pixee uses provider-family-aware prompting. When configured for Anthropic, the triage engine uses Anthropic-optimized prompt structures rather than a generic approach.
-
-### What happens if my LLM provider is unavailable?
-
-Pixee queues tasks and retries when the provider becomes available. Deterministic codemods that require no LLM continue functioning regardless of LLM availability.
-
-### Can I use a self-hosted open-source model?
-
-If your model exposes an OpenAI-compatible API endpoint, it can be configured as a provider. Quality of triage and remediation depends on model capability.

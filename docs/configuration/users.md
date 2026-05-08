@@ -70,16 +70,3 @@ Enterprise self-hosted deployments also support embedded OIDC (via Authentik run
 
 For full SSO configuration details on self-hosted deployments, see [Enterprise > Security Architecture](/enterprise/security-architecture).
 
-## FAQ
-
-### Do developers need a Pixee account to review and merge fixes?
-
-No. Pixee delivers fixes as standard PRs in your SCM platform. Developers review and merge them using their existing GitHub, GitLab, Azure DevOps, or Bitbucket workflow. No Pixee login required.
-
-### Can I restrict which users can change organization-wide policies?
-
-Yes. Only Admin and Security Lead roles can modify organization policies. Member roles interact with Pixee through PRs and can only configure per-repository settings via PIXEE.yaml.
-
-### Does Pixee support SSO?
-
-Yes. Pixee integrates with Google Workspace, Microsoft Entra ID, and Okta for single sign-on. Enterprise self-hosted deployments additionally support embedded OIDC via Authentik, which can federate to any upstream corporate IdP.

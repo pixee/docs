@@ -1,6 +1,6 @@
 ---
 title: CI/CD Integration
-slug: /getting-started/ci-cd
+slug: /integrations/ci-cd
 track: dev
 content_type: tutorial
 seo_title: "Pixee CI/CD Integration | Automated Security Fixes in Your Pipeline"
@@ -179,7 +179,7 @@ Pixee does not require a specific CI system. As long as the scanner can run _som
 Two common patterns:
 
 1. **Scanner writes to the SCM's code-scanning surface.** A Jenkins job runs the scanner, then uploads SARIF to GitHub Code Scanning / GitLab Security Dashboard / etc. via that platform's API. Pixee picks up the findings through the SCM integration.
-2. **Scripted upload to Pixee.** A pipeline step uploads SARIF directly to the Pixee API. The [Pixee CLI](/getting-started/cli)'s `pixee api` subcommand can POST a SARIF body, or you can use any HTTP client.
+2. **Scripted upload to Pixee.** A pipeline step uploads SARIF directly to the Pixee API. The [Pixee CLI](/api/cli)'s `pixee api` subcommand can POST a SARIF body, or you can use any HTTP client.
 
 ```bash
 # Example: upload SARIF directly to Pixee using the CLI in any CI environment.
@@ -194,15 +194,15 @@ pixee api /api/v1/scans \
 
 Discover the exact upload endpoint for your deployment via HAL link traversal: `pixee api /api/v1` lists the available resources, and each resource's `_links` lead to its upload routes.
 
-**Prerequisites:** A Pixee API token (`PIXEE_TOKEN`) and the deployment URL (`PIXEE_SERVER`). For background on the CLI, see [Pixee CLI](/getting-started/cli).
+**Prerequisites:** A Pixee API token (`PIXEE_TOKEN`) and the deployment URL (`PIXEE_SERVER`). For background on the CLI, see [Pixee CLI](/api/cli).
 
 ## Scanner Result Ingestion
 
 Pixee accepts scanner results through three paths:
 
 1. **SCM-native APIs.** GitHub Code Scanning, GitLab vulnerability reports, Azure DevOps Code Scanning, Bitbucket reports. Pixee reads findings through the SCM integration.
-2. **Direct SARIF upload to Pixee.** Use the [Pixee CLI](/getting-started/cli) (`pixee api`) or an HTTP client. Useful when your CI system doesn't have a clean upload path to the SCM.
-3. **Native scanner integrations.** For 13 named scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy) Pixee uses dedicated handlers that extract scanner-specific metadata for richer triage. See the per-scanner pages under [Integrations](/integrations/overview).
+2. **Direct SARIF upload to Pixee.** Use the [Pixee CLI](/api/cli) (`pixee api`) or an HTTP client. Useful when your CI system doesn't have a clean upload path to the SCM.
+3. **Native scanner integrations.** For 13 named scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy) Pixee uses dedicated handlers that extract scanner-specific metadata for richer triage. See the per-scanner pages under [Integrations](/integrations/integrations-overview).
 
 **Universal SARIF.** Any SARIF 2.1.0–producing scanner works through the universal SARIF integration. See [Universal SARIF Integration](/integrations/sarif-universal).
 
@@ -214,26 +214,5 @@ Pixee accepts scanner results through three paths:
 
 **Fix PRs not appearing.** Check that the Pixee integration has write access to the target repository. For GitHub, the App needs `pull_requests: write`. Fix generation is asynchronous — allow a few minutes after findings are ingested.
 
-**`pixee api` returns exit code 2.** Authentication failed. Run `pixee auth status` to confirm the configured server and token, or reset both with `pixee auth login`. See [Pixee CLI](/getting-started/cli) for credential resolution rules.
+**`pixee api` returns exit code 2.** Authentication failed. Run `pixee auth status` to confirm the configured server and token, or reset both with `pixee auth login`. See [Pixee CLI](/api/cli) for credential resolution rules.
 
-## Frequently Asked Questions
-
-### Does adding Pixee require a new pipeline step?
-
-Not always. If your scanner writes to the SCM's code-scanning surface (GHAS, GitLab vulnerability reports, etc.), Pixee ingests findings through the SCM integration with no pipeline change. A new step is only required when uploading SARIF directly to Pixee or to the SCM's code-scanning API.
-
-### Does Pixee slow down my CI/CD pipeline?
-
-No. Pixee processes findings on the platform asynchronously, not in your pipeline. The pipeline itself sees only the time to invoke any SARIF upload step (seconds), not the time to generate fixes.
-
-### Does Pixee require code changes to my application?
-
-No code changes to your application. You configure the SCM integration once; pipeline definition files are unchanged or gain a single SARIF upload step depending on your scanner.
-
-### Can I control which findings Pixee fixes?
-
-Yes. Use [PIXEE.yaml](/configuration/pixee-yaml) to configure which finding types, languages, or severity levels Pixee should address. You can also scope fixes to specific directories or exclude paths.
-
-### Where does the `pixee` CLI fit?
-
-The CLI is a client for the Pixee REST API — useful for managing workflows, querying scan history, or scripting SARIF uploads. It does not run scanners or generate fixes locally. See [Pixee CLI](/getting-started/cli).

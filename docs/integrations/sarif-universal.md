@@ -10,7 +10,7 @@ sidebar_position: 2
 
 # Universal SARIF Integration
 
-Pixee's Universal SARIF integration accepts findings from any security scanner that produces SARIF 2.1.0 output. This means you are not limited to Pixee's 12 natively integrated scanners — if your tool can export SARIF, Pixee can triage and remediate its findings. Universal SARIF is how Pixee stays scanner-agnostic: your choice of detection tools is independent of your choice of resolution platform.
+Pixee's Universal SARIF integration accepts findings from any security scanner that produces SARIF 2.1.0 output. This means you are not limited to Pixee's 13 natively integrated scanners — if your tool can export SARIF, Pixee can triage and remediate its findings. Universal SARIF is how Pixee stays scanner-agnostic: your choice of detection tools is independent of your choice of resolution platform.
 
 This page covers the SARIF format requirements, upload methods, what metadata Pixee extracts, and the differences between Universal SARIF and native integrations.
 
@@ -18,7 +18,7 @@ This page covers the SARIF format requirements, upload methods, what metadata Pi
 
 Use Universal SARIF when:
 
-- Your scanner is not in Pixee's [native integration list](/integrations/overview)
+- Your scanner is not in Pixee's [native integration list](/integrations/integrations-overview)
 - You use a proprietary or custom-built scanner
 - You aggregate findings from multiple tools through a central platform that exports SARIF
 - You want to evaluate Pixee with a scanner before requesting a native integration
@@ -114,20 +114,3 @@ Any scanner producing valid SARIF 2.1.0 output works with Universal SARIF. Scann
 - Custom scanners with SARIF export
 - Security platforms with SARIF aggregation (DefectDojo, GitHub Code Scanning, etc.)
 
-## Frequently Asked Questions
-
-### Can I use any scanner with Pixee?
-
-Yes, if the scanner produces SARIF 2.1.0 output. Universal SARIF is Pixee's fallback integration that accepts findings from any SARIF-compatible tool. Pixee also has 12 native integrations that provide deeper triage context.
-
-### What if my scanner does not produce SARIF?
-
-Some scanners can be configured to output SARIF via plugins or converters. Check your scanner's documentation for SARIF export options. If SARIF export is not available, contact the Pixee team to discuss custom integration options.
-
-### Is Universal SARIF less accurate than native integrations?
-
-Triage and fix quality depend on the metadata available in the SARIF file. Native integrations use scanner-specific handlers that extract maximum context. Universal SARIF works with whatever metadata the SARIF contains. If your SARIF includes code flows, rule metadata, and help text, the quality difference is minimal.
-
-### How do I validate my SARIF file before uploading?
-
-Use a SARIF validator (the SARIF SDK includes validation tools) to verify your file conforms to the 2.1.0 specification before uploading. Common issues include missing required fields, incorrect schema references, and unsupported SARIF versions.

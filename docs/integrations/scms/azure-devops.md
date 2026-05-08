@@ -52,22 +52,4 @@ Pixee Enterprise Server supports both Azure DevOps Services (cloud) and Azure De
 
 For on-premises configuration, see the [enterprise deployment documentation](/enterprise/deployment).
 
-## FAQ
-
-### Does Pixee work with Azure DevOps Server (on-premises)?
-
-Yes. Pixee Enterprise Server connects to Azure DevOps Server via the same PAT plus webhook integration used for Azure DevOps Services.
-
-### What permissions does the PAT need?
-
-A custom scope with **full _Code_ access**. Avoid the "Full access" preset — that grants more than the integration needs.
-
-### Are the webhook credentials required?
-
-No, they are optional. Without them, Pixee operates against Azure DevOps without inbound webhook events. Configuring webhooks gives the integration lower-latency response to repository and PR events.
-
-### Do I need Azure Pipelines?
-
-No. Pixee works with any scanner that produces SARIF, regardless of where the scanner runs. Many teams use Azure Pipelines, but Jenkins or other CI systems work equally well.
-
-See [Integrations Overview](/integrations/overview) for the full integration coverage matrix.
+See [Integrations Overview](/integrations/integrations-overview) for the full integration coverage matrix.

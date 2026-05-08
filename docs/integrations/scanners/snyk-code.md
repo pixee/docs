@@ -69,18 +69,4 @@ Fixes are generated using deterministic codemods and AI-powered MagicMods for co
 - **Test code at production severity:** Intentionally vulnerable test fixtures, mock data, or example code flagged as production security issues
 - **Context-dependent findings:** Findings that depend on runtime configuration or deployment context that static analysis cannot determine
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
-
-## FAQ
-
-### Does Pixee replace Snyk Code?
-
-No. Pixee complements Snyk Code by adding unified triage and automated remediation. Snyk Code continues scanning as before. Pixee processes the output alongside findings from all your other scanners through one pipeline.
-
-### If Snyk Code already has low false positive rates, why add Pixee triage?
-
-Two reasons. First, Pixee provides independent verification with audit-ready justification trails -- valuable for compliance. Second, and more importantly, Pixee triages Snyk Code findings alongside every other scanner in your portfolio through one pipeline. The unified view across all tools is the primary value for teams running Snyk Code alongside other scanners.
-
-### How does Pixee compare to Snyk's DeepCode AI Fix?
-
-DeepCode AI Fix provides remediation suggestions within the Snyk UI. Pixee delivers complete fixes as pull requests through your standard code review workflow. Pixee also provides independent triage classification before remediation -- sorting findings before fixing them.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

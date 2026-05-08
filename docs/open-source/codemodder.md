@@ -121,7 +121,7 @@ Codemodder powers the deterministic remediation layer of the Pixee platform. The
 
 - **MagicMods** -- AI-powered fixes for patterns that deterministic rules cannot reach (custom framework wrappers, multi-file dataflows, context-dependent sanitization)
 - **Triage Automation** -- false positive reduction before fixes are generated
-- **Scanner integration** -- 12 native scanner integrations plus universal SARIF support
+- **Scanner integration** -- 13 native scanner integrations plus universal SARIF support
 - **PR workflow** -- fixes delivered as pull requests through GitHub, GitLab, Azure DevOps, or Bitbucket
 
 Codemodder handles the known, well-understood vulnerability patterns. MagicMods extend coverage to the long tail. Both produce fixes that pass through the same quality evaluation before reaching a developer.
@@ -130,28 +130,4 @@ Codemodder handles the known, well-understood vulnerability patterns. MagicMods 
 
 - **Build your own codemod:** The [Custom Codemods](/open-source/custom-codemods) tutorial walks through building a codemod from scratch
 - **Contribute to the project:** See the [Contributing](/open-source/contributing) guide for community participation
-- **Explore the full platform:** The Pixee platform adds AI-powered remediation and triage on top of Codemodder -- [learn how fix generation works](/how-it-works/fix-generation)
-
----
-
-## Frequently Asked Questions
-
-### What is Codemodder?
-
-Codemodder is an open source framework created by Pixee for building deterministic, security-focused code transformations. It supports Java (51+ codemods) and Python (60+ codemods), with a combined 110+ codemods publicly available on GitHub.
-
-### What is a codemod in security?
-
-A security codemod is a deterministic rule that transforms insecure code into secure code. Unlike AI-generated fixes, codemods produce the same output for the same input every time. There is no LLM involved, no variance, and no hallucination risk. Each codemod encodes a specific OWASP or SANS remediation pattern.
-
-### Can I run Codemodder without the Pixee platform?
-
-Yes. Codemodder is a standalone open source tool. Run it locally or in CI/CD to apply deterministic security fixes. The Pixee platform adds AI-powered MagicMods, triage automation, scanner integration, and enterprise deployment on top of Codemodder.
-
-### How does Codemodder relate to the Pixee platform?
-
-Codemodder powers the deterministic remediation layer. The Pixee platform builds on Codemodder and adds AI-powered fixes for novel patterns, triage automation for false positive reduction, native scanner integrations, and pull request delivery through your existing code review workflow.
-
-### What languages does Codemodder support?
-
-Codemodder currently supports Java (codemodder-java, 51+ codemods using ParseAndGo AST transformations) and Python (codemodder-python, 60+ codemods using LibCST, regex, and XML transformers).
+- **Explore the full platform:** The Pixee platform adds AI-powered remediation and triage on top of Codemodder — [learn how fix generation works](/platform/remediation)

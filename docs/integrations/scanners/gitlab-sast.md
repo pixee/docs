@@ -58,18 +58,4 @@ GitLab SAST findings often lack the contextual detail needed for efficient manua
 
 **Prerequisites:** GitLab Ultimate license (for SAST), Pixee GitLab integration installed
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
-
-## Frequently Asked Questions
-
-### Does Pixee replace GitLab SAST?
-
-No. GitLab SAST continues running in your CI/CD pipeline exactly as configured. Pixee sits downstream, triaging the findings and generating fixes. You keep GitLab SAST for detection; Pixee adds triage and remediation.
-
-### How does Pixee handle findings from different GitLab SAST analyzers?
-
-Pixee normalizes findings from all GitLab SAST analyzers (Semgrep, SpotBugs, Gosec, Bandit, etc.) into a single triage workflow. Each finding is classified with the same structured evidence format regardless of which analyzer produced it.
-
-### Do I need GitLab Ultimate for this integration?
-
-GitLab SAST requires GitLab Ultimate. If you use GitLab Free or Premium, you can still use Pixee with other scanners that produce SARIF output. See [Universal SARIF](/integrations/sarif-universal).
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

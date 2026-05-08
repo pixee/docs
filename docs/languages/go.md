@@ -10,7 +10,7 @@ sidebar_position: 6
 
 Pixee remediates Go vulnerabilities using Tree-sitter-based analysis and AI-powered fixes for standard library, Gin, and Echo applications. Coverage includes injection vulnerabilities, insecure cryptography, and dependency vulnerabilities in go.mod-managed projects. Go support uses lighter parsing than Pixee's full AST languages (Java, Python, JS/TS, .NET) with expanding coverage for standard security patterns and framework-specific fixes.
 
-Go's adoption in infrastructure and cloud-native environments makes it a strategic language for Pixee. Coverage is actively expanding. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
+Go's adoption in infrastructure and cloud-native environments makes it a strategic language for Pixee. Coverage is actively expanding. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
 
 ## What Pixee Fixes in Go
 
@@ -120,20 +120,3 @@ The pull request includes any source-file changes required by the upgraded modul
 | Code hosting          | GitHub, GitLab, Azure DevOps, Bitbucket                      |
 | Frameworks            | Standard library, Gin, Echo                                  |
 
-## FAQ
-
-**Does Pixee support Go?**
-
-Yes. Pixee remediates Go vulnerabilities using Tree-sitter analysis and AI-powered fixes for standard library, Gin, and Echo applications. Coverage is actively expanding.
-
-**What is the difference between Go support and Java/Python support in Pixee?**
-
-Java and Python use full AST parsing for deeper cross-file analysis and have larger deterministic codemod libraries (51+ and 60+ core codemods, respectively). Go uses Tree-sitter for reliable syntax parsing with expanding coverage. All three languages benefit from AI-powered MagicMods for custom patterns.
-
-**Does Pixee work with govulncheck?**
-
-Pixee remediates govulncheck findings exported in SARIF format through the [universal SARIF integration](/integrations/sarif-universal). Export your govulncheck results as SARIF, and Pixee generates remediation pull requests.
-
-**How does Pixee handle Go dependency vulnerabilities?**
-
-Pixee upgrades vulnerable dependencies in go.mod and coordinates version changes with source-file refactoring in a single pull request.

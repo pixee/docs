@@ -86,24 +86,3 @@ All three contexts share the same technical deployment. The difference is in the
 
 Air-gapped installation follows the same Helm deployment process with additional configuration for container image transfer to a local registry, private LLM endpoint settings, proxy configuration, and CA certificates. Preflight checks validate LLM endpoint connectivity and license server access before the first analysis runs. For the current installation procedure and common issues, see the [deployment guide](https://app.pixee.ai/docs/deploy) and [Enterprise Troubleshooting](/enterprise/troubleshooting).
 
-## Frequently Asked Questions
-
-### Can Pixee run with zero internet connectivity?
-
-Not completely. Pixee requires a network path for license validation, either direct or through a proxy. Source code, findings, and LLM requests stay fully within your network, but the license check must reach Pixee servers. There is no offline license mode.
-
-### Does Pixee work with Azure AI Foundry in an air-gapped environment?
-
-Yes. Azure AI Foundry is a first-class supported LLM provider for air-gapped deployments. Configure your Azure AI Foundry endpoint and API key during installation. The models run in your Azure subscription with your keys.
-
-### What happens if the private LLM endpoint goes down?
-
-Pixee queues analysis tasks and retries when the endpoint becomes available. Existing PRs and triage results are unaffected. Deterministic codemods that require no LLM continue to function regardless of LLM availability.
-
-### Can I use a self-hosted open-source LLM?
-
-If the model exposes an OpenAI-compatible API endpoint, it can be configured as Pixee's LLM provider. Triage and fix quality depend on model capability -- lower-capability models may produce lower merge rates and less accurate triage.
-
-### Does air-gapped deployment affect fix quality?
-
-Fix quality depends on the LLM model available at your private endpoint. If the private model is equivalent to production defaults, quality is identical. Lower-capability models may produce lower merge rates. Web search and deep research LLM tiers are unavailable in air-gapped environments. Deterministic codemods are unaffected.

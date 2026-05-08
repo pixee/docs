@@ -10,7 +10,7 @@ sidebar_position: 3
 
 Pixee remediates Python vulnerabilities automatically using 60+ deterministic codemods and AI-powered fixes for custom patterns. Coverage includes Django, Flask, and FastAPI applications with fixes for SQL injection, SSRF, insecure deserialization (PyYAML hardening, defused XML), weak cryptography, and dependency vulnerabilities. Pixee uses full AST-level analysis for deep cross-file dataflow tracking and framework-aware transformations across all five Python packaging formats.
 
-Python is Pixee's second-deepest language ecosystem alongside Java. The open-source [codemodder-python](https://github.com/pixee/codemodder-python) engine is publicly inspectable, and support for five packaging conventions (requirements.txt, pyproject.toml, Pipfile, setup.py, setup.cfg) sets Pixee apart from tools that handle only one. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
+Python is Pixee's second-deepest language ecosystem alongside Java. The open-source [codemodder-python](https://github.com/pixee/codemodder-python) engine is publicly inspectable, and support for five packaging conventions (requirements.txt, pyproject.toml, Pipfile, setup.py, setup.cfg) sets Pixee apart from tools that handle only one. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
 
 ## What Pixee Fixes in Python
 
@@ -170,24 +170,3 @@ Bandit findings can be exported in SARIF format and consumed by Pixee through th
 | Code hosting         | GitHub, GitLab, Azure DevOps, Bitbucket                        |
 | Dependency manifests | requirements.txt, pyproject.toml, Pipfile, setup.py, setup.cfg |
 
-## FAQ
-
-**Can Pixee remediate Python security issues?**
-
-Yes. Pixee uses 60+ deterministic codemods and AI-powered MagicMods to automatically fix Python SAST and SCA findings. Fixes are delivered as pull requests.
-
-**Does Pixee support Django applications?**
-
-Yes. Pixee recognizes Django models, views, URL configurations, and REST Framework serializers. Fixes respect Django conventions and use Django-native security utilities.
-
-**How does Pixee handle Python dependency vulnerabilities?**
-
-Pixee upgrades vulnerable dependencies across all five Python packaging conventions (requirements.txt, pyproject.toml, Pipfile, setup.py, setup.cfg) and coordinates version bumps with source-file refactoring in a single PR.
-
-**What Python scanners does Pixee work with?**
-
-Pixee remediates findings from CodeQL, Semgrep, SonarQube, Snyk Code, Checkmarx, and any SARIF-producing scanner including Bandit.
-
-**Is the Python codemod engine open source?**
-
-Yes. [codemodder-python](https://github.com/pixee/codemodder-python) is open source on GitHub with 60+ core codemods that customers and auditors can inspect.

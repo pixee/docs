@@ -59,18 +59,4 @@ Polaris provides findings and remediation guidance but does not generate automat
 - **Buffer overflow false positives in managed languages:** Coverity rules designed for C/C++ may produce findings in managed-language code (Java, C#) where memory management is handled by the runtime
 - **Test and example code at production severity:** Findings in non-production code flagged at production severity levels
 
-## FAQ
-
-### Does Pixee work with both Coverity SAST and Black Duck SCA through Polaris?
-
-Pixee's Polaris integration focuses on SAST findings from the Coverity engine. For SCA-specific remediation (dependency version updates), see the [SCA pipeline](/how-it-works/sca-pipeline) documentation.
-
-### I see findings from Coverity, Black Duck, and Rapid Scan in Polaris -- does Pixee handle all of them?
-
-Pixee processes Polaris findings exported in SARIF format. Coverity SAST findings are the primary input for the triage and remediation pipeline. Rapid Scan results that overlap with Coverity finding types are also handled.
-
-### Is the brand Synopsys, Black Duck, or Polaris?
-
-Synopsys divested its Software Integrity Group, which now operates under the Black Duck Software brand. Polaris remains the unified platform name. Coverity remains the SAST engine name. Pixee works with Polaris regardless of the branding on your license agreement.
-
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

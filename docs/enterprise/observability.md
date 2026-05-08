@@ -52,7 +52,7 @@ For day-two operations teams, these are the metrics that indicate platform healt
 
 **Business metrics vs. platform metrics:** Merge rate, triage volume, and remediation velocity are business metrics visible in Pixee's reporting dashboard. Analysis throughput, LLM latency, and error rates are platform metrics visible in the observability stack. Both matter for different audiences -- share business metrics with security leadership and platform metrics with SRE.
 
-For business-level reporting (merge rate trends, triage reduction, MTTR), see [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success).
+For business-level reporting (merge rate trends, triage reduction, MTTR), see [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success).
 
 ## Operational Controls
 
@@ -67,16 +67,3 @@ Operational settings are configurable through the KOTS admin console (embedded c
 
 For troubleshooting operational issues, see [Enterprise Troubleshooting](/enterprise/troubleshooting).
 
-## Frequently Asked Questions
-
-### Does Pixee include monitoring out of the box?
-
-Yes. The Helm chart bundles VictoriaMetrics (metrics), Victoria-logs (logs), Victoria-traces (distributed tracing), and Grafana dashboards. No separate purchase or manual installation required.
-
-### Can I route Pixee telemetry to my existing Grafana or Prometheus?
-
-Yes. Disable the embedded observability subcharts and configure Pixee to emit metrics to your existing stack. Grafana Cloud Private Data Connector integration is also supported.
-
-### What dashboards does Pixee provide?
-
-Pixee includes curated Grafana dashboards for platform health, analysis throughput, LLM performance, and fix quality metrics. These are Pixee-specific dashboards, not just upstream chart defaults.

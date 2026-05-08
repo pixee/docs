@@ -31,9 +31,9 @@ For detailed setup procedures, see [Embedded Cluster](/enterprise/embedded-clust
 | Scanner findings not appearing in Pixee | SARIF file format mismatch or upload path error                     | Verify the scanner output conforms to the SARIF 2.1.0 specification and the upload endpoint is correctly configured. |
 | Partial findings ingestion              | Scanner output exceeds size limits or contains unsupported rule IDs | Check the scanner output for unsupported finding types. Verify the scanner is producing complete SARIF output.       |
 | Duplicate findings after re-scan        | Deduplication key mismatch between scan runs                        | Verify the scanner configuration produces consistent finding identifiers across runs.                                |
-| Findings appear but no fixes generated  | Scanner findings are in an unsupported language or CWE category     | Check the [Languages Overview](/languages/overview) for supported language and finding type coverage.                |
+| Findings appear but no fixes generated  | Scanner findings are in an unsupported language or CWE category     | Check the [Languages Overview](/languages/languages-overview) for supported language and finding type coverage.                |
 
-For scanner-specific setup guides, see [Integrations Overview](/integrations/overview). For custom scanner configuration, see the [Universal SARIF](/integrations/sarif-universal) guide.
+For scanner-specific setup guides, see [Integrations Overview](/integrations/integrations-overview). For custom scanner configuration, see the [Universal SARIF](/integrations/sarif-universal) guide.
 
 ## LLM Configuration
 
@@ -83,21 +83,3 @@ If your issue is not covered on this page:
    - Support bundle (attached)
 
 3. **For critical issues** affecting production analysis, escalate through your enterprise support channel for priority response.
-
-## Frequently Asked Questions
-
-### How do I troubleshoot a failed Pixee Helm installation?
-
-Check three things in order: (1) image pull secrets are configured and the cluster can reach the container registry, (2) minimum resource requirements are met (8 vCPU, 32 GB RAM), and (3) Helm values match your environment (LLM endpoint, SCM credentials, SSO configuration). Check pod status and logs for specific error messages.
-
-### Why are scanner findings not appearing in Pixee?
-
-The most common cause is a SARIF format mismatch. Verify your scanner output matches the SARIF 2.1.0 specification and that the upload path is correct. Check the [Integrations Overview](/integrations/overview) for scanner-specific configuration requirements.
-
-### How do I generate a support bundle for Pixee?
-
-Use the KOTS admin console (embedded cluster) or the support bundle tool (Helm) to generate a diagnostic bundle. Configure log size and age limits before generation to control bundle size. Include the bundle with your support request to Pixee solutions engineering.
-
-### What do I do if LLM-based fixes stop generating?
-
-Verify the LLM endpoint is reachable from within the cluster, API credentials are valid, and rate limits have not been exceeded. For air-gapped deployments, confirm the private LLM endpoint is accessible on the configured network path. See [Bring Your Own Model](/enterprise/byom) for provider-specific configuration.

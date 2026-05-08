@@ -55,18 +55,4 @@ Fortify identifies vulnerabilities but does not generate automated code fixes. P
 
 **Prerequisites:** Fortify SCA or SSC with findings, SARIF export capability, Pixee platform integration configured.
 
-## FAQ
-
-### Does Pixee work with Fortify on-premises deployments?
-
-Yes. Pixee ingests Fortify findings via SARIF export, which works regardless of whether Fortify runs on-premises or in the cloud. For on-premises Pixee deployments, no data leaves your network.
-
-### How do I export Fortify findings in SARIF format?
-
-Fortify supports SARIF export via FPR-to-SARIF conversion tools and Fortify Software Security Center (SSC). Check your Fortify version documentation for the specific export method available.
-
-### Can Pixee leverage Fortify's dataflow traces?
-
-When Fortify findings include source-to-sink dataflow information in the SARIF output, Pixee's triage engine uses this context for more accurate exploitability assessment.
-
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

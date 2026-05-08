@@ -145,7 +145,7 @@ for fix in fixes["data"]:
 
 ## Input format
 
-Pixee consumes scanner output in **SARIF** -- the OASIS standard for static analysis results -- from 12 native scanner integrations and any SARIF-producing tool. See the [SARIF Reference](/api/sarif).
+Pixee consumes scanner output in **SARIF** -- the OASIS standard for static analysis results -- from 13 native scanner integrations and any SARIF-producing tool. See the [SARIF Reference](/api/sarif).
 
 ## SDKs and OpenAPI specification
 
@@ -172,19 +172,5 @@ npx @openapitools/openapi-generator-cli generate \
 - [SARIF Reference](/api/sarif) -- How Pixee consumes SARIF from scanners
 - [Webhooks](/api/webhooks) -- Event-driven integration for CI/CD and automation
 - [Changelog](/api/changelog) -- API version history and release notes
-- [CI/CD Integration](/getting-started/ci-cd) -- Common API consumer patterns
-- [Configuration Overview](/configuration/overview) -- Repository management
-
-## FAQ
-
-### Does Pixee have a REST API?
-
-Yes. Pixee provides a REST API for programmatic access to triage and remediation workflows, fix status, repository management, and webhook configuration. Authenticate with an organization-scoped API token and use standard HTTPS requests.
-
-### How do I authenticate with the Pixee API?
-
-Generate an API token in your Pixee dashboard under **Settings > API Tokens**. Pass it as a bearer token in the `Authorization` header: `Authorization: Bearer YOUR_API_TOKEN`.
-
-### What input format does Pixee accept from scanners?
-
-Pixee accepts SARIF (the OASIS standard for static analysis results) from 12 native scanner integrations and any SARIF-producing tool via the universal SARIF integration.
+- [CI/CD Integration](/integrations/ci-cd) -- Common API consumer patterns
+- [Configuration Overview](/configuration/config-overview) -- Repository management

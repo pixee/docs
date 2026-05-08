@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Pixee supports six language ecosystems: Java, Python, JavaScript/TypeScript, .NET, Go, and PHP. Coverage varies by language. Java and Python have the deepest support with 120+ deterministic codemods plus AI-powered fixes for custom patterns. Each language includes framework-specific remediation (Spring Boot, Django, Express, ASP.NET) and fixes for OWASP Top 10 vulnerability categories. The coverage matrix below shows exactly what Pixee fixes in your stack.
 
-Language support is one half of the integration picture. Pixee also integrates with [12 native scanners](/integrations/overview) across all supported languages.
+Language support is one half of the integration picture. Pixee also integrates with [13 native scanners](/integrations/integrations-overview) across all supported languages.
 
 ## Coverage Matrix
 
@@ -85,7 +85,7 @@ Python's five packaging conventions are worth calling out. Most tools handle onl
 
 ## Scanner Compatibility
 
-Pixee remediates findings from [12 native scanner integrations](/integrations/overview) plus any scanner that exports SARIF. Scanner compatibility applies across all supported languages, though individual scanner coverage depth varies by language.
+Pixee remediates findings from [13 native scanner integrations](/integrations/integrations-overview) plus any scanner that exports SARIF. Scanner compatibility applies across all supported languages, though individual scanner coverage depth varies by language.
 
 | Scanner         | Java | Python | JS/TS | .NET | Go  | PHP |
 | --------------- | ---- | ------ | ----- | ---- | --- | --- |
@@ -99,7 +99,7 @@ Pixee remediates findings from [12 native scanner integrations](/integrations/ov
 | AppScan         | Yes  | --     | --    | --   | --  | --  |
 | Universal SARIF | Yes  | Yes    | Yes   | Yes  | Yes | Yes |
 
-For scanner-specific details, see the [Integrations](/integrations/overview) section.
+For scanner-specific details, see the [Integrations](/integrations/integrations-overview) section.
 
 ## Roadmap
 
@@ -111,24 +111,3 @@ Pixee is actively expanding language coverage. Current priorities:
 
 If your language or framework is not listed, [contact the team](https://pixee.ai/demo) to discuss your stack. Pixee's [universal SARIF integration](/integrations/sarif-universal) can remediate findings from any scanner in any language.
 
-## FAQ
-
-**What programming languages does Pixee support?**
-
-Pixee supports Java, Python, JavaScript/TypeScript, .NET, Go, and PHP. Java and Python have the deepest coverage with 120+ combined deterministic codemods. All six languages also receive AI-powered MagicMod fixes for custom patterns.
-
-**Which language has the deepest Pixee support?**
-
-Java and Python. Both have mature open-source codemod engines (codemodder-java with 51+ core codemods, codemodder-python with 60+ core codemods), full AST parsing, and comprehensive framework coverage.
-
-**Does Pixee support polyglot repositories?**
-
-Yes. Pixee analyzes each language independently within a single repository and generates language-appropriate fixes. A repository containing Java, Python, and JavaScript files receives separate, correctly-scoped fixes for each language.
-
-**What is the difference between full AST and Tree-sitter analysis?**
-
-Full AST languages (Java, Python, JS/TS, .NET) receive deeper cross-file dataflow analysis and more deterministic codemods. Tree-sitter languages (Go, PHP) use syntax-level parsing with expanding coverage. Both benefit from AI-powered MagicMods.
-
-**Can Pixee fix vulnerabilities across multiple languages in one repository?**
-
-Yes. Pixee processes each language independently and generates separate, language-appropriate pull requests (or combined PRs when a fix spans multiple files within the same language).

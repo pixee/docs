@@ -98,16 +98,3 @@ Cross-platform visibility means your security team sees triage results and fix a
 
 Enterprise self-hosted deployments have the same multi-SCM support. See [Enterprise > Deployment Options](/enterprise/deployment) for infrastructure details.
 
-## FAQ
-
-### Can I add repositories from multiple SCM platforms?
-
-Yes. A single Pixee deployment supports repositories from GitHub, GitLab, Azure DevOps, and Bitbucket simultaneously. All 4 platforms are managed from one dashboard.
-
-### What happens when I add a new repository?
-
-Pixee runs an initial analysis and opens PRs for any findings it can triage or fix. The first results typically appear within minutes.
-
-### Can I limit Pixee to specific repositories instead of an entire organization?
-
-Yes. On GitHub, you can restrict the GitHub App to selected repositories during installation. On GitLab, the `member_projects_only` toggle restricts Pixee to projects where the service account is an explicit member. On Azure DevOps and Bitbucket, repository scope is controlled through PAT access.

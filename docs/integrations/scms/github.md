@@ -89,7 +89,7 @@ The Pixee GitHub App requests the following permissions during installation. Pix
 
 **Webhook events the App subscribes to:** Code scanning alert, Check run, Create, Dependabot alert, Issue comment, Issues, Pull request, Pull request review, Pull request review comment, Pull request review thread, Push, Repository.
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
 
 ## GitHub Enterprise Server
 
@@ -139,20 +139,3 @@ Provide the App's credentials to your Pixee Enterprise installation:
 
 For deployment-model details (embedded cluster, Helm, air-gapped), see [Enterprise Deployment Options](/enterprise/deployment).
 
-## FAQ
-
-### Does Pixee work with GitHub Enterprise Server?
-
-Yes. Pixee supports both GitHub.com and GitHub Enterprise Server. Pixee Enterprise Server connects to GHES via a GitHub App with the same capabilities as the cloud integration.
-
-### Do developers need to install anything?
-
-No. The GitHub App is installed at the organization level by an administrator. Developers interact with Pixee through standard pull requests. There is nothing new to install, learn, or configure on the developer side.
-
-### Can I control which repositories Pixee monitors?
-
-Yes. During GitHub App installation, you choose between all repositories or a selected set. You can modify this selection at any time through GitHub's App settings.
-
-### How does Pixee integrate with GitHub Actions?
-
-Pixee works alongside your existing Actions workflows. Scanner results from Actions jobs are available to Pixee automatically (for GHAS/CodeQL) or via SARIF upload. No modification to your workflow YAML is required.

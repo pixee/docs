@@ -16,7 +16,7 @@ Before you start, confirm the following:
 
 - **GitHub permissions.** You need admin or owner permissions on the target repositories, or organization-level install permissions for org-wide deployment.
 - **Supported language.** At least one repository with code in Java, Python, JavaScript/TypeScript, .NET, Go, or PHP.
-- **Scanner results (optional).** If you already run CodeQL, Semgrep, Snyk Code, Checkmarx, SonarQube, or another scanner that uploads SARIF to GitHub Code Scanning, Pixee ingests those results automatically. This is additive — Pixee also runs its own analysis without any external scanner.
+- **Scanner results (required).** Pixee needs scanner findings to perform triage and generate fixes. If you already run CodeQL, Semgrep, Snyk Code, Checkmarx, SonarQube, or another scanner that uploads SARIF to GitHub Code Scanning, Pixee ingests those results automatically.
 
 No agents to install. No CLI required. No configuration files needed to start.
 
@@ -26,7 +26,7 @@ Install the Pixee GitHub App from the GitHub Marketplace, select your organizati
 
 Pixee analyzes the default branch of each connected repository. Branch targeting and other behavior can be customized later via a [PIXEE.yaml](/configuration/pixee-yaml) file in the repository root.
 
-**Scanner integration:** Pixee natively integrates with 12 scanners. If you use GitHub Code Scanning (which includes CodeQL, Semgrep via SARIF upload, and others), Pixee ingests those results automatically. For scanners outside the GitHub Code Scanning ecosystem, connect them through Pixee's [Integrations](/integrations/overview) page. Pixee also runs its own analysis independently, so external scanners are additive, not required.
+**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If you use GitHub Code Scanning (which includes CodeQL, Semgrep via SARIF upload, and others), Pixee ingests those results automatically through the GitHub App. For scanners outside the GitHub Code Scanning ecosystem, connect them through Pixee's [Integrations](/integrations/integrations-overview) page.
 
 After installation, Pixee begins its initial analysis. Within the first hour, Pixee opens pull requests for any actionable findings it identifies. If no PRs appear, the repository may have no actionable findings, or you may need to verify repository access and supported language coverage.
 
@@ -93,7 +93,7 @@ When Pixee identifies a fixable vulnerability, it opens a standard GitHub pull r
 
 **How to reject:** Close the PR with a comment. Pixee does not reopen closed PRs for the same finding.
 
-For merge rate data, see [Fix Safety](/how-it-works/fix-safety).
+For merge rate data, see [Security & Trust](/platform/security).
 
 ## What Data Leaves Your Network
 
@@ -122,12 +122,3 @@ See the full [PIXEE.yaml Reference](/configuration/pixee-yaml) for all options.
 
 GHES is supported via Pixee Enterprise (self-hosted) — not on the cloud SaaS. See [GitHub Integration → GitHub Enterprise Server](/integrations/scms/github#github-enterprise-server) for the connection model and network requirements, and [Enterprise Deployment Options](/enterprise/deployment) for infrastructure setup.
 
-## Frequently Asked Questions
-
-### Does Pixee require code changes to install on GitHub?
-
-No. Pixee installs as a standard GitHub App. You authorize it, select repositories, and it begins working. No code changes, no config files required to start. You can optionally add a `PIXEE.yaml` for customization later.
-
-### What scanners work with Pixee on GitHub?
-
-Pixee natively integrates with 12 scanners including CodeQL, Semgrep, Checkmarx, Snyk Code, SonarQube, and any scanner that produces SARIF output via GitHub Code Scanning. Pixee also runs its own analysis independently, so external scanners are additive, not required.

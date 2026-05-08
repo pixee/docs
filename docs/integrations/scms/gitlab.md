@@ -80,26 +80,4 @@ Pixee Enterprise Server connects to self-hosted GitLab via the same PAT integrat
 
 For self-hosted GitLab configuration, see the [enterprise deployment documentation](/enterprise/deployment).
 
-## FAQ
-
-### Does Pixee work with self-hosted GitLab?
-
-Yes. Pixee Enterprise Server connects to self-hosted GitLab via a service-account PAT with the same capabilities as the GitLab.com integration.
-
-### What is `member_projects_only`?
-
-A configuration toggle that restricts Pixee's effective project scope to projects where the service-account user is an explicit member. This is a useful security control on large GitLab instances where the service-account token might technically have access to many more projects than you actually want Pixee monitoring.
-
-### Do I need GitLab Ultimate?
-
-No. Pixee works with GitLab Free, Premium, and Ultimate. GitLab Ultimate is required only if you want to use GitLab's built-in SAST as a scanner source — see [GitLab SAST](/integrations/scanners/gitlab-sast). Without Ultimate, Pixee still works with any other SARIF-producing scanner via the universal SARIF integration.
-
-### Do developers need to install anything?
-
-No. The integration is configured at the group/project level by an administrator. Developers interact with Pixee through standard merge requests.
-
-### Can Pixee link MRs to GitLab issues?
-
-Pixee MR descriptions can reference issues, but explicit issue-linking integration depends on configuration. Contact the Pixee team for current options.
-
-See [Integrations Overview](/integrations/overview) for the full integration coverage matrix.
+See [Integrations Overview](/integrations/integrations-overview) for the full integration coverage matrix.

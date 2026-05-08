@@ -4,11 +4,11 @@ slug: /
 track: dev
 content_type: tutorial
 seo_title: "Get Started with Pixee | Automated Security Remediation"
-description: Install Pixee and connect your repositories for automated vulnerability triage and remediation via pull requests.
+description: Install Pixee and connect your scanners for automated vulnerability triage and remediation via pull requests.
 sidebar_position: 1
 ---
 
-Pixee automates vulnerability triage and remediation directly inside your existing pull request workflow. Install the GitHub App, GitLab integration, Azure DevOps extension, or Bitbucket connector, and Pixee starts delivering fixes as standard PRs your developers already know how to review and merge. No new dashboards. No new interfaces. Setup takes under five minutes, and most teams see their first automated fix within the hour.
+Pixee automates vulnerability triage and remediation directly inside your existing pull request workflow. Install the GitHub App, GitLab integration, Azure DevOps extension, or Bitbucket connector, connect your scanners, and Pixee starts delivering fixes as standard PRs your developers already know how to review and merge. Setup takes under five minutes, and most teams see their first automated fix within the hour.
 
 Pixee is not a scanner. It works downstream of your existing SAST, SCA, and DAST tools — ingesting their findings, triaging them for exploitability, and generating validated fixes.
 
@@ -16,30 +16,49 @@ Pixee is not a scanner. It works downstream of your existing SAST, SCA, and DAST
 
 Pixee provides two co-equal capabilities:
 
-**Triage Automation** reduces false positives by up to 95%. Each scanner finding passes through exploitability analysis that determines whether the vulnerability is actually reachable and triggerable in your codebase — not just whether it matches a pattern. Findings classified as false positives include a structured justification explaining why, so your security team can audit the decision.
+**Triage Automation** reduces false positives by up to 98%. Each scanner finding passes through exploitability analysis that determines whether the vulnerability is actually reachable and triggerable in your codebase — not just whether it matches a pattern. Every verdict includes a structured justification with the specific code evidence that drove the decision.
 
 **Remediation Automation** generates context-aware code fixes and delivers them as pull requests. Developers review and merge these PRs like any other code change. Across production deployments, 76% of Pixee-generated fixes are merged by development teams after human review.
 
-Both capabilities work together. Triage eliminates the noise. Remediation fixes what remains. The combination reduces vulnerability backlog resolution time.
+Both capabilities work together. Triage eliminates the noise. Remediation fixes what remains.
 
-| Capability  | What It Does                                                  | Proof Point                              |
-| ----------- | ------------------------------------------------------------- | ---------------------------------------- |
-| Triage      | Exploitability analysis across 12 native scanner integrations | Up to 95% false positive reduction       |
-| Remediation | Context-aware fixes as pull requests                          | 76% merge rate on production deployments |
-| Delivery    | Standard PRs in GitHub, GitLab, ADO, Bitbucket                | Native platform integration              |
+| Capability | What It Does | Proof Point |
+|---|---|---|
+| Triage | Exploitability analysis across 13 native scanner integrations | Up to 98% false positive reduction |
+| Remediation | Context-aware fixes as pull requests | 76% merge rate on production deployments |
+| Delivery | Standard PRs in GitHub, GitLab, ADO, Bitbucket | Native platform integration |
+
+## Setup Flow
+
+Setting up Pixee takes three steps:
+
+| Step | Page | Time |
+|---|---|---|
+| 1. Install the platform integration | [GitHub](/getting-started/github), [GitLab](/getting-started/gitlab), [Azure DevOps](/getting-started/azure-devops), or [Bitbucket](/getting-started/bitbucket) | 3-5 min |
+| 2. Connect your scanners | See below — required | 5-10 min |
+| 3. Review and merge your first fix | [Your First Fix](/getting-started/first-fix) | 5 min |
+
+Total time to first merged fix: under 30 minutes for most teams.
+
+## Connecting Scanners (Required)
+
+Pixee requires scanner findings to perform triage and generate fixes. Without connected scanners, there is nothing for Pixee to act on.
+
+**What "connecting a scanner" means:**
+
+- For scanners that write to your SCM's code-scanning surface (GitHub Code Scanning, GitLab Security Dashboard, etc.), Pixee ingests findings automatically through the SCM integration — no additional step required.
+- For scanners that don't write to the SCM's code-scanning surface, upload SARIF results to the SCM's code-scanning API as a CI step. Pixee then ingests them through the SCM integration.
+
+Pixee integrates natively with 13 scanners: CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy. Any SARIF-producing scanner also works. See [Scanner Integration](/platform/scanner-integration) for the full list and [CI/CD Integration](/integrations/ci-cd) for pipeline setup examples.
 
 ## Choose Your Platform
 
-| Platform         | Setup Time | Guide                                                 |
-| ---------------- | ---------- | ----------------------------------------------------- |
-| **GitHub**       | ~3 minutes | [GitHub Setup →](/getting-started/github)             |
-| **GitLab**       | ~5 minutes | [GitLab Setup →](/getting-started/gitlab)             |
+| Platform | Setup Time | Guide |
+|---|---|---|
+| **GitHub** | ~3 minutes | [GitHub Setup →](/getting-started/github) |
+| **GitLab** | ~5 minutes | [GitLab Setup →](/getting-started/gitlab) |
 | **Azure DevOps** | ~5 minutes | [Azure DevOps Setup →](/getting-started/azure-devops) |
-| **Bitbucket**    | ~5 minutes | [Bitbucket Setup →](/getting-started/bitbucket)       |
-
-Already running CI/CD pipelines? See [CI/CD Integration](/getting-started/ci-cd) for pipeline-level setup.
-
-Want to drive the platform from the command line — query scans, configure workflows, hit the API? See [Pixee CLI](/getting-started/cli).
+| **Bitbucket** | ~5 minutes | [Bitbucket Setup →](/getting-started/bitbucket) |
 
 Need enterprise deployment (self-hosted, air-gapped, BYOM)? Start with [Enterprise Deployment Options](/enterprise/deployment).
 
@@ -51,54 +70,20 @@ Need enterprise deployment (self-hosted, air-gapped, BYOM)? Start with [Enterpri
 4. Your developers review the PR in their normal workflow — same code review process, same CI/CD pipeline, same branch protection rules.
 5. Developers merge, modify, or close the PR. No special tooling required.
 
-There is no Pixee dashboard you need to monitor. The PR is the interface.
-
-## Developer Journey
-
-This Getting Started section walks you through a complete path:
-
-**Install** → **Connect scanners** → **Review your first fix** → **Merge**
-
-| Step                                | Page                                                                                                                                                   | Time     |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| 1. Install the platform integration | [GitHub](/getting-started/github), [GitLab](/getting-started/gitlab), [ADO](/getting-started/azure-devops), or [Bitbucket](/getting-started/bitbucket) | 3-5 min  |
-| 2. Connect your scanner (optional)  | [CI/CD Integration](/getting-started/ci-cd)                                                                                                            | 5-10 min |
-| 3. Review and merge your first fix  | [Your First Fix](/getting-started/first-fix)                                                                                                           | 5 min    |
-
-Total time to first merged fix: under 30 minutes for most teams.
-
 ## Prerequisites
 
 - A GitHub, GitLab, Azure DevOps, or Bitbucket account with at least one repository
-- Code in a supported language: Java, Python, JavaScript/TypeScript, .NET, Go, or PHP
-- Existing scanner findings recommended for immediate triage and remediation results. Without connected scanner results, Pixee can apply proactive security hardening codemods to common vulnerability patterns.
+- Code in a supported language: Java, Python, JavaScript/TypeScript, .NET, Go, Ruby, PHP, Kotlin, Rust, Scala, Swift, or IaC
+- At least one connected scanner — this is required for triage and remediation to work
 
 No agents to install. No CLI required for the standard workflow. No configuration files needed to start.
 
 ## Large Backlogs (10,000+ Findings)
 
-Pixee handles large vulnerability backlogs without overwhelming your development team. Findings are prioritized by severity -- Critical and High findings are processed first, so the most dangerous vulnerabilities get addressed before lower-priority items.
+Pixee handles large vulnerability backlogs without overwhelming your development team. Findings are prioritized by severity — Critical and High findings are processed first.
 
-PR creation is batched, not instantaneous. Expect a steady stream of fixes delivered over days, not a flood of hundreds of PRs at once. This pacing keeps code review manageable and avoids overwhelming CI/CD pipelines.
+PR creation is batched, not instantaneous. Expect a steady stream of fixes delivered over days, not a flood of hundreds of PRs at once.
 
-Use a [PIXEE.yaml](/configuration/pixee-yaml) file to scope initial remediation to specific severity levels, vulnerability types, or repository paths. This gives your team control over the rollout pace and lets you focus on the findings that matter most.
+Use a [PIXEE.yaml](/configuration/pixee-yaml) file to scope initial remediation to specific severity levels, vulnerability types, or repository paths.
 
-For organizations managing hundreds of repositories or millions of findings, the [Phased Rollout Guide](/enterprise/phased-rollout) covers rollout strategy for large estates -- including recommended phasing, success metrics per phase, and organizational change management.
-
-## Frequently Asked Questions
-
-### How do I install Pixee?
-
-Choose your platform (GitHub, GitLab, Azure DevOps, or Bitbucket), authorize the app, select your repositories, and Pixee begins analyzing findings automatically. Setup takes under five minutes. See the platform-specific guides linked above.
-
-### How long does it take to see results?
-
-Most teams see their first automated fix within one hour of installation. Triage results appear as soon as scanner findings are ingested. The timeline depends on how many findings your scanners have already produced.
-
-### Does Pixee require code changes to install?
-
-No. Pixee installs as a platform integration (GitHub App, GitLab webhook, Azure DevOps extension, Bitbucket connector) and requires zero code changes, CLI installs, or configuration files to start.
-
-### Do developers need to learn a new tool?
-
-No. Developers interact with Pixee exclusively through pull requests in their existing platform. There is no new interface, no new CLI, no new dashboard. Reviewing a Pixee PR is identical to reviewing any other code change.
+For organizations managing hundreds of repositories or millions of findings, the [Phased Rollout Guide](/enterprise/phased-rollout) covers rollout strategy for large estates.

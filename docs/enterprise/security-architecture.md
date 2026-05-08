@@ -166,24 +166,3 @@ Pixee retains the following data categories, each with distinct lifecycle contro
 
 **Data purge** follows standard Kubernetes PVC lifecycle. Customers control retention and deletion through their infrastructure configuration. For cloud SaaS deployments, data deletion requests are handled through standard support channels.
 
-## Frequently Asked Questions
-
-### Does Pixee send my source code to an LLM?
-
-Pixee sends only the code relevant to each specific vulnerability -- not entire repositories. For smaller files, the full file is sent for proper context; for larger files, only the vulnerable region plus surrounding context. No absolute paths, repository URLs, git metadata, commit hashes, author information, or CI/CD details are included.
-
-### How does Pixee handle data residency?
-
-In self-hosted deployments, all data stays in your network. LLM inference uses your chosen provider in your chosen region. The only outbound connection is license validation, which can be proxied. See [Deployment Options](/enterprise/deployment) for the full data flow table.
-
-### Can a compromised analysis affect other repositories?
-
-No. Each analysis is an isolated, stateless inference call. A single analysis cannot modify the model, persist across analyses, or affect other applications.
-
-### Does Pixee use my code to train AI models?
-
-No. Customer code is used only for the specific analysis request. Azure OpenAI and equivalent providers offer contractual guarantees that customer data is not used for model training. Pixee does not retain customer code after analysis completion.
-
-### What credentials does Pixee need?
-
-Pixee requires SCM access tokens (GitHub App, GitLab PAT, Azure DevOps PAT, or Bitbucket API token) and LLM provider API keys. All credentials are stored in Kubernetes secrets and support external secret manager integration via `existingSecret`.

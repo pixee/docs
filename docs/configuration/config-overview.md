@@ -49,15 +49,15 @@ Use this table to jump to the right page for your configuration task.
 | Customize PR formatting (labels, title prefix)        | [PIXEE.yaml Reference](/configuration/pixee-yaml)    |
 | Add or remove repositories from monitoring            | [Repository Management](/configuration/repositories) |
 | Organize repos by team or business unit               | [Repository Management](/configuration/repositories) |
-| Set scan schedules or switch to on-demand analysis    | [Operations](/configuration/operations)              |
-| Route notifications to Slack or email                 | [Notifications](/configuration/operations)           |
-| Set up webhook integrations for custom workflows      | [Notifications](/configuration/operations)           |
+| Set scan schedules or switch to on-demand analysis    | [Operations](/configuration/operations-config)              |
+| Route notifications to Slack or email                 | [Notifications](/configuration/operations-config)           |
+| Set up webhook integrations for custom workflows      | [Notifications](/configuration/operations-config)           |
 | Manage team member access and roles                   | [Users & Access](/configuration/users)               |
 | Configure SSO with your identity provider             | [Users & Access](/configuration/users)               |
 | Tune AI triage sensitivity                            | [AI Settings](/configuration/ai-settings)            |
 | Control which finding categories get AI-powered fixes | [AI Settings](/configuration/ai-settings)            |
-| Configure reporting exports or dashboards             | [Reporting](/configuration/operations)               |
-| Export data for compliance audits                     | [Reporting](/configuration/operations)               |
+| Configure reporting exports or dashboards             | [Reporting](/configuration/operations-config)               |
+| Export data for compliance audits                     | [Reporting](/configuration/operations-config)        |
 
 ## Getting Started with Configuration
 
@@ -69,16 +69,3 @@ If you just installed Pixee, the recommended approach is:
 
 Enterprise self-hosted deployments have additional configuration surfaces for infrastructure (LLM providers, authentication, observability) managed through the admin console or Helm values. See [Enterprise > Deployment Options](/enterprise/deployment) for details.
 
-## FAQ
-
-### Do I need to configure Pixee before it starts working?
-
-No. Pixee works with zero configuration on supported repositories. Default settings enable triage and remediation for all supported languages and vulnerability types.
-
-### Can developers override organization-wide settings?
-
-Developers can customize behavior for their repositories using PIXEE.yaml. Organization-level policies set guardrails that PIXEE.yaml operates within.
-
-### Where do I configure Pixee for enterprise self-hosted deployments?
-
-Enterprise deployments have additional infrastructure configuration (LLM providers, authentication, observability) managed through the admin console or Helm values. See [Enterprise > Deployment Options](/enterprise/deployment).

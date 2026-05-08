@@ -75,7 +75,7 @@ Connect SonarQube by providing your instance URL and a user token with Browse an
 
 ### What Happens with Large Backlogs
 
-If your SonarQube instance has thousands of findings, Pixee does not open thousands of PRs simultaneously. Findings are prioritized by severity (Critical and High first), and PR creation is controlled by your configured batch settings. See [Operations](/configuration/operations) for PR volume controls.
+If your SonarQube instance has thousands of findings, Pixee does not open thousands of PRs simultaneously. Findings are prioritized by severity (Critical and High first), and PR creation is controlled by your configured batch settings. See [Operations](/configuration/operations-config) for PR volume controls.
 
 ## SonarQube Finding Examples
 
@@ -120,18 +120,4 @@ ResultSet rs = ps.executeQuery();
 - **Framework-mitigated injection patterns:** Findings where the application framework provides protection (parameterized queries via ORM, CSRF tokens via framework middleware)
 - **Test code at production severity:** SonarQube scans test directories by default; Pixee adjusts classification for non-production code
 
-See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
-
-## FAQ
-
-### Does Pixee work with both SonarQube and SonarCloud?
-
-Yes. Pixee's SonarQube integration works with both self-hosted SonarQube and SonarCloud (SaaS). The same triage and remediation pipeline processes findings from either deployment.
-
-### How does Pixee handle SonarQube security hotspots?
-
-SonarQube security hotspots require manual review -- someone must investigate the code and classify the hotspot as safe or vulnerable. Pixee automates this review by investigating the actual code context and classifying each hotspot with a detailed justification. This eliminates the manual review bottleneck.
-
-### Does Pixee fix code quality issues from SonarQube, or only security findings?
-
-Pixee focuses on security-relevant findings -- vulnerabilities and security hotspots. Code quality issues like code smells and technical debt remain in SonarQube's domain. When a code quality finding has security implications, Pixee's triage pipeline evaluates it and may generate a fix.
+See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.

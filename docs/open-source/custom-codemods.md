@@ -221,22 +221,3 @@ codemodder $WORKSPACE --codemod-include pixee:python/safe-yaml-load --output res
 
 **Contributing upstream.** If your codemod addresses a general vulnerability pattern, consider [contributing it back](/open-source/contributing) to the open source repositories so the broader community benefits.
 
----
-
-## Frequently Asked Questions
-
-### Can I write custom codemods for Pixee?
-
-Yes. Using the open source Codemodder framework, you can build custom deterministic codemods for your organization's specific security patterns. Both Java and Python are supported with full framework tooling for testing and validation.
-
-### Do I need the Pixee platform to run custom codemods?
-
-No. Custom codemods built on Codemodder run standalone via CLI or in CI/CD. The Pixee platform can optionally integrate custom codemods into its full remediation workflow alongside built-in codemods and MagicMods.
-
-### What testing is required for custom codemods?
-
-Each codemod should have before/after test fixtures covering the primary pattern, code style variations, negative cases (where the codemod should not fire), and edge cases. Codemodder provides a testing framework that automatically validates fixtures.
-
-### Can I share custom codemods with the community?
-
-Yes. Submit custom codemods as contributions to the codemodder-java or codemodder-python open source repositories. See the [Contributing](/open-source/contributing) guide for the submission workflow and quality standards.

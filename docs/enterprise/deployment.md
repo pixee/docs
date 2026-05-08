@@ -137,24 +137,3 @@ Use this decision tree to narrow down your model:
 
 These are starting recommendations. Actual resource requirements depend on finding volume, concurrent analysis workload, and LLM inference latency. Contact Pixee solutions engineering for sizing guidance on large deployments.
 
-## Frequently Asked Questions
-
-### What data does Pixee send outside my network?
-
-In self-hosted deployments (embedded cluster, Helm, air-gapped), source code and scanner findings stay in your network. LLM inference uses your chosen provider. The only outbound connection is license validation, which can be proxied. See the data flow table above for details per deployment model.
-
-### Does Pixee require Kubernetes expertise?
-
-No. The embedded cluster deployment installs a complete K3s-based platform on a single Linux VM with a form-based admin console. No Kubernetes knowledge required. The Helm deployment does require an existing Kubernetes cluster and Helm CLI experience. See [Embedded Cluster](/enterprise/embedded-cluster) for details.
-
-### Can Pixee run in my existing EKS/GKE/AKS cluster?
-
-Yes. The Helm chart deploys into any customer-provided Kubernetes cluster. Conditional subcharts let you swap embedded components for your own services (S3, PostgreSQL, observability, auth). See [Helm / BYO Kubernetes](/enterprise/helm) for details.
-
-### How long does deployment take?
-
-Embedded cluster and Helm deployments typically complete in under one hour. Air-gapped deployments take longer due to private LLM endpoint configuration and network verification.
-
-### Does Pixee support multi-cloud?
-
-Yes. The Helm chart includes storage-class configurations for EKS (gp2/gp3), GKE (standard-rwo), AKS (managed-csi), and K3s local default. A single Pixee deployment can connect to multiple SCM platforms simultaneously.

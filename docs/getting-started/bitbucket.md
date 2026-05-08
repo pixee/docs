@@ -17,7 +17,7 @@ Before you start, confirm the following:
 - **Bitbucket permissions.** You need Admin permissions on the target workspace (Bitbucket Cloud) or Project Admin permissions (Bitbucket Server).
 - **Bitbucket instance.** Bitbucket Cloud (bitbucket.org) or Bitbucket Data Center / Server. See [Bitbucket Data Center / Server](#bitbucket-data-center--server) below for on-premises details.
 - **Supported language.** At least one repository with code in Java, Python, JavaScript/TypeScript, .NET, Go, or PHP.
-- **Scanner results (optional).** If you run scanners through Bitbucket Pipelines or a separate CI system (Snyk, SonarQube, Checkmarx, or others), Pixee can ingest those findings. This is additive — Pixee also runs its own analysis.
+- **Scanner results (required).** Pixee needs scanner findings to perform triage and generate fixes. If you run scanners through Bitbucket Pipelines or a separate CI system (Snyk, SonarQube, Checkmarx, or others), Pixee can ingest those findings.
 
 No Bitbucket app marketplace installs required. No `bitbucket-pipelines.yml` changes needed to start.
 
@@ -27,7 +27,7 @@ Create a Bitbucket Cloud API token for a dedicated service account ([Atlassian i
 
 After connecting, choose which repositories Pixee should analyze -- all repositories in the workspace or specific repositories. Pixee analyzes the default branch (typically `main` or `master`) of each connected repository. You can customize branch targeting and other behavior later via a [PIXEE.yaml](/configuration/pixee-yaml) file in the repository root.
 
-**Scanner integration:** Pixee natively integrates with 12 scanners. If your Bitbucket Pipelines include security scanner steps, Pixee can ingest findings from those pipeline runs. Any scanner producing SARIF output can also be connected through Pixee's [Integrations](/integrations/overview) page. Pixee runs its own analysis independently, so external scanners are additive, not required.
+**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your Bitbucket Pipelines include security scanner steps, Pixee can ingest findings from those pipeline runs. Any scanner producing SARIF output can also be connected through Pixee's [Integrations](/integrations/integrations-overview) page.
 
 After setup, Pixee begins its initial analysis and opens pull requests for actionable findings within the first hour. If no PRs appear, verify API token permissions, workspace-level admin approval, and supported language coverage.
 
@@ -55,7 +55,7 @@ When Pixee identifies a fixable vulnerability, it opens a standard Bitbucket pul
 
 **Pipeline behavior:** Pixee-generated PRs trigger your existing Bitbucket Pipelines like any other pull request. If your pipeline includes security scans, tests, or linting steps, those run against the Pixee fix branch automatically.
 
-For merge rate data, see [Fix Safety](/how-it-works/fix-safety).
+For merge rate data, see [Security & Trust](/platform/security).
 
 ## What Data Leaves Your Network
 
@@ -76,14 +76,5 @@ Bitbucket Server (formerly Data Center) is a separate Atlassian product from Bit
 
 If your team uses Jira alongside Bitbucket, Pixee PRs can reference Jira issue keys in their descriptions when configured. This allows Jira to automatically link the Pixee-generated PR to the relevant security issue, keeping your Atlassian workflow intact.
 
-For Jira integration details, see [Integrations Overview](/integrations/overview).
+For Jira integration details, see [Integrations Overview](/integrations/integrations-overview).
 
-## Frequently Asked Questions
-
-### What scanners work with Pixee on Bitbucket?
-
-Pixee natively integrates with 12 scanners including Snyk, SonarQube, Checkmarx, and any scanner producing SARIF output. Scanner results can be ingested via Bitbucket Pipelines or direct integration. Pixee also runs its own analysis independently.
-
-### Do I need to modify my `bitbucket-pipelines.yml` to use Pixee?
-
-No. Pixee connects through an API token and operates independently of your pipeline configuration. No changes to `bitbucket-pipelines.yml` are required to start. If you want Pixee to ingest scanner results from your pipeline, that configuration is handled in the Pixee integration settings, not in your pipeline file.

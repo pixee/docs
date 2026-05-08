@@ -162,11 +162,11 @@ Pixee tracks every triage decision and remediation outcome, giving your team vis
 | **Remediation Velocity** | Time from finding to merged fix                                          | Compliance teams tracking MTTR reduction                     |
 | **Repository Status**    | Per-repo analysis state, last scan time, recent activity                 | Developers checking individual repo health                   |
 
-**Merge rate** is the percentage of Pixee PRs that developers review and merge. It is a primary indicator of fix quality and relevance. See [Fix Safety](/how-it-works/fix-safety) for production metrics.
+**Merge rate** is the percentage of Pixee PRs that developers review and merge. It is a primary indicator of fix quality and relevance. See [Security & Trust](/platform/security) for production metrics.
 
 **Remediation velocity** measures the elapsed time from when a finding is detected to when its fix is merged. This metric maps directly to Mean Time to Remediation (MTTR), a standard compliance metric.
 
-**Triage volume** tracks how many findings Pixee classified, broken down by true positive, false positive, and won't-fix outcomes. See [Triage Engine](/how-it-works/triage-engine) for details on false positive reduction.
+**Triage volume** tracks how many findings Pixee classified, broken down by true positive, false positive, and won't-fix outcomes. See [Triage](/platform/triage) for details on false positive reduction.
 
 ### Dashboard
 
@@ -202,7 +202,7 @@ Compliance exports include:
 - Fix outcome (PR merged, closed, pending)
 - Timestamps for each state transition
 
-For custom reporting, use the Pixee API to query triage and remediation data programmatically. See [API > Overview](/api/overview) for endpoints and authentication.
+For custom reporting, use the Pixee API to query triage and remediation data programmatically. See [API Overview](/api/api-overview) for endpoints and authentication.
 
 ### Enterprise Observability
 
@@ -210,40 +210,3 @@ Self-hosted Pixee deployments include a bundled observability stack with metrics
 
 For full observability configuration, see [Enterprise > Observability](/enterprise/observability).
 
-## FAQ
-
-### Does Pixee run on every commit?
-
-By default, Pixee analyzes when new scanner findings are available, not on every commit. You can configure event-driven, scheduled, or on-demand analysis modes to match your workflow.
-
-### Can I prevent Pixee from opening PRs during business hours?
-
-Yes. Scheduled mode lets you set a cron expression that runs analysis during off-hours, so PRs are ready for review when your team starts work.
-
-### How do I trigger a scan manually?
-
-Use the Pixee dashboard or API to trigger on-demand analysis for any connected repository. Results and PRs appear as soon as analysis completes.
-
-### Do I need to configure notifications to use Pixee?
-
-No. Pixee uses your SCM platform's native notification system by default. PRs appear in your normal PR queue, and status checks integrate with your existing workflow. Additional channels (Slack, email, webhooks) are optional.
-
-### Can I send notifications to different Slack channels for different repositories?
-
-Yes. Notification routing supports per-repository and per-team channel assignments. Route backend repos to `#backend-security` and frontend repos to `#frontend-security`, for example.
-
-### Does Pixee support PagerDuty or ServiceNow integration?
-
-Pixee supports generic webhooks that integrate with PagerDuty, ServiceNow, Jira, or any system that accepts webhook payloads. Configure a webhook URL and select the event types you want forwarded.
-
-### Can I export Pixee data for compliance audits?
-
-Yes. Every triage decision and fix outcome is persisted with timestamps and justification. Export as CSV or JSON, or use the API for automated evidence collection. The data maps to common compliance frameworks including SOC 2 and ISO 27001.
-
-### Does Pixee show fix merge rates?
-
-Yes. Merge rate -- the percentage of Pixee PRs that developers review and merge -- is a primary metric tracked in the dashboard. See [Fix Safety](/how-it-works/fix-safety) for production metrics.
-
-### Can I integrate Pixee reporting with Jira or ServiceNow?
-
-Yes. Use the webhook and API integrations to push Pixee data to Jira, ServiceNow, or any system that accepts webhook payloads or REST API calls. See [API > Webhooks](/api/webhooks) for payload details.
