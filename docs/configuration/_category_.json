@@ -1,0 +1,10 @@
+{
+  "label": "Configuration",
+  "position": 5,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "configuration/config-overview"
+  }
+}

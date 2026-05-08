@@ -1,0 +1,10 @@
+{
+  "label": "Platform Overview",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "platform/what-is-agentic-security-engineering"
+  }
+}
