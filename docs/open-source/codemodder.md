@@ -29,7 +29,7 @@ Codemodder has three layers:
 - **codemodder-java** uses ParseAndGo-based AST transformations. Codemods register into a default codemod set and operate on Java abstract syntax trees.
 - **codemodder-python** supports three transformer strategies: LibCST for AST-level transformations, regex for pattern-based changes, and XML for configuration files. A single Python codemod can target source files, config files, or dependency manifests.
 
-**Output format.** All engines produce CodeTF (Code Transformation Format) output -- a structured JSON description of every change made, including what was modified, where, and the security rationale. CodeTF is machine-readable, making it straightforward to integrate codemod results into CI/CD pipelines or review workflows.
+**Output format.** All engines produce a structured JSON report describing every change made — including what was modified, where, and the security rationale — designed to be straightforward to integrate into CI/CD pipelines or review workflows.
 
 ## How Codemods Work
 
@@ -43,9 +43,9 @@ The transformation pipeline follows a consistent flow from scanner finding to st
 
 4. **The transformation applies the security fix.** The codemod rewrites the code deterministically. For SQL injection, this means converting string concatenation to parameterized queries. For insecure deserialization, it means adding type validation or switching to a safe loader.
 
-5. **CodeTF output describes the result.** The engine writes a structured report of what changed and why. This output is both human-readable and machine-parseable.
+5. **The engine writes a structured report.** A JSON document describes what changed and why — both human-readable and machine-parseable.
 
-6. **Developer reviews the change.** In the Pixee platform, the fix becomes a pull request. With the standalone engine, you review the CodeTF output and the modified files directly.
+6. **Developer reviews the change.** In the Pixee platform, the fix becomes a pull request. With the standalone engine, you review the structured report and the modified files directly.
 
 ## codemodder-java
 

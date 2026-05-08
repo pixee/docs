@@ -5,7 +5,7 @@ track: dev
 content_type: reference
 seo_title: SARIF Reference -- Pixee Docs
 description: How Pixee consumes SARIF from scanners. Field mapping, required fields, validation, and integration examples.
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # SARIF Reference
@@ -23,13 +23,13 @@ SARIF matters to Pixee's architecture because it enables scanner-agnostic remedi
 ## How Pixee uses SARIF
 
 ```
-Scanner  -->  SARIF file  -->  Pixee ingestion  -->  Triage  -->  Fix  -->  CodeTF  -->  PR
+Scanner  -->  SARIF file  -->  Pixee ingestion  -->  Triage  -->  Fix  -->  PR
 ```
 
 1. **Ingestion.** SARIF files arrive via webhook from native scanner integrations, via the Universal SARIF integration, or via API upload.
 2. **Normalization.** Scanner-specific handlers extract maximum metadata from each tool's SARIF output. When a native handler does not exist, the Universal SARIF handler processes any valid SARIF document.
 3. **Triage routing.** Normalized findings enter the three-tier triage engine. Findings with richer SARIF data (code flows, related locations) receive higher-quality triage and remediation.
-4. **Output.** Remediation results are expressed as [CodeTF](/api/codetf) documents -- the complement to SARIF input.
+4. **Output.** Remediation results are delivered as pull requests on the target repository.
 
 ## Required and optional SARIF fields
 
@@ -62,12 +62,12 @@ These fields are not required, but significantly improve triage accuracy and fix
 
 ### Optional fields
 
-| SARIF Field                            | Type   | Pixee Usage                                             |
-| -------------------------------------- | ------ | ------------------------------------------------------- |
-| `runs[].results[].fingerprints`        | object | Finding deduplication across scans                      |
-| `runs[].results[].partialFingerprints` | object | Fuzzy matching for findings that shift between scans    |
-| `runs[].results[].suppressions[]`      | array  | Previously suppressed findings (Pixee respects these)   |
-| `runs[].results[].properties`          | object | Custom scanner metadata passed through to CodeTF output |
+| SARIF Field                            | Type   | Pixee Usage                                            |
+| -------------------------------------- | ------ | ------------------------------------------------------ |
+| `runs[].results[].fingerprints`        | object | Finding deduplication across scans                     |
+| `runs[].results[].partialFingerprints` | object | Fuzzy matching for findings that shift between scans   |
+| `runs[].results[].suppressions[]`      | array  | Previously suppressed findings (Pixee respects these)  |
+| `runs[].results[].properties`          | object | Custom scanner metadata preserved through the pipeline |
 
 ## Dataflow quality and fix quality
 
@@ -186,7 +186,6 @@ For full setup guides per scanner, see [Integrations Overview](/integrations/ove
 ## Related pages
 
 - [API Overview](/api/overview) -- Authentication and endpoint reference
-- [CodeTF Specification](/api/codetf) -- The complementary output format
 - [Universal SARIF Integration](/integrations/sarif-universal) -- Setup guide for SARIF ingestion
 - [Integrations Overview](/integrations/overview) -- All supported scanners
 - [How Scanner Integration Works](/how-it-works/scanner-integration) -- Technical depth on scanner normalization

@@ -87,6 +87,7 @@ const config = {
             from: "/configuration/scheduling",
             to: "/configuration/operations",
           },
+          { from: "/api/codetf", to: "/api/overview" },
 
           // Old code-scanning-tools/* → new integrations/scanners/*
           {

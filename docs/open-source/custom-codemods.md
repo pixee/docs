@@ -86,7 +86,7 @@ The codemod needs to:
 
 Implement the codemod class by extending the framework's base class. The class declares which CWE or rule ID it handles, and the `visit` method contains the transformation logic.
 
-The transformation uses ParseAndGo to walk the Java AST, identify `Statement.execute()` nodes, and rewrite them. The framework handles file discovery, change tracking, and CodeTF output generation.
+The transformation uses ParseAndGo to walk the Java AST, identify `Statement.execute()` nodes, and rewrite them. The framework handles file discovery, change tracking, and structured-report generation.
 
 Refer to the [codemodder-java CONTRIBUTING guide](https://github.com/pixee/codemodder-java/blob/main/CONTRIBUTING.md) for the current base class interfaces and registration patterns.
 
@@ -134,7 +134,7 @@ Add the codemod to the registration system so the engine discovers it at runtime
 ./gradlew run --args="--source /path/to/test-repo --codemod-include pixee:java/sql-parameterizer --output results.json"
 ```
 
-Review the CodeTF output in `results.json` to verify the changes are correct. The output describes each file modified, the lines changed, and the security rationale.
+Review the report in `results.json` to verify the changes are correct. The output describes each file modified, the lines changed, and the security rationale.
 
 ## Tutorial: Build a Custom Python Codemod
 
@@ -214,7 +214,7 @@ Reliable codemods require thorough testing:
 
 ```bash
 # Example CI/CD step
-codemodder $WORKSPACE --codemod-include pixee:python/safe-yaml-load --output codetf-results.json
+codemodder $WORKSPACE --codemod-include pixee:python/safe-yaml-load --output results.json
 ```
 
 **Sharing across teams.** Package custom codemods as a separate module that depends on the Codemodder framework. Teams can pull your codemod package alongside the core engine.

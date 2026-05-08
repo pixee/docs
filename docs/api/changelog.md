@@ -5,7 +5,7 @@ track: dev
 content_type: reference
 seo_title: Changelog -- Pixee Docs
 description: "Pixee platform changelog: new features, improvements, bug fixes, and API changes."
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Changelog

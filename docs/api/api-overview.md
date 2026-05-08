@@ -4,13 +4,13 @@ slug: /api/overview
 track: dev
 content_type: reference
 seo_title: API Overview -- Pixee Docs
-description: "Pixee REST API reference: authentication, endpoints, rate limits, and CodeTF/SARIF output formats."
+description: "Pixee REST API reference: authentication, endpoints, rate limits, and SARIF input format."
 sidebar_position: 1
 ---
 
 # API Overview
 
-Pixee provides a REST API for programmatic access to vulnerability triage and remediation workflows. The API enables querying fix status, managing repository configurations, consuming webhook events for CI/CD integration, and working with CodeTF and SARIF output formats. Authentication uses organization-scoped API tokens. This page covers available endpoints, authentication, rate limits, and links to detailed specifications.
+Pixee provides a REST API for programmatic access to vulnerability triage and remediation workflows. The API enables querying fix status, managing repository configurations, consuming webhook events for CI/CD integration, and ingesting SARIF scanner output. Authentication uses organization-scoped API tokens. This page covers available endpoints, authentication, rate limits, and links to detailed specifications.
 
 ## API architecture
 
@@ -73,7 +73,7 @@ Rate-limited responses return `429 Too Many Requests` with a `Retry-After` heade
 | Repositories | `GET`    | `/repositories/{id}`          | Get repository configuration and status          |
 | Repositories | `PATCH`  | `/repositories/{id}`          | Update repository settings                       |
 | Fixes        | `GET`    | `/repositories/{id}/fixes`    | List fix results for a repository                |
-| Fixes        | `GET`    | `/fixes/{id}`                 | Get fix details including CodeTF output          |
+| Fixes        | `GET`    | `/fixes/{id}`                 | Get fix details including diff and rationale     |
 | Scans        | `GET`    | `/repositories/{id}/scans`    | List scan history                                |
 | Scans        | `POST`   | `/repositories/{id}/scans`    | Trigger a new scan                               |
 | Triage       | `GET`    | `/repositories/{id}/findings` | List triaged findings                            |
@@ -143,12 +143,9 @@ for fix in fixes["data"]:
     print(f"{fix['codemod']} - {fix['status']} - {fix['pr_url']}")
 ```
 
-## Output formats
+## Input format
 
-The API returns fix results in two structured formats:
-
-- **CodeTF** -- Pixee's open specification for describing code transformations. Fix detail endpoints return CodeTF documents that capture what changed, why, and how the change was validated. See the [CodeTF Specification](/api/codetf).
-- **SARIF** -- The OASIS standard for static analysis results. Pixee consumes SARIF as input from 12 native scanner integrations and any SARIF-producing tool. See the [SARIF Reference](/api/sarif).
+Pixee consumes scanner output in **SARIF** -- the OASIS standard for static analysis results -- from 12 native scanner integrations and any SARIF-producing tool. See the [SARIF Reference](/api/sarif).
 
 ## SDKs and OpenAPI specification
 
@@ -172,7 +169,6 @@ npx @openapitools/openapi-generator-cli generate \
 
 ## Related pages
 
-- [CodeTF Specification](/api/codetf) -- Pixee's open format for code transformations
 - [SARIF Reference](/api/sarif) -- How Pixee consumes SARIF from scanners
 - [Webhooks](/api/webhooks) -- Event-driven integration for CI/CD and automation
 - [Changelog](/api/changelog) -- API version history and release notes
@@ -189,6 +185,6 @@ Yes. Pixee provides a REST API for programmatic access to triage and remediation
 
 Generate an API token in your Pixee dashboard under **Settings > API Tokens**. Pass it as a bearer token in the `Authorization` header: `Authorization: Bearer YOUR_API_TOKEN`.
 
-### What output formats does the Pixee API support?
+### What input format does Pixee accept from scanners?
 
-The API supports CodeTF (Pixee's open code transformation format) for describing fixes and SARIF (the OASIS standard) for ingesting security findings. Fix detail endpoints return CodeTF documents; scan ingestion accepts SARIF input.
+Pixee accepts SARIF (the OASIS standard for static analysis results) from 12 native scanner integrations and any SARIF-producing tool via the universal SARIF integration.

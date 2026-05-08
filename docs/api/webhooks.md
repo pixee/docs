@@ -5,7 +5,7 @@ track: dev
 content_type: reference
 seo_title: Webhooks -- Pixee Docs
 description: Configure Pixee webhooks for real-time notifications on fix generation, PR status, triage decisions, and remediation events.
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Webhooks
@@ -16,7 +16,7 @@ Pixee webhooks deliver real-time HTTP POST notifications when remediation events
 
 | Event              | Trigger                                           | Payload Includes                                                                       |
 | ------------------ | ------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `fix.generated`    | A fix passes evaluation and is ready for delivery | CodeTF snippet, finding metadata, repository, codemod ID                               |
+| `fix.generated`    | A fix passes evaluation and is ready for delivery | Fix summary, finding metadata, repository, codemod ID                                  |
 | `pr.opened`        | A pull request or merge request is created        | PR URL, fix summary, affected files, target branch                                     |
 | `pr.merged`        | A fix PR is merged by a developer                 | PR URL, merge metadata, fix details, merge timestamp                                   |
 | `pr.closed`        | A fix PR is closed without merging                | PR URL, close reason, closed-by metadata                                               |
@@ -300,7 +300,6 @@ if event["type"] == "triage.completed":
 ## Related pages
 
 - [API Overview](/api/overview) -- Authentication and endpoint reference
-- [CodeTF Specification](/api/codetf) -- Payload format for fix-related events
 - [SARIF Reference](/api/sarif) -- Input format that triggers scan events
 - [CI/CD Integration](/getting-started/ci-cd) -- Common webhook consumer patterns
 - [Changelog](/api/changelog) -- Webhook event version history

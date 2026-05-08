@@ -59,7 +59,7 @@ To run the open source codemod engines locally:
 git clone https://github.com/pixee/codemodder-java.git
 
 # Build and run against your project
-./gradlew run --args="--source /path/to/your/project --output codetf-output.json"
+./gradlew run --args="--source /path/to/your/project --output results.json"
 ```
 
 **Python:**
@@ -69,10 +69,10 @@ git clone https://github.com/pixee/codemodder-java.git
 pip install codemodder
 
 # Run against your project
-codemodder /path/to/your/project --output codetf-output.json
+codemodder /path/to/your/project --output results.json
 ```
 
-The engines produce [CodeTF](/api/codetf) output, a structured format describing every transformation applied, what changed, and why.
+The engines produce a structured JSON report describing every transformation applied, what changed, and why.
 
 From here:
 

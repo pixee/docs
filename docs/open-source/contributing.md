@@ -68,7 +68,7 @@ Add before/after test fixtures for new codemods and run the full test suite loca
 pytest
 ```
 
-Verify that your changes produce correct CodeTF output by running the codemod against a sample repository.
+Verify that your changes produce a correct structured report by running the codemod against a sample repository.
 
 ### Step 5: Submit a Pull Request
 
@@ -99,7 +99,7 @@ Every contribution must meet these standards:
 
 **Code of Conduct.** All contributors are expected to engage respectfully and constructively. Review the CODE_OF_CONDUCT.md in each repository.
 
-**Issue etiquette.** Search existing issues before opening a new one. When reporting bugs, provide reproduction steps, the codemod involved, and the CodeTF output if applicable.
+**Issue etiquette.** Search existing issues before opening a new one. When reporting bugs, provide reproduction steps, the codemod involved, and the engine's output report if applicable.
 
 **PR etiquette.** Keep PRs focused. Respond to review feedback. If a maintainer requests changes, address them or explain your reasoning -- both are fine.
 
