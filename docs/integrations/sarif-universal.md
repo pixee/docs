@@ -18,7 +18,7 @@ This page covers the SARIF format requirements, upload methods, what metadata Pi
 
 Use Universal SARIF when:
 
-- Your scanner is not in Pixee's [native integration list](/integrations/integrations-overview)
+- Your scanner is not in Pixee's [native integration list](/integrations/overview)
 - You use a proprietary or custom-built scanner
 - You aggregate findings from multiple tools through a central platform that exports SARIF
 - You want to evaluate Pixee with a scanner before requesting a native integration

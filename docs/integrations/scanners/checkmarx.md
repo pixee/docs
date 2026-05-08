@@ -84,4 +84,4 @@ Beyond these dedicated codemods, Pixee's general-purpose codemod library and AI-
 - **Test code at production severity:** Test fixtures and example files flagged alongside production code
 - **Context-poor findings:** Findings where Checkmarx's sparse SARIF metadata makes manual review difficult -- Pixee re-derives context from the actual codebase
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

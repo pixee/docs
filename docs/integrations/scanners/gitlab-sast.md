@@ -58,4 +58,4 @@ GitLab SAST findings often lack the contextual detail needed for efficient manua
 
 **Prerequisites:** GitLab Ultimate license (for SAST), Pixee GitLab integration installed
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

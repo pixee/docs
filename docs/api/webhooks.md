@@ -299,7 +299,7 @@ if event["type"] == "triage.completed":
 
 ## Related pages
 
-- [API Overview](/api/api-overview) -- Authentication and endpoint reference
+- [API Overview](/api/overview) -- Authentication and endpoint reference
 - [SARIF Reference](/api/sarif) -- Input format that triggers scan events
 - [CI/CD Integration](/integrations/ci-cd) -- Common webhook consumer patterns
 - [Changelog](/api/changelog) -- Webhook event version history

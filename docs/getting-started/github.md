@@ -26,7 +26,7 @@ Install the Pixee GitHub App from the GitHub Marketplace, select your organizati
 
 Pixee analyzes the default branch of each connected repository. Branch targeting and other behavior can be customized later via a [PIXEE.yaml](/configuration/pixee-yaml) file in the repository root.
 
-**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If you use GitHub Code Scanning (which includes CodeQL, Semgrep via SARIF upload, and others), Pixee ingests those results automatically through the GitHub App. For scanners outside the GitHub Code Scanning ecosystem, connect them through Pixee's [Integrations](/integrations/integrations-overview) page.
+**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If you use GitHub Code Scanning (which includes CodeQL, Semgrep via SARIF upload, and others), Pixee ingests those results automatically through the GitHub App. For scanners outside the GitHub Code Scanning ecosystem, connect them through Pixee's [Integrations](/integrations/overview) page.
 
 After installation, Pixee begins its initial analysis. Within the first hour, Pixee opens pull requests for any actionable findings it identifies. If no PRs appear, the repository may have no actionable findings, or you may need to verify repository access and supported language coverage.
 

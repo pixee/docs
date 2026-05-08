@@ -52,4 +52,4 @@ Pixee Enterprise Server supports both Azure DevOps Services (cloud) and Azure De
 
 For on-premises configuration, see the [enterprise deployment documentation](/enterprise/deployment).
 
-See [Integrations Overview](/integrations/integrations-overview) for the full integration coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full integration coverage matrix.

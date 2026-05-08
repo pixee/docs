@@ -52,7 +52,7 @@ For day-two operations teams, these are the metrics that indicate platform healt
 
 **Business metrics vs. platform metrics:** Merge rate, triage volume, and remediation velocity are business metrics visible in Pixee's reporting dashboard. Analysis throughput, LLM latency, and error rates are platform metrics visible in the observability stack. Both matter for different audiences -- share business metrics with security leadership and platform metrics with SRE.
 
-For business-level reporting (merge rate trends, triage reduction, MTTR), see [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success).
+For business-level reporting (merge rate trends, triage reduction, MTTR), see [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success).
 
 ## Operational Controls
 

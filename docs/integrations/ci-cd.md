@@ -202,7 +202,7 @@ Pixee accepts scanner results through three paths:
 
 1. **SCM-native APIs.** GitHub Code Scanning, GitLab vulnerability reports, Azure DevOps Code Scanning, Bitbucket reports. Pixee reads findings through the SCM integration.
 2. **Direct SARIF upload to Pixee.** Use the [Pixee CLI](/api/cli) (`pixee api`) or an HTTP client. Useful when your CI system doesn't have a clean upload path to the SCM.
-3. **Native scanner integrations.** For 13 named scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy) Pixee uses dedicated handlers that extract scanner-specific metadata for richer triage. See the per-scanner pages under [Integrations](/integrations/integrations-overview).
+3. **Native scanner integrations.** For 13 named scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy) Pixee uses dedicated handlers that extract scanner-specific metadata for richer triage. See the per-scanner pages under [Integrations](/integrations/overview).
 
 **Universal SARIF.** Any SARIF 2.1.0–producing scanner works through the universal SARIF integration. See [Universal SARIF Integration](/integrations/sarif-universal).
 

@@ -49,15 +49,15 @@ Use this table to jump to the right page for your configuration task.
 | Customize PR formatting (labels, title prefix)        | [PIXEE.yaml Reference](/configuration/pixee-yaml)    |
 | Add or remove repositories from monitoring            | [Repository Management](/configuration/repositories) |
 | Organize repos by team or business unit               | [Repository Management](/configuration/repositories) |
-| Set scan schedules or switch to on-demand analysis    | [Operations](/configuration/operations-config)              |
-| Route notifications to Slack or email                 | [Notifications](/configuration/operations-config)           |
-| Set up webhook integrations for custom workflows      | [Notifications](/configuration/operations-config)           |
+| Set scan schedules or switch to on-demand analysis    | [Operations](/configuration/operations)              |
+| Route notifications to Slack or email                 | [Notifications](/configuration/operations)           |
+| Set up webhook integrations for custom workflows      | [Notifications](/configuration/operations)           |
 | Manage team member access and roles                   | [Users & Access](/configuration/users)               |
 | Configure SSO with your identity provider             | [Users & Access](/configuration/users)               |
 | Tune AI triage sensitivity                            | [AI Settings](/configuration/ai-settings)            |
 | Control which finding categories get AI-powered fixes | [AI Settings](/configuration/ai-settings)            |
-| Configure reporting exports or dashboards             | [Reporting](/configuration/operations-config)               |
-| Export data for compliance audits                     | [Reporting](/configuration/operations-config)        |
+| Configure reporting exports or dashboards             | [Reporting](/configuration/operations)               |
+| Export data for compliance audits                     | [Reporting](/configuration/operations)        |
 
 ## Getting Started with Configuration
 

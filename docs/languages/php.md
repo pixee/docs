@@ -10,7 +10,7 @@ sidebar_position: 7
 
 Pixee remediates PHP vulnerabilities using Tree-sitter-based analysis and AI-powered fixes for Laravel and Symfony applications. Coverage includes injection vulnerabilities, insecure cryptography, and dependency vulnerabilities managed through Composer. PHP support uses Tree-sitter parsing with expanding deterministic coverage and AI-powered fixes for custom framework patterns. Fixes are delivered as pull requests that match your codebase conventions.
 
-PHP powers significant enterprise web infrastructure through Laravel, Symfony, and WordPress. Pixee's PHP support ensures teams running these frameworks have automated remediation in their pipeline. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
+PHP powers significant enterprise web infrastructure through Laravel, Symfony, and WordPress. Pixee's PHP support ensures teams running these frameworks have automated remediation in their pipeline. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
 
 ## What Pixee Fixes in PHP
 

@@ -1,6 +1,6 @@
 ---
 title: FAQ
-slug: /faq
+slug: /faq/general
 track: both
 content_type: faq
 seo_title: "Pixee FAQ | General, Enterprise, and Troubleshooting"
@@ -34,7 +34,7 @@ No. Pixee sits downstream of your existing SAST, SCA, and DAST tools. It consume
 
 ### What programming languages does Pixee support?
 
-Java, Python, JavaScript/TypeScript, .NET/C#, Go, Ruby, PHP, Kotlin, Rust, Scala, Swift, plus IaC formats (Terraform, Dockerfile, K8s/Helm, CloudFormation). Deterministic codemod coverage is deepest for Java and Python. See [Language Support](/languages/languages-overview) for the full coverage matrix.
+Java, Python, JavaScript/TypeScript, .NET/C#, Go, Ruby, PHP, Kotlin, Rust, Scala, Swift, plus IaC formats (Terraform, Dockerfile, K8s/Helm, CloudFormation). Deterministic codemod coverage is deepest for Java and Python. See [Language Support](/languages/overview) for the full coverage matrix.
 
 ### Does Pixee support SCA (software composition analysis) remediation?
 
@@ -140,7 +140,7 @@ Most likely cause: the repository has not been enabled in Pixee's settings after
 
 Most likely cause: no scanner findings exist for the connected repository. **Connecting a scanner is required** — Pixee needs scanner findings to generate fixes and triage results.
 
-1. Connect at least one scanner. See the [Integrations Overview](/integrations/integrations-overview) for setup instructions.
+1. Connect at least one scanner. See the [Integrations Overview](/integrations/overview) for setup instructions.
 2. Verify the scanner has produced findings for the repository.
 3. For custom or unsupported scanners, verify findings are in SARIF 2.1.0 format and are being uploaded correctly.
 
@@ -154,7 +154,7 @@ Three common causes, in order of likelihood:
 
 ### Scanner findings appear in Pixee but no fixes are generated. Why?
 
-Not all findings have available fixes. Pixee generates fixes when: a codemod or AI generation path exists for the vulnerability pattern, the code context is sufficient for safe fix generation, and the fix passes the multi-layer validation pipeline. Findings without available fixes still receive triage classification. Check [Language Support](/languages/languages-overview) for coverage of your specific finding types.
+Not all findings have available fixes. Pixee generates fixes when: a codemod or AI generation path exists for the vulnerability pattern, the code context is sufficient for safe fix generation, and the fix passes the multi-layer validation pipeline. Findings without available fixes still receive triage classification. Check [Language Support](/languages/overview) for coverage of your specific finding types.
 
 ### Why is Pixee not opening PRs on my repository?
 
@@ -184,7 +184,7 @@ Use [PIXEE.yaml](/configuration/pixee-yaml) to exclude specific finding types, f
 
 ### How do I export triage decisions for compliance reporting?
 
-Pixee exports triage decisions via CSV, JSON, and API. Each export includes timestamp, finding metadata, classification, structured justification, and any analyst overrides. See the [Reporting](/configuration/operations-config) page for export procedures.
+Pixee exports triage decisions via CSV, JSON, and API. Each export includes timestamp, finding metadata, classification, structured justification, and any analyst overrides. See the [Reporting](/configuration/operations) page for export procedures.
 
 ### Can I use Pixee with a private or internal GitHub Enterprise instance?
 

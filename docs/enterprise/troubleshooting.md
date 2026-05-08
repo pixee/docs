@@ -31,9 +31,9 @@ For detailed setup procedures, see [Embedded Cluster](/enterprise/embedded-clust
 | Scanner findings not appearing in Pixee | SARIF file format mismatch or upload path error                     | Verify the scanner output conforms to the SARIF 2.1.0 specification and the upload endpoint is correctly configured. |
 | Partial findings ingestion              | Scanner output exceeds size limits or contains unsupported rule IDs | Check the scanner output for unsupported finding types. Verify the scanner is producing complete SARIF output.       |
 | Duplicate findings after re-scan        | Deduplication key mismatch between scan runs                        | Verify the scanner configuration produces consistent finding identifiers across runs.                                |
-| Findings appear but no fixes generated  | Scanner findings are in an unsupported language or CWE category     | Check the [Languages Overview](/languages/languages-overview) for supported language and finding type coverage.                |
+| Findings appear but no fixes generated  | Scanner findings are in an unsupported language or CWE category     | Check the [Languages Overview](/languages/overview) for supported language and finding type coverage.                |
 
-For scanner-specific setup guides, see [Integrations Overview](/integrations/integrations-overview). For custom scanner configuration, see the [Universal SARIF](/integrations/sarif-universal) guide.
+For scanner-specific setup guides, see [Integrations Overview](/integrations/overview). For custom scanner configuration, see the [Universal SARIF](/integrations/sarif-universal) guide.
 
 ## LLM Configuration
 

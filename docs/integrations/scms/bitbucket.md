@@ -62,4 +62,4 @@ For the install-time walkthrough, see [Getting Started with Bitbucket](/getting-
 
 Bitbucket Server (formerly Data Center) is a separate Atlassian product from Bitbucket Cloud. The integration mechanics — credentials, scopes, and configuration paths — differ. For Bitbucket Server deployments running on Pixee Enterprise, see the [enterprise deployment documentation](/enterprise/deployment) for the supported connection model and current configuration details.
 
-See [Integrations Overview](/integrations/integrations-overview) for the full integration coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full integration coverage matrix.

@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Pixee supports six language ecosystems: Java, Python, JavaScript/TypeScript, .NET, Go, and PHP. Coverage varies by language. Java and Python have the deepest support with 120+ deterministic codemods plus AI-powered fixes for custom patterns. Each language includes framework-specific remediation (Spring Boot, Django, Express, ASP.NET) and fixes for OWASP Top 10 vulnerability categories. The coverage matrix below shows exactly what Pixee fixes in your stack.
 
-Language support is one half of the integration picture. Pixee also integrates with [13 native scanners](/integrations/integrations-overview) across all supported languages.
+Language support is one half of the integration picture. Pixee also integrates with [13 native scanners](/integrations/overview) across all supported languages.
 
 ## Coverage Matrix
 
@@ -85,7 +85,7 @@ Python's five packaging conventions are worth calling out. Most tools handle onl
 
 ## Scanner Compatibility
 
-Pixee remediates findings from [13 native scanner integrations](/integrations/integrations-overview) plus any scanner that exports SARIF. Scanner compatibility applies across all supported languages, though individual scanner coverage depth varies by language.
+Pixee remediates findings from [13 native scanner integrations](/integrations/overview) plus any scanner that exports SARIF. Scanner compatibility applies across all supported languages, though individual scanner coverage depth varies by language.
 
 | Scanner         | Java | Python | JS/TS | .NET | Go  | PHP |
 | --------------- | ---- | ------ | ----- | ---- | --- | --- |
@@ -99,7 +99,7 @@ Pixee remediates findings from [13 native scanner integrations](/integrations/in
 | AppScan         | Yes  | --     | --    | --   | --  | --  |
 | Universal SARIF | Yes  | Yes    | Yes   | Yes  | Yes | Yes |
 
-For scanner-specific details, see the [Integrations](/integrations/integrations-overview) section.
+For scanner-specific details, see the [Integrations](/integrations/overview) section.
 
 ## Roadmap
 

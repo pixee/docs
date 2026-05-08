@@ -49,4 +49,4 @@ DefectDojo tracks vulnerability status but does not generate code fixes. Pixee d
 
 **Prerequisites:** DefectDojo instance with findings imported, Pixee platform integration configured.
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

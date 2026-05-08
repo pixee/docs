@@ -27,7 +27,7 @@ Create a GitLab personal access token for a dedicated service account, then conn
 
 After connecting, choose which GitLab projects Pixee should analyze -- all projects, member projects only, or specific projects. Pixee analyzes the default branch of each connected project. You can customize branch targeting and other behavior later via a [PIXEE.yaml](/configuration/pixee-yaml) file in the project root.
 
-**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your `.gitlab-ci.yml` includes the GitLab SAST template, Pixee ingests those findings directly. Third-party scanners producing SARIF output can be connected through Pixee's [Integrations](/integrations/integrations-overview) page.
+**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your `.gitlab-ci.yml` includes the GitLab SAST template, Pixee ingests those findings directly. Third-party scanners producing SARIF output can be connected through Pixee's [Integrations](/integrations/overview) page.
 
 After setup, Pixee begins its initial analysis and opens merge requests for actionable findings within the first hour. If no MRs appear, verify PAT scopes, network connectivity (for self-managed instances), and supported language coverage.
 

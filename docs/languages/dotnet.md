@@ -10,7 +10,7 @@ sidebar_position: 5
 
 Pixee remediates .NET vulnerabilities automatically using deterministic codemods and AI-powered fixes for custom patterns. Coverage includes ASP.NET Core and Blazor applications with fixes for injection vulnerabilities, insecure cryptography, and dependency vulnerabilities. Pixee uses full AST analysis for C# source code and manages dependency upgrades across both .csproj and packages.config formats, delivering fixes as pull requests that match your codebase conventions.
 
-.NET support uses Pixee's full AST parsing tier, providing deep cross-file analysis on par with Java and Python. Deterministic codemod coverage is growing alongside comprehensive AI-powered MagicMod support. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
+.NET support uses Pixee's full AST parsing tier, providing deep cross-file analysis on par with Java and Python. Deterministic codemod coverage is growing alongside comprehensive AI-powered MagicMod support. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
 
 ## What Pixee Fixes in .NET
 

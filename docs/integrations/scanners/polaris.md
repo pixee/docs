@@ -59,4 +59,4 @@ Polaris provides findings and remediation guidance but does not generate automat
 - **Buffer overflow false positives in managed languages:** Coverity rules designed for C/C++ may produce findings in managed-language code (Java, C#) where memory management is handled by the runtime
 - **Test and example code at production severity:** Findings in non-production code flagged at production severity levels
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

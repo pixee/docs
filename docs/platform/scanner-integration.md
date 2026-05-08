@@ -56,7 +56,7 @@ Both tiers feed into the same downstream [triage](/platform/triage) and [remedia
 | **Trivy** | GA | SARIF pipeline with MagicMod dispatcher support |
 | **DefectDojo** | GA | SARIF pipeline (aggregates findings from multiple scanners) |
 
-All 13 named scanners are GA. See individual scanner integration pages under [Integrations](/integrations/integrations-overview) for per-tool setup guides.
+All 13 named scanners are GA. See individual scanner integration pages under [Integrations](/integrations/overview) for per-tool setup guides.
 
 ## Universal SARIF Support
 

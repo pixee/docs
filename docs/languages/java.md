@@ -10,7 +10,7 @@ sidebar_position: 2
 
 Pixee remediates Java vulnerabilities automatically using 51+ deterministic codemods and AI-powered fixes for custom patterns. Coverage spans Spring Boot, Jakarta EE, and Micronaut applications with fixes for SQL injection, SSRF, insecure deserialization, weak cryptography, and dependency vulnerabilities. Pixee analyzes Java source code using full AST parsing for deep cross-file dataflow analysis, delivering fixes as pull requests.
 
-Java is Pixee's most mature language ecosystem. The open-source [codemodder-java](https://github.com/pixee/codemodder-java) engine is publicly inspectable, and deterministic codemods cover the broadest range of vulnerability types. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
+Java is Pixee's most mature language ecosystem. The open-source [codemodder-java](https://github.com/pixee/codemodder-java) engine is publicly inspectable, and deterministic codemods cover the broadest range of vulnerability types. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
 
 ## What Pixee Fixes in Java
 

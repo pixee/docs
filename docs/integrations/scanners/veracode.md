@@ -68,4 +68,4 @@ Veracode's own "Veracode Fix" provides AI-assisted remediation suggestions, but 
 - **Test code at production severity:** Pixee distinguishes test fixtures, example code, and documentation snippets from production code
 - **Framework-mitigated findings:** Code protected by framework-level security controls (Spring Security, Django middleware) that Veracode's static analysis cannot resolve
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

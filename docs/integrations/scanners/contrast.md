@@ -80,4 +80,4 @@ Pixee ingests Contrast findings via the [pixee/upload-tool-results-action](https
 - **Sanitized sinks:** Runtime-observed flows that terminate in sinks with framework-level sanitization Contrast does not always resolve
 - **Severity inflation:** Findings flagged at high severity that are gated behind authentication, internal APIs, or otherwise reduced-impact contexts
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

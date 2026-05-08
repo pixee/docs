@@ -89,7 +89,7 @@ The Pixee GitHub App requests the following permissions during installation. Pix
 
 **Webhook events the App subscribes to:** Code scanning alert, Check run, Create, Dependabot alert, Issue comment, Issues, Pull request, Pull request review, Pull request review comment, Pull request review thread, Push, Repository.
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.
 
 ## GitHub Enterprise Server
 

@@ -76,7 +76,7 @@ The recommended approach is progressive expansion:
 
 1. **Start conservative.** Enable deterministic codemods only. Review merge rates and fix quality.
 2. **Expand by category.** Enable MagicMods for specific CWE categories where your team sees high fix quality.
-3. **Broaden over time.** As confidence builds (tracked via merge rate and quality scores in [Reporting](/configuration/operations-config)), expand the scope of AI-powered fixes.
+3. **Broaden over time.** As confidence builds (tracked via merge rate and quality scores in [Reporting](/configuration/operations)), expand the scope of AI-powered fixes.
 
 The [Phased Rollout Guide](/enterprise/phased-rollout) covers this progression in detail.
 

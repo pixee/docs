@@ -10,7 +10,7 @@ sidebar_position: 3
 
 Pixee remediates Python vulnerabilities automatically using 60+ deterministic codemods and AI-powered fixes for custom patterns. Coverage includes Django, Flask, and FastAPI applications with fixes for SQL injection, SSRF, insecure deserialization (PyYAML hardening, defused XML), weak cryptography, and dependency vulnerabilities. Pixee uses full AST-level analysis for deep cross-file dataflow tracking and framework-aware transformations across all five Python packaging formats.
 
-Python is Pixee's second-deepest language ecosystem alongside Java. The open-source [codemodder-python](https://github.com/pixee/codemodder-python) engine is publicly inspectable, and support for five packaging conventions (requirements.txt, pyproject.toml, Pipfile, setup.py, setup.cfg) sets Pixee apart from tools that handle only one. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
+Python is Pixee's second-deepest language ecosystem alongside Java. The open-source [codemodder-python](https://github.com/pixee/codemodder-python) engine is publicly inspectable, and support for five packaging conventions (requirements.txt, pyproject.toml, Pipfile, setup.py, setup.cfg) sets Pixee apart from tools that handle only one. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
 
 ## What Pixee Fixes in Python
 

@@ -10,7 +10,7 @@ sidebar_position: 6
 
 Pixee remediates Go vulnerabilities using Tree-sitter-based analysis and AI-powered fixes for standard library, Gin, and Echo applications. Coverage includes injection vulnerabilities, insecure cryptography, and dependency vulnerabilities in go.mod-managed projects. Go support uses lighter parsing than Pixee's full AST languages (Java, Python, JS/TS, .NET) with expanding coverage for standard security patterns and framework-specific fixes.
 
-Go's adoption in infrastructure and cloud-native environments makes it a strategic language for Pixee. Coverage is actively expanding. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
+Go's adoption in infrastructure and cloud-native environments makes it a strategic language for Pixee. Coverage is actively expanding. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
 
 ## What Pixee Fixes in Go
 

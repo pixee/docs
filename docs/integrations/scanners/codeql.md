@@ -75,4 +75,4 @@ Pixee generates fixes using a combination of deterministic codemods and AI-power
 - **Test code at production severity:** Findings in test fixtures, example code, and documentation snippets flagged at production severity levels
 - **Low-precision rules in specific contexts:** Rules with high recall but low precision in certain language or framework configurations
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

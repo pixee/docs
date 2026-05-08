@@ -173,4 +173,4 @@ npx @openapitools/openapi-generator-cli generate \
 - [Webhooks](/api/webhooks) -- Event-driven integration for CI/CD and automation
 - [Changelog](/api/changelog) -- API version history and release notes
 - [CI/CD Integration](/integrations/ci-cd) -- Common API consumer patterns
-- [Configuration Overview](/configuration/config-overview) -- Repository management
+- [Configuration Overview](/configuration/overview) -- Repository management

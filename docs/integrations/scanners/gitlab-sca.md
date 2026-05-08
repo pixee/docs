@@ -64,4 +64,4 @@ Pixee's SCA remediation is deterministic: for each TRUE_POSITIVE with a fix avai
 
 **Prerequisites:** GitLab Ultimate license (Dependency Scanning is part of GitLab's Secure category, which requires Ultimate), Pixee GitLab integration installed.
 
-See the [SCA](/platform/sca) page for details on how Pixee handles dependency findings end-to-end. See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See the [SCA](/platform/sca) page for details on how Pixee handles dependency findings end-to-end. See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

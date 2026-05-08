@@ -10,7 +10,7 @@ sidebar_position: 4
 
 Pixee remediates JavaScript and TypeScript vulnerabilities automatically using deterministic codemods and AI-powered fixes. Coverage spans Express, React, and Node.js applications with fixes for injection vulnerabilities, prototype pollution, insecure dependencies, and OWASP Top 10 patterns. Pixee uses full AST analysis for deep cross-file dataflow tracking and manages package.json dependency upgrades coordinated with source-file refactoring in a single pull request.
 
-JavaScript/TypeScript support is actively expanding. Deterministic codemod coverage is growing alongside comprehensive AI-powered MagicMod support. For the full language coverage matrix, see the [Language Support Overview](/languages/languages-overview).
+JavaScript/TypeScript support is actively expanding. Deterministic codemod coverage is growing alongside comprehensive AI-powered MagicMod support. For the full language coverage matrix, see the [Language Support Overview](/languages/overview).
 
 ## What Pixee Fixes in JavaScript/TypeScript
 

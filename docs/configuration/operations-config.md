@@ -202,7 +202,7 @@ Compliance exports include:
 - Fix outcome (PR merged, closed, pending)
 - Timestamps for each state transition
 
-For custom reporting, use the Pixee API to query triage and remediation data programmatically. See [API Overview](/api/api-overview) for endpoints and authentication.
+For custom reporting, use the Pixee API to query triage and remediation data programmatically. See [API Overview](/api/overview) for endpoints and authentication.
 
 ### Enterprise Observability
 

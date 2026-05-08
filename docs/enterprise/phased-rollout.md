@@ -12,7 +12,7 @@ Pixee deploys in phases: single repository, team, org unit, enterprise. Each pha
 
 ## Overview
 
-Pixee deploys in phases to validate triage accuracy and fix quality on a controlled scope before expanding. Each phase generates metrics that inform the next expansion decision. Phase 1 data feeds the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success).
+Pixee deploys in phases to validate triage accuracy and fix quality on a controlled scope before expanding. Each phase generates metrics that inform the next expansion decision. Phase 1 data feeds the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success).
 
 ## Phase Model Overview
 
@@ -62,7 +62,7 @@ Phase 1 is where most readers will start and where the most specific guidance ma
 
 Expand from champion repositories to team-wide deployment. Set team-level merge rate targets based on Phase 1 data. Establish fix review norms: who reviews Pixee PRs, what response time is expected.
 
-Use Phase 1 metrics to evaluate whether expansion is warranted. The metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success) provide the data points for Phase 3 decision-making.
+Use Phase 1 metrics to evaluate whether expansion is warranted. The metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success) provide the data points for Phase 3 decision-making.
 
 ### Security Engineer Execution Track
 
@@ -84,7 +84,7 @@ Build the executive reporting dashboard for Phase 4 approval. Present triage red
 
 ### Security Engineer Execution Track
 
-Scale repository configuration across teams using PIXEE.yaml. Verify language coverage across the org unit (see [Languages > Overview](/languages/languages-overview)). Integrate Pixee reporting with existing CI/CD pipelines and dashboards. Set up observability (see [Observability](/enterprise/observability)) if running a self-hosted deployment.
+Scale repository configuration across teams using PIXEE.yaml. Verify language coverage across the org unit (see [Languages > Overview](/languages/overview)). Integrate Pixee reporting with existing CI/CD pipelines and dashboards. Set up observability (see [Observability](/enterprise/observability)) if running a self-hosted deployment.
 
 ### Decision Gate
 
@@ -94,7 +94,7 @@ Consistent metrics across all enrolled teams, compliance team sign-off on audit 
 
 ### Security Leader Planning Track
 
-Executive sign-off requires presenting Phase 3 results with the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success): merge rate, triage reduction, MTTR, and compliance window adherence.
+Executive sign-off requires presenting Phase 3 results with the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success): merge rate, triage reduction, MTTR, and compliance window adherence.
 
 Make enterprise deployment model decisions at this stage -- cloud SaaS, embedded cluster, Helm, or air-gapped based on compliance requirements. See [Deployment Options](/enterprise/deployment).
 
@@ -119,7 +119,7 @@ Disabling Pixee at any phase does not affect existing code. Previously merged fi
 
 A champion is a developer who actively uses Pixee PRs during the pilot phase and can support other teams during expansion. Typical indicators: merges Pixee PRs early, reviews PR descriptions and quality scores in detail, and asks about framework coverage.
 
-**Enablement:** Share the [Languages > Overview](/languages/languages-overview) page (coverage matrix) and this rollout guide. Provide access to the metrics from [Enterprise Overview > Measuring Success](/enterprise/enterprise-overview#measuring-success).
+**Enablement:** Share the [Languages > Overview](/languages/overview) page (coverage matrix) and this rollout guide. Provide access to the metrics from [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success).
 
 ## Multi-Business-Unit Rollout
 

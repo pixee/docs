@@ -27,7 +27,7 @@ Create an Azure DevOps personal access token for a dedicated service account wit
 
 After connecting, choose which projects and repositories Pixee should analyze -- at the organization, project, or individual repository level. Pixee targets the default branch of each connected repository. You can customize branch targeting and other behavior later via a [PIXEE.yaml](/configuration/pixee-yaml) file in the repository root.
 
-**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your Azure Pipelines run security scanners, Pixee can ingest findings from those pipeline runs. Any scanner producing SARIF output can also be connected through Pixee's [Integrations](/integrations/integrations-overview) page.
+**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your Azure Pipelines run security scanners, Pixee can ingest findings from those pipeline runs. Any scanner producing SARIF output can also be connected through Pixee's [Integrations](/integrations/overview) page.
 
 After setup, Pixee begins its initial analysis and opens pull requests for actionable findings within the first hour. If no PRs appear, verify PAT scopes, organization-level admin consent, and supported language coverage.
 

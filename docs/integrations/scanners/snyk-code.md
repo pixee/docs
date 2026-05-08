@@ -69,4 +69,4 @@ Fixes are generated using deterministic codemods and AI-powered MagicMods for co
 - **Test code at production severity:** Intentionally vulnerable test fixtures, mock data, or example code flagged as production security issues
 - **Context-dependent findings:** Findings that depend on runtime configuration or deployment context that static analysis cannot determine
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

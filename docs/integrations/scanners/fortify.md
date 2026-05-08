@@ -55,4 +55,4 @@ Fortify identifies vulnerabilities but does not generate automated code fixes. P
 
 **Prerequisites:** Fortify SCA or SSC with findings, SARIF export capability, Pixee platform integration configured.
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

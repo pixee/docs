@@ -27,7 +27,7 @@ Create a Bitbucket Cloud API token for a dedicated service account ([Atlassian i
 
 After connecting, choose which repositories Pixee should analyze -- all repositories in the workspace or specific repositories. Pixee analyzes the default branch (typically `main` or `master`) of each connected repository. You can customize branch targeting and other behavior later via a [PIXEE.yaml](/configuration/pixee-yaml) file in the repository root.
 
-**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your Bitbucket Pipelines include security scanner steps, Pixee can ingest findings from those pipeline runs. Any scanner producing SARIF output can also be connected through Pixee's [Integrations](/integrations/integrations-overview) page.
+**Scanner integration (required):** Pixee needs scanner findings to generate fixes. Pixee natively integrates with 13 scanners. If your Bitbucket Pipelines include security scanner steps, Pixee can ingest findings from those pipeline runs. Any scanner producing SARIF output can also be connected through Pixee's [Integrations](/integrations/overview) page.
 
 After setup, Pixee begins its initial analysis and opens pull requests for actionable findings within the first hour. If no PRs appear, verify API token permissions, workspace-level admin approval, and supported language coverage.
 
@@ -76,5 +76,5 @@ Bitbucket Server (formerly Data Center) is a separate Atlassian product from Bit
 
 If your team uses Jira alongside Bitbucket, Pixee PRs can reference Jira issue keys in their descriptions when configured. This allows Jira to automatically link the Pixee-generated PR to the relevant security issue, keeping your Atlassian workflow intact.
 
-For Jira integration details, see [Integrations Overview](/integrations/integrations-overview).
+For Jira integration details, see [Integrations Overview](/integrations/overview).
 

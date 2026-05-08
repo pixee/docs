@@ -78,4 +78,4 @@ Pixee generates fixes using deterministic codemods and AI-powered MagicMods. The
 - **Test code flagged at production severity:** Test fixtures, example code, and mock data triggering rules intended for production code
 - **Stale API warnings:** Generic rules that lack language-version awareness, flagging deprecated API usage on code that has already been migrated
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

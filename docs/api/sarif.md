@@ -181,12 +181,12 @@ Native scanner integrations handle SARIF automatically. These notes apply when y
 | **Snyk**      | Use `snyk code test --sarif` for SAST results.                                                                                                              |
 | **Trivy**     | Use `trivy fs --format sarif` for filesystem scanning results.                                                                                              |
 
-For full setup guides per scanner, see [Integrations Overview](/integrations/integrations-overview).
+For full setup guides per scanner, see [Integrations Overview](/integrations/overview).
 
 ## Related pages
 
-- [API Overview](/api/api-overview) -- Authentication and endpoint reference
+- [API Overview](/api/overview) -- Authentication and endpoint reference
 - [Universal SARIF Integration](/integrations/sarif-universal) -- Setup guide for SARIF ingestion
-- [Integrations Overview](/integrations/integrations-overview) -- All supported scanners
+- [Integrations Overview](/integrations/overview) -- All supported scanners
 - [Scanner Integration](/platform/scanner-integration) -- Technical depth on scanner normalization
 - [Changelog](/api/changelog) -- API and format version history

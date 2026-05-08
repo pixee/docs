@@ -80,4 +80,4 @@ Pixee Enterprise Server connects to self-hosted GitLab via the same PAT integrat
 
 For self-hosted GitLab configuration, see the [enterprise deployment documentation](/enterprise/deployment).
 
-See [Integrations Overview](/integrations/integrations-overview) for the full integration coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full integration coverage matrix.

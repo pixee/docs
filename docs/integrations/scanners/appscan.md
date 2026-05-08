@@ -60,7 +60,7 @@ Fixes use deterministic codemods and AI-powered MagicMods.
    - **Basic Auth (recommended)** — username and password for HTTP Basic auth on inbound webhook requests. Configure the username and password in Pixee, then use them when registering the webhooks in AppScan (see below).
    - **Webhook secret (deprecated)** — a shared secret embedded in the webhook URL path. Supported but not recommended.
 4. **Configure two webhooks in AppScan** (see [Webhook Configuration](#webhook-configuration) below) so AppScan notifies Pixee when scans complete and when patch requests are created.
-5. **Connect your code repository** to Pixee (GitHub, GitLab, Azure DevOps, or Bitbucket — see [Source Control](/integrations/integrations-overview#source-control-coverage)).
+5. **Connect your code repository** to Pixee (GitHub, GitLab, Azure DevOps, or Bitbucket — see [Source Control](/integrations/overview#source-control-coverage)).
 6. **Pixee ingests AppScan findings** and processes them through the triage and remediation pipeline.
 7. **Review and merge** Pixee-generated PRs in your normal development workflow.
 
@@ -124,4 +124,4 @@ For details on AppScan's webhook API, see HCL's [AppScan Webhook API Documentati
 - **Framework-protected patterns:** Findings in code protected by application framework security controls that AppScan's static analysis cannot resolve
 - **Duplicate findings across SAST and DAST:** When teams use both AppScan SAST and DAST, the same vulnerability may appear from both testing methods; Pixee's unified pipeline helps deduplicate
 
-See [Integrations Overview](/integrations/integrations-overview) for the full scanner coverage matrix.
+See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

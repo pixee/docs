@@ -63,7 +63,7 @@ Categories are omitted when a release has no entries of that type.
 
 ### Added
 
-- **Datadog SAST integration.** Native scanner handler for Datadog SAST findings. See [Integrations Overview](/integrations/integrations-overview).
+- **Datadog SAST integration.** Native scanner handler for Datadog SAST findings. See [Integrations Overview](/integrations/overview).
 - **Activity feed with SSE streaming.** Triage outcomes and remediation activity are now streamed in real time via Server-Sent Events to the Pixee dashboard. Includes drawer auto-transition and outcome banners.
 
 ### Changed
@@ -77,7 +77,7 @@ Categories are omitted when a release has no entries of that type.
 ### Added
 
 - **Decision-tree triage analyzer.** New triage strategy option (`decision-tree`) for deterministic, rules-based triage routing. Complements existing ReACT and agent-based strategies.
-- **Arnica SAST integration.** Native scanner handler for Arnica SAST findings. See [Integrations Overview](/integrations/integrations-overview).
+- **Arnica SAST integration.** Native scanner handler for Arnica SAST findings. See [Integrations Overview](/integrations/overview).
 - **Anthropic-optimized triage prompts.** Provider-family-aware prompting for Anthropic LLM providers. Triage prompts are now optimized per provider family rather than using a lowest-common-denominator approach.
 - **Authentik IdP federation and RP-Initiated Logout.** Embedded Authentik OIDC provider now federates to upstream corporate identity providers (Google Workspace, Microsoft Entra ID, Okta) with auto-redirect and direct login. RP-Initiated Logout enables clean session termination.
 - **Bring-your-own database secret support.** CloudNativePG now supports `existingSecret` for external secret managers (Vault, External Secrets Operator, SOPS). See [Enterprise Deployment](/enterprise/deployment).
@@ -145,7 +145,7 @@ Non-breaking additions (new fields in response bodies, new event types, new endp
 
 ## Related pages
 
-- [API Overview](/api/api-overview) -- Endpoint reference and authentication
+- [API Overview](/api/overview) -- Endpoint reference and authentication
 - [Enterprise Deployment](/enterprise/deployment) -- Upgrade procedures
 - [Enterprise Troubleshooting](/enterprise/troubleshooting) -- Version-specific issues
-- [Integrations Overview](/integrations/integrations-overview) -- Scanner integration details
+- [Integrations Overview](/integrations/overview) -- Scanner integration details
