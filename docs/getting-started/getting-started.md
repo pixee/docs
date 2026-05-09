@@ -71,7 +71,6 @@ Need enterprise deployment (self-hosted, air-gapped, BYOM)? Start with [Enterpri
 ## Prerequisites
 
 - A GitHub, GitLab, Azure DevOps, or Bitbucket account with at least one repository
-- Code in a supported language: Java, Python, JavaScript/TypeScript, .NET, Go, Ruby, PHP, Kotlin, Rust, Scala, Swift, or IaC
 - At least one connected scanner — this is required for triage and remediation to work
 
 No agents to install. No CLI required for the standard workflow. No configuration files needed to start.
