@@ -26,7 +26,7 @@ A codemod is a deterministic code transformation rule that rewrites source code 
 
 ### What scanners does Pixee work with?
 
-Pixee integrates natively with a growing list of scanners including CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy. Any scanner that produces SARIF output can also connect through the Universal SARIF integration — over 50 additional scanners validated. You do not need to change your detection stack.
+Pixee integrates natively with a growing list of scanners including CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy, Arnica, and Datadog SAST. Any scanner that produces SARIF output can also connect through the Universal SARIF integration — over 50 additional scanners validated. You do not need to change your detection stack.
 
 ### Does Pixee replace my existing scanners?
 

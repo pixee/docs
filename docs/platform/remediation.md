@@ -83,7 +83,7 @@ Standard `git revert` applies if any merged change needs to be undone. There is 
 | Coverage Type | Details |
 |---|---|
 | **Languages** | Java, Python, JavaScript/TypeScript, .NET/C#, Go, Ruby, PHP, Kotlin, Rust, Scala, Swift + IaC (Terraform, Dockerfile, K8s/Helm, CloudFormation) |
-| **Native scanner integrations** | 13 (CodeQL, SonarQube, Checkmarx, Veracode, Snyk Code, Semgrep, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy) |
+| **Native scanner integrations** | 15 (CodeQL, SonarQube, Checkmarx, Veracode, Snyk Code, Semgrep, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy, Arnica, Datadog SAST) |
 | **Universal SARIF** | Any SARIF-producing scanner (50+ validated) |
 | **Platforms** | GitHub, GitLab, Azure DevOps, Bitbucket |
 
