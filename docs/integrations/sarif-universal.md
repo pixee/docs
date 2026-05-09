@@ -27,30 +27,9 @@ Use a native integration when available — native integrations extract richer m
 
 ## SARIF Requirements
 
-Pixee supports the current SARIF standard (OASIS SARIF). Your SARIF file must include:
+Pixee supports SARIF version 2.1.0. At minimum, each finding must include a `ruleId`, `message.text`, and a `physicalLocation` (file path and line number). Richer SARIF — particularly `codeFlows` with `threadFlows` — directly improves triage accuracy and fix quality.
 
-### Required Fields
-
-| Field          | Path                                     | Description                            |
-| -------------- | ---------------------------------------- | -------------------------------------- |
-| Schema version | `$schema`                                | Must reference a valid SARIF schema      |
-| Tool info      | `runs[].tool.driver.name`                | Scanner name                           |
-| Results        | `runs[].results[]`                       | Array of findings                      |
-| Rule ID        | `results[].ruleId`                       | Unique identifier for the finding type |
-| Message        | `results[].message.text`                 | Human-readable finding description     |
-| Location       | `results[].locations[].physicalLocation` | File path and line number              |
-
-### Optional But Recommended
-
-| Field           | Path                              | Impact on Pixee                                   |
-| --------------- | --------------------------------- | ------------------------------------------------- |
-| Rule metadata   | `runs[].tool.driver.rules[]`      | Enables richer triage justifications              |
-| Code flows      | `results[].codeFlows[]`           | Enables source-to-sink dataflow triage            |
-| Severity        | `results[].level`                 | Informs triage prioritization                     |
-| Help text       | `runs[].tool.driver.rules[].help` | Provides vulnerability context for fix generation |
-| Tags/properties | `results[].properties`            | Custom metadata for organization-specific context |
-
-The more metadata your SARIF contains, the better Pixee's triage and remediation quality. Scanners that produce minimal SARIF (rule ID + location only) still work, but triage justifications are less detailed.
+For the complete field reference, required vs. optional field breakdown, dataflow quality tiers, and validation guidance, see the [SARIF Reference](/api/sarif).
 
 ## Upload Methods
 

@@ -75,7 +75,9 @@ const config = {
           { from: "/installing", to: "/" },
           { from: "/faqs", to: "/faq/general" },
           { from: "/languages", to: "/languages/overview" },
-          { from: "/open-pixee", to: "/open-source/overview" },
+          { from: "/open-pixee", to: "/open-source/codemodder" },
+          { from: "/open-source/overview", to: "/open-source/codemodder" },
+          { from: "/open-source/contributing", to: "/open-source/codemodder" },
           {
             from: "/running_on_public_github_repos",
             to: "/getting-started/source-control",

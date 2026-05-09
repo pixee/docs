@@ -10,7 +10,7 @@ sidebar_position: 2
 
 # SARIF Reference
 
-SARIF (Static Analysis Results Interchange Format) is the OASIS standard that Pixee uses to ingest security findings from 12 native scanner integrations and any SARIF-producing tool. Pixee reads SARIF files to understand what vulnerabilities were found, where they are located, and what dataflow information is available -- then routes each finding to the appropriate triage and remediation engine. This page documents how Pixee consumes SARIF.
+SARIF (Static Analysis Results Interchange Format) is the OASIS standard that Pixee uses to ingest security findings from its named scanner integrations and any SARIF-producing tool. Pixee reads SARIF files to understand what vulnerabilities were found, where they are located, and what dataflow information is available -- then routes each finding to the appropriate triage and remediation engine. This page documents how Pixee consumes SARIF.
 
 ## What is SARIF?
 

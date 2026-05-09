@@ -29,7 +29,7 @@ Trivy produces SARIF output natively, making it highly interoperable with downst
 
 ### Triage
 
-Trivy's breadth is its strength and its challenge. Container image scans can surface hundreds of CVEs in OS packages, most of which are not exploitable in the application's context. Pixee's triage pipeline classifies each finding by exploitability and actionability, separating real threats from noise. For code-level findings and IaC misconfigurations, the triage engine investigates the actual codebase to determine whether the finding represents a real risk.
+Trivy's breadth is its strength and its challenge. Container image scans can surface hundreds of CVEs in OS packages, most of which are not exploitable in the application's context. Pixee's triage pipeline classifies each finding by exploitability and actionability, separating real threats from noise. For code-level findings and IaC misconfigurations, the triage engine investigates the actual codebase to determine whether the finding represents a real risk. For dependency vulnerabilities found in container image scans, Pixee can generate dependency update fixes where the dependency is managed in your source code.
 
 ### Remediation
 
@@ -45,19 +45,5 @@ For the full list of vulnerability types Pixee triages and fixes, see [What Pixe
 4. **Review and merge** — Pixee triages findings and opens PRs for remediable issues.
 
 **Prerequisites:** Trivy installed in your CI pipeline or locally, Pixee platform integration configured.
-
-## FAQ
-
-### Does Pixee work with Trivy's container image scanning?
-
-Yes. Pixee ingests Trivy's SARIF output from container image scans and triages the findings by exploitability. For dependency vulnerabilities found in container images, Pixee can generate dependency update fixes where the dependency is managed in your source code.
-
-### How does Pixee reduce noise from Trivy scans?
-
-Trivy container scans often surface hundreds of CVEs in OS packages. Pixee's triage engine classifies each by exploitability — whether the vulnerable code path is actually reachable in your application — reducing the volume requiring human review.
-
-### Does Trivy need to output SARIF for this integration?
-
-Yes. Configure Trivy with `--format sarif` to produce SARIF output. Pixee also supports Trivy's native JSON format through the dedicated Trivy handler.
 
 See [Integrations Overview](/integrations/overview) for the full scanner coverage matrix.

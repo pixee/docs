@@ -219,5 +219,5 @@ codemodder $WORKSPACE --codemod-include pixee:python/safe-yaml-load --output res
 
 **Sharing across teams.** Package custom codemods as a separate module that depends on the Codemodder framework. Teams can pull your codemod package alongside the core engine.
 
-**Contributing upstream.** If your codemod addresses a general vulnerability pattern, consider [contributing it back](/open-source/contributing) to the open source repositories so the broader community benefits.
+**Contributing upstream.** If your codemod addresses a general vulnerability pattern, consider [contributing it back](/open-source/codemodder#contributing) to the open source repositories so the broader community benefits.
 

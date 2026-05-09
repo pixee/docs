@@ -49,7 +49,7 @@ Triage settings control how Pixee classifies scanner findings.
 
 ### Relationship to scanner quality
 
-Triage accuracy depends on the quality of scanner input. Pixee integrates with 12 native scanner integrations and accepts any SARIF-producing scanner via universal SARIF import. Higher-quality scanner output yields higher-confidence triage results.
+Triage accuracy depends on the quality of scanner input. Pixee integrates with a growing list of named scanner integrations and accepts any SARIF-producing scanner via universal SARIF import. Higher-quality scanner output yields higher-confidence triage results.
 
 ## Remediation Settings
 
