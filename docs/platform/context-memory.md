@@ -49,22 +49,20 @@ Pixee improves from the signals your team sends when it interacts with Pixee-gen
 | PR closed / declined | Fix was not accepted — negative signal for this finding type or fix approach |
 | Triage override | Team disagreed with Pixee's classification — updates classification logic for similar findings |
 
-**Scope of learning:** [NEEDS VERIFICATION: whether feedback signals apply at per-repo scope, org-level scope, or both. Current understanding is that signals apply at the repository level and may aggregate to org level over time.]
-
-**Observing improvement:** Teams that have been using Pixee for several weeks typically see reduced false positive rates and higher merge rates as the system calibrates to their codebase and review preferences. [NEEDS VERIFICATION: specific time windows and observable metrics for feedback loop effects.]
+**Observing improvement:** Teams that have been using Pixee for several weeks typically see improved triage outcomes and higher merge rates as the system calibrates to their codebase and review preferences.
 
 ## Triage Overrides
 
 When Pixee classifies a finding as a true positive but your team disagrees — or vice versa — you can override the triage verdict. Overrides are the strongest feedback signal available.
 
-**How to override:** [NEEDS VERIFICATION: specific UI mechanics for submitting a triage override — whether this is done via PR comment, dashboard action, or PIXEE.yaml configuration.]
+**How to override:** Overrides can be submitted in three ways: by providing feedback directly on an individual triage result, via natural language preferences in PIXEE.yaml, or through Organization Preferences in the UI.
 
 **What happens when you override:**
 - The specific finding's verdict is updated immediately.
 - The override is recorded with the rationale (if provided).
 - Future findings matching the same pattern in the same codebase context receive adjusted classification.
 
-**Influence on future classifications:** Triage overrides influence how Pixee classifies similar findings going forward. The more specific the context (same rule ID, same file pattern, same framework), the more targeted the adjustment. [NEEDS VERIFICATION: the exact scope and mechanism by which overrides propagate to future similar findings.]
+**Influence on future classifications:** Triage overrides influence how Pixee classifies similar findings going forward. The more specific the context (same rule ID, same file pattern, same framework), the more targeted the adjustment.
 
 ## Enterprise Context
 
@@ -73,8 +71,7 @@ For organizations with specific policies — approved libraries, banned patterns
 **Mechanisms for providing enterprise context:**
 
 - **PIXEE.yaml** — per-repository configuration for fix scope and behavior preferences.
+- **Organization Preferences** — org-level configuration in the UI for specifying approved libraries, banned patterns, and internal framework conventions that apply across all repositories.
 - **Codebase reading** — Pixee automatically detects internal libraries and frameworks by analyzing imports, dependency manifests, and usage patterns. If your organization uses an internal HTTP client wrapper, Pixee detects it and uses it in fixes.
-
-[NEEDS VERIFICATION: whether there is a dedicated enterprise-level configuration mechanism beyond PIXEE.yaml for specifying approved libraries, banned patterns, or internal framework conventions at the organization level. Contact your Pixee account team for current enterprise context configuration options.]
 
 For organizations managing hundreds of repositories, the [Phased Rollout Guide](/enterprise/phased-rollout) covers organization-wide deployment strategy that accounts for repository-level variation in conventions and risk tolerance.
