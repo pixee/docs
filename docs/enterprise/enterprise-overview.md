@@ -8,7 +8,7 @@ description: Pixee Enterprise deployment models, compliance controls, identity m
 sidebar_position: 1
 ---
 
-Pixee Enterprise deploys into your infrastructure -- cloud SaaS, turnkey embedded cluster, Helm into existing Kubernetes, or fully air-gapped with your own LLM. Every deployment model delivers the same triage and remediation engine, the same scanner integrations, and the same audit trail. This section covers deployment options, compliance, security architecture, and how to measure operational impact.
+Pixee Enterprise deploys into your infrastructure -- Dedicated SaaS, turnkey embedded cluster, Helm into existing Kubernetes, or fully air-gapped with your own LLM. Every deployment model delivers the same triage and remediation engine, the same scanner integrations, and the same audit trail. This section covers deployment options, compliance, security architecture, and how to measure operational impact.
 
 ## Enterprise Capabilities
 
@@ -29,7 +29,7 @@ A single Pixee Enterprise deployment supports multiple SCM platforms simultaneou
 
 | Model                     | Best For                                              | Infra Required                             | Time to Deploy |
 | ------------------------- | ----------------------------------------------------- | ------------------------------------------ | -------------- |
-| **Cloud SaaS**            | Teams wanting zero infrastructure management          | None                                       | Minutes        |
+| **Dedicated SaaS**        | Teams wanting zero infrastructure management          | None                                       | Minutes        |
 | **Embedded Cluster**      | Orgs without Kubernetes, regulated industries         | Single Linux VM (8 vCPU, 32 GB RAM)        | Under 1 hour   |
 | **Helm / BYO Kubernetes** | Orgs with existing EKS/GKE/AKS clusters               | Customer Kubernetes cluster                | Under 1 hour   |
 | **Air-Gapped**            | Federal, financial services, healthcare (no internet) | Customer Kubernetes + private LLM endpoint | Hours          |

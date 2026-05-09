@@ -39,7 +39,7 @@ The following describes how data flows through a self-hosted Pixee deployment:
 5. **Approved fixes** are delivered as pull requests back to the customer's SCM
 6. **Triage decisions** are persisted with timestamp, classification, and LLM justification
 
-For cloud SaaS, steps 2-4 run on Pixee-managed infrastructure. For all self-hosted models, every step runs within the customer's network.
+For Dedicated SaaS, steps 2-4 run on Pixee-managed infrastructure. For all self-hosted models, every step runs within the customer's network.
 
 ### Data Classification Table
 
@@ -57,13 +57,13 @@ This table is the single most important reference for security review. It specif
 
 ### Data Flow by Deployment Model
 
-| Data Type            | Cloud SaaS    | Self-Hosted (Embedded/Helm) | Air-Gapped                   |
-| -------------------- | ------------- | --------------------------- | ---------------------------- |
-| Source code snippets | Pixee cloud   | Customer network            | Customer network             |
-| Scanner findings     | Pixee cloud   | Customer network            | Customer network             |
-| LLM inference        | Pixee-managed | Customer's provider         | Customer's private endpoint  |
-| Triage records       | Pixee cloud   | Customer network            | Customer network             |
-| License validation   | Pixee cloud   | Pixee cloud (proxyable)     | Pixee cloud (proxy required) |
+| Data Type            | Dedicated SaaS (single-tenant) | Self-Hosted (Embedded/Helm) | Air-Gapped                   |
+| -------------------- | ------------------------------ | --------------------------- | ---------------------------- |
+| Source code snippets | Pixee cloud (dedicated)        | Customer network            | Customer network             |
+| Scanner findings     | Pixee cloud (dedicated)        | Customer network            | Customer network             |
+| LLM inference        | Pixee-managed                  | Customer's provider         | Customer's private endpoint  |
+| Triage records       | Pixee cloud (dedicated)        | Customer network            | Customer network             |
+| License validation   | Pixee cloud                    | Pixee cloud (proxyable)     | Pixee cloud (proxy required) |
 
 ## Authentication and Access Control
 
@@ -166,4 +166,4 @@ Pixee retains the following data categories, each with distinct lifecycle contro
 
 **LLM interaction logs** (prompts and responses) are retained for audit and debugging purposes. Enterprise customers can configure the retention period to match their organization's data governance policies.
 
-**Data purge** follows standard Kubernetes PVC lifecycle. Customers control retention and deletion through their infrastructure configuration. For cloud SaaS deployments, data deletion requests are handled through standard support channels.
+**Data purge** follows standard Kubernetes PVC lifecycle. Customers control retention and deletion through their infrastructure configuration. For Dedicated SaaS deployments, data deletion requests are handled through standard support channels.

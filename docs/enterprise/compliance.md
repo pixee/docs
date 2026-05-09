@@ -59,12 +59,12 @@ Evidence is exportable via the reporting API in CSV and JSON formats for integra
 
 Compliance-driven organizations frequently ask where data lives. The answer depends on your deployment model:
 
-| Deployment Model     | Data Residency                               | LLM Data Handling                                   |
-| -------------------- | -------------------------------------------- | --------------------------------------------------- |
-| **Cloud SaaS**       | Pixee cloud (see Pixee data handling policy) | Pixee-managed LLM providers                         |
-| **Embedded Cluster** | Customer network                             | Customer's LLM provider in customer's chosen region |
-| **Helm / BYO K8s**   | Customer network                             | Customer's LLM provider in customer's chosen region |
-| **Air-Gapped**       | Customer network (isolated)                  | Customer's private LLM endpoint                     |
+| Deployment Model     | Data Residency                                                                                   | LLM Data Handling                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
+| **Dedicated SaaS**   | Pixee cloud — dedicated, single-tenant environment per customer (see Pixee data handling policy) | Pixee-managed LLM providers                         |
+| **Embedded Cluster** | Customer network                                                                                 | Customer's LLM provider in customer's chosen region |
+| **Helm / BYO K8s**   | Customer network                                                                                 | Customer's LLM provider in customer's chosen region |
+| **Air-Gapped**       | Customer network (isolated)                                                                      | Customer's private LLM endpoint                     |
 
 For self-hosted deployments, source code and scanner findings stay in the customer's network. LLM inference uses the customer's chosen provider in the customer's chosen region. The only outbound connection is license validation, which can be proxied.
 

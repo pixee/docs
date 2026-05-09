@@ -21,7 +21,9 @@ In Pixee's air-gapped deployment:
 
 The same Pixee platform, the same Helm chart, and the same upgrade path apply as in connected deployments. Air-gapped mode changes where LLM inference runs and how network traffic flows -- not what the product does.
 
-**An honest clarification:** "Air-gapped" in this context means LLM inference is private and code stays internal. License validation still requires a network path to Pixee servers -- either direct or through a proxy. This is not a fully zero-internet-connectivity deployment. If your policy prohibits all outbound connections without exception, read the Known Limitations section below and discuss requirements with Pixee solutions engineering before proceeding.
+:::warning[Not fully zero-internet]
+"Air-gapped" in this context means LLM inference is private and code stays internal. License validation still requires a network path to Pixee servers — either direct or through a proxy. If your policy prohibits all outbound connections without exception, read [Known Limitations](#known-limitations) below and contact Pixee solutions engineering before proceeding.
+:::
 
 ## Supported Private LLM Endpoints
 

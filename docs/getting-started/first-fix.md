@@ -79,12 +79,14 @@ Standard `git revert` applies if a merged change ever needs to be undone. There 
 
 ## If No Fix Arrives
 
-If you do not see a PR within an hour of installation:
+:::note
+If you do not see a PR within an hour of installation, check these in order:
 
 1. **Verify the integration is connected.** Check that Pixee has access to the repositories you selected during setup.
 2. **Confirm a scanner is connected.** Pixee needs scanner findings to act on. Connect CodeQL, Semgrep, SonarQube, or any SARIF-producing scanner via [CI/CD Integration](/integrations/ci-cd).
 3. **Confirm supported languages are present.** Repositories in unsupported languages will not generate fixes.
 4. **Check for fixable findings.** Your repositories may have findings that Pixee cannot currently remediate. Triage classifications will still appear.
+   :::
 
 ## From First Fix to Full Value
 

@@ -96,7 +96,7 @@ Consistent metrics across all enrolled teams, compliance team sign-off on audit 
 
 Executive sign-off requires presenting Phase 3 results with the metrics tracked in [Enterprise Overview > Measuring Success](/enterprise/overview#measuring-success): merge rate, triage reduction, MTTR, and compliance window adherence.
 
-Make enterprise deployment model decisions at this stage -- cloud SaaS, embedded cluster, Helm, or air-gapped based on compliance requirements. See [Deployment Options](/enterprise/deployment).
+Make enterprise deployment model decisions at this stage -- Dedicated SaaS, embedded cluster, Helm, or air-gapped based on compliance requirements. See [Deployment Options](/enterprise/deployment).
 
 ### Security Engineer Execution Track
 

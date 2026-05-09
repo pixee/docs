@@ -42,7 +42,9 @@ Total time to first merged fix: under 30 minutes for most teams.
 
 ## Connecting Scanners (Required)
 
-Pixee requires scanner findings to perform triage and generate fixes. Without connected scanners, there is nothing for Pixee to act on.
+:::warning[Scanners are required]
+Pixee requires scanner findings to perform triage and generate fixes. Without at least one connected scanner, there is nothing for Pixee to act on. Installing Pixee without connecting a scanner will not produce any results.
+:::
 
 **What "connecting a scanner" means:**
 

@@ -46,7 +46,7 @@ Copilot Autofix is limited to GitHub Advanced Security (CodeQL) findings on GitH
 
 ### How long does it take to set up Pixee?
 
-Cloud SaaS setup: install the GitHub App, GitLab integration, Azure DevOps extension, or Bitbucket connector and Pixee begins analyzing repositories immediately — under 5 minutes. Self-hosted deployment (embedded cluster or Helm) typically completes in under one hour. Air-gapped deployment takes longer due to private LLM configuration and image transfer.
+Dedicated SaaS setup: install the GitHub App, GitLab integration, Azure DevOps extension, or Bitbucket connector and Pixee begins analyzing repositories immediately — under 5 minutes. Self-hosted deployment (embedded cluster or Helm) typically completes in under one hour. Air-gapped deployment takes longer due to private LLM configuration and image transfer.
 
 ### Does Pixee require code changes to install?
 
@@ -102,7 +102,7 @@ Yes. Pixee supports fully air-gapped deployment with a customer-hosted LLM. No c
 
 ### How does Pixee handle data residency requirements?
 
-Self-hosted deployments keep all data in your network. Air-gapped deployments have zero outbound data transmission. For cloud SaaS, contact Pixee for data handling details. See [Security Architecture](/enterprise/security-architecture) for the full data flow table by deployment model.
+Self-hosted deployments keep all data in your network. Air-gapped deployments have zero outbound data transmission. For Dedicated SaaS, each customer is provisioned into a dedicated, single-tenant environment — contact Pixee for full data handling details. See [Security Architecture](/enterprise/security-architecture) for the full data flow table by deployment model.
 
 ### What data does Pixee send to LLM providers?
 

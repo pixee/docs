@@ -81,12 +81,12 @@ Every Pixee change flows through your full approval pipeline. PR-only delivery i
 
 ## Deployment Models
 
-| Model                     | What It Provides                                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Cloud SaaS**            | Pixee-managed infrastructure. Pixee accesses repositories via SCM integration (read-only code access, write access limited to PR creation). |
-| **Embedded cluster**      | Turnkey self-hosted deployment on a single Linux VM. No Kubernetes expertise required. All data stays in your network.                      |
-| **Helm / BYO Kubernetes** | Deploys into your existing Kubernetes infrastructure (EKS, GKE, AKS, or self-managed).                                                      |
-| **Air-gapped**            | Fully disconnected operation with customer-hosted LLM. Zero outbound internet after installation.                                           |
+| Model                     | What It Provides                                                                                                                                                                              |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Dedicated SaaS**        | Pixee-managed infrastructure, dedicated single-tenant environment per customer. Pixee accesses repositories via SCM integration (read-only code access, write access limited to PR creation). |
+| **Embedded cluster**      | Turnkey self-hosted deployment on a single Linux VM. No Kubernetes expertise required. All data stays in your network.                                                                        |
+| **Helm / BYO Kubernetes** | Deploys into your existing Kubernetes infrastructure (EKS, GKE, AKS, or self-managed).                                                                                                        |
+| **Air-gapped**            | Fully disconnected operation with customer-hosted LLM. Zero outbound internet after installation.                                                                                             |
 
 For air-gapped deployments, a customer-hosted LLM is required. The only outbound connection is license validation, which can be proxied.
 

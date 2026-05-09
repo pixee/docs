@@ -8,7 +8,11 @@ description: How Pixee's three-tier triage engine classifies every vulnerability
 sidebar_position: 3
 ---
 
-Pixee's triage engine classifies every vulnerability finding as true positive, false positive, or won't-fix through codebase-aware exploitability analysis. The three-tier progressive architecture handles known patterns at sub-second speed, investigates ambiguous cases via AI agents, and generates custom analyzers for novel vulnerability types. The result: up to 98% false positive reduction with structured evidence on every verdict, across findings from natively integrated scanners.
+Pixee's triage engine classifies every vulnerability finding as true positive, false positive, or won't-fix through codebase-aware exploitability analysis. The three-tier progressive architecture handles known patterns at sub-second speed, investigates ambiguous cases via AI agents, and generates custom analyzers for novel vulnerability types.
+
+:::info[Up to 98% false positive reduction]
+Every verdict includes structured, auditable evidence — specific code paths, security controls, or context signals that drove the decision. Not a score. An investigation trail.
+:::
 
 Triage is co-equal with [remediation](/platform/remediation). Together they close the loop from "scanner found something" to "vulnerability is fixed."
 
@@ -16,11 +20,11 @@ Triage is co-equal with [remediation](/platform/remediation). Together they clos
 
 Pixee routes every finding through a tiered system that applies the cheapest sufficient intelligence. Routing is automatic — no configuration required.
 
-| Tier                   | Strategy                                                                                     | Speed                                                      | LLM Cost                           | Auditability                                                      | Coverage                                                                                      |
-| ---------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| **Tier 1: Structured** | 15+ deterministic analyzers                                                                  | Sub-second                                                 | Zero                               | Reproducible — same input, same output                            | Known vulnerability classes (SQL injection, XSS, command injection, path traversal, 12+ more) |
-| **Tier 2: Agentic**    | AI agents dynamically search the codebase                                                    | Seconds                                                    | Per-finding                        | Readable investigation trail with every search and reasoning step | Ambiguous findings, novel frameworks, custom security controls                                |
-| **Tier 3: Adaptive**   | Handles novel rule types automatically, expanding coverage as new rule types are encountered | Minutes (first encounter), faster on subsequent encounters | Per-finding (first encounter only) | Generated analyzer is inspectable                                 | Novel rule types, proprietary scanners, custom rulesets                                       |
+| Tier                   | Strategy                                                                    | Speed                     | Coverage                                                                       |
+| ---------------------- | --------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------ |
+| **Tier 1: Structured** | 15+ deterministic analyzers — no LLM, zero cost                             | Sub-second                | Known classes: SQL injection, XSS, command injection, path traversal, 12+ more |
+| **Tier 2: Agentic**    | AI agents dynamically search the codebase                                   | Seconds                   | Ambiguous findings, novel frameworks, custom security controls                 |
+| **Tier 3: Adaptive**   | Auto-generates coverage for novel rule types; expands on each new encounter | Minutes (first encounter) | Proprietary scanners, custom Semgrep/CodeQL rules, internal rulesets           |
 
 **End-to-end flow:**
 

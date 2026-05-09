@@ -35,7 +35,9 @@ Key capabilities: follows SARIF-based taint propagation across files, highlights
 
 ## Fix Evaluation
 
-Every generated fix passes through an independent quality gate before a developer sees it. Bad fixes are rejected, not shipped.
+:::info
+Every generated fix passes through an independent quality gate before a developer sees it. **Bad fixes are rejected, not shipped** — a fix that cannot pass evaluation is suppressed entirely and never reaches a PR.
+:::
 
 **Three-dimension rubric:**
 

@@ -70,7 +70,9 @@ Contact your account team for guidance on model-to-task assignment for your depl
 
 ## Governance Controls
 
-Bring Your Own Model is not just a technical feature — it is a governance feature.
+:::info
+Bring Your Own Model is not just a technical feature — it is a governance feature. You own the API keys, control which model handles your code, and see all LLM costs on your own cloud bill.
+:::
 
 | Control             | Detail                                                                                                                             |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
