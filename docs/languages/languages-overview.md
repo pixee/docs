@@ -26,6 +26,9 @@ Pixee supports a broad and growing set of languages and IaC formats. Coverage ex
 | **Scala** | Play, Akka | sbt, Maven |
 | **Swift** | iOS/macOS | Swift Package Manager |
 | **Objective-C** | iOS/macOS | CocoaPods, Carthage |
+| **Groovy** | Gradle, Spring, Jenkins | Maven, Gradle |
+| **Shell / Bash** | | — |
+| **PowerShell** | | — |
 
 ## Infrastructure as Code
 
@@ -38,4 +41,4 @@ Pixee supports a broad and growing set of languages and IaC formats. Coverage ex
 | **Ansible** | Playbook security patterns |
 | **Docker Compose** | Service configuration security |
 
-For what Pixee triages and fixes across these languages and formats, see [What Pixee Fixes](/platform/what-pixee-fixes). For questions about a specific language or framework not listed here, [contact the team](https://pixee.ai/demo).
+For what Pixee triages and fixes across these languages and formats, see [What Pixee Fixes](/platform/what-pixee-fixes). Pixee's architecture is designed to work across languages — if yours isn't listed, [contact the team](https://pixee.ai/demo).
