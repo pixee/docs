@@ -48,6 +48,7 @@ Pixee requires scanner findings to perform triage and generate fixes. Without co
 
 - For scanners that write to your SCM's code-scanning surface (GitHub Code Scanning, GitLab Security Dashboard, etc.), Pixee ingests findings automatically through the SCM integration — no additional step required.
 - For scanners that don't write to the SCM's code-scanning surface, upload SARIF results to the SCM's code-scanning API as a CI step. Pixee then ingests them through the SCM integration.
+- For natively integrated scanners, configure the scanner connection directly in Pixee. Pixee pulls results automatically — no SARIF upload or CI step required. See [Integrations Overview](/integrations/overview) for the list of supported native integrations.
 
 Pixee integrates natively with a growing list of scanners including CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, and Trivy. Any SARIF-producing scanner also works. See [Scanner Integration](/platform/scanner-integration) for the full list and [CI/CD Integration](/integrations/ci-cd) for pipeline setup examples.
 
