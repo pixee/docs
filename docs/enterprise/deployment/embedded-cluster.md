@@ -97,4 +97,3 @@ The embedded cluster is the right choice for most organizations without existing
 - Your platform engineering team prefers Helm-managed deployments and wants to integrate Pixee into existing cluster operations
 
 Both deployment models deliver the same triage and remediation capabilities. The choice is about infrastructure preference, not product functionality.
-

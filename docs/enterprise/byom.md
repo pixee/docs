@@ -12,14 +12,14 @@ Pixee lets you choose your LLM provider instead of locking you into a single ven
 
 ## Supported Providers
 
-| Provider | Description |
-|---|---|
-| **OpenAI** | Direct OpenAI API |
-| **Anthropic** | Direct Anthropic API with Anthropic-optimized prompts |
-| **Azure AI Foundry** | Azure-hosted models in customer's Azure tenant (OpenAI and Anthropic models available) |
-| **AWS Bedrock** | AWS-hosted model marketplace in customer's AWS account |
-| **Google Cloud Vertex AI** | Google Cloud-hosted model platform |
-| **Oracle Cloud OCI Generative AI** | Oracle Cloud-hosted generative AI service |
+| Provider                           | Description                                                                                                                  |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **OpenAI**                         | Direct OpenAI API                                                                                                            |
+| **Anthropic**                      | Direct Anthropic API with Anthropic-optimized prompts                                                                        |
+| **Azure AI Foundry**               | Azure-hosted models in customer's Azure tenant (OpenAI and Anthropic models available)                                       |
+| **AWS Bedrock**                    | AWS-hosted model marketplace in customer's AWS account                                                                       |
+| **Google Cloud Vertex AI**         | Google Cloud-hosted model platform                                                                                           |
+| **Oracle Cloud OCI Generative AI** | Oracle Cloud-hosted generative AI service                                                                                    |
 | **Any OpenAI-compatible endpoint** | Self-hosted, private, or custom API gateway — covers air-gapped deployments, self-hosted models, and enterprise API gateways |
 
 **Custom endpoint support** allows routing through enterprise API gateways. Custom header name/value pairs handle gateway authentication, so Pixee fits into your existing API management infrastructure.
@@ -72,12 +72,12 @@ Contact your account team for guidance on model-to-task assignment for your depl
 
 Bring Your Own Model is not just a technical feature — it is a governance feature.
 
-| Control | Detail |
-|---|---|
-| **Key ownership** | Customer owns all API keys. Pixee never stores or accesses customer LLM credentials. |
-| **Traffic routing** | All LLM traffic routes through the customer's account. Pixee does not proxy LLM calls for self-hosted deployments. |
+| Control             | Detail                                                                                                                             |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Key ownership**   | Customer owns all API keys. Pixee never stores or accesses customer LLM credentials.                                               |
+| **Traffic routing** | All LLM traffic routes through the customer's account. Pixee does not proxy LLM calls for self-hosted deployments.                 |
 | **Cost visibility** | LLM usage appears on the customer's standard cloud billing. No hidden costs or Pixee-side LLM charges for self-hosted deployments. |
-| **Audit trail** | Every triage decision includes the LLM justification. Auditors can see what the model was asked and what it answered. |
+| **Audit trail**     | Every triage decision includes the LLM justification. Auditors can see what the model was asked and what it answered.              |
 
 For full data flow details and credential handling, see [Security Architecture](/enterprise/security-architecture).
 

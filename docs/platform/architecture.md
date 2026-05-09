@@ -42,10 +42,10 @@ All findings are normalized into a common internal format before downstream proc
 
 The triage engine classifies every finding through a three-tier progressive architecture. Each tier represents a different analysis strategy, and the system routes each finding to the cheapest sufficient tier automatically.
 
-| Tier                   | Strategy                                  | Speed                     | LLM Cost    | Best For                                                               |
-| ---------------------- | ----------------------------------------- | ------------------------- | ----------- | ---------------------------------------------------------------------- |
-| **Tier 1: Structured** | 15+ deterministic analyzers               | Sub-second                | Zero        | Known patterns (SQL injection, XSS, command injection, path traversal) |
-| **Tier 2: Agentic**    | AI agents dynamically search the codebase | Seconds                   | Per-finding | Ambiguous findings, novel frameworks, custom security controls         |
+| Tier                   | Strategy                                                                                     | Speed                     | LLM Cost    | Best For                                                               |
+| ---------------------- | -------------------------------------------------------------------------------------------- | ------------------------- | ----------- | ---------------------------------------------------------------------- |
+| **Tier 1: Structured** | 15+ deterministic analyzers                                                                  | Sub-second                | Zero        | Known patterns (SQL injection, XSS, command injection, path traversal) |
+| **Tier 2: Agentic**    | AI agents dynamically search the codebase                                                    | Seconds                   | Per-finding | Ambiguous findings, novel frameworks, custom security controls         |
 | **Tier 3: Adaptive**   | Handles novel rule types automatically, expanding coverage as new rule types are encountered | Minutes (first encounter) | Per-finding | Novel rule types, proprietary scanners, custom rulesets                |
 
 **Progressive fallback:** The system attempts Tier 1 first. If the deterministic analyzer cannot reach a high-confidence verdict, the finding escalates to Tier 2. If the agentic investigation cannot resolve it, Tier 3 handles it automatically and coverage expands for future findings of the same type. Most findings resolve at Tier 1.
@@ -114,4 +114,3 @@ For air-gapped deployments, a customer-hosted LLM is required. No code leaves th
 | **User Interface**   | Dashboard, findings management, configuration, reporting                                     |
 
 The Analysis Service handles the computationally intensive work -- triage decisions, fix generation, and quality evaluation. The Backend Platform manages the integration surface: scanner webhooks, SCM platform APIs, and PR lifecycle. The User Interface provides visibility into triage outcomes, remediation activity, and configuration.
-

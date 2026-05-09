@@ -145,4 +145,3 @@ pixee workflow create new-scan --repo "$REPO" --tool codeql ...
 ```
 
 The CLI does not run analysis or generate fixes — those happen on the platform, triggered by your SCM integration. See [CI/CD Integration](/integrations/ci-cd) for the end-to-end pipeline patterns.
-

@@ -42,19 +42,19 @@ Both tiers feed into the same downstream [triage](/platform/triage) and [remedia
 
 ## Standard Scanner Integrations
 
-| Scanner | Status | Integration Method |
-|---|---|---|
-| **Veracode** | GA | SARIF pipeline with tool-specific identification |
-| **Snyk Code** | GA | SARIF pipeline with native metadata extraction |
-| **SonarQube / SonarCloud** | GA | SARIF pipeline with native metadata extraction |
-| **HCL AppScan** | GA | SARIF ingestion pipeline |
-| **Polaris (Synopsys)** | GA | SARIF ingestion pipeline |
-| **Fortify** | GA | SARIF ingestion pipeline |
-| **Contrast** | GA | SARIF ingestion pipeline |
-| **GitLab SAST** | GA | SARIF pipeline with dedicated namespace |
-| **GitLab SCA** | GA | SARIF pipeline |
-| **Trivy** | GA | SARIF pipeline with native metadata extraction |
-| **DefectDojo** | GA | SARIF pipeline (aggregates findings from multiple scanners) |
+| Scanner                    | Status | Integration Method                                          |
+| -------------------------- | ------ | ----------------------------------------------------------- |
+| **Veracode**               | GA     | SARIF pipeline with tool-specific identification            |
+| **Snyk Code**              | GA     | SARIF pipeline with native metadata extraction              |
+| **SonarQube / SonarCloud** | GA     | SARIF pipeline with native metadata extraction              |
+| **HCL AppScan**            | GA     | SARIF ingestion pipeline                                    |
+| **Polaris (Synopsys)**     | GA     | SARIF ingestion pipeline                                    |
+| **Fortify**                | GA     | SARIF ingestion pipeline                                    |
+| **Contrast**               | GA     | SARIF ingestion pipeline                                    |
+| **GitLab SAST**            | GA     | SARIF pipeline with dedicated namespace                     |
+| **GitLab SCA**             | GA     | SARIF pipeline                                              |
+| **Trivy**                  | GA     | SARIF pipeline with native metadata extraction              |
+| **DefectDojo**             | GA     | SARIF pipeline (aggregates findings from multiple scanners) |
 
 All named scanner integrations are GA. See individual scanner integration pages under [Integrations](/integrations/overview) for per-tool setup guides.
 
@@ -75,23 +75,23 @@ Over 50 scanner tools have been validated via this path.
 
 Triage accuracy scales with the richness of metadata each scanner includes in its SARIF output.
 
-| Metadata Type | Which Scanners Provide It | How Pixee Uses It |
-|---|---|---|
-| **codeFlows** (dataflow paths) | CodeQL (multi-step source-to-sink) | Full dataflow context for triage |
-| **Rule descriptions** | Semgrep (fullDescription.text), CodeQL (help.markdown) | Enriches triage context with rule semantics |
-| **Severity ratings** | Most scanners | Input to context-aware severity adjustment |
-| **Language tags** | Most scanners | Routes to language-specific codemods and analysis strategies |
-| **Rule ID only** (minimal metadata) | Checkmarx, some internal tools | Triggers compensatory strategies that re-derive context from the codebase |
+| Metadata Type                       | Which Scanners Provide It                              | How Pixee Uses It                                                         |
+| ----------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------- |
+| **codeFlows** (dataflow paths)      | CodeQL (multi-step source-to-sink)                     | Full dataflow context for triage                                          |
+| **Rule descriptions**               | Semgrep (fullDescription.text), CodeQL (help.markdown) | Enriches triage context with rule semantics                               |
+| **Severity ratings**                | Most scanners                                          | Input to context-aware severity adjustment                                |
+| **Language tags**                   | Most scanners                                          | Routes to language-specific codemods and analysis strategies              |
+| **Rule ID only** (minimal metadata) | Checkmarx, some internal tools                         | Triggers compensatory strategies that re-derive context from the codebase |
 
 Rich-metadata scanners get deep extraction. Sparse-metadata scanners get compensatory strategies. No scanner is left behind.
 
 ## Platform Integrations
 
-| Platform | SARIF Ingestion | Native CodeQL/GHAS | Notes |
-|---|---|---|---|
-| **GitHub** | Full support | Deep integration | CodeQL findings via GHAS API or SARIF upload |
-| **GitLab** | Full support | Via SARIF upload | GitLab SAST has dedicated namespace |
-| **Azure DevOps** | Full support | Via SARIF upload | Standard SARIF pipeline |
-| **Bitbucket** | Full support | Via SARIF upload | Standard SARIF pipeline |
+| Platform         | SARIF Ingestion | Native CodeQL/GHAS | Notes                                        |
+| ---------------- | --------------- | ------------------ | -------------------------------------------- |
+| **GitHub**       | Full support    | Deep integration   | CodeQL findings via GHAS API or SARIF upload |
+| **GitLab**       | Full support    | Via SARIF upload   | GitLab SAST has dedicated namespace          |
+| **Azure DevOps** | Full support    | Via SARIF upload   | Standard SARIF pipeline                      |
+| **Bitbucket**    | Full support    | Via SARIF upload   | Standard SARIF pipeline                      |
 
 All scanner integrations are available across SaaS and Enterprise deployment models.

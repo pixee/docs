@@ -18,8 +18,8 @@ One triage-and-remediation pipeline spans every scanner in your stack, regardles
 
 Pixee delivers remediation as pull requests (or merge requests) on the four major development platforms. All four support cloud and self-hosted/on-premises deployments via Pixee Enterprise Server.
 
-| Platform                                        | PR/MR Delivery        | Authentication        | Setup Guide                                  |
-| ----------------------------------------------- | --------------------- | --------------------- | -------------------------------------------- |
+| Platform                                        | PR/MR Delivery        | Authentication        | Setup Guide                                                 |
+| ----------------------------------------------- | --------------------- | --------------------- | ----------------------------------------------------------- |
 | [GitHub](/integrations/scms/github)             | Native pull requests  | GitHub App            | [Get started](/getting-started/source-control#github)       |
 | [GitLab](/integrations/scms/gitlab)             | Native merge requests | Personal access token | [Get started](/getting-started/source-control#gitlab)       |
 | [Azure DevOps](/integrations/scms/azure-devops) | Native pull requests  | PAT + webhooks        | [Get started](/getting-started/source-control#azure-devops) |
@@ -82,4 +82,3 @@ The result: one triage and remediation pipeline across every scanner in your sta
 - New commercial scanners are supported immediately if they produce SARIF
 - You are never locked to a specific tool list
 - Adding or removing a scanner from your stack does not require any Pixee configuration changes
-

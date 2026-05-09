@@ -16,10 +16,10 @@ Remediation is co-equal with [triage](/platform/triage). Triage determines what 
 
 Pixee uses two fundamentally different fix engines, routed automatically based on vulnerability type:
 
-| Engine | How It Works | When It Fires | Risk Profile |
-|---|---|---|---|
-| **Deterministic codemods** | Pre-built, rule-based transformations encoding OWASP/SANS patterns | Known patterns: SQL injection parameterization, SSRF prevention, insecure deserialization, weak cryptography, insecure temp files, SSL/TLS upgrades | Zero hallucination risk. Same input, same output, every time. |
-| **AI-powered fixes** | Constrained AI generation with dataflow-bounded context and per-rule knowledge base guidance | Custom frameworks, multi-file dataflow vulnerabilities, novel patterns, context-dependent sanitization | AI-generated, independently evaluated before reaching a PR. |
+| Engine                     | How It Works                                                                                 | When It Fires                                                                                                                                       | Risk Profile                                                  |
+| -------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| **Deterministic codemods** | Pre-built, rule-based transformations encoding OWASP/SANS patterns                           | Known patterns: SQL injection parameterization, SSRF prevention, insecure deserialization, weak cryptography, insecure temp files, SSL/TLS upgrades | Zero hallucination risk. Same input, same output, every time. |
+| **AI-powered fixes**       | Constrained AI generation with dataflow-bounded context and per-rule knowledge base guidance | Custom frameworks, multi-file dataflow vulnerabilities, novel patterns, context-dependent sanitization                                              | AI-generated, independently evaluated before reaching a PR.   |
 
 Routing is automatic. The system checks whether a deterministic codemod exists for the vulnerability type. If yes, the codemod fires — sub-second, zero LLM cost. If no deterministic rule handles it, an AI-powered fix is generated using scanner-aware context.
 
@@ -39,11 +39,11 @@ Every generated fix passes through an independent quality gate before a develope
 
 **Three-dimension rubric:**
 
-| Dimension | What It Checks | Why It Matters |
-|---|---|---|
-| **Safety** | No breaking changes, no regressions, no unintended side effects | Prevents the fix from creating new problems |
-| **Effectiveness** | Correctly resolves the security vulnerability | Prevents cosmetic changes that leave the vulnerability open |
-| **Cleanliness** | Proper formatting, no extraneous changes, preserves existing code | Prevents unnecessary diff noise that frustrates reviewers |
+| Dimension         | What It Checks                                                    | Why It Matters                                              |
+| ----------------- | ----------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Safety**        | No breaking changes, no regressions, no unintended side effects   | Prevents the fix from creating new problems                 |
+| **Effectiveness** | Correctly resolves the security vulnerability                     | Prevents cosmetic changes that leave the vulnerability open |
+| **Cleanliness**   | Proper formatting, no extraneous changes, preserves existing code | Prevents unnecessary diff noise that frustrates reviewers   |
 
 **Architectural independence.** The evaluator runs as a separate inference call — the generator does not grade its own work. This is not self-critique from the same model. The separation prevents the "grading your own homework" failure mode.
 
@@ -80,12 +80,12 @@ Standard `git revert` applies if any merged change needs to be undone. There is 
 
 ## Language and Scanner Coverage
 
-| Coverage Type | Details |
-|---|---|
-| **Languages** | Java, Python, JavaScript/TypeScript, .NET/C#, Go, Ruby, PHP, Kotlin, Rust, Scala, Swift + IaC (Terraform, Dockerfile, K8s/Helm, CloudFormation) |
+| Coverage Type                   | Details                                                                                                                                                    |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Languages**                   | Java, Python, JavaScript/TypeScript, .NET/C#, Go, Ruby, PHP, Kotlin, Rust, Scala, Swift + IaC (Terraform, Dockerfile, K8s/Helm, CloudFormation)            |
 | **Native scanner integrations** | 15 (CodeQL, SonarQube, Checkmarx, Veracode, Snyk Code, Semgrep, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy, Arnica, Datadog SAST) |
-| **Universal SARIF** | Any SARIF-producing scanner (50+ validated) |
-| **Platforms** | GitHub, GitLab, Azure DevOps, Bitbucket |
+| **Universal SARIF**             | Any SARIF-producing scanner (50+ validated)                                                                                                                |
+| **Platforms**                   | GitHub, GitLab, Azure DevOps, Bitbucket                                                                                                                    |
 
 Deterministic codemod coverage is deepest for Java and Python. JavaScript/TypeScript, .NET, Go, and PHP have expanding codemod libraries supplemented by AI-powered generation for patterns not yet covered by deterministic rules.
 

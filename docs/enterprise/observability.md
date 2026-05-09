@@ -66,4 +66,3 @@ Operational settings are configurable through the KOTS admin console (embedded c
 | **Support bundle configuration** | Log size and age limits for diagnostic bundle generation |
 
 For troubleshooting operational issues, see [Enterprise Troubleshooting](/enterprise/troubleshooting).
-

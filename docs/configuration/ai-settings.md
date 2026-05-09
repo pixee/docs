@@ -55,11 +55,11 @@ Triage accuracy depends on the quality of scanner input. Pixee integrates with a
 
 Remediation settings control how Pixee generates fixes.
 
-| Setting           | What It Controls                                                              |
-| ----------------- | ----------------------------------------------------------------------------- |
-| Fix categories    | Which CWE categories receive automated fixes                                  |
+| Setting           | What It Controls                                                          |
+| ----------------- | ------------------------------------------------------------------------- |
+| Fix categories    | Which CWE categories receive automated fixes                              |
 | Fix mode          | Whether a category uses deterministic codemods, AI-powered fixes, or both |
-| Quality threshold | Minimum evaluation score a fix must meet before being presented as a PR       |
+| Quality threshold | Minimum evaluation score a fix must meet before being presented as a PR   |
 
 ### The hybrid model
 
@@ -89,4 +89,3 @@ Self-hosted Pixee deployments have additional AI configuration beyond the behavi
 - **Data flow controls.** Control what data reaches the LLM and through which network path. See [Enterprise > Security Architecture](/enterprise/security-architecture).
 
 These infrastructure-level settings are managed through the admin console or Helm values, not through the Pixee dashboard's AI settings page.
-

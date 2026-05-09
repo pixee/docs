@@ -174,23 +174,23 @@ The Pixee dashboard provides real-time visibility into triage and remediation ac
 
 **Primary views:**
 
-| View | What It Shows |
-|---|---|
-| **Overview** | Organization-wide summary: total findings triaged, true positive rate, open PRs, merged PRs, and remediation velocity. Entry point for daily monitoring. |
-| **Findings** | All findings across connected repositories, filterable by status (triaged, awaiting fix, fixed), severity, scanner, language, and repository. Click any finding for the full triage verdict and evidence trail. |
-| **Pull Requests** | All Pixee-generated PRs across repositories — open, merged, and closed. Shows PR status, fix type (deterministic or AI), quality scores, and time since creation. |
-| **Repositories** | Per-repository status: last scan time, finding count, triage coverage, and PR activity. Shows which repositories are active and which have pending configuration. |
-| **Reports** | Access to metric summaries, trend charts, and export controls. See [Exporting Data](#exporting-data) below. |
+| View              | What It Shows                                                                                                                                                                                                   |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Overview**      | Organization-wide summary: total findings triaged, true positive rate, open PRs, merged PRs, and remediation velocity. Entry point for daily monitoring.                                                        |
+| **Findings**      | All findings across connected repositories, filterable by status (triaged, awaiting fix, fixed), severity, scanner, language, and repository. Click any finding for the full triage verdict and evidence trail. |
+| **Pull Requests** | All Pixee-generated PRs across repositories — open, merged, and closed. Shows PR status, fix type (deterministic or AI), quality scores, and time since creation.                                               |
+| **Repositories**  | Per-repository status: last scan time, finding count, triage coverage, and PR activity. Shows which repositories are active and which have pending configuration.                                               |
+| **Reports**       | Access to metric summaries, trend charts, and export controls. See [Exporting Data](#exporting-data) below.                                                                                                     |
 
 **Filtering options:**
 
-| Filter | Options |
-|---|---|
-| Repository | Single repo, multiple repos, or all repos |
-| Time range | Last 7 days, 30 days, 90 days, custom range |
-| Severity | Critical, High, Medium, Low |
-| Language | Java, Python, JavaScript/TypeScript, .NET, Go, PHP |
-| Scanner | Filter by the source scanner for a finding or PR |
+| Filter     | Options                                            |
+| ---------- | -------------------------------------------------- |
+| Repository | Single repo, multiple repos, or all repos          |
+| Time range | Last 7 days, 30 days, 90 days, custom range        |
+| Severity   | Critical, High, Medium, Low                        |
+| Language   | Java, Python, JavaScript/TypeScript, .NET, Go, PHP |
+| Scanner    | Filter by the source scanner for a finding or PR   |
 
 **Trend views** show how metrics change over time — track merge rate improvement as your team builds confidence in automated fixes, watch triage volume shift as false positives are eliminated, and monitor remediation velocity across release cycles. Trend data is available for any custom time range and can be exported for compliance reporting or executive review.
 
@@ -220,4 +220,3 @@ For custom reporting, use the Pixee API to query triage and remediation data pro
 Self-hosted Pixee deployments include a bundled observability stack with metrics, logs, traces, and dashboards. Enterprise reporting data feeds into this stack, giving SRE teams visibility into both application-level metrics (triage volume, fix quality) and infrastructure-level metrics (analysis duration, queue depth).
 
 For full observability configuration, see [Enterprise > Observability](/enterprise/observability).
-

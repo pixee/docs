@@ -14,12 +14,12 @@ Agentic security engineering is a discipline where purpose-built AI agents auton
 
 Pixee adds triage, remediation, and delivery layers on top of your existing detection tools:
 
-| Layer | Function | Who Provides It |
-|---|---|---|
-| **1. Detection** | Find vulnerabilities | Your existing scanners (SonarQube, Checkmarx, Semgrep, CodeQL, Snyk, Veracode, etc.) |
-| **2. Triage** | Determine which findings are real threats | Pixee — see [Triage](/platform/triage) |
-| **3. Remediation** | Generate validated code fixes | Pixee — deterministic + AI hybrid. See [Remediation](/platform/remediation) |
-| **4. Delivery** | Ship fixes through existing workflow | Pixee — PRs in GitHub, GitLab, ADO, Bitbucket |
+| Layer              | Function                                  | Who Provides It                                                                      |
+| ------------------ | ----------------------------------------- | ------------------------------------------------------------------------------------ |
+| **1. Detection**   | Find vulnerabilities                      | Your existing scanners (SonarQube, Checkmarx, Semgrep, CodeQL, Snyk, Veracode, etc.) |
+| **2. Triage**      | Determine which findings are real threats | Pixee — see [Triage](/platform/triage)                                               |
+| **3. Remediation** | Generate validated code fixes             | Pixee — deterministic + AI hybrid. See [Remediation](/platform/remediation)          |
+| **4. Delivery**    | Ship fixes through existing workflow      | Pixee — PRs in GitHub, GitLab, ADO, Bitbucket                                        |
 
 Pixee integrates natively with a growing list of scanners and accepts any SARIF-producing tool. No changes to your detection stack are required.
 
@@ -55,22 +55,22 @@ The term "agentic" distinguishes this approach from both rule-based automation a
 
 ## End-to-End Processing Flow
 
-| Stage | What Happens | Output |
-|---|---|---|
-| **1. Scan Ingestion** | Finding arrives via webhook or API; normalized into a common internal format | Standardized finding with maximum available metadata |
-| **2. Triage** | Three-tier progressive analysis determines exploitability | Typed verdict (true positive, false positive, won't fix) with structured evidence |
-| **3. Remediation** | Hybrid engine generates a validated fix for confirmed vulnerabilities | Code change that passed independent quality evaluation |
-| **4. PR Delivery** | Fix shipped as a native pull request on your platform | Reviewable diff with vulnerability context, quality scores, and description |
-| **5. Developer Review** | Your team reviews, tests, and merges through existing workflow | Merged fix or feedback |
+| Stage                   | What Happens                                                                 | Output                                                                            |
+| ----------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **1. Scan Ingestion**   | Finding arrives via webhook or API; normalized into a common internal format | Standardized finding with maximum available metadata                              |
+| **2. Triage**           | Three-tier progressive analysis determines exploitability                    | Typed verdict (true positive, false positive, won't fix) with structured evidence |
+| **3. Remediation**      | Hybrid engine generates a validated fix for confirmed vulnerabilities        | Code change that passed independent quality evaluation                            |
+| **4. PR Delivery**      | Fix shipped as a native pull request on your platform                        | Reviewable diff with vulnerability context, quality scores, and description       |
+| **5. Developer Review** | Your team reviews, tests, and merges through existing workflow               | Merged fix or feedback                                                            |
 
 SAST and SCA findings both flow through this same pipeline.
 
 ## Technical Stack
 
-| Component | Responsibility |
-|---|---|
-| **Backend Platform** | Platform orchestration, scan ingestion, PR authoring, API layer, webhook processing |
+| Component            | Responsibility                                                                               |
+| -------------------- | -------------------------------------------------------------------------------------------- |
+| **Backend Platform** | Platform orchestration, scan ingestion, PR authoring, API layer, webhook processing          |
 | **Analysis Service** | Triage analysis, remediation generation, fix evaluation, SCA processing, code transformation |
-| **User Interface** | Dashboard, findings management, configuration, reporting |
+| **User Interface**   | Dashboard, findings management, configuration, reporting                                     |
 
 See [Platform Architecture](/platform/architecture) for the full technical stack and LLM orchestration details.

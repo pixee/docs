@@ -42,12 +42,12 @@ Pixee improves from the signals your team sends when it interacts with Pixee-gen
 
 **Signals Pixee collects:**
 
-| Signal | What It Means |
-|---|---|
-| PR merged (as-is) | Fix was correct and matched team conventions — positive signal for this fix pattern |
-| PR merged (with modifications) | Fix was directionally correct but needed adjustment — Pixee notes the delta |
-| PR closed / declined | Fix was not accepted — negative signal for this finding type or fix approach |
-| Triage override | Team disagreed with Pixee's classification — updates classification logic for similar findings |
+| Signal                         | What It Means                                                                                  |
+| ------------------------------ | ---------------------------------------------------------------------------------------------- |
+| PR merged (as-is)              | Fix was correct and matched team conventions — positive signal for this fix pattern            |
+| PR merged (with modifications) | Fix was directionally correct but needed adjustment — Pixee notes the delta                    |
+| PR closed / declined           | Fix was not accepted — negative signal for this finding type or fix approach                   |
+| Triage override                | Team disagreed with Pixee's classification — updates classification logic for similar findings |
 
 **Observing improvement:** Teams that have been using Pixee for several weeks typically see improved triage outcomes and higher merge rates as the system calibrates to their codebase and review preferences.
 
@@ -58,6 +58,7 @@ When Pixee classifies a finding as a true positive but your team disagrees — o
 **How to override:** Overrides can be submitted in three ways: by providing feedback directly on an individual triage result, via natural language preferences in PIXEE.yaml, or through Organization Preferences in the UI.
 
 **What happens when you override:**
+
 - The specific finding's verdict is updated immediately.
 - The override is recorded with the rationale (if provided).
 - Future findings matching the same pattern in the same codebase context receive adjusted classification.

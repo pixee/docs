@@ -69,4 +69,3 @@ SSO maps your identity provider's user accounts to Pixee roles. When a user auth
 Enterprise self-hosted deployments also support embedded OIDC (via Authentik running in-cluster), which federates to your upstream corporate identity provider. This means SSO works even when Pixee runs inside your infrastructure with no external IdP dependency.
 
 For full SSO configuration details on self-hosted deployments, see [Enterprise > Security Architecture](/enterprise/security-architecture).
-

@@ -18,10 +18,10 @@ All projects are licensed under **Apache 2.0**.
 
 ## Projects
 
-| Project | Language | Description |
-|---|---|---|
-| [codemodder-java](https://github.com/pixee/codemodder-java) | Java | Java codemod engine with AST transformations via ParseAndGo |
-| [codemodder-python](https://github.com/pixee/codemodder-python) | Python | Python codemod engine with LibCST, regex, and XML transformers |
+| Project                                                          | Language       | Description                                                                     |
+| ---------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------- |
+| [codemodder-java](https://github.com/pixee/codemodder-java)      | Java           | Java codemod engine with AST transformations via ParseAndGo                     |
+| [codemodder-python](https://github.com/pixee/codemodder-python)  | Python         | Python codemod engine with LibCST, regex, and XML transformers                  |
 | [Codemodder framework](https://github.com/pixee/codemodder-spec) | Multi-language | Core specification and framework for building language-specific codemod engines |
 
 ## What Codemods Are
@@ -89,11 +89,11 @@ The Python engine provides a library of deterministic codemods with three distin
 
 **Transformer strategies:**
 
-| Strategy | Target | Use Case |
-|---|---|---|
-| LibCST | Python source files | AST-level transformations (function calls, imports, class definitions) |
-| Regex | Config and source files | Pattern-based replacements where AST parsing is unnecessary |
-| XML | Dependency manifests, config | XML configuration files and dependency declarations |
+| Strategy | Target                       | Use Case                                                               |
+| -------- | ---------------------------- | ---------------------------------------------------------------------- |
+| LibCST   | Python source files          | AST-level transformations (function calls, imports, class definitions) |
+| Regex    | Config and source files      | Pattern-based replacements where AST parsing is unnecessary            |
+| XML      | Dependency manifests, config | XML configuration files and dependency declarations                    |
 
 A single codemod can combine strategies. For example, a PyYAML hardening codemod might use LibCST to change `yaml.load()` calls to `yaml.safe_load()` in source files while also updating a requirements file via regex.
 

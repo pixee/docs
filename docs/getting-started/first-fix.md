@@ -27,11 +27,11 @@ Your first Pixee fix arrives as a pull request in your existing code review tool
 
 Every Pixee PR includes three scores from an independent evaluation pass (a separate inference call from the fix generator):
 
-| Score | What It Checks |
-|---|---|
-| **Safety** | No breaking changes, no regressions, no unintended side effects |
-| **Effectiveness** | The fix correctly resolves the vulnerability |
-| **Cleanliness** | Proper formatting, no extraneous changes, preserves existing code |
+| Score             | What It Checks                                                    |
+| ----------------- | ----------------------------------------------------------------- |
+| **Safety**        | No breaking changes, no regressions, no unintended side effects   |
+| **Effectiveness** | The fix correctly resolves the vulnerability                      |
+| **Cleanliness**   | Proper formatting, no extraneous changes, preserves existing code |
 
 All three must pass before the fix reaches your PR queue. A fix cannot reach you on a high Cleanliness score if it fails Safety.
 
@@ -44,11 +44,11 @@ Review a Pixee PR the same way you review any other code change:
 3. Check CI results — your existing tests, linters, and scanners run against the fix automatically.
 4. Decide:
 
-| Action | When |
-|---|---|
-| **Merge** | The fix is correct, tests pass, and the change resolves the vulnerability |
+| Action              | When                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| **Merge**           | The fix is correct, tests pass, and the change resolves the vulnerability             |
 | **Request changes** | The fix is directionally correct but needs modification for your codebase conventions |
-| **Close** | The fix is not appropriate for your codebase or the finding is acceptable risk |
+| **Close**           | The fix is not appropriate for your codebase or the finding is acceptable risk        |
 
 Pixee proposes. You decide. Your code review policies, CI/CD pipelines, and branch protection rules all apply.
 

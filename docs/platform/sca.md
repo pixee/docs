@@ -25,22 +25,22 @@ Pixee answers "Can this CVE actually be triggered in this codebase?" — not jus
 
 **How it works:**
 
-| Step | What Happens |
-|---|---|
-| **1. External research** | A CVE research agent gathers CVE details, changelogs, patches, and release notes to identify the specific conditions required for exploitation |
-| **2. Internal analysis** | The triage agent examines how the library is actually used in your code — which functions are called, what input reaches them, what security controls exist |
+| Step                                 | What Happens                                                                                                                                                                                                       |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. External research**             | A CVE research agent gathers CVE details, changelogs, patches, and release notes to identify the specific conditions required for exploitation                                                                     |
+| **2. Internal analysis**             | The triage agent examines how the library is actually used in your code — which functions are called, what input reaches them, what security controls exist                                                        |
 | **3. Evidence-based classification** | Every "Not Exploitable" verdict includes the conditions the CVE requires, analysis of each condition against your code, code snippets demonstrating why conditions are or are not met, and a defensible conclusion |
-| **4. Efficient reanalysis** | Previously evaluated CVE+dependency combinations are not reanalyzed unnecessarily, keeping SCA processing efficient across repositories sharing common dependencies |
+| **4. Efficient reanalysis**          | Previously evaluated CVE+dependency combinations are not reanalyzed unnecessarily, keeping SCA processing efficient across repositories sharing common dependencies                                                |
 
 **Concrete example:** A scanner flags a Spring WebFlux static resource authorization bypass (CVSS 6.9). The CVE requires three conditions: WebFlux controllers, Spring static resource handling, and a non-permitAll security rule. Pixee's analysis finds no WebFlux controllers, no Spring static resource APIs, and no non-permitAll protection rules. Two of three conditions are unmet. Classification: Not Exploitable, with the evidence.
 
 **The three approaches compared:**
 
-| Approach | What It Tells You | What It Misses |
-|---|---|---|
-| **Version matching** (legacy SCA) | "This dependency version has a known CVE" | Whether the vulnerable function is called, whether exploitation conditions are met, whether security controls mitigate the risk |
-| **Basic reachability** | "The vulnerable function is reachable from your code" | Exploitation preconditions, input validation, configuration states |
-| **Exploitability verification** (Pixee) | "This CVE requires conditions X, Y, Z. Your code meets/does not meet each one. Here is the evidence." | — |
+| Approach                                | What It Tells You                                                                                     | What It Misses                                                                                                                  |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Version matching** (legacy SCA)       | "This dependency version has a known CVE"                                                             | Whether the vulnerable function is called, whether exploitation conditions are met, whether security controls mitigate the risk |
+| **Basic reachability**                  | "The vulnerable function is reachable from your code"                                                 | Exploitation preconditions, input validation, configuration states                                                              |
+| **Exploitability verification** (Pixee) | "This CVE requires conditions X, Y, Z. Your code meets/does not meet each one. Here is the evidence." | —                                                                                                                               |
 
 ## Efficient Reanalysis
 
@@ -67,12 +67,12 @@ When an SCA finding is confirmed as exploitable, Pixee generates a justified upg
 
 **Multi-manifest support:**
 
-| Language | Supported Manifest Formats |
-|---|---|
-| **Python** | requirements.txt, pyproject.toml, Pipfile, setup.py, setup.cfg |
-| **Java** | pom.xml, build.gradle |
-| **JavaScript** | package.json |
-| **.NET** | .csproj, packages.config |
+| Language       | Supported Manifest Formats                                     |
+| -------------- | -------------------------------------------------------------- |
+| **Python**     | requirements.txt, pyproject.toml, Pipfile, setup.py, setup.cfg |
+| **Java**       | pom.xml, build.gradle                                          |
+| **JavaScript** | package.json                                                   |
+| **.NET**       | .csproj, packages.config                                       |
 
 **Atomic PRs.** A single Pixee PR contains both the manifest version bump AND the downstream source-file changes the upgrade requires. When a major version upgrade changes an API, the import statements and call sites are updated in the same diff. No "upgrade succeeded, tests broken" half-states.
 
@@ -82,9 +82,9 @@ When an SCA finding is confirmed as exploitable, Pixee generates a justified upg
 
 The SCA pipeline benefits from Pixee's unified platform architecture. SAST and SCA findings share context and inform each other:
 
-| Intelligence Source | What It Provides |
-|---|---|
-| **SAST results** | Inform SCA risk scoring — a dependency vulnerability in code that also has SAST findings carries compounded risk |
-| **Historical triage decisions** | Prevent re-triaging the same CVEs across repositories |
-| **Secure coding guidelines** | Team preferences in natural language enrich SCA analysis |
-| **GitHub PRs and Jira tickets** | Previous SCA upgrade context provides upgrade history |
+| Intelligence Source             | What It Provides                                                                                                 |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **SAST results**                | Inform SCA risk scoring — a dependency vulnerability in code that also has SAST findings carries compounded risk |
+| **Historical triage decisions** | Prevent re-triaging the same CVEs across repositories                                                            |
+| **Secure coding guidelines**    | Team preferences in natural language enrich SCA analysis                                                         |
+| **GitHub PRs and Jira tickets** | Previous SCA upgrade context provides upgrade history                                                            |

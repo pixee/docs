@@ -24,13 +24,13 @@ Pixee's trust model rests on three governing principles:
 
 This distinction is the most important concept on this page.
 
-| Dimension | Deterministic Codemods | AI-Generated Fixes |
-|---|---|---|
-| **Input/output predictability** | Identical output every time | Output varies based on context; constrained by dataflow-bounded input |
-| **Scope** | Known vulnerability patterns (SQL injection, XSS, SSRF, deserialization, etc.) | Novel, custom, and multi-file patterns |
-| **Hallucination risk** | Zero | Mitigated by independent evaluation and retry/suppression |
-| **Validation requirement** | Pre-validated by design; open-source engines inspectable | Mandatory independent evaluation gate |
-| **LLM involvement** | None | Constrained generation with per-rule knowledge base guidance |
+| Dimension                       | Deterministic Codemods                                                         | AI-Generated Fixes                                                    |
+| ------------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| **Input/output predictability** | Identical output every time                                                    | Output varies based on context; constrained by dataflow-bounded input |
+| **Scope**                       | Known vulnerability patterns (SQL injection, XSS, SSRF, deserialization, etc.) | Novel, custom, and multi-file patterns                                |
+| **Hallucination risk**          | Zero                                                                           | Mitigated by independent evaluation and retry/suppression             |
+| **Validation requirement**      | Pre-validated by design; open-source engines inspectable                       | Mandatory independent evaluation gate                                 |
+| **LLM involvement**             | None                                                                           | Constrained generation with per-rule knowledge base guidance          |
 
 **Deterministic codemods** handle known vulnerability patterns — SQL injection parameterization, SSRF prevention, insecure deserialization, weak cryptography, and more. These are pre-built, rule-based transformations with zero LLM involvement. The open-source engines (codemodder-java, codemodder-python) are publicly inspectable — your security team or auditors can review the transformation rules before deployment.
 
@@ -46,11 +46,11 @@ Every AI-generated fix passes through an independent quality gate before a devel
 
 **Three-dimension rubric:**
 
-| Dimension | What It Checks |
-|---|---|
-| **Safety** | No behavior changes beyond fixing the vulnerability. No breaking API changes, missing imports, or unintended side effects. |
-| **Effectiveness** | Correctly addresses the security issue. The SAST scanner should stop flagging this finding after the fix is applied. |
-| **Cleanliness** | Proper formatting, indentation, no extraneous changes. Preserves existing comments and code structure. |
+| Dimension         | What It Checks                                                                                                             |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Safety**        | No behavior changes beyond fixing the vulnerability. No breaking API changes, missing imports, or unintended side effects. |
+| **Effectiveness** | Correctly addresses the security issue. The SAST scanner should stop flagging this finding after the fix is applied.       |
+| **Cleanliness**   | Proper formatting, indentation, no extraneous changes. Preserves existing comments and code structure.                     |
 
 **All three dimensions must pass.** This is not an aggregate score that lets a dangerous fix through because it scored well on formatting.
 
@@ -81,12 +81,12 @@ Every Pixee change flows through your full approval pipeline. PR-only delivery i
 
 ## Deployment Models
 
-| Model | What It Provides |
-|---|---|
-| **Cloud SaaS** | Pixee-managed infrastructure. Pixee accesses repositories via SCM integration (read-only code access, write access limited to PR creation). |
-| **Embedded cluster** | Turnkey self-hosted deployment on a single Linux VM. No Kubernetes expertise required. All data stays in your network. |
-| **Helm / BYO Kubernetes** | Deploys into your existing Kubernetes infrastructure (EKS, GKE, AKS, or self-managed). |
-| **Air-gapped** | Fully disconnected operation with customer-hosted LLM. Zero outbound internet after installation. |
+| Model                     | What It Provides                                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Cloud SaaS**            | Pixee-managed infrastructure. Pixee accesses repositories via SCM integration (read-only code access, write access limited to PR creation). |
+| **Embedded cluster**      | Turnkey self-hosted deployment on a single Linux VM. No Kubernetes expertise required. All data stays in your network.                      |
+| **Helm / BYO Kubernetes** | Deploys into your existing Kubernetes infrastructure (EKS, GKE, AKS, or self-managed).                                                      |
+| **Air-gapped**            | Fully disconnected operation with customer-hosted LLM. Zero outbound internet after installation.                                           |
 
 For air-gapped deployments, a customer-hosted LLM is required. The only outbound connection is license validation, which can be proxied.
 
@@ -101,15 +101,15 @@ For air-gapped deployments, a customer-hosted LLM is required. The only outbound
 
 Pixee is designed for AI governance committee review. Concrete answers to common governance questions:
 
-| Question | Answer |
-|---|---|
-| **What does the AI generate?** | Security fixes only — 1-5 line changes applying OWASP/SANS patterns. |
-| **Who validates the output?** | An independent evaluation layer (separate inference call), then your developers via PR review, then your CI/CD and SAST re-scanning. |
-| **Can it bypass human approval?** | No. PR-only delivery is an architectural constraint, not a configuration option. |
-| **What data does it access?** | Only code relevant to the specific vulnerability. No entire repositories, no PII, no secrets. |
-| **What if it is wrong?** | Fixes that fail quality evaluation are suppressed. Fixes that pass are reviewed by developers. Merged fixes can be reverted with standard Git operations. |
-| **What is the deterministic floor?** | Common vulnerability patterns are fixed with zero AI involvement using publicly inspectable, open-source codemod engines. |
-| **What controls exist on the AI itself?** | Constrained generation with security-specific context only, independent evaluation, structured retry with feedback, suppression on failure. |
+| Question                                  | Answer                                                                                                                                                    |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **What does the AI generate?**            | Security fixes only — 1-5 line changes applying OWASP/SANS patterns.                                                                                      |
+| **Who validates the output?**             | An independent evaluation layer (separate inference call), then your developers via PR review, then your CI/CD and SAST re-scanning.                      |
+| **Can it bypass human approval?**         | No. PR-only delivery is an architectural constraint, not a configuration option.                                                                          |
+| **What data does it access?**             | Only code relevant to the specific vulnerability. No entire repositories, no PII, no secrets.                                                             |
+| **What if it is wrong?**                  | Fixes that fail quality evaluation are suppressed. Fixes that pass are reviewed by developers. Merged fixes can be reverted with standard Git operations. |
+| **What is the deterministic floor?**      | Common vulnerability patterns are fixed with zero AI involvement using publicly inspectable, open-source codemod engines.                                 |
+| **What controls exist on the AI itself?** | Constrained generation with security-specific context only, independent evaluation, structured retry with feedback, suppression on failure.               |
 
 ## Audit Defensibility
 

@@ -165,4 +165,3 @@ severity:
 ```
 
 Each business unit or team can use a different configuration during rollout. As confidence builds, adjust the severity threshold downward and remove directory exclusions. See [PIXEE.yaml Reference](/configuration/pixee-yaml) for the complete configuration reference.
-

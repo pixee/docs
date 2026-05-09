@@ -22,21 +22,21 @@ Pixee provides two co-equal capabilities:
 
 Both capabilities work together. Triage eliminates the noise. Remediation fixes what remains.
 
-| Capability | What It Does | Proof Point |
-|---|---|---|
-| Triage | Exploitability analysis across natively integrated scanners | Up to 98% false positive reduction |
-| Remediation | Context-aware fixes as pull requests | 76% merge rate on production deployments |
-| Delivery | Standard PRs in GitHub, GitLab, ADO, Bitbucket | Native platform integration |
+| Capability  | What It Does                                                | Proof Point                              |
+| ----------- | ----------------------------------------------------------- | ---------------------------------------- |
+| Triage      | Exploitability analysis across natively integrated scanners | Up to 98% false positive reduction       |
+| Remediation | Context-aware fixes as pull requests                        | 76% merge rate on production deployments |
+| Delivery    | Standard PRs in GitHub, GitLab, ADO, Bitbucket              | Native platform integration              |
 
 ## Setup Flow
 
 Setting up Pixee takes three steps:
 
-| Step | Page | Time |
-|---|---|---|
-| 1. Connect your source control platform | [Connect Source Control](/getting-started/source-control) | 3-5 min |
-| 2. Connect your scanners | See below — required | 5-10 min |
-| 3. Review and merge your first fix | [Your First Fix](/getting-started/first-fix) | 5 min |
+| Step                                    | Page                                                      | Time     |
+| --------------------------------------- | --------------------------------------------------------- | -------- |
+| 1. Connect your source control platform | [Connect Source Control](/getting-started/source-control) | 3-5 min  |
+| 2. Connect your scanners                | See below — required                                      | 5-10 min |
+| 3. Review and merge your first fix      | [Your First Fix](/getting-started/first-fix)              | 5 min    |
 
 Total time to first merged fix: under 30 minutes for most teams.
 

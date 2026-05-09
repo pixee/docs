@@ -167,4 +167,3 @@ Pixee retains the following data categories, each with distinct lifecycle contro
 **LLM interaction logs** (prompts and responses) are retained for audit and debugging purposes. Enterprise customers can configure the retention period to match their organization's data governance policies.
 
 **Data purge** follows standard Kubernetes PVC lifecycle. Customers control retention and deletion through their infrastructure configuration. For cloud SaaS deployments, data deletion requests are handled through standard support channels.
-

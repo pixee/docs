@@ -92,4 +92,3 @@ Any scanner producing valid SARIF output works with Universal SARIF. Scanners kn
 - Brakeman (Ruby)
 - Custom scanners with SARIF export
 - Security platforms with SARIF aggregation (DefectDojo, GitHub Code Scanning, etc.)
-

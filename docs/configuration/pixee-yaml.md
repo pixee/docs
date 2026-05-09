@@ -253,4 +253,3 @@ Check the Pixee dashboard for your repository. The configuration status indicate
 | Exclusions not working                | Incorrect glob pattern                              | Test patterns locally; remember `**` matches across directories |
 | Codemod still running after disabling | Codemod name typo                                   | Verify the exact codemod identifier in the Pixee dashboard      |
 | Labels not appearing on PRs           | SCM permissions                                     | Ensure the Pixee integration has permission to apply labels     |
-

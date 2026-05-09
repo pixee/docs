@@ -57,7 +57,7 @@ Use this table to jump to the right page for your configuration task.
 | Tune AI triage sensitivity                            | [AI Settings](/configuration/ai-settings)            |
 | Control which finding categories get AI-powered fixes | [AI Settings](/configuration/ai-settings)            |
 | Configure reporting exports or dashboards             | [Reporting](/configuration/operations)               |
-| Export data for compliance audits                     | [Reporting](/configuration/operations)        |
+| Export data for compliance audits                     | [Reporting](/configuration/operations)               |
 
 ## Getting Started with Configuration
 
@@ -68,4 +68,3 @@ If you just installed Pixee, the recommended approach is:
 3. **Ongoing: tune organization settings.** As you scale to more repositories, use the Pixee dashboard to set organization-wide policies for scheduling, notifications, and AI behavior.
 
 Enterprise self-hosted deployments have additional configuration surfaces for infrastructure (LLM providers, authentication, observability) managed through the admin console or Helm values. See [Enterprise > Deployment Options](/enterprise/deployment) for details.
-

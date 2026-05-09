@@ -16,11 +16,11 @@ Triage is co-equal with [remediation](/platform/remediation). Together they clos
 
 Pixee routes every finding through a tiered system that applies the cheapest sufficient intelligence. Routing is automatic — no configuration required.
 
-| Tier | Strategy | Speed | LLM Cost | Auditability | Coverage |
-|---|---|---|---|---|---|
-| **Tier 1: Structured** | 15+ deterministic analyzers | Sub-second | Zero | Reproducible — same input, same output | Known vulnerability classes (SQL injection, XSS, command injection, path traversal, 12+ more) |
-| **Tier 2: Agentic** | AI agents dynamically search the codebase | Seconds | Per-finding | Readable investigation trail with every search and reasoning step | Ambiguous findings, novel frameworks, custom security controls |
-| **Tier 3: Adaptive** | Handles novel rule types automatically, expanding coverage as new rule types are encountered | Minutes (first encounter), faster on subsequent encounters | Per-finding (first encounter only) | Generated analyzer is inspectable | Novel rule types, proprietary scanners, custom rulesets |
+| Tier                   | Strategy                                                                                     | Speed                                                      | LLM Cost                           | Auditability                                                      | Coverage                                                                                      |
+| ---------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Tier 1: Structured** | 15+ deterministic analyzers                                                                  | Sub-second                                                 | Zero                               | Reproducible — same input, same output                            | Known vulnerability classes (SQL injection, XSS, command injection, path traversal, 12+ more) |
+| **Tier 2: Agentic**    | AI agents dynamically search the codebase                                                    | Seconds                                                    | Per-finding                        | Readable investigation trail with every search and reasoning step | Ambiguous findings, novel frameworks, custom security controls                                |
+| **Tier 3: Adaptive**   | Handles novel rule types automatically, expanding coverage as new rule types are encountered | Minutes (first encounter), faster on subsequent encounters | Per-finding (first encounter only) | Generated analyzer is inspectable                                 | Novel rule types, proprietary scanners, custom rulesets                                       |
 
 **End-to-end flow:**
 
@@ -54,23 +54,23 @@ A shared intelligence layer enriches all three tiers with codebase context. Reac
 
 Every triage verdict is a structured, machine-processable artifact.
 
-| Status | Meaning | Recommended Action |
-|---|---|---|
-| **True Positive** | The finding is a real, exploitable vulnerability in this code context | Escalate for remediation — Pixee can generate a fix automatically |
-| **False Positive** | The scanner fired on a pattern that is not exploitable in this context | Suppress from developer view; remove from backlog noise |
-| **Won't Fix** | Technically real but not worth fixing given the context (test code, acceptable risk, compensating controls) | Deprioritize; document the rationale for auditors |
-| **Suspicious** | Insufficient evidence for a definitive verdict | Route to a security engineer for manual assessment |
+| Status             | Meaning                                                                                                     | Recommended Action                                                |
+| ------------------ | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **True Positive**  | The finding is a real, exploitable vulnerability in this code context                                       | Escalate for remediation — Pixee can generate a fix automatically |
+| **False Positive** | The scanner fired on a pattern that is not exploitable in this context                                      | Suppress from developer view; remove from backlog noise           |
+| **Won't Fix**      | Technically real but not worth fixing given the context (test code, acceptable risk, compensating controls) | Deprioritize; document the rationale for auditors                 |
+| **Suspicious**     | Insufficient evidence for a definitive verdict                                                              | Route to a security engineer for manual assessment                |
 
 **What ships with every verdict:**
 
-| Component | What It Contains |
-|---|---|
-| **Typed status** | True Positive, False Positive, Won't Fix, or Suspicious — not a numeric score |
-| **Adjusted severity** | Severity re-ranked based on context signals |
-| **Justification prose** | Human-readable explanation of why this verdict was reached |
-| **Code snippets** | The sanitizer location, dataflow path, or framework control that drove the decision |
-| **Confidence score** | Quantified confidence in the verdict |
-| **Investigation trail** (Tier 2/3) | Step-by-step record of agent searches, control checks, and reasoning chain |
+| Component                          | What It Contains                                                                    |
+| ---------------------------------- | ----------------------------------------------------------------------------------- |
+| **Typed status**                   | True Positive, False Positive, Won't Fix, or Suspicious — not a numeric score       |
+| **Adjusted severity**              | Severity re-ranked based on context signals                                         |
+| **Justification prose**            | Human-readable explanation of why this verdict was reached                          |
+| **Code snippets**                  | The sanitizer location, dataflow path, or framework control that drove the decision |
+| **Confidence score**               | Quantified confidence in the verdict                                                |
+| **Investigation trail** (Tier 2/3) | Step-by-step record of agent searches, control checks, and reasoning chain          |
 
 **Audit defensibility.** Compliance officers and auditors see exactly why a finding was suppressed. The justification and code snippets provide a defensible record for every triage decision.
 

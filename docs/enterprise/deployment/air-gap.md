@@ -85,4 +85,3 @@ All three contexts share the same technical deployment. The difference is in the
 ## Installation
 
 Air-gapped installation follows the same Helm deployment process with additional configuration for container image transfer to a local registry, private LLM endpoint settings, proxy configuration, and CA certificates. Preflight checks validate LLM endpoint connectivity and license server access before the first analysis runs. For the current installation procedure and common issues, see the [deployment guide](https://app.pixee.ai/docs/deploy) and [Enterprise Troubleshooting](/enterprise/troubleshooting).
-

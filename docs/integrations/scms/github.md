@@ -138,4 +138,3 @@ Provide the App's credentials to your Pixee Enterprise installation:
 - **Verify connectivity** by checking the App's event log under **Settings → Developer settings → GitHub Apps → Advanced**. Successful deliveries to the Pixee webhook URL confirm the integration is reachable end-to-end.
 
 For deployment-model details (embedded cluster, Helm, air-gapped), see [Enterprise Deployment Options](/enterprise/deployment).
-

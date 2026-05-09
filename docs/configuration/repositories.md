@@ -97,4 +97,3 @@ A single Pixee deployment supports repositories from multiple SCM platforms simu
 Cross-platform visibility means your security team sees triage results and fix activity across every connected repository, regardless of which SCM hosts it.
 
 Enterprise self-hosted deployments have the same multi-SCM support. See [Enterprise > Deployment Options](/enterprise/deployment) for infrastructure details.
-

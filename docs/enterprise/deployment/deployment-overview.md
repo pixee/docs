@@ -136,4 +136,3 @@ Use this decision tree to narrow down your model:
 | Large           | 500+         | 32+ vCPU, 128+ GB RAM, 500+ GB SSD | Helm / BYO K8s (multi-node) |
 
 These are starting recommendations. Actual resource requirements depend on finding volume, concurrent analysis workload, and LLM inference latency. Contact Pixee solutions engineering for sizing guidance on large deployments.
-
