@@ -45,7 +45,7 @@ Each finding receives a classification with reasoning trail suitable for audit d
 
 True positive findings receive automated code fixes delivered as pull requests.
 
-Pixee generates fixes using deterministic codemods and AI-powered MagicMods. The deterministic codemods handle standard security patterns with zero LLM dependency. MagicMods address complex, codebase-specific scenarios where the fix requires understanding your application's architecture and conventions.
+Pixee generates fixes using deterministic codemods and AI-powered fixes. The deterministic codemods handle standard security patterns with zero LLM dependency. AI-powered fixes address complex, codebase-specific scenarios where the fix requires understanding your application's architecture and conventions.
 
 - Fixes match your team's code conventions -- Pixee generates fixes that use your existing libraries and follow your patterns
 - Semgrep identifies what is wrong; Pixee delivers the fix as a PR

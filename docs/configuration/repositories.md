@@ -26,7 +26,7 @@ For organizations with dozens or hundreds of repositories, Pixee supports bulk a
 
 1. Pixee scans the repository for connected scanner findings (SARIF imports, native scanner integrations).
 2. Triage Automation classifies findings as true positives, false positives, or won't-fix.
-3. Remediation Automation generates fixes for actionable findings using deterministic codemods plus AI-powered MagicMods.
+3. Remediation Automation generates fixes for actionable findings using deterministic codemods plus AI-powered fixes.
 4. PRs appear in your normal SCM workflow for review and merge.
 
 ### Platform-specific notes

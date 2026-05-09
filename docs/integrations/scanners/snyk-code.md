@@ -40,7 +40,7 @@ Snyk Code already produces lower false positive rates than traditional SAST tool
 
 Snyk's "DeepCode AI Fix" provides remediation suggestions within the Snyk UI. Pixee delivers a different outcome: complete, context-aware fixes as pull requests that developers review and merge through their standard code review workflow.
 
-Fixes are generated using deterministic codemods and AI-powered MagicMods for complex scenarios. Every fix matches the team's code conventions -- naming patterns, preferred libraries, and existing security utilities.
+Fixes are generated using deterministic codemods and AI-powered fixes for complex scenarios. Every fix matches the team's code conventions -- naming patterns, preferred libraries, and existing security utilities.
 
 For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 

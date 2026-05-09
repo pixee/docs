@@ -45,7 +45,7 @@ Both tiers feed into the same downstream [triage](/platform/triage) and [remedia
 | Scanner | Status | Integration Method |
 |---|---|---|
 | **Veracode** | GA | SARIF pipeline with tool-specific identification |
-| **Snyk Code** | GA | SARIF pipeline with MagicMod dispatcher support |
+| **Snyk Code** | GA | SARIF pipeline with AI fix dispatcher support |
 | **SonarQube / SonarCloud** | GA | SARIF pipeline with dedicated prompt builders |
 | **HCL AppScan** | GA | SARIF ingestion pipeline |
 | **Polaris (Synopsys)** | GA | SARIF ingestion pipeline |
@@ -53,7 +53,7 @@ Both tiers feed into the same downstream [triage](/platform/triage) and [remedia
 | **Contrast** | GA | SARIF ingestion pipeline |
 | **GitLab SAST** | GA | SARIF pipeline with dedicated namespace |
 | **GitLab SCA** | GA | SARIF pipeline |
-| **Trivy** | GA | SARIF pipeline with MagicMod dispatcher support |
+| **Trivy** | GA | SARIF pipeline with AI fix dispatcher support |
 | **DefectDojo** | GA | SARIF pipeline (aggregates findings from multiple scanners) |
 
 All named scanner integrations are GA. See individual scanner integration pages under [Integrations](/integrations/overview) for per-tool setup guides.

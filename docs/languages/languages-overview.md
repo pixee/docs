@@ -12,18 +12,18 @@ Pixee supports a broad and growing set of languages and IaC formats. Coverage ex
 
 ## Programming Languages
 
-| Language | Notes |
+| Language | Common Frameworks (examples) |
 |---|---|
 | **Java** | Spring Boot, Jakarta EE, Micronaut |
 | **Python** | Django, Flask, FastAPI |
-| **JavaScript / TypeScript / Node.js** | Express, React, Node.js server-side |
+| **JavaScript / TypeScript / Node.js** | Express, React, Next.js, Nest.js |
 | **C# / .NET** | ASP.NET Core, Blazor |
 | **Go** | Standard library, Gin, Echo |
 | **Ruby** | Rails, Sinatra |
 | **PHP** | Laravel, Symfony |
-| **Kotlin** | JVM ecosystem, Spring Boot |
+| **Kotlin** | Spring Boot, Android |
 | **Rust** | |
-| **Scala** | JVM ecosystem |
+| **Scala** | Play, Akka |
 | **Swift** | iOS/macOS |
 | **Objective-C** | iOS/macOS |
 

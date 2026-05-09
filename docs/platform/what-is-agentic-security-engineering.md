@@ -36,7 +36,7 @@ Up to 98% false positive reduction. See [Triage](/platform/triage) for the full 
 For confirmed vulnerabilities, the platform generates context-aware code fixes:
 
 - **Deterministic codemods:** Pre-built, rule-based transformations for known vulnerability patterns. Same input, same output, every time. Zero LLM involvement. Zero hallucination risk.
-- **AI-powered MagicMods:** For novel or complex patterns where deterministic rules cannot reach, constrained AI generates fixes that are independently evaluated for Safety, Effectiveness, and Cleanliness before any developer sees them.
+- **AI-powered fixes:** For novel or complex patterns where deterministic rules cannot reach, constrained AI generates fixes that are independently evaluated for Safety, Effectiveness, and Cleanliness before any developer sees them.
 - **Pull request delivery:** Every fix ships as a standard PR in GitHub, GitLab, Azure DevOps, or Bitbucket. Never a direct commit.
 
 76% merge rate on production deployments. See [Remediation](/platform/remediation) and [Security & Trust](/platform/security) for details.

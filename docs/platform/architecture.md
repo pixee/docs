@@ -58,11 +58,11 @@ For full triage details, see [Triage](/platform/triage).
 
 ## Remediation Engine
 
-The remediation engine uses a hybrid-intelligence model: deterministic codemods handle known vulnerability patterns, and AI-powered MagicMods handle everything else.
+The remediation engine uses a hybrid-intelligence model: deterministic codemods handle known vulnerability patterns, and AI-powered fixes handle everything else.
 
 **Deterministic codemods:** Pre-built, rule-based transformations for known OWASP/SANS security patterns. Same input, same output, every time. Zero LLM involvement. Zero hallucination risk. Open-source engines (codemodder-java, codemodder-python) are publicly inspectable. See [Remediation](/platform/remediation) for the full codemod library.
 
-**AI-powered MagicMods:** Handle custom frameworks, multi-file dataflow vulnerabilities, and novel patterns where deterministic rules cannot reach. Scanner-aware dispatchers for 8+ tools ensure the AI receives the right context for each scanner's output format.
+**AI-powered fixes:** Handle custom frameworks, multi-file dataflow vulnerabilities, and novel patterns where deterministic rules cannot reach. Scanner-aware dispatchers for 8+ tools ensure the AI receives the right context for each scanner's output format.
 
 **Multi-agent fix planning:** Complex fixes that span dependency manifests, source files, and configuration changes are planned before execution. Specialized agents handle version decisions, source file identification, and manifest updates independently. Plans are evaluated for quality before code changes begin.
 

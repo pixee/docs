@@ -24,7 +24,7 @@ Pixee's trust model rests on three governing principles:
 
 This distinction is the most important concept on this page.
 
-| Dimension | Deterministic Codemods | AI-Generated MagicMods |
+| Dimension | Deterministic Codemods | AI-Generated Fixes |
 |---|---|---|
 | **Input/output predictability** | Identical output every time | Output varies based on context; constrained by dataflow-bounded input |
 | **Scope** | Known vulnerability patterns (SQL injection, XSS, SSRF, deserialization, etc.) | Novel, custom, and multi-file patterns |
@@ -34,7 +34,7 @@ This distinction is the most important concept on this page.
 
 **Deterministic codemods** handle known vulnerability patterns — SQL injection parameterization, SSRF prevention, insecure deserialization, weak cryptography, and more. These are pre-built, rule-based transformations with zero LLM involvement. The open-source engines (codemodder-java, codemodder-python) are publicly inspectable — your security team or auditors can review the transformation rules before deployment.
 
-**AI-powered MagicMods** fire only when deterministic rules cannot reach — custom framework wrappers, multi-file dataflow vulnerabilities, novel patterns. Every MagicMod fix passes through the full independent evaluation pipeline.
+**AI-powered fixes** fire only when deterministic rules cannot reach — custom framework wrappers, multi-file dataflow vulnerabilities, novel patterns. Every AI-powered fix passes through the full independent evaluation pipeline.
 
 Routing between modes is automatic — no manual configuration.
 

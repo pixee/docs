@@ -17,9 +17,9 @@ Pixee's AI settings let you control how aggressively the triage engine classifie
 AI settings govern two behaviors:
 
 1. **Triage Automation behavior.** How aggressively Pixee classifies findings as true positives, false positives, or won't-fix. Higher sensitivity catches more issues but may surface more borderline findings.
-2. **Remediation Automation behavior.** Which finding types receive AI-generated fixes (MagicMods) versus deterministic code transformations (codemods), and the quality threshold fixes must meet before being presented as PRs.
+2. **Remediation Automation behavior.** Which finding types receive AI-generated fixes versus deterministic code transformations (codemods), and the quality threshold fixes must meet before being presented as PRs.
 
-These settings tune behavior. They do not bypass validation. Every fix Pixee generates -- whether from a deterministic codemod or an AI-powered MagicMod -- passes through the same multi-layer evaluation pipeline before reaching your PR queue.
+These settings tune behavior. They do not bypass validation. Every fix Pixee generates -- whether from a deterministic codemod or an AI-powered fix -- passes through the same multi-layer evaluation pipeline before reaching your PR queue.
 
 ## Security Gates vs. Guardrails
 
@@ -58,7 +58,7 @@ Remediation settings control how Pixee generates fixes.
 | Setting           | What It Controls                                                              |
 | ----------------- | ----------------------------------------------------------------------------- |
 | Fix categories    | Which CWE categories receive automated fixes                                  |
-| Fix mode          | Whether a category uses deterministic codemods, AI-powered MagicMods, or both |
+| Fix mode          | Whether a category uses deterministic codemods, AI-powered fixes, or both |
 | Quality threshold | Minimum evaluation score a fix must meet before being presented as a PR       |
 
 ### The hybrid model
@@ -66,16 +66,16 @@ Remediation settings control how Pixee generates fixes.
 Pixee uses a hybrid approach to fix generation:
 
 - **Deterministic codemods** apply well-known, deterministic code transformations. No LLM involved. These are the same open-source transformations available through [Codemodder](/open-source/codemodder).
-- **AI-powered MagicMods** handle complex scenarios where deterministic patterns are insufficient. These use LLM-powered analysis to understand context and generate fixes.
+- **AI-powered fixes** handle complex scenarios where deterministic patterns are insufficient. These use LLM-powered analysis to understand context and generate fixes.
 
-By default, both modes are active. You can disable MagicMods entirely and run only deterministic codemods, or restrict MagicMods to specific CWE categories.
+By default, both modes are active. You can disable AI-powered fixes entirely and run only deterministic codemods, or restrict AI-powered fixes to specific CWE categories.
 
 ### Gradual automation
 
 The recommended approach is progressive expansion:
 
 1. **Start conservative.** Enable deterministic codemods only. Review merge rates and fix quality.
-2. **Expand by category.** Enable MagicMods for specific CWE categories where your team sees high fix quality.
+2. **Expand by category.** Enable AI-powered fixes for specific CWE categories where your team sees high fix quality.
 3. **Broaden over time.** As confidence builds (tracked via merge rate and quality scores in [Reporting](/configuration/operations)), expand the scope of AI-powered fixes.
 
 The [Phased Rollout Guide](/enterprise/phased-rollout) covers this progression in detail.

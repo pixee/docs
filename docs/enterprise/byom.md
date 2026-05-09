@@ -8,38 +8,37 @@ description: Configure Pixee with your preferred LLM provider. Supports OpenAI, 
 sidebar_position: 8
 ---
 
-Pixee lets you choose your LLM provider instead of locking you into a single vendor. You own the API keys, pick the vendor, control the bill, and decide which model handles which task through seven named LLM routing tiers. This is the opposite of a black-box AI product.
+Pixee lets you choose your LLM provider instead of locking you into a single vendor. You own the API keys, pick the vendor, and control the bill. This is the opposite of a black-box AI product.
 
 ## Supported Providers
 
-| Provider | Description | Hosted Model Families | Use Case |
-|---|---|---|---|
-| **OpenAI** | Direct OpenAI API | GPT-4 family | General purpose; developer-friendly API |
-| **Anthropic** | Direct Anthropic API with Anthropic-optimized prompts | Claude 3 / Claude 3.5+ family | Teams preferring Anthropic models directly |
-| **Azure AI Foundry** | Azure-hosted models in customer's Azure tenant | GPT-4 family (OpenAI via Azure), Claude family (Anthropic via Azure) | Azure-centric enterprises with existing Azure agreements |
-| **AWS Bedrock** | AWS-hosted model marketplace in customer's AWS account | Claude family (Anthropic), Llama family (Meta), Mistral family, Amazon Nova | AWS-centric enterprises; broad model choice with AWS IAM controls |
-| **Google Cloud Vertex AI** | Google Cloud-hosted model platform | Gemini family; third-party models available on Vertex | GCP-centric enterprises; Google Cloud IAM integration |
-| **Oracle Cloud OCI Generative AI** | Oracle Cloud-hosted generative AI service | [NEEDS VERIFICATION: specific model families available on OCI Gen AI] | Organizations standardized on Oracle Cloud |
-| **Any OpenAI-compatible endpoint** | Self-hosted, private, or custom API gateway that implements the OpenAI API interface | Any model served behind an OpenAI-compatible interface | Air-gapped deployments, self-hosted models, enterprise API gateways |
+| Provider | Description |
+|---|---|
+| **OpenAI** | Direct OpenAI API |
+| **Anthropic** | Direct Anthropic API with Anthropic-optimized prompts |
+| **Azure AI Foundry** | Azure-hosted models in customer's Azure tenant (OpenAI and Anthropic models available) |
+| **AWS Bedrock** | AWS-hosted model marketplace in customer's AWS account |
+| **Google Cloud Vertex AI** | Google Cloud-hosted model platform |
+| **Oracle Cloud OCI Generative AI** | Oracle Cloud-hosted generative AI service |
+| **Any OpenAI-compatible endpoint** | Self-hosted, private, or custom API gateway — covers air-gapped deployments, self-hosted models, and enterprise API gateways |
 
 **Custom endpoint support** allows routing through enterprise API gateways. Custom header name/value pairs handle gateway authentication, so Pixee fits into your existing API management infrastructure.
 
-**Provider-family-aware prompting** is a design decision worth understanding: when configured for Anthropic, Pixee uses Anthropic-optimized triage prompts — not a lowest-common-denominator approach that treats all providers identically. This matters for triage accuracy and fix quality. Most single-model AI products cannot do this because they are built around a single provider.
+**Provider-aware prompting:** Pixee optimizes prompts for each provider rather than using a one-size-fits-all approach. This matters for triage accuracy and fix quality.
 
-## Model Families
+## Supported Model Families
 
-Pixee supports the following model families across provider platforms. Model versions evolve rapidly — Pixee tracks the current generation of each family rather than locking to specific version strings.
+Each provider platform gives access to a broad and evolving set of model families. The list below is indicative — model availability expands continuously across platforms.
 
-| Model Family | Provider Platforms | Typical Use in Pixee |
-|---|---|---|
-| **GPT-4 family** | OpenAI, Azure AI Foundry | General-purpose triage and fix generation |
-| **Claude 3 / Claude 3.5+ family** | Anthropic, AWS Bedrock, Azure AI Foundry | Triage reasoning, complex dataflow analysis, fix generation |
-| **Gemini family** | Google Cloud Vertex AI | Triage and generation for GCP-standardized environments |
-| **Meta Llama family** | AWS Bedrock, self-hosted | Cost-efficient classification tiers |
-| **Mistral family** | AWS Bedrock, Azure AI Foundry, self-hosted | Fast classification and generation |
-| **Amazon Nova family** | AWS Bedrock | AWS-native cost-efficient generation |
+- **OpenAI models** — available via OpenAI and Azure AI Foundry
+- **Anthropic Claude models** — available via Anthropic, AWS Bedrock, and Azure AI Foundry
+- **Google Gemini models** — available via Google Cloud Vertex AI
+- **Meta Llama models** — available via AWS Bedrock and self-hosted endpoints
+- **Mistral models** — available via AWS Bedrock, Azure AI Foundry, and self-hosted endpoints
+- **Amazon Nova models** — available via AWS Bedrock
+- **Any model behind an OpenAI-compatible API** — self-hosted or custom
 
-[NEEDS VERIFICATION: confirm which model families are tested and supported in current Pixee releases. The table above reflects provider platform support; actual tested model coverage may be a subset.]
+Model versions evolve rapidly. Pixee provides a current recommendation for each customer based on benchmarks across quality, speed, and cost. See [Model Recommendations](#model-recommendations) below.
 
 ## Model Recommendations
 
@@ -49,33 +48,21 @@ Based on your available cloud platforms and constraints, Pixee provides a recomm
 
 ## Hierarchical Model Routing
 
-Seven named tiers let enterprises control which model handles which workflow stage. Each tier is independently configurable for model selection, endpoint, and effort level.
+Pixee uses hierarchical routing to assign the right model capability to each task type — triage classification, deep reasoning, fix generation, and dependency analysis each have different requirements. You can assign different models to different task categories, letting you optimize for cost, latency, and quality independently.
 
-| Tier | Purpose | What You Control |
-|---|---|---|
-| **Default** | General-purpose calls | Model selection, endpoint |
-| **Reasoning** | Deep triage decisions requiring careful analysis | Higher-capability model for complex classifications |
-| **Fast** | Quick classification of straightforward findings | Lower-latency model for speed |
-| **Web Search** | External research augmentation | Model with web access capability |
-| **SCA** | Software composition analysis | Model tuned for dependency analysis |
-| **Deep Research** | In-depth vulnerability investigation | Research-capable model |
-| **Codegen** | Fix generation | Generation strategy selection |
+**Cost optimization.** Route straightforward classifications to faster, cheaper models. Reserve high-capability models for complex decisions that justify the cost.
 
-### Why This Matters
+**Quality optimization.** Each task type gets a model matched to its requirements — not a single model handling everything.
 
-**Cost optimization.** Route simple classifications to cheaper, faster models. Reserve expensive, high-capability models for complex triage decisions that justify the cost. Your LLM bill reflects the actual complexity of each task, not a one-size-fits-all model choice.
+**Latency control.** Speed-sensitive tasks use low-latency models. Quality-sensitive tasks use higher-capability models regardless of latency.
 
-**Quality optimization.** Complex multi-file vulnerabilities get a reasoning-capable model. Straightforward SQL injection patterns get a fast model. The right model for the right task.
-
-**Latency control.** Speed-sensitive workflows (fast classification, initial triage) use low-latency models. Quality-sensitive workflows (deep triage, fix generation) use higher-capability models regardless of latency.
-
-Most competitors in the AI-assisted AppSec space use a single model for all tasks. Hierarchical routing lets enterprises tune the cost-quality-latency surface per workflow stage.
+Contact your account team for guidance on model-to-task assignment for your deployment.
 
 ## Configuration
 
 **During installation:** Select your LLM provider through the admin console (embedded cluster) or Helm values (BYO Kubernetes). Provide the API key and endpoint URL.
 
-**Per-tier model configuration:** After initial setup, assign specific models to each of the seven tiers based on your cost, quality, and latency requirements.
+**Per-task model configuration:** After initial setup, assign specific models to each task category based on your cost, quality, and latency requirements.
 
 **Preflight checks:** Every provider configuration is validated at install time. Preflight checks catch LLM misconfiguration immediately -- not when your first analysis runs and fails. This is a small detail that saves hours of debugging.
 

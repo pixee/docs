@@ -39,12 +39,37 @@ This page is the canonical reference for what Pixee can triage and fix. It cover
 | **Dependency Vulnerabilities (SCA)** | CVEs in direct and transitive open-source dependencies | Yes | Deterministic (version bumps + source refactoring) |
 | **Container / Dockerfile Misconfigurations** | Running as root, insecure base image patterns, exposed secrets in layers | Yes | Both |
 | **Infrastructure as Code (IaC) Misconfigurations** | Terraform / CloudFormation / Kubernetes / Helm security misconfigurations, overly permissive IAM, unencrypted storage | Yes | Both |
+| **Open Redirect (CWE-601)** | Redirects to attacker-controlled URLs via unvalidated redirect parameters | Yes | Triage + Fix |
+| **Code Injection / Eval Injection (CWE-94)** | Dynamic code execution from untrusted input via eval, exec, or similar constructs | Yes | Triage + Fix |
+| **Prototype Pollution** | JavaScript object prototype manipulation via untrusted key assignment | Yes | Triage + Fix |
+| **Template Injection (SSTI)** | Server-side template injection via user input rendered in template engines | Yes | Triage + Fix |
+| **Insecure File Upload (CWE-434)** | Unrestricted file type or content upload without validation | Yes | Triage + Fix |
+| **Missing Security Headers** | CSP, HSTS, X-Frame-Options, and other protective headers absent from responses | Yes | Triage + Fix |
+| **CORS Misconfiguration** | Overly permissive cross-origin resource sharing allowing untrusted origins | Yes | Triage + Fix |
+| **Race Conditions / TOCTOU (CWE-362)** | Time-of-check to time-of-use vulnerabilities in file and resource access | Yes | Triage |
+| **Improper Input Validation (CWE-20)** | Missing or insufficient validation of input data before processing | Yes | Triage + Fix |
+| **Integer Overflow / Underflow (CWE-190)** | Arithmetic boundary condition errors leading to unexpected behavior | Yes | Triage + Fix |
+
+## Secrets Detection
+
+Pixee triages and remediates secrets found in source code across all supported scanners.
+
+| Category | Examples | Supported |
+|---|---|---|
+| **API Keys & Tokens** | Hardcoded API keys, OAuth tokens, service account keys | Triage + Fix |
+| **Credentials in Code** | Hardcoded passwords, database connection strings | Triage + Fix |
+| **Cloud Provider Secrets** | AWS access keys, GCP service account JSON, Azure credentials | Triage + Fix |
+| **Private Keys & Certificates** | RSA/EC private keys, TLS certificates committed to repos | Triage + Fix |
+
+## Custom Rules
+
+Pixee's triage engine handles custom scanner rules — including custom Semgrep rules, custom CodeQL queries, and internal rule sets — through its adaptive analysis tier. Custom rules don't require Pixee configuration; the engine generates triage logic for novel rule types automatically.
 
 ## Fix Modes Explained
 
 **Deterministic** — A pre-built codemod applies a rule-based transformation. Same input always produces the same output. Zero LLM involvement. Fastest fix path and most predictable output.
 
-**AI (MagicMod)** — An AI-powered fix is generated for patterns where deterministic rules do not reach — custom framework wrappers, multi-file dataflows, context-dependent sanitization, or novel vulnerability patterns. Every AI-generated fix passes through an independent quality evaluation before delivery.
+**AI** — An AI-powered fix is generated for patterns where deterministic rules do not reach — custom framework wrappers, multi-file dataflows, context-dependent sanitization, or novel vulnerability patterns. Every AI-generated fix passes through an independent quality evaluation before delivery.
 
 **Both** — A deterministic codemod handles well-understood patterns (standard libraries, known frameworks), while AI handles custom or complex variants. Routing is automatic.
 

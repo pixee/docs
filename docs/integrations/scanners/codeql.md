@@ -44,7 +44,7 @@ Each finding receives a classification with confidence score and audit-ready rea
 
 True positive findings receive automated code fixes delivered as pull requests.
 
-Pixee generates fixes using a combination of deterministic codemods and AI-powered MagicMods for complex, codebase-specific scenarios. Every fix goes through multi-layer validation before reaching a developer's review queue.
+Pixee generates fixes using a combination of deterministic codemods and AI-powered fixes for complex, codebase-specific scenarios. Every fix goes through multi-layer validation before reaching a developer's review queue.
 
 - Pre-configured handlers cover common CodeQL rules
 - Fixes match your team's code conventions -- naming patterns, preferred libraries, existing security utilities

@@ -30,7 +30,7 @@ The Coverity engine is known for thorough, conservative analysis. This thoroughn
 
 ### Remediation
 
-Polaris provides findings and remediation guidance but does not generate automated code fixes or pull requests. Pixee closes this gap. True positive findings are automatically fixed using deterministic codemods and AI-powered MagicMods. Fixes are delivered as pull requests matching the team's code conventions.
+Polaris provides findings and remediation guidance but does not generate automated code fixes or pull requests. Pixee closes this gap. True positive findings are automatically fixed using deterministic codemods and AI-powered fixes. Fixes are delivered as pull requests matching the team's code conventions.
 
 For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 

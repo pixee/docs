@@ -40,7 +40,7 @@ AppScan-specific severity levels are extracted and mapped appropriately, ensurin
 
 True positive findings receive automated code fixes delivered as pull requests. AppScan has dedicated tool-specific codemods in the remediation engine, meaning fixes are generated with awareness of the specific finding types and patterns AppScan reports.
 
-Fixes use deterministic codemods and AI-powered MagicMods.
+Fixes use deterministic codemods and AI-powered fixes.
 
 For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 

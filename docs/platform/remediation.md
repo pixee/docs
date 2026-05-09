@@ -4,11 +4,11 @@ slug: /platform/remediation
 track: both
 content_type: guide
 seo_title: "Automated Vulnerability Remediation | 76% Merge Rate"
-description: How Pixee generates security fixes using deterministic codemods and AI-powered MagicMods with independent quality evaluation.
+description: How Pixee generates security fixes using deterministic codemods and AI-powered fixes with independent quality evaluation.
 sidebar_position: 4
 ---
 
-Pixee generates validated security fixes and delivers them as pull requests. The hybrid-intelligence engine routes each vulnerability to the best fix method: deterministic codemods handle known patterns with zero AI variance, while AI-powered MagicMods handle novel and complex scenarios. Every fix passes independent quality evaluation before reaching a developer. Across production deployments, 76% of Pixee-generated fixes are merged by development teams after human review.
+Pixee generates validated security fixes and delivers them as pull requests. The hybrid-intelligence engine routes each vulnerability to the best fix method: deterministic codemods handle known patterns with zero AI variance, while AI-powered fixes handle novel and complex scenarios. Every fix passes independent quality evaluation before reaching a developer. Across production deployments, 76% of Pixee-generated fixes are merged by development teams after human review.
 
 Remediation is co-equal with [triage](/platform/triage). Triage determines what is real; remediation fixes what is real.
 
@@ -19,13 +19,13 @@ Pixee uses two fundamentally different fix engines, routed automatically based o
 | Engine | How It Works | When It Fires | Risk Profile |
 |---|---|---|---|
 | **Deterministic codemods** | Pre-built, rule-based transformations encoding OWASP/SANS patterns | Known patterns: SQL injection parameterization, SSRF prevention, insecure deserialization, weak cryptography, insecure temp files, SSL/TLS upgrades | Zero hallucination risk. Same input, same output, every time. |
-| **AI-powered MagicMods** | Constrained AI generation with dataflow-bounded context and per-rule knowledge base guidance | Custom frameworks, multi-file dataflow vulnerabilities, novel patterns, context-dependent sanitization | AI-generated, independently evaluated before reaching a PR. |
+| **AI-powered fixes** | Constrained AI generation with dataflow-bounded context and per-rule knowledge base guidance | Custom frameworks, multi-file dataflow vulnerabilities, novel patterns, context-dependent sanitization | AI-generated, independently evaluated before reaching a PR. |
 
-Routing is automatic. The system checks whether a deterministic codemod exists for the vulnerability type. If yes, the codemod fires — sub-second, zero LLM cost. If no deterministic rule handles it, a MagicMod generates a fix using scanner-aware context.
+Routing is automatic. The system checks whether a deterministic codemod exists for the vulnerability type. If yes, the codemod fires — sub-second, zero LLM cost. If no deterministic rule handles it, an AI-powered fix is generated using scanner-aware context.
 
 **Open-source engines.** The deterministic codemod engines (codemodder-java with 51 core codemods, codemodder-python with 60+ core codemods) are publicly inspectable. Customers and auditors can read the transformation rules before trusting them.
 
-**Scanner-aware dispatchers.** MagicMod includes scanner-aware dispatchers for each natively integrated scanner. Each dispatcher understands the scanner's output format and rule semantics, so the AI receives the right context for each finding.
+**Scanner-aware dispatchers.** The AI fix engine includes scanner-aware dispatchers for each natively integrated scanner. Each dispatcher understands the scanner's output format and rule semantics, so the AI receives the right context for each finding.
 
 ## Context Gathering
 

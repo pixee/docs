@@ -43,18 +43,7 @@ The result: Pixee's triage accuracy does not degrade when the scanner provides m
 
 True positive findings receive automated code fixes delivered as pull requests.
 
-Pixee includes three Checkmarx-specific remediation codemods built for the most common Checkmarx finding categories:
-
-| Codemod                | What It Fixes                             | Language   |
-| ---------------------- | ----------------------------------------- | ---------- |
-| SQL parameterization   | SQL injection via parameterized queries   | .NET       |
-| SQL parameterization   | SQL injection via parameterized queries   | JavaScript |
-| NoSQL parameterization | NoSQL injection via parameterized queries | JavaScript |
-
-Beyond these dedicated codemods, Pixee's general-purpose codemod library and AI-powered MagicMods address additional vulnerability types identified by Checkmarx.
-
-- Fixes match your team's code conventions
-- Developers review and merge Pixee PRs through their standard workflow
+Pixee includes Checkmarx-specific remediation codemods alongside its general-purpose codemod library and AI-powered fixes. Fixes match your team's code conventions. Developers review and merge Pixee PRs through their standard workflow.
 
 For the full list of vulnerability types Pixee triages and fixes, see [What Pixee Fixes](/platform/what-pixee-fixes).
 

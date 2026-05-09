@@ -40,7 +40,7 @@ The open source engines and the commercial Pixee platform serve different needs.
 
 **The Pixee platform** builds on the open source engines and adds:
 
-- **AI-powered MagicMods** for vulnerability patterns that deterministic rules cannot reach (custom frameworks, multi-file dataflows, context-dependent sanitization)
+- **AI-powered fixes** for vulnerability patterns that deterministic rules cannot reach (custom frameworks, multi-file dataflows, context-dependent sanitization)
 - **Triage Automation** with false positive reduction via exploitability analysis
 - **12 native scanner integrations** that ingest findings from Semgrep, CodeQL, Sonar, Snyk, and others
 - **Pull request delivery** so developers review fixes through their existing code review process

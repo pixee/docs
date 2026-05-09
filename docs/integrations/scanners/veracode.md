@@ -36,7 +36,7 @@ Each classified finding includes an audit-ready justification trail explaining t
 
 ### Remediation
 
-True positive findings receive automated code fixes delivered as pull requests. Pixee generates fixes using deterministic codemods and AI-powered MagicMods for complex, codebase-specific scenarios.
+True positive findings receive automated code fixes delivered as pull requests. Pixee generates fixes using deterministic codemods and AI-powered fixes for complex, codebase-specific scenarios.
 
 Veracode's own "Veracode Fix" provides AI-assisted remediation suggestions, but it does not deliver merged pull requests at scale. Pixee closes that gap: findings move from classification to fix to developer review in one pipeline. Developers review and merge Pixee PRs through their standard workflow.
 
