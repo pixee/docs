@@ -18,7 +18,7 @@ Automated vulnerability remediation programmatically fixes security findings wit
 
 ### How does automated vulnerability triage work?
 
-Pixee's triage engine routes each finding through three progressive tiers: deterministic analyzers for known patterns (sub-second, zero cost), AI agents for ambiguous cases (dynamic codebase investigation), and adaptive analyzer generation for novel rule types. Every verdict includes a structured justification — the specific code paths, security controls, or context that drove the decision. Up to 98% false positive reduction. See [Triage](/platform/triage) for the full architecture.
+Pixee's triage engine routes each finding through three progressive tiers: deterministic analyzers for known patterns (sub-second, zero cost), AI agents for ambiguous cases (dynamic codebase investigation), and automatic handling for novel and custom rule types — including proprietary scanners and custom rulesets — without manual configuration. Every verdict includes a structured justification — the specific code paths, security controls, or context that drove the decision. Up to 98% false positive reduction. See [Triage](/platform/triage) for the full architecture.
 
 ### What is a codemod?
 

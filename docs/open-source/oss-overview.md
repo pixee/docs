@@ -10,7 +10,7 @@ sidebar_position: 1
 
 # Open Source Overview
 
-Pixee maintains several open source projects that form the foundation of its deterministic remediation engine. The [Codemodder](/open-source/codemodder) framework provides language-specific engines for building security-focused code transformations. [codemodder-java](https://github.com/pixee/codemodder-java) (51+ codemods) and [codemodder-python](https://github.com/pixee/codemodder-python) (60+ codemods) are publicly inspectable on GitHub. These open source engines let customers and auditors review fix rules before trusting automated remediation in their codebase.
+Pixee maintains several open source projects that form the foundation of its deterministic remediation engine. The [Codemodder](/open-source/codemodder) framework provides language-specific engines for building security-focused code transformations. [codemodder-java](https://github.com/pixee/codemodder-java) and [codemodder-python](https://github.com/pixee/codemodder-python) are publicly inspectable on GitHub. These open source engines let customers and auditors review fix rules before trusting automated remediation in their codebase.
 
 ## Why Open Source Matters for Security Remediation
 
@@ -24,11 +24,11 @@ Automated code changes demand trust. When a tool modifies your source files, you
 
 ## Pixee Open Source Projects
 
-| Project                                                          | Language       | Codemods | Description                                                                     |
-| ---------------------------------------------------------------- | -------------- | -------- | ------------------------------------------------------------------------------- |
-| [codemodder-java](https://github.com/pixee/codemodder-java)      | Java           | 51+ core | Java codemod engine with AST transformations via ParseAndGo                     |
-| [codemodder-python](https://github.com/pixee/codemodder-python)  | Python         | 60+ core | Python codemod engine with LibCST, regex, and XML transformers                  |
-| [Codemodder framework](https://github.com/pixee/codemodder-spec) | Multi-language | N/A      | Core specification and framework for building language-specific codemod engines |
+| Project                                                          | Language       | Description                                                                     |
+| ---------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------- |
+| [codemodder-java](https://github.com/pixee/codemodder-java)      | Java           | Java codemod engine with AST transformations via ParseAndGo                     |
+| [codemodder-python](https://github.com/pixee/codemodder-python)  | Python         | Python codemod engine with LibCST, regex, and XML transformers                  |
+| [Codemodder framework](https://github.com/pixee/codemodder-spec) | Multi-language | Core specification and framework for building language-specific codemod engines |
 
 All projects are licensed under Apache 2.0.
 

@@ -10,7 +10,7 @@ sidebar_position: 2
 
 # Codemodder Framework
 
-Codemodder is an open source framework created by Pixee for building language-specific, security-focused code transformations called codemods. Each codemod encodes a specific security remediation pattern -- SQL injection parameterization, insecure deserialization hardening, cryptography upgrades -- as a deterministic, testable rule. Codemodder currently supports Java via [codemodder-java](https://github.com/pixee/codemodder-java) (51+ codemods) and Python via [codemodder-python](https://github.com/pixee/codemodder-python) (60+ codemods), with every codemod publicly inspectable on GitHub.
+Codemodder is an open source framework created by Pixee for building language-specific, security-focused code transformations called codemods. Each codemod encodes a specific security remediation pattern -- SQL injection parameterization, insecure deserialization hardening, cryptography upgrades -- as a deterministic, testable rule. Codemodder currently supports Java via [codemodder-java](https://github.com/pixee/codemodder-java) and Python via [codemodder-python](https://github.com/pixee/codemodder-python), with every codemod publicly inspectable on GitHub.
 
 ## What Codemods Are
 
@@ -49,7 +49,7 @@ The transformation pipeline follows a consistent flow from scanner finding to st
 
 ## codemodder-java
 
-The Java engine provides 51+ core codemods using ParseAndGo-based AST transformations.
+The Java engine provides a library of deterministic codemods using ParseAndGo-based AST transformations.
 
 **Fix categories covered:**
 
@@ -78,7 +78,7 @@ cd codemodder-java
 
 ## codemodder-python
 
-The Python engine provides 60+ core codemods with three distinct transformer strategies.
+The Python engine provides a library of deterministic codemods with three distinct transformer strategies.
 
 **Transformer strategies:**
 

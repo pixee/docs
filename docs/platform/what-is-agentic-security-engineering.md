@@ -51,7 +51,7 @@ The term "agentic" distinguishes this approach from both rule-based automation a
 
 **Multi-agent orchestration.** Specialized agents handle distinct tasks independently: triage analysis, fix planning, dependency resolution, and fix quality evaluation. The agent that generates a fix is not the agent that evaluates it — preventing self-grading.
 
-**Hybrid intelligence architecture.** The system routes each task to the cheapest sufficient method. Known patterns get deterministic rules (sub-second, zero cost). Complex patterns get AI investigation. Novel patterns generate new analyzers that are cached for future reuse. Routing is automatic.
+**Hybrid intelligence architecture.** The system routes each task to the cheapest sufficient method. Known patterns get deterministic rules (sub-second, zero cost). Complex patterns get AI investigation. Novel and custom rule types — including proprietary scanners and custom rulesets — are handled automatically, with coverage expanding as new rule types are encountered. Routing is automatic.
 
 ## End-to-End Processing Flow
 
@@ -67,10 +67,10 @@ SAST and SCA findings both flow through this same pipeline.
 
 ## Technical Stack
 
-| Component | Technology | Responsibility |
-|---|---|---|
-| **Backend Platform** | Java / Quarkus | Platform orchestration, scan ingestion, PR authoring, API layer, webhook processing |
-| **Analysis Service** | Python / FastAPI | Triage analysis, remediation generation, fix evaluation, SCA processing, code transformation |
-| **User Platform** | React / TypeScript | Dashboard, findings management, configuration, reporting |
+| Component | Responsibility |
+|---|---|
+| **Backend Platform** | Platform orchestration, scan ingestion, PR authoring, API layer, webhook processing |
+| **Analysis Service** | Triage analysis, remediation generation, fix evaluation, SCA processing, code transformation |
+| **User Interface** | Dashboard, findings management, configuration, reporting |
 
 See [Platform Architecture](/platform/architecture) for the full technical stack and LLM orchestration details.

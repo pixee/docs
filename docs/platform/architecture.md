@@ -8,7 +8,7 @@ description: Three-component architecture with progressive triage, hybrid remedi
 sidebar_position: 2
 ---
 
-Pixee's Agentic Security Engineering Platform uses a three-component architecture -- a Java/Quarkus backend, a Python/FastAPI analysis service, and a React/TypeScript frontend -- to process vulnerability findings from any scanner through unified triage and remediation pipelines. Findings arrive via webhook or API, pass through a progressive triage engine, and exit as validated pull requests. The system handles everything from sub-second deterministic triage to multi-agent AI fix planning without requiring you to replace any existing tools.
+Pixee's Agentic Security Engineering Platform uses a three-component architecture — a backend platform, an analysis service, and a user interface — to process vulnerability findings from any scanner through unified triage and remediation pipelines. Findings arrive via webhook or API, pass through a progressive triage engine, and exit as validated pull requests. The system handles everything from sub-second deterministic triage to multi-agent AI fix planning without requiring you to replace any existing tools.
 
 This page walks through the end-to-end processing flow, from scanner finding to merged fix.
 
@@ -46,9 +46,9 @@ The triage engine classifies every finding through a three-tier progressive arch
 | ---------------------- | ----------------------------------------- | ------------------------- | ----------- | ---------------------------------------------------------------------- |
 | **Tier 1: Structured** | 15+ deterministic analyzers               | Sub-second                | Zero        | Known patterns (SQL injection, XSS, command injection, path traversal) |
 | **Tier 2: Agentic**    | AI agents dynamically search the codebase | Seconds                   | Per-finding | Ambiguous findings, novel frameworks, custom security controls         |
-| **Tier 3: Adaptive**   | Generates custom analyzers on the fly     | Minutes (first encounter) | Per-finding | Novel rule types, proprietary scanners, custom rulesets                |
+| **Tier 3: Adaptive**   | Handles novel rule types automatically, expanding coverage as new rule types are encountered | Minutes (first encounter) | Per-finding | Novel rule types, proprietary scanners, custom rulesets                |
 
-**Progressive fallback:** The system attempts Tier 1 first. If the deterministic analyzer cannot reach a high-confidence verdict, the finding escalates to Tier 2. If the agentic investigation cannot resolve it, Tier 3 generates a custom analyzer and caches it for future reuse. Most findings resolve at Tier 1.
+**Progressive fallback:** The system attempts Tier 1 first. If the deterministic analyzer cannot reach a high-confidence verdict, the finding escalates to Tier 2. If the agentic investigation cannot resolve it, Tier 3 handles it automatically and coverage expands for future findings of the same type. Most findings resolve at Tier 1.
 
 A shared context-aware intelligence layer enriches every tier with codebase signals: dataflow quality, production versus test classification, security control detection, and intentionally-vulnerable project filtering. Every verdict includes a typed status, adjusted severity, justification with code snippets, and a confidence score.
 
@@ -62,7 +62,7 @@ The remediation engine uses a hybrid-intelligence model: deterministic codemods 
 
 **Deterministic codemods:** Pre-built, rule-based transformations for known OWASP/SANS security patterns. Same input, same output, every time. Zero LLM involvement. Zero hallucination risk. Open-source engines (codemodder-java, codemodder-python) are publicly inspectable. See [Remediation](/platform/remediation) for the full codemod library.
 
-**AI-powered fixes:** Handle custom frameworks, multi-file dataflow vulnerabilities, and novel patterns where deterministic rules cannot reach. Scanner-aware dispatchers for 8+ tools ensure the AI receives the right context for each scanner's output format.
+**AI-powered fixes:** Handle custom frameworks, multi-file dataflow vulnerabilities, and novel patterns where deterministic rules cannot reach. Pixee extracts maximum metadata from each scanner's native output format, normalizing findings so the AI receives the right context regardless of source scanner.
 
 **Multi-agent fix planning:** Complex fixes that span dependency manifests, source files, and configuration changes are planned before execution. Specialized agents handle version decisions, source file identification, and manifest updates independently. Plans are evaluated for quality before code changes begin.
 
@@ -107,11 +107,11 @@ For air-gapped deployments, a customer-hosted LLM is required. No code leaves th
 
 ## Three-Component Stack
 
-| Component            | Technology         | Responsibility                                                                               |
-| -------------------- | ------------------ | -------------------------------------------------------------------------------------------- |
-| **Backend Platform** | Java / Quarkus     | Platform orchestration, scan ingestion, PR authoring, API layer, webhook processing          |
-| **Analysis Service** | Python / FastAPI   | Triage analysis, remediation generation, fix evaluation, SCA processing, code transformation |
-| **User Platform**    | React / TypeScript | Dashboard, findings management, configuration, reporting                                     |
+| Component            | Responsibility                                                                               |
+| -------------------- | -------------------------------------------------------------------------------------------- |
+| **Backend Platform** | Platform orchestration, scan ingestion, PR authoring, API layer, webhook processing          |
+| **Analysis Service** | Triage analysis, remediation generation, fix evaluation, SCA processing, code transformation |
+| **User Interface**   | Dashboard, findings management, configuration, reporting                                     |
 
-The Analysis Service handles the computationally intensive work -- triage decisions, fix generation, and quality evaluation. The Backend Platform manages the integration surface: scanner webhooks, SCM platform APIs, and PR lifecycle. The User Platform provides visibility into triage outcomes, remediation activity, and configuration.
+The Analysis Service handles the computationally intensive work -- triage decisions, fix generation, and quality evaluation. The Backend Platform manages the integration surface: scanner webhooks, SCM platform APIs, and PR lifecycle. The User Interface provides visibility into triage outcomes, remediation activity, and configuration.
 

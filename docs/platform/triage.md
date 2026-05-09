@@ -20,19 +20,19 @@ Pixee routes every finding through a tiered system that applies the cheapest suf
 |---|---|---|---|---|---|
 | **Tier 1: Structured** | 15+ deterministic analyzers | Sub-second | Zero | Reproducible — same input, same output | Known vulnerability classes (SQL injection, XSS, command injection, path traversal, 12+ more) |
 | **Tier 2: Agentic** | AI agents dynamically search the codebase | Seconds | Per-finding | Readable investigation trail with every search and reasoning step | Ambiguous findings, novel frameworks, custom security controls |
-| **Tier 3: Adaptive** | Generates custom analyzers on the fly, caches for reuse | Minutes (first encounter), near-Tier-2 speed after caching | Per-finding (first encounter only) | Generated analyzer is inspectable | Novel rule types, proprietary scanners, custom rulesets |
+| **Tier 3: Adaptive** | Handles novel rule types automatically, expanding coverage as new rule types are encountered | Minutes (first encounter), faster on subsequent encounters | Per-finding (first encounter only) | Generated analyzer is inspectable | Novel rule types, proprietary scanners, custom rulesets |
 
 **End-to-end flow:**
 
 1. A finding arrives from any SARIF-producing scanner.
 2. Tier 1 checks whether a deterministic analyzer exists for this vulnerability class. If yes and confidence is sufficient, triage completes at sub-second speed.
 3. If Tier 1 cannot decide, the finding routes to Tier 2. An AI agent investigates the codebase — searching for security controls, tracing dataflow, and building an evidence chain.
-4. If Tier 2 cannot resolve the finding (typically because the rule type is novel), Tier 3 generates a custom analyzer, runs it, and caches it for future use.
+4. If Tier 2 cannot resolve the finding (typically because the rule type is novel), Tier 3 handles it automatically and coverage expands for future findings of the same type.
 5. Regardless of which tier resolved it, every finding exits with the same structured verdict.
 
 **Cost efficiency:** Most findings resolve at Tier 1, where there is no LLM cost. Only genuinely complex findings incur AI inference cost.
 
-**Self-extending coverage:** Every novel rule type Tier 3 encounters becomes a cached analyzer. Coverage grows automatically as you connect new scanners.
+**Expanding coverage:** Pixee handles novel and custom rule types automatically — including proprietary scanners, custom Semgrep rules, and internal CodeQL queries — without manual configuration. Coverage expands as new rule types are encountered.
 
 ## Context-Aware Intelligence
 
@@ -40,14 +40,7 @@ A shared intelligence layer enriches all three tiers with codebase context. Reac
 
 **Context signals evaluated on every finding:**
 
-**Dataflow quality.** Classified on a four-tier scale: strong multi-file, strong single-file, weak, and single-location. Higher dataflow quality increases confidence in true positive verdicts. Weak evidence can downgrade findings that basic reachability would flag as critical.
-
-| Tier | Description | Confidence Impact |
-|---|---|---|
-| **Strong Multi-File** | High-confidence taint propagation across multiple files | Highest confidence |
-| **Strong Single-File** | High-confidence dataflow within a single file | High confidence |
-| **Weak** | Partial or low-confidence dataflow | Reduced confidence; may downgrade findings |
-| **Single-Location** | Only the flagged line, no dataflow available | Lowest confidence |
+**Dataflow quality.** Pixee evaluates the quality and completeness of dataflow evidence available for each finding. Findings with stronger dataflow evidence — where the full taint path from source to sink is traceable — receive higher-confidence verdicts. Findings with limited dataflow evidence are handled conservatively.
 
 **Production vs. test classification.** A SQL injection in a production API endpoint is critical. The same pattern in a test fixture is not. Pixee classifies code context and adjusts severity accordingly, so dashboards reflect real exploit risk rather than raw rule counts.
 

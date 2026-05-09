@@ -37,7 +37,7 @@ Both tiers feed into the same downstream [triage](/platform/triage) and [remedia
 ### Checkmarx
 
 - Compensates for Checkmarx's sparse SARIF output (minimal rule descriptions, no codeFlows)
-- Uses a rule-ID-only prompting strategy that routes findings to the adaptive triage pipeline, which re-derives context directly from the codebase
+- Uses compensatory strategies that re-derive triage context directly from the codebase when scanner metadata is sparse
 - Includes Checkmarx-specific remediation codemods (SQL parameterization for .NET and JavaScript, NoSQL parameterization for JavaScript)
 
 ## Standard Scanner Integrations
@@ -45,15 +45,15 @@ Both tiers feed into the same downstream [triage](/platform/triage) and [remedia
 | Scanner | Status | Integration Method |
 |---|---|---|
 | **Veracode** | GA | SARIF pipeline with tool-specific identification |
-| **Snyk Code** | GA | SARIF pipeline with AI fix dispatcher support |
-| **SonarQube / SonarCloud** | GA | SARIF pipeline with dedicated prompt builders |
+| **Snyk Code** | GA | SARIF pipeline with native metadata extraction |
+| **SonarQube / SonarCloud** | GA | SARIF pipeline with native metadata extraction |
 | **HCL AppScan** | GA | SARIF ingestion pipeline |
 | **Polaris (Synopsys)** | GA | SARIF ingestion pipeline |
 | **Fortify** | GA | SARIF ingestion pipeline |
 | **Contrast** | GA | SARIF ingestion pipeline |
 | **GitLab SAST** | GA | SARIF pipeline with dedicated namespace |
 | **GitLab SCA** | GA | SARIF pipeline |
-| **Trivy** | GA | SARIF pipeline with AI fix dispatcher support |
+| **Trivy** | GA | SARIF pipeline with native metadata extraction |
 | **DefectDojo** | GA | SARIF pipeline (aggregates findings from multiple scanners) |
 
 All named scanner integrations are GA. See individual scanner integration pages under [Integrations](/integrations/overview) for per-tool setup guides.
@@ -81,7 +81,7 @@ Triage accuracy scales with the richness of metadata each scanner includes in it
 | **Rule descriptions** | Semgrep (fullDescription.text), CodeQL (help.markdown) | Enriches triage context with rule semantics |
 | **Severity ratings** | Most scanners | Input to context-aware severity adjustment |
 | **Language tags** | Most scanners | Routes to language-specific codemods and analysis strategies |
-| **Rule ID only** (minimal metadata) | Checkmarx, some internal tools | Triggers adaptive triage that re-derives context from the codebase |
+| **Rule ID only** (minimal metadata) | Checkmarx, some internal tools | Triggers compensatory strategies that re-derive context from the codebase |
 
 Rich-metadata scanners get deep extraction. Sparse-metadata scanners get compensatory strategies. No scanner is left behind.
 

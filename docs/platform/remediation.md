@@ -23,20 +23,13 @@ Pixee uses two fundamentally different fix engines, routed automatically based o
 
 Routing is automatic. The system checks whether a deterministic codemod exists for the vulnerability type. If yes, the codemod fires — sub-second, zero LLM cost. If no deterministic rule handles it, an AI-powered fix is generated using scanner-aware context.
 
-**Open-source engines.** The deterministic codemod engines (codemodder-java with 51 core codemods, codemodder-python with 60+ core codemods) are publicly inspectable. Customers and auditors can read the transformation rules before trusting them.
+**Open-source engines.** The deterministic codemod engines (codemodder-java, codemodder-python) are publicly inspectable. Customers and auditors can read the transformation rules before trusting them.
 
-**Scanner-aware dispatchers.** The AI fix engine includes scanner-aware dispatchers for each natively integrated scanner. Each dispatcher understands the scanner's output format and rule semantics, so the AI receives the right context for each finding.
+**Native scanner support.** Pixee extracts maximum metadata from each scanner's native output format, normalizing findings for consistent downstream processing regardless of source scanner. Native integrations benefit from richer metadata than generic SARIF ingestion.
 
 ## Context Gathering
 
-Fix quality is bounded by what the system can see. Context gathering controls this boundary using the same four-tier dataflow quality classification that drives triage accuracy.
-
-| Tier | Description | Gathering Strategy |
-|---|---|---|
-| **Strong Multi-File** | High-confidence taint propagation across multiple files | Traces full cross-file dataflow; includes all files in the taint path |
-| **Strong Single-File** | High-confidence dataflow within a single file | Full file context with highlighted vulnerable region |
-| **Weak** | Partial or low-confidence dataflow information | Targeted excerpts around the flagged location |
-| **Single-Location** | Only the flagged line, no dataflow available | Surrounding context with heuristic file matching |
+Fix quality is bounded by what the system can see. Context gathering adapts based on the quality and completeness of dataflow evidence available for each finding. Pixee evaluates whether the full taint path from source to sink is traceable and adjusts context accordingly — tracing full cross-file dataflow when available, and using targeted excerpts when evidence is limited.
 
 Key capabilities: follows SARIF-based taint propagation across files, highlights the vulnerable region with inline markers, adapts between whole-file and targeted excerpts based on file size, and merges consecutive vulnerable regions to reduce token cost.
 
@@ -94,6 +87,6 @@ Standard `git revert` applies if any merged change needs to be undone. There is 
 | **Universal SARIF** | Any SARIF-producing scanner (50+ validated) |
 | **Platforms** | GitHub, GitLab, Azure DevOps, Bitbucket |
 
-Deterministic codemod coverage is deepest for Java (51+ codemods) and Python (60+ codemods). JavaScript/TypeScript, .NET, Go, and PHP have expanding codemod libraries supplemented by AI-powered generation for patterns not yet covered by deterministic rules.
+Deterministic codemod coverage is deepest for Java and Python. JavaScript/TypeScript, .NET, Go, and PHP have expanding codemod libraries supplemented by AI-powered generation for patterns not yet covered by deterministic rules.
 
 SCA findings flow through the same remediation pipeline as SAST findings — see [SCA](/platform/sca) for dependency-specific details.

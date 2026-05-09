@@ -30,7 +30,7 @@ Pixee answers "Can this CVE actually be triggered in this codebase?" — not jus
 | **1. External research** | A CVE research agent gathers CVE details, changelogs, patches, and release notes to identify the specific conditions required for exploitation |
 | **2. Internal analysis** | The triage agent examines how the library is actually used in your code — which functions are called, what input reaches them, what security controls exist |
 | **3. Evidence-based classification** | Every "Not Exploitable" verdict includes the conditions the CVE requires, analysis of each condition against your code, code snippets demonstrating why conditions are or are not met, and a defensible conclusion |
-| **4. Cache acceleration** | Verified CVE+dependency combinations are cached. The same analysis is not repeated across repositories sharing common dependencies |
+| **4. Efficient reanalysis** | Previously evaluated CVE+dependency combinations are not reanalyzed unnecessarily, keeping SCA processing efficient across repositories sharing common dependencies |
 
 **Concrete example:** A scanner flags a Spring WebFlux static resource authorization bypass (CVSS 6.9). The CVE requires three conditions: WebFlux controllers, Spring static resource handling, and a non-permitAll security rule. Pixee's analysis finds no WebFlux controllers, no Spring static resource APIs, and no non-permitAll protection rules. Two of three conditions are unmet. Classification: Not Exploitable, with the evidence.
 
@@ -42,13 +42,9 @@ Pixee answers "Can this CVE actually be triggered in this codebase?" — not jus
 | **Basic reachability** | "The vulnerable function is reachable from your code" | Exploitation preconditions, input validation, configuration states |
 | **Exploitability verification** (Pixee) | "This CVE requires conditions X, Y, Z. Your code meets/does not meet each one. Here is the evidence." | — |
 
-## Verification Cache
+## Efficient Reanalysis
 
-Verified CVE+dependency combinations are cached for reuse across repositories. Organizations with many repositories sharing common dependencies verify once, not N times.
-
-- Significantly reduces cost for repeated CVE analysis
-- Cache remains valid until CVE data or dependency context changes
-- Particularly valuable for large enterprises where dozens of repositories import the same libraries
+Pixee avoids redundant reanalysis of previously evaluated dependency/vulnerability combinations, keeping SCA processing efficient at scale. Organizations with many repositories sharing common dependencies benefit automatically — repeated CVE analysis across repositories is avoided without requiring manual coordination.
 
 ## Transitive Dependency Handling
 
