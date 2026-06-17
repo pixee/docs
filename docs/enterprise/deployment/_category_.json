@@ -1,0 +1,10 @@
+{
+  "label": "Deployment Options",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "enterprise/deployment/deployment-overview"
+  }
+}

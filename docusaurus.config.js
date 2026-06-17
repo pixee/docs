@@ -70,27 +70,141 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // Old top-level pages → new IA
+          { from: "/intro", to: "/" },
+          { from: "/installing", to: "/" },
+          { from: "/faqs", to: "/faq/general" },
+          { from: "/languages", to: "/languages/overview" },
+          { from: "/open-pixee", to: "/open-source/codemodder" },
+          { from: "/open-source/overview", to: "/open-source/codemodder" },
+          { from: "/open-source/contributing", to: "/open-source/codemodder" },
           {
-            to: "/code-scanning-tools/overview",
-            from: "/integrations",
+            from: "/running_on_public_github_repos",
+            to: "/getting-started/source-control",
+          },
+          { from: "/supported-scms", to: "/getting-started/source-control" },
+          { from: "/using-pixeebot", to: "/getting-started/source-control" },
+          { from: "/getting-started", to: "/" },
+          {
+            from: "/configuration/scheduling",
+            to: "/configuration/operations",
+          },
+          { from: "/api/codetf", to: "/api/overview" },
+
+          // Old code-scanning-tools/* → new integrations/scanners/*
+          {
+            from: "/code-scanning-tools/overview",
+            to: "/integrations/overview",
           },
           {
-            to: "/code-scanning-tools/sonar",
-            from: "/integrations/sonar",
+            from: "/code-scanning-tools/codeql",
+            to: "/integrations/scanners/codeql",
           },
           {
-            to: "/code-scanning-tools/codeql",
-            from: "/integrations/codeql",
+            from: "/code-scanning-tools/contrast",
+            to: "/integrations/scanners/contrast",
           },
           {
-            to: "/code-scanning-tools/semgrep",
-            from: "/integrations/semgrep",
+            from: "/code-scanning-tools/semgrep",
+            to: "/integrations/scanners/semgrep",
+          },
+          {
+            from: "/code-scanning-tools/snyk",
+            to: "/integrations/scanners/snyk-code",
+          },
+          {
+            from: "/code-scanning-tools/sonar",
+            to: "/integrations/scanners/sonarqube",
+          },
+          {
+            from: "/code-scanning-tools/sonarqube",
+            to: "/integrations/scanners/sonarqube",
           },
 
-          // You can add more redirects here as needed
+          // Pre-existing /integrations/* aliases → updated to new IA
+          { from: "/integrations", to: "/integrations/overview" },
+          {
+            from: "/integrations/sonar",
+            to: "/integrations/scanners/sonarqube",
+          },
+
+          // Flat /integrations/<name> URLs from the prior PR → new SCM/scanner subfolders
+          {
+            from: "/integrations/codeql",
+            to: "/integrations/scanners/codeql",
+          },
+          {
+            from: "/integrations/semgrep",
+            to: "/integrations/scanners/semgrep",
+          },
+          {
+            from: "/integrations/snyk-code",
+            to: "/integrations/scanners/snyk-code",
+          },
+          {
+            from: "/integrations/sonarqube",
+            to: "/integrations/scanners/sonarqube",
+          },
+          {
+            from: "/integrations/veracode",
+            to: "/integrations/scanners/veracode",
+          },
+          {
+            from: "/integrations/checkmarx",
+            to: "/integrations/scanners/checkmarx",
+          },
+          {
+            from: "/integrations/appscan",
+            to: "/integrations/scanners/appscan",
+          },
+          {
+            from: "/integrations/contrast",
+            to: "/integrations/scanners/contrast",
+          },
+          {
+            from: "/integrations/gitlab-sast",
+            to: "/integrations/scanners/gitlab-sast",
+          },
+          { from: "/integrations/github", to: "/integrations/scms/github" },
+
+          // Removed consolidated wrappers → overview
+          {
+            from: "/integrations/commercial-scanners",
+            to: "/integrations/overview",
+          },
+          {
+            from: "/integrations/oss-aggregator-scanners",
+            to: "/integrations/overview",
+          },
+          {
+            from: "/integrations/scm-platforms",
+            to: "/integrations/overview",
+          },
         ],
       },
     ],
+    "docusaurus-plugin-llms",
+  ],
+
+  headTags: [
+    {
+      tagName: "script",
+      attributes: { type: "application/ld+json" },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Pixee",
+        url: "https://pixee.ai",
+        logo: "https://pixee.ai/images/pixee-logo.png",
+        sameAs: [
+          "https://github.com/pixee",
+          "https://www.linkedin.com/company/pixee/",
+          "https://twitter.com/pixaboratory",
+        ],
+        description:
+          "Pixee automates security vulnerability triage and remediation at scale.",
+      }),
+    },
   ],
 
   themeConfig:

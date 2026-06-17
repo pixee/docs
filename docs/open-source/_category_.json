@@ -1,0 +1,10 @@
+{
+  "label": "Open Source",
+  "position": 9,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "open-source/codemodder"
+  }
+}
