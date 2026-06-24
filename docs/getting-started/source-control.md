@@ -35,13 +35,13 @@ For public repositories without an existing scanner, see the [GitHub Setup guide
 
 ## GitLab
 
-| Item                    | Detail                                                                                         |
-| ----------------------- | ---------------------------------------------------------------------------------------------- |
-| **Integration type**    | Personal access token (service account recommended)                                            |
+| Item                    | Detail                                                                                                                         |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **Integration type**    | Personal access token (service account recommended)                                                                            |
 | **Required scopes**     | `api`, `read_user`, `read_repository`, `read_api`, `write_repository`, `ai_features`, `read_registry`, `read_virtual_registry` |
-| **What you need**       | Maintainer or Owner role on target projects; Owner on parent group for group-level setup       |
-| **Instances supported** | GitLab SaaS (gitlab.com) and self-managed GitLab                                               |
-| **Scanner ingestion**   | Automatic via GitLab Security Dashboard if you use GitLab SAST or other CI-integrated scanners |
+| **What you need**       | Maintainer or Owner role on target projects; Owner on parent group for group-level setup                                       |
+| **Instances supported** | GitLab SaaS (gitlab.com) and self-managed GitLab                                                                               |
+| **Scanner ingestion**   | Automatic via GitLab Security Dashboard if you use GitLab SAST or other CI-integrated scanners                                 |
 
 **Quick steps:**
 
@@ -75,14 +75,14 @@ For public repositories without an existing scanner, see the [GitHub Setup guide
 
 ## Bitbucket
 
-| Item                    | Detail                                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Integration type**    | API token (Bitbucket Cloud) or repository access token                                                        |
+| Item                    | Detail                                                                                                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Integration type**    | API token (Bitbucket Cloud) or repository access token                                                                                                                    |
 | **Required scopes**     | `read:user:bitbucket`, `read:workspace:bitbucket`, `read:repository:bitbucket`, `read:pullrequest:bitbucket`, `write:repository:bitbucket`, `write:pullrequest:bitbucket` |
-| **What you need**       | Admin on the target workspace (Cloud) or Project Admin (Server)                                               |
-| **Instances supported** | Bitbucket Cloud (bitbucket.org) and Bitbucket Data Center / Server                                            |
-| **Credentials**         | Three values required: service account username, email address, and API token                                 |
-| **Scanner ingestion**   | Via Bitbucket Pipelines scanner steps; SARIF upload supported                                                 |
+| **What you need**       | Admin on the target workspace (Cloud) or Project Admin (Server)                                                                                                           |
+| **Instances supported** | Bitbucket Cloud (bitbucket.org) and Bitbucket Data Center / Server                                                                                                        |
+| **Credentials**         | Three values required: service account username, email address, and API token                                                                                             |
+| **Scanner ingestion**   | Via Bitbucket Pipelines scanner steps; SARIF upload supported                                                                                                             |
 
 **Quick steps:**
 
