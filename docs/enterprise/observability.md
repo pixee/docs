@@ -4,7 +4,7 @@ slug: /enterprise/observability
 track: leader
 content_type: guide
 seo_title: Observability - Metrics, Logs, Traces, and Dashboards for Pixee Enterprise
-description: Monitor Pixee Enterprise with a bundled VictoriaMetrics, VictoriaLogs, and VictoriaTraces stack, with dashboards served through VMUI. BYO observability supported.
+description: Monitor Pixee Enterprise with bundled VictoriaMetrics, Grafana dashboards, distributed tracing, and log aggregation. BYO observability supported.
 sidebar_position: 9
 ---
 
@@ -12,16 +12,17 @@ Pixee Enterprise ships a complete observability stack -- metrics, logs, traces, 
 
 ## Bundled Observability Stack
 
-The Helm chart includes four observability components, each shipped as a conditional subchart that can be independently enabled or disabled:
+The Helm chart includes five observability components, each shipped as a conditional subchart that can be independently enabled or disabled:
 
-| Component                     | Purpose                                     | Replaceable?                             |
-| ----------------------------- | ------------------------------------------- | ---------------------------------------- |
-| **VictoriaMetrics (VMUI)**    | Metrics collection, storage, and dashboards | Yes -- BYO Prometheus or VictoriaMetrics |
-| **VictoriaLogs + collector**  | Log aggregation                             | Yes -- BYO log pipeline                  |
-| **VictoriaTraces**            | Distributed tracing                         | Yes -- BYO tracing solution              |
-| **Sentry**                    | Error reporting                             | Toggleable (opt-in / opt-out)            |
+| Component                     | Purpose                        | Replaceable?                             |
+| ----------------------------- | ------------------------------ | ---------------------------------------- |
+| **VictoriaMetrics**           | Metrics collection and storage | Yes -- BYO Prometheus or VictoriaMetrics |
+| **Victoria-logs + collector** | Log aggregation                | Yes -- BYO log pipeline                  |
+| **Victoria-traces**           | Distributed tracing            | Yes -- BYO tracing solution              |
+| **Grafana k8s-monitoring**    | Dashboards and visualization   | Yes -- BYO Grafana                       |
+| **Sentry**                    | Error reporting                | Toggleable (opt-in / opt-out)            |
 
-Pixee ships curated dashboards built specifically for the Pixee platform, served through the VictoriaMetrics VMUI at `/metrics/vmui/#/dashboards` once local metrics are enabled. These dashboards cover AI service performance, per-finding task metrics, analysis throughput, LLM performance, and fix quality.
+Pixee ships curated dashboards built specifically for the Pixee platform -- not just upstream chart defaults. These dashboards cover platform health, analysis throughput, LLM performance, and fix quality metrics.
 
 **Why this matters for enterprise evaluation:** Legacy on-premises scanners (Checkmarx, Veracode) predate Kubernetes-native observability and do not ship monitoring. SaaS scanners do not expose observability because the customer does not run the infrastructure. Pixee ships both the platform and the tools to monitor it.
 
@@ -29,9 +30,11 @@ Pixee ships curated dashboards built specifically for the Pixee platform, served
 
 Most enterprise platform teams already run an observability stack. Pixee integrates rather than duplicating.
 
-**Disable embedded subcharts.** Turn off any embedded component (VictoriaMetrics, VictoriaLogs, VictoriaTraces) and configure Pixee to emit telemetry to your existing platform. Each subchart is independently toggleable.
+**Disable embedded subcharts.** Turn off any embedded component (VictoriaMetrics, Victoria-logs, Victoria-traces, Grafana) and configure Pixee to emit telemetry to your existing platform. Each subchart is independently toggleable.
 
-**Standard pipelines.** VictoriaMetrics and VictoriaLogs are compatible with standard Prometheus and OpenTelemetry pipelines, so you can scrape, remote-write, or forward Pixee telemetry to an external platform (Prometheus, Grafana, Datadog, or similar) without custom adapters or exposing the cluster to inbound connections.
+**Grafana Cloud integration.** Grafana Cloud Private Data Connector support routes metrics from your self-hosted Pixee deployment to your Grafana Cloud tenant without exposing the cluster to inbound connections.
+
+**Standard pipelines.** Pixee's telemetry is compatible with standard Prometheus and OpenTelemetry pipelines. If your team already runs Prometheus, Datadog, or a similar platform, Pixee's metrics integrate without custom adapters.
 
 **Verification.** After configuring your integration, verify that metrics, logs, and traces are flowing to your platform. Pixee's admin console shows telemetry status for embedded components.
 

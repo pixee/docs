@@ -32,7 +32,7 @@ A single Linux VM hosts the complete Pixee platform as a turnkey appliance. The 
 
 The Pixee Helm chart deploys into an existing customer-managed Kubernetes cluster. Conditional subcharts let platform engineering teams swap embedded components for their own services -- BYO database, object store, observability, and identity provider.
 
-**Component layout:** Customer Kubernetes cluster (EKS, GKE, AKS, or self-managed) runs Pixee platform, analysis service, and user platform as pods. Embedded subcharts (SeaweedFS, CloudNativePG, VictoriaMetrics, VictoriaLogs, VictoriaTraces, Authentik) are each independently replaceable. LLM inference routes to the customer's provider. SCM integration connects via the cluster's network.
+**Component layout:** Customer Kubernetes cluster (EKS, GKE, AKS, or self-managed) runs Pixee platform, analysis service, and user platform as pods. Embedded subcharts (SeaweedFS, CloudNativePG, VictoriaMetrics, Grafana, Authentik) are each independently replaceable. LLM inference routes to the customer's provider. SCM integration connects via the cluster's network.
 
 ### Air-Gapped Architecture
 

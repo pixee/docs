@@ -4,7 +4,7 @@ slug: /enterprise/byom
 track: leader
 content_type: guide
 seo_title: Bring Your Own Model - Choose Your LLM Provider for Pixee
-description: Configure Pixee with your preferred LLM provider. Supports OpenAI, Anthropic, Azure OpenAI / Azure AI Foundry, Azure Anthropic, Databricks, OCI Generative AI, and any OpenAI-compatible endpoint.
+description: Configure Pixee with your preferred LLM provider. Supports OpenAI, Anthropic, Azure AI Foundry, AWS Bedrock, Google Vertex AI, and more with hierarchical model routing.
 sidebar_position: 8
 ---
 
@@ -12,15 +12,15 @@ Pixee lets you choose your LLM provider instead of locking you into a single ven
 
 ## Supported Providers
 
-| Provider                            | Description                                                                                                                  |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| **OpenAI**                          | Direct OpenAI API                                                                                                           |
-| **Anthropic**                       | Direct Anthropic API with Anthropic-optimized prompts                                                                       |
-| **Azure OpenAI / Azure AI Foundry** | Azure-hosted OpenAI and other foundation models in the customer's Azure tenant                                             |
-| **Azure Anthropic**                 | Anthropic (Claude) models served through Azure infrastructure                                                              |
-| **Databricks AI**                   | Models served from Databricks Mosaic AI serving endpoints (OpenAI-compatible)                                             |
-| **Oracle Cloud OCI Generative AI**  | Oracle Cloud-hosted generative AI service (Llama and custom model deployments)                                            |
-| **Any OpenAI-compatible endpoint**  | Self-hosted, private, or custom API gateway — also the path for AWS Bedrock; covers air-gapped deployments, self-hosted models, and enterprise API gateways |
+| Provider                           | Description                                                                                                                  |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **OpenAI**                         | Direct OpenAI API                                                                                                            |
+| **Anthropic**                      | Direct Anthropic API with Anthropic-optimized prompts                                                                        |
+| **Azure AI Foundry**               | Azure-hosted models in customer's Azure tenant (OpenAI and Anthropic models available)                                       |
+| **AWS Bedrock**                    | AWS-hosted model marketplace in customer's AWS account                                                                       |
+| **Google Cloud Vertex AI**         | Google Cloud-hosted model platform                                                                                           |
+| **Oracle Cloud OCI Generative AI** | Oracle Cloud-hosted generative AI service                                                                                    |
+| **Any OpenAI-compatible endpoint** | Self-hosted, private, or custom API gateway — covers air-gapped deployments, self-hosted models, and enterprise API gateways |
 
 **Custom endpoint support** allows routing through enterprise API gateways. Custom header name/value pairs handle gateway authentication, so Pixee fits into your existing API management infrastructure.
 
@@ -30,10 +30,13 @@ Pixee lets you choose your LLM provider instead of locking you into a single ven
 
 Each provider platform gives access to a broad and evolving set of model families. The list below is indicative — model availability expands continuously across platforms.
 
-- **OpenAI models** — available via OpenAI, Azure OpenAI, and Azure AI Foundry
-- **Anthropic Claude models** — available via Anthropic and Azure Anthropic
-- **Llama and other open or custom models** — available via OCI Generative AI or self-hosted OpenAI-compatible endpoints
-- **Any model behind an OpenAI-compatible API** — including AWS Bedrock, Databricks, or a custom gateway
+- **OpenAI models** — available via OpenAI and Azure AI Foundry
+- **Anthropic Claude models** — available via Anthropic, AWS Bedrock, and Azure AI Foundry
+- **Google Gemini models** — available via Google Cloud Vertex AI
+- **Meta Llama models** — available via AWS Bedrock and self-hosted endpoints
+- **Mistral models** — available via AWS Bedrock, Azure AI Foundry, and self-hosted endpoints
+- **Amazon Nova models** — available via AWS Bedrock
+- **Any model behind an OpenAI-compatible API** — self-hosted or custom
 
 Model versions evolve rapidly. Pixee provides a current recommendation for each customer based on benchmarks across quality, speed, and cost. See [Model Recommendations](#model-recommendations) below.
 
