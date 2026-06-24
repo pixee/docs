@@ -33,7 +33,7 @@ For detailed setup procedures, see [Embedded Cluster](/enterprise/embedded-clust
 | Duplicate findings after re-scan        | Deduplication key mismatch between scan runs                        | Verify the scanner configuration produces consistent finding identifiers across runs.                          |
 | Findings appear but no fixes generated  | Scanner findings are in an unsupported language or CWE category     | Check the [Languages Overview](/languages/overview) for supported language and finding type coverage.          |
 
-For scanner-specific setup guides, see [Integrations Overview](/integrations/overview). For custom scanner configuration, see the [Universal SARIF](/integrations/sarif-universal) guide.
+For scanner-specific setup guides, see [Integrations Overview](/integrations/overview).
 
 ## LLM Configuration
 
@@ -63,7 +63,7 @@ For SSO configuration details, see [Security Architecture](/enterprise/security-
 | Symptom                                   | Likely Cause                                       | Resolution                                                                                                                     |
 | ----------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | High disk usage                           | Log retention or metrics storage growing unbounded | Adjust log retention settings in the admin console. Configure metric pruning intervals. Review support bundle log size limits. |
-| Metrics dashboards (VMUI) not loading     | Local metrics disabled or VMUI web interface off   | Enable Local Metrics and the VMUI web interface under Advanced Settings, then access dashboards at `/metrics/vmui/#/dashboards`. If using BYO observability, verify telemetry is flowing to your platform. |
+| Grafana dashboards not loading            | Observability subchart disabled or misconfigured   | Verify the Grafana subchart is enabled. If using BYO observability, verify telemetry is flowing to your platform.              |
 | Upgrade fails                             | Helm values conflict with new version              | Review release notes for breaking changes before upgrading. Back up your values file before running the upgrade.               |
 | Support bundle is too large               | Default log collection scope too broad             | Configure support bundle log size and age limits before generating. Narrow the collection scope to the relevant time window.   |
 | Analysis queue growing without processing | LLM endpoint degraded or rate limited              | Check LLM endpoint health and rate limit status. Review the error rate in the observability dashboard.                         |

@@ -47,7 +47,7 @@ Pixee provides a growing list of named scanner integrations plus universal SARIF
 | [Arnica](/integrations/scanners/arnica)                               | Native           | SAST           | Yes    | Yes         | SARIF            |
 | [Datadog SAST](/integrations/scanners/datadog-sast)                   | Native           | SAST           | Yes    | Yes         | SARIF            |
 | [DefectDojo](/integrations/scanners/defectdojo)                       | Aggregator       | Aggregated     | Yes    | Yes         | SARIF            |
-| [Any SARIF-producing scanner](/integrations/sarif-universal)          | Universal        | Varies         | Yes    | Yes         | SARIF            |
+| Any SARIF-producing scanner                                           | Universal        | Varies         | Yes    | Yes         | SARIF            |
 
 **Integration tiers explained:**
 

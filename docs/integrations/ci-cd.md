@@ -51,8 +51,8 @@ This is the question teams ask first, and the answer depends on your deployment 
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
 | **GitHub Actions**      | Scanner publishes SARIF to GitHub Code Scanning; GHAS-native scanners (CodeQL) need no extra step                                           | ~5 min     | Pixee GitHub App installed ([setup guide](/getting-started/source-control#github))                |
 | **GitLab CI**           | GitLab SAST + Dependency Scanning are ingested natively; external scanners upload SARIF to GitLab's vulnerability API                       | ~10 min    | GitLab integration configured ([setup guide](/getting-started/source-control#gitlab))             |
-| **Azure Pipelines**     | Scanner runs in pipeline; SARIF is uploaded directly to Pixee                                                                              | ~10 min    | Azure DevOps integration configured ([setup guide](/getting-started/source-control#azure-devops)) |
-| **Bitbucket Pipelines** | Scanner runs in pipeline; SARIF is uploaded directly to Pixee                                                                              | ~10 min    | Bitbucket integration configured ([setup guide](/getting-started/source-control#bitbucket))       |
+| **Azure Pipelines**     | Scanner runs in pipeline; SARIF is uploaded via Azure DevOps Code Scanning or directly to Pixee                                             | ~10 min    | Azure DevOps integration configured ([setup guide](/getting-started/source-control#azure-devops)) |
+| **Bitbucket Pipelines** | Scanner runs in pipeline; SARIF is uploaded to Pixee                                                                                        | ~10 min    | Bitbucket connector configured ([setup guide](/getting-started/source-control#bitbucket))         |
 | **Jenkins / other CI**  | Scanner runs anywhere; the SCM-native path still applies if your scanner publishes to GitHub Code Scanning, GitLab Security Dashboard, etc. | varies     | One of the four SCM integrations configured                                                       |
 
 Setup times are wall-clock time from "I have a pipeline" to "Pixee is processing scanner results." This does not include scanner setup — that is your existing infrastructure.
@@ -119,7 +119,7 @@ For external scanners, run them in CI and emit GitLab-compatible reports (or upl
 
 ## Azure Pipelines
 
-Run your scanner as a pipeline task and emit SARIF. Azure DevOps has no built-in code-scanning surface for Pixee to read from, so upload the SARIF output directly to Pixee.
+Run your scanner as a pipeline task and emit SARIF. The exact ingestion path depends on which scanner: scanners with Azure DevOps Code Scanning support publish there; others can upload SARIF directly to Pixee.
 
 ```yaml
 trigger:
@@ -179,34 +179,32 @@ Pixee does not require a specific CI system. As long as the scanner can run _som
 Two common patterns:
 
 1. **Scanner writes to the SCM's code-scanning surface.** A Jenkins job runs the scanner, then uploads SARIF to GitHub Code Scanning / GitLab Security Dashboard / etc. via that platform's API. Pixee picks up the findings through the SCM integration.
-2. **Scripted upload to Pixee.** A pipeline step uploads the SARIF file directly to the Pixee API with any HTTP client (the example below uses `curl`).
+2. **Scripted upload to Pixee.** A pipeline step uploads SARIF directly to the Pixee API. The [Pixee CLI](/api/cli)'s `pixee api` subcommand can POST a SARIF body, or you can use any HTTP client.
 
 ```bash
-# Example: upload SARIF directly to Pixee from any CI environment.
-export PIXEE_API_KEY="$PIXEE_API_KEY"
-export PIXEE_BASE_URL="https://pixee.example.com"
-export PIXEE_REPO_ID="<repository-id-from-resolution-center-url>"
+# Example: upload SARIF directly to Pixee using the CLI in any CI environment.
+brew tap pixee/pixee && brew install pixee   # one-time, on a runner with brew
+export PIXEE_TOKEN="$PIXEE_TOKEN"
+export PIXEE_SERVER="https://pixee.example.com"
 
-curl -X POST "$PIXEE_BASE_URL/api/v1/repositories/$PIXEE_REPO_ID/scans" \
-  -H "Accept: application/json" \
-  -H "Authorization: Bearer $PIXEE_API_KEY" \
-  -F 'file=@results.sarif' \
-  -F 'metadata={"tool":"<your-scanner>","branch":"main"};type=application/json'
+pixee api /api/v1/scans \
+  --method POST \
+  --input results.sarif
 ```
 
 Discover the exact upload endpoint for your deployment via HAL link traversal: `pixee api /api/v1` lists the available resources, and each resource's `_links` lead to its upload routes.
 
-**Prerequisites:** A Pixee API key, your deployment base URL, and the repository ID (from the repository's URL in the Pixee Resolution Center). For background on the CLI, see [Pixee CLI](/api/cli).
+**Prerequisites:** A Pixee API token (`PIXEE_TOKEN`) and the deployment URL (`PIXEE_SERVER`). For background on the CLI, see [Pixee CLI](/api/cli).
 
 ## Scanner Result Ingestion
 
 Pixee accepts scanner results through three paths:
 
-1. **SCM-native APIs.** GitHub Code Scanning and GitLab vulnerability reports. Pixee reads findings through the SCM integration. (Azure DevOps and Bitbucket have no equivalent code-scanning API — use direct SARIF upload for those.)
+1. **SCM-native APIs.** GitHub Code Scanning, GitLab vulnerability reports, Azure DevOps Code Scanning, Bitbucket reports. Pixee reads findings through the SCM integration.
 2. **Direct SARIF upload to Pixee.** Use the [Pixee CLI](/api/cli) (`pixee api`) or an HTTP client. Useful when your CI system doesn't have a clean upload path to the SCM.
 3. **Native scanner integrations.** For named scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy, and others) Pixee uses dedicated handlers that extract scanner-specific metadata for richer triage. See the per-scanner pages under [Integrations](/integrations/overview).
 
-**Universal SARIF.** Any SARIF-producing scanner works through the universal SARIF integration. See [Universal SARIF Integration](/integrations/sarif-universal).
+**Universal SARIF.** Any SARIF-producing scanner works through tool-agnostic SARIF processing.
 
 ## Troubleshooting
 
