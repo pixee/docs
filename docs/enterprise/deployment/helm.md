@@ -46,8 +46,8 @@ Conditional subcharts let you swap embedded defaults for your existing infrastru
 | Component         | Embedded Default          | BYO Option                                       |
 | ----------------- | ------------------------- | ------------------------------------------------ |
 | **Object store**  | SeaweedFS                 | AWS S3, Azure Blob, GCS, any S3-compatible store |
-| **Database**      | CloudNativePG             | External PostgreSQL 17.4+                         |
-| **Observability** | VictoriaMetrics, VictoriaLogs, VictoriaTraces (VMUI) | Customer's existing observability stack |
+| **Database**      | CloudNativePG             | External PostgreSQL 17.4+                        |
+| **Observability** | VictoriaMetrics + Grafana | Customer's existing observability stack          |
 | **Auth**          | Authentik OIDC            | Google Workspace, Microsoft Entra ID, Okta       |
 
 ### Credential Management for BYO Components
