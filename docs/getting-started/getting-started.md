@@ -8,7 +8,7 @@ description: Install Pixee and connect your scanners for automated vulnerability
 sidebar_position: 1
 ---
 
-Pixee automates vulnerability triage and remediation directly inside your existing pull request workflow. Install the GitHub App, GitLab integration, Azure DevOps extension, or Bitbucket connector, connect your scanners, and Pixee starts delivering fixes as standard PRs your developers already know how to review and merge. Setup takes under five minutes, and most teams see their first automated fix within the hour.
+Pixee automates vulnerability triage and remediation directly inside your existing pull request workflow. Install the GitHub App, GitLab integration, Azure DevOps integration, or Bitbucket integration, connect your scanners, and Pixee starts delivering fixes as standard PRs your developers already know how to review and merge. Setup takes under five minutes, and most teams see their first automated fix within the hour.
 
 Pixee is not a scanner. It works downstream of your existing SAST, SCA, and DAST tools — ingesting their findings, triaging them for exploitability, and generating validated fixes.
 

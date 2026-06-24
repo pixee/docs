@@ -50,11 +50,12 @@ Pixee remediates SonarQube findings across Java, Python, JavaScript/TypeScript, 
 
 ### Prerequisites
 
-- SonarQube 9.x or later (self-hosted) or SonarCloud (SaaS) with existing scan results
+- SonarQube Server (self-hosted) or SonarQube Cloud (SaaS) with existing scan results
 - A Pixee account with at least one repository connected ([Getting Started](/))
-- A SonarQube user token with **Browse** and **Administer** project permissions (not a global analysis token)
+- A SonarQube personal access token with access to retrieve issues and hotspots for the projects you integrate
+- A webhook secret so Pixee can receive scan-completion notifications
 
-Connect SonarQube by providing your instance URL and a user token with Browse and Administer project permissions. Pixee queries SonarQube directly via API -- no SARIF export needed. SonarQube projects are mapped to code repositories using the project key; if your project keys match your repository names, mapping is automatic. For enterprise self-hosted deployments, configure SonarQube credentials in your Helm values. For step-by-step configuration, see the [installation guide](https://app.pixee.ai/docs/setup).
+Connect SonarQube by providing your instance URL, a personal access token that can retrieve issues and hotspots, and a webhook secret. Pixee queries SonarQube directly via API -- no SARIF export needed -- and receives scan-completion events through a SonarQube webhook pointed at `https://<your-pixee-server>/api/v1/integrations/sonar-default/webhooks`. SonarQube projects are mapped to code repositories using the project key. For enterprise self-hosted deployments, configure the token and webhook secret in your Helm values (`platform.sonar.token`, `platform.sonar.webhookSecret`). For step-by-step configuration, see the [installation guide](https://app.pixee.ai/docs/setup).
 
 ### What Happens with Large Backlogs
 

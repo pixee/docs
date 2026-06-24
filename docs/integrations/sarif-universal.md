@@ -41,16 +41,18 @@ Upload SARIF as a step in your CI/CD pipeline after your scanner runs:
 # Example: GitHub Actions
 - name: Upload SARIF to Pixee
   run: |
-    curl -X POST \
-      -H "Authorization: Bearer $PIXEE_TOKEN" \
-      -H "Content-Type: application/sarif+json" \
-      -d @results.sarif \
-      https://api.pixee.ai/v1/sarif/upload
+    curl -X POST "$PIXEE_BASE_URL/api/v1/repositories/$PIXEE_REPO_ID/scans" \
+      -H "Accept: application/json" \
+      -H "Authorization: Bearer $PIXEE_API_KEY" \
+      -F 'file=@results.sarif' \
+      -F 'metadata={"tool":"<your-scanner>","branch":"main"};type=application/json'
 ```
+
+The upload is a multipart request to the repository's `scans` endpoint. Retrieve `PIXEE_BASE_URL` and `PIXEE_REPO_ID` from the repository's URL in the Pixee Resolution Center, and set the `tool` field in `metadata` to your scanner's identifier.
 
 ### Platform-Native Upload
 
-If your scanner integrates with GitHub Code Scanning, GitLab Security Dashboard, or Azure DevOps, Pixee can ingest SARIF through the platform's native security findings API.
+If your scanner publishes to GitHub Code Scanning (GHAS) or the GitLab Security Dashboard, Pixee can ingest findings through the platform's native security-findings API. For Azure DevOps and Bitbucket, run your scanner in the pipeline and upload its SARIF directly to Pixee using the CI/CD method above.
 
 ### Manual Upload
 

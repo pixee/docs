@@ -47,7 +47,7 @@ Every model delivers the same triage and remediation engine. The only difference
 | Bundled observability (metrics, logs, traces, dashboards)                   | GA     | [Observability](/enterprise/observability)                 |
 | Compliance mapping (SOC 2, HIPAA, FedRAMP, PCI-DSS, NIST 800-53, ISO 27001) | GA     | [Compliance](/enterprise/compliance)                       |
 | Multi-SCM support (GitHub, GitLab, Azure DevOps, Bitbucket)                 | GA     | [Getting Started](/)                                       |
-| Hierarchical LLM routing (7 named tiers)                                    | GA     | [Bring Your Own Model](/enterprise/byom)                   |
+| Hierarchical LLM routing (separate reasoning, fast, SCA, and deep-research models) | GA     | [Bring Your Own Model](/enterprise/byom)                   |
 | Audit-ready triage records with LLM justification                           | GA     | [Compliance](/enterprise/compliance)                       |
 | Role-based access control                                                   | GA     | [Security Architecture](/enterprise/security-architecture) |
 
