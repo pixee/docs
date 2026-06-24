@@ -4,5 +4,8 @@
   "prHourlyLimit": 2,
   "prConcurrentLimit": 3,
   "timezone": "America/New_York",
-  "schedule": ["before 8am every weekday"]
+  "schedule": ["before 8am every weekday"],
+  "automerge": true,
+  "automergeType": "pr",
+  "platformAutomerge": true
 }
