@@ -46,7 +46,7 @@ Copilot Autofix is limited to GitHub Advanced Security (CodeQL) findings on GitH
 
 ### How long does it take to set up Pixee?
 
-Dedicated SaaS setup: install the GitHub App, GitLab integration, Azure DevOps extension, or Bitbucket connector and Pixee begins analyzing repositories immediately — under 5 minutes. Self-hosted deployment (embedded cluster or Helm) typically completes in under one hour. Air-gapped deployment takes longer due to private LLM configuration and image transfer.
+Dedicated SaaS setup: install the GitHub App, GitLab integration, Azure DevOps integration, or Bitbucket integration and Pixee begins analyzing repositories immediately — under 5 minutes. Self-hosted deployment (embedded cluster or Helm) typically completes in under one hour. Air-gapped deployment takes longer due to private LLM configuration and image transfer.
 
 ### Does Pixee require code changes to install?
 
@@ -130,10 +130,10 @@ Every AI-generated fix passes through documented validation layers before delive
 
 Most likely cause: the repository has not been enabled in Pixee's settings after installing the SCM app.
 
-1. Verify the GitHub App, GitLab integration, Azure DevOps extension, or Bitbucket connector is installed on the correct organization.
+1. Verify the GitHub App, GitLab integration, Azure DevOps integration, or Bitbucket integration is configured for the correct organization.
 2. Check that the specific repository is enabled in Pixee's repository management settings — installing the app does not automatically enable all repositories.
 3. Verify Pixee has the required permissions: read code, read pull requests, write pull requests.
-4. For GitLab, confirm the service account has the required scopes (`api`, `read_user`, `read_repository`, `read_api`, `write_repository`).
+4. For GitLab, confirm the service account has the required scopes (`api`, `read_user`, `read_repository`, `read_api`, `write_repository`, `ai_features`, `read_registry`, `read_virtual_registry`).
 5. For Azure DevOps, verify the PAT is active and the webhook is configured.
 
 ### Pixee installed but I do not see any activity. What is wrong?

@@ -204,7 +204,7 @@ Pixee accepts scanner results through three paths:
 2. **Direct SARIF upload to Pixee.** Use the [Pixee CLI](/api/cli) (`pixee api`) or an HTTP client. Useful when your CI system doesn't have a clean upload path to the SCM.
 3. **Native scanner integrations.** For named scanners (CodeQL, Semgrep, Checkmarx, Veracode, Snyk Code, SonarQube, AppScan, Polaris, Fortify, Contrast, GitLab SAST, GitLab SCA, Trivy, and others) Pixee uses dedicated handlers that extract scanner-specific metadata for richer triage. See the per-scanner pages under [Integrations](/integrations/overview).
 
-**Universal SARIF.** Any SARIF-producing scanner works through the universal SARIF integration. See [Universal SARIF Integration](/integrations/sarif-universal).
+**Universal SARIF.** Any SARIF-producing scanner works through tool-agnostic SARIF processing.
 
 ## Troubleshooting
 

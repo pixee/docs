@@ -8,7 +8,7 @@ description: Deploy Pixee Enterprise via Helm chart into your existing Kubernete
 sidebar_position: 4
 ---
 
-The Helm deployment installs Pixee into your existing Kubernetes cluster using a standard Helm chart. It supports EKS, GKE, AKS, and self-managed Kubernetes. Conditional subcharts let you swap embedded components for your own services -- BYO database (PostgreSQL 15+), object store (S3, Azure Blob, GCS), observability stack, and identity provider. This is the deployment model for organizations with established platform engineering teams.
+The Helm deployment installs Pixee into your existing Kubernetes cluster using a standard Helm chart. It supports EKS, GKE, AKS, and self-managed Kubernetes. Conditional subcharts let you swap embedded components for your own services -- BYO database (PostgreSQL 17.4+), object store (S3, Azure Blob, GCS), observability stack, and identity provider. This is the deployment model for organizations with established platform engineering teams.
 
 ## Who This Is For
 
@@ -46,7 +46,7 @@ Conditional subcharts let you swap embedded defaults for your existing infrastru
 | Component         | Embedded Default          | BYO Option                                       |
 | ----------------- | ------------------------- | ------------------------------------------------ |
 | **Object store**  | SeaweedFS                 | AWS S3, Azure Blob, GCS, any S3-compatible store |
-| **Database**      | CloudNativePG             | External PostgreSQL 15+                          |
+| **Database**      | CloudNativePG             | External PostgreSQL 17.4+                        |
 | **Observability** | VictoriaMetrics + Grafana | Customer's existing observability stack          |
 | **Auth**          | Authentik OIDC            | Google Workspace, Microsoft Entra ID, Okta       |
 

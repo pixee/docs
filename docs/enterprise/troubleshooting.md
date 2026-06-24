@@ -33,7 +33,7 @@ For detailed setup procedures, see [Embedded Cluster](/enterprise/embedded-clust
 | Duplicate findings after re-scan        | Deduplication key mismatch between scan runs                        | Verify the scanner configuration produces consistent finding identifiers across runs.                          |
 | Findings appear but no fixes generated  | Scanner findings are in an unsupported language or CWE category     | Check the [Languages Overview](/languages/overview) for supported language and finding type coverage.          |
 
-For scanner-specific setup guides, see [Integrations Overview](/integrations/overview). For custom scanner configuration, see the [Universal SARIF](/integrations/sarif-universal) guide.
+For scanner-specific setup guides, see [Integrations Overview](/integrations/overview).
 
 ## LLM Configuration
 
