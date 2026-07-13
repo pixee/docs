@@ -16,9 +16,9 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@docusaurus/core": "^3.10.1",
-    "@docusaurus/plugin-client-redirects": "^3.10.1",
-    "@docusaurus/preset-classic": "^3.10.1",
+    "@docusaurus/core": "^3.10.2",
+    "@docusaurus/plugin-client-redirects": "^3.10.2",
+    "@docusaurus/preset-classic": "^3.10.2",
     "docusaurus-plugin-llms": "^0.4.0",
     "@mdx-js/react": "^3.1.1",
     "clsx": "^2.1.1",
@@ -28,8 +28,8 @@
     "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.10.1",
-    "@docusaurus/types": "^3.10.1",
+    "@docusaurus/module-type-aliases": "^3.10.2",
+    "@docusaurus/types": "^3.10.2",
     "prettier": "^3.9.5"
   },
   "browserslist": {
