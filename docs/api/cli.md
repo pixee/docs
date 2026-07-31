@@ -40,34 +40,80 @@ pixee --version
 
 ## Authenticate
 
-You need a Pixee API token (generated from the admin console's **API Tokens** page) and the URL of your Pixee deployment.
+The CLI supports two credentials. Which one you want depends on whether a person is present.
+
+|                     | Sign-in as yourself (default)                 | Shared API key (`--token`)                 |
+| ------------------- | --------------------------------------------- | ------------------------------------------ |
+| Issued by           | your deployment's identity provider, per user | the admin console's **API Tokens** page    |
+| Identity            | you, by name — actions are attributable       | none; a shared `api-token` principal       |
+| Lifetime            | short-lived, refreshes silently               | static until an operator rotates it        |
+| Revoking one person | revoke them in your IdP                       | not possible without rotating for everyone |
+| Works unattended    | no — one interactive approval                 | yes                                        |
+
+### Sign in as yourself
+
+`pixee auth login` opens your browser to sign in through your deployment's identity provider, then caches a short-lived token locally. All you need is the URL of your deployment.
 
 ```bash
-# Interactive login — stores token + server in a platform-appropriate config file.
-pixee auth login --server https://pixee.example.com --token pixee_xxx
-
-# Stdin form — keeps the token off the command line and out of shell history.
-echo -n "$PIXEE_TOKEN" | pixee auth login --server https://pixee.example.com --token -
-
-# Confirm.
-pixee auth status
-# Logged in to https://pixee.example.com as api-token
-# Token: valid
+pixee auth login --server https://pixee.example.com
+# To authorize the Pixee CLI for https://pixee.example.com, open:
+#
+#     https://pixee.example.com/authentik/device?code=296519628
+#
+# Waiting for authorization…
+# Logged in to https://pixee.example.com as you@example.com.
 ```
 
-The token is written with `0600` permissions on Unix; Windows inherits the per-user directory's NTFS ACL.
+The browser does not have to be on the machine running `pixee`. Because sign-in needs no redirect back to the CLI, you can log in over SSH and approve on a laptop, as long as that device can reach the deployment's URL.
 
-**Credential resolution.** For every subcommand except `pixee auth login`, the CLI resolves credentials in this order:
+Once you are signed in, ordinary commands run as you — no API key required:
 
-- **Token:** `PIXEE_TOKEN` env var → stored config.
+```bash
+pixee auth status
+# Server: https://pixee.example.com
+# Session: you@example.com
+# Session token: valid (expires in 54m)
+# Refresh token: present
+# Commands will use: your session
+
+pixee repo list
+```
+
+The token refreshes itself, so you will not be prompted again until your session expires. Note that a change to your permissions reaches the CLI at the next refresh, within one token lifetime (up to an hour) — including a permission being **removed**. Run `pixee auth login` again to pick it up immediately.
+
+### Shared API key
+
+Use the API key for CI and any other unattended context, where nobody can approve a browser prompt.
+
+```bash
+# Stdin form — keeps the key off the command line and out of shell history.
+echo -n "$PIXEE_TOKEN" | pixee auth login --server https://pixee.example.com --token -
+```
+
+Credentials are written with `0600` permissions on Unix; Windows inherits the per-user directory's NTFS ACL. The two are stored separately, so signing in never disturbs an existing API key.
+
+### Credential resolution
+
+For every subcommand except `pixee auth login`:
+
+- **Token:** `--token` flag → your signed-in session for that server → `PIXEE_TOKEN` env var → stored API key.
 - **Server:** `--server` flag → `PIXEE_SERVER` env var → stored config.
 
-Setting `PIXEE_TOKEN` and `PIXEE_SERVER` is the standard CI/CD path — no `pixee auth login` step is required in pipelines.
+Your session outranks both the environment variable and the stored key, so after signing in your commands are already running as you. An API key overrides the session **only** when passed explicitly with `--token` on that invocation — an exported `PIXEE_TOKEN` does not, because it is indistinguishable from one set in a shell profile.
+
+Setting `PIXEE_TOKEN` and `PIXEE_SERVER` remains the standard CI/CD path, and no `pixee auth login` step is required in pipelines: a build runner has no session, so it uses the key. On a workstation that has both, the session wins — pass `--token` to force the key.
+
+If you are ever unsure which credential a command will send, `pixee auth status` says so on its `Commands will use:` line.
 
 ## Common Commands
 
 | Command                                                             | What It Does                                                                                         |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `pixee auth login --server <url>`                                   | Sign in as yourself through your IdP. Add `--token -` to store a shared API key instead.             |
+| `pixee auth status`                                                 | Show configured credentials, every stored session, and which credential commands will use.           |
+| `pixee auth use <url>`                                              | Choose which deployment subsequent commands target.                                                  |
+| `pixee auth token --server <url>`                                   | Print a currently-valid bearer for use with `curl` or a coding agent. Requires an explicit server.   |
+| `pixee auth logout --server <url>`                                  | Remove the locally stored session for a deployment.                                                  |
 | `pixee repo list`                                                   | List repositories registered with the platform. Filter with `--name <pattern>`.                      |
 | `pixee scan list --repo <name>`                                     | List scans for a repository. Filter with `--branch`, `--tool`, `--analysis-state`, `--has-analysis`. |
 | `pixee scan get <id>`                                               | Fetch a single scan by UUID.                                                                         |
@@ -94,12 +140,12 @@ pixee repo list --json | jq '.[] | select(.type == "github") | .full_name'
 
 Scripts and agents can branch on these without parsing stderr:
 
-| Code | Meaning                                                                   |
-| ---- | ------------------------------------------------------------------------- |
-| 0    | Success                                                                   |
-| 1    | General error                                                             |
-| 2    | Authentication failure (token missing, expired, invalid, or wrong server) |
-| 3    | Resource not found                                                        |
+| Code | Meaning                                                                                    |
+| ---- | ------------------------------------------------------------------------------------------ |
+| 0    | Success                                                                                    |
+| 1    | General error                                                                              |
+| 2    | Authentication failure (not signed in, session or token expired, invalid, or wrong server) |
+| 3    | Resource not found                                                                         |
 
 Errors from the Pixee API are returned as `application/problem+json`. With `--output text`, the CLI renders the problem document in compact human-readable form; with `--output json` the raw document passes through unchanged.
 
