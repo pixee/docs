@@ -45,10 +45,10 @@ The CLI supports two credentials. Which one you want depends on whether a person
 |                     | Sign-in as yourself (default)                 | Shared API key (`--token`)                 |
 | ------------------- | --------------------------------------------- | ------------------------------------------ |
 | Issued by           | your deployment's identity provider, per user | the admin console's **API Tokens** page    |
-| Identity            | you, by name — actions are attributable       | none; a shared `api-token` principal       |
+| Identity            | you, by name; actions are attributable        | none; a shared `api-token` principal       |
 | Lifetime            | short-lived, refreshes silently               | static until an operator rotates it        |
 | Revoking one person | revoke them in your IdP                       | not possible without rotating for everyone |
-| Works unattended    | no — one interactive approval                 | yes                                        |
+| Works unattended    | no; one interactive approval                  | yes                                        |
 
 ### Sign in as yourself
 
@@ -66,7 +66,7 @@ pixee auth login --server https://pixee.example.com
 
 The browser does not have to be on the machine running `pixee`. Because sign-in needs no redirect back to the CLI, you can log in over SSH and approve on a laptop, as long as that device can reach the deployment's URL.
 
-Once you are signed in, ordinary commands run as you — no API key required:
+Once you are signed in, ordinary commands run as you, with no API key required:
 
 ```bash
 pixee auth status
@@ -79,14 +79,14 @@ pixee auth status
 pixee repo list
 ```
 
-The token refreshes itself, so you will not be prompted again until your session expires. Note that a change to your permissions reaches the CLI at the next refresh, within one token lifetime (up to an hour) — including a permission being **removed**. Run `pixee auth login` again to pick it up immediately.
+The token refreshes itself, so you will not be prompted again until your session expires. Note that a change to your permissions reaches the CLI at the next refresh, within one token lifetime (up to an hour). That includes a permission being **removed**. Run `pixee auth login` again to pick it up immediately.
 
 ### Shared API key
 
 Use the API key for CI and any other unattended context, where nobody can approve a browser prompt.
 
 ```bash
-# Stdin form — keeps the key off the command line and out of shell history.
+# Stdin form keeps the key off the command line and out of shell history.
 echo -n "$PIXEE_TOKEN" | pixee auth login --server https://pixee.example.com --token -
 ```
 
@@ -99,9 +99,9 @@ For every subcommand except `pixee auth login`:
 - **Token:** `--token` flag → your signed-in session for that server → `PIXEE_TOKEN` env var → stored API key.
 - **Server:** `--server` flag → `PIXEE_SERVER` env var → stored config.
 
-Your session outranks both the environment variable and the stored key, so after signing in your commands are already running as you. An API key overrides the session **only** when passed explicitly with `--token` on that invocation — an exported `PIXEE_TOKEN` does not, because it is indistinguishable from one set in a shell profile.
+Your session outranks both the environment variable and the stored key, so after signing in your commands are already running as you. An API key overrides the session **only** when passed explicitly with `--token` on that invocation. An exported `PIXEE_TOKEN` does not, because it is indistinguishable from one set in a shell profile.
 
-Setting `PIXEE_TOKEN` and `PIXEE_SERVER` remains the standard CI/CD path, and no `pixee auth login` step is required in pipelines: a build runner has no session, so it uses the key. On a workstation that has both, the session wins — pass `--token` to force the key.
+Setting `PIXEE_TOKEN` and `PIXEE_SERVER` remains the standard CI/CD path, and no `pixee auth login` step is required in pipelines: a build runner has no session, so it uses the key. On a workstation that has both, the session wins; pass `--token` to force the key.
 
 If you are ever unsure which credential a command will send, `pixee auth status` says so on its `Commands will use:` line.
 
