@@ -8,5 +8,17 @@
   "schedule": ["before 8am every weekday"],
   "automerge": true,
   "automergeType": "pr",
-  "platformAutomerge": true
+  "platformAutomerge": true,
+  "lockFileMaintenance": {
+    "description": "Refreshes yarn.lock so transitive deps pick up patched versions. vulnerabilityAlerts below only covers direct deps in package.json, so this is what remediates transitive CVEs. NOTE: schedule is temporarily 'at any time' to force an initial catch-up run; restore to 'before 8am on monday' once that lands.",
+    "enabled": true,
+    "schedule": ["at any time"],
+    "automerge": true
+  },
+  "vulnerabilityAlerts": {
+    "description": "Security PRs bypass schedule and prConcurrentLimit by default, but not prHourlyLimit - so unset it here.",
+    "enabled": true,
+    "prHourlyLimit": 0,
+    "automerge": true
+  }
 }
