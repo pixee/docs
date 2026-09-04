@@ -10,7 +10,7 @@
   "automergeType": "pr",
   "platformAutomerge": true,
   "lockFileMaintenance": {
-    "description": "Refreshes yarn.lock so transitive deps pick up patched versions. vulnerabilityAlerts below only covers direct deps in package.json, so this is what remediates transitive CVEs. NOTE: schedule is temporarily 'at any time' to force an initial catch-up run; restore to 'before 8am on monday' once that lands.",
+    "description": "Refreshes yarn.lock so transitive deps pick up patched versions. vulnerabilityAlerts below only covers direct deps in package.json, so this is what remediates transitive CVEs. Runs on every Renovate pass rather than weekly, so transitive advisories are picked up as they land; a pass with no drift produces no PR.",
     "enabled": true,
     "schedule": ["at any time"],
     "automerge": true
