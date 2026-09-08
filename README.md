@@ -21,6 +21,28 @@ This command starts a local development server and opens up a browser window. Mo
 Uses Prettier to maintain consistent code formatting. Configure your editor to
 use Prettier on save, and/or remember to run `yarn format` to format the source.
 
+### Dependency maintenance
+
+Renovate handles the routine work on its own (in-range bumps, lockfile
+refreshes, security PRs) - see `renovate.json`. For the periodic manual sweep
+that Renovate can't do unattended, run:
+
+```
+$ scripts/upgrade-deps.sh --dry-run   # report what's available
+$ scripts/upgrade-deps.sh --format    # apply, then absorb formatting churn
+```
+
+It pins every direct dependency to its newest version (including majors),
+syncs the Node version across `package.json`, `.node-version` and both
+workflows, then verifies
+with the same steps CI runs - `yarn install --frozen-lockfile`,
+`yarn check-format`, and `yarn build`. The build matters: `onBrokenLinks` is
+set to `"throw"`, so an upgrade really can fail it. Nothing is committed or
+pushed; review the diff yourself. `--help` lists the other options.
+
+Invoke it directly, not via `yarn` - Yarn 1 enforces the `engines` floor on
+`yarn run`, which would fail before the script can handle a Node mismatch.
+
 ### Build
 
 ```
