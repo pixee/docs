@@ -4199,9 +4199,9 @@ dns-packet@^5.2.2:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
 docusaurus-plugin-llms@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-llms/-/docusaurus-plugin-llms-0.6.0.tgz#acacf2371e191dd265575009ca8b0da407d3dbbd"
-  integrity sha512-v9I6QEJLujkmtKjfWZ/SniWu7oOGZd0JUkyxO5MaFU09+qZHjQuraYuJZ+2AoZdesrrcktgDmZtqPL/sJtHe6A==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-llms/-/docusaurus-plugin-llms-0.6.1.tgz#08e67711885addc9138c433ef49eaf025a1a877d"
+  integrity sha512-elqTn7httrRG20g1mfzTtWZjLVpXMNKO2IS9R84dxiIp7QjAcDuubLp6/bvpe3umHdPnEXHJKhNOpTY+wnQa1Q==
   dependencies:
     gray-matter "4.0.3"
     minimatch "9.0.3"
