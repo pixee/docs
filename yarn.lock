@@ -4198,7 +4198,7 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-llms@^0.6.0:
+docusaurus-plugin-llms@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/docusaurus-plugin-llms/-/docusaurus-plugin-llms-0.6.1.tgz#08e67711885addc9138c433ef49eaf025a1a877d"
   integrity sha512-elqTn7httrRG20g1mfzTtWZjLVpXMNKO2IS9R84dxiIp7QjAcDuubLp6/bvpe3umHdPnEXHJKhNOpTY+wnQa1Q==
