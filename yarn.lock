@@ -1490,24 +1490,24 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@docsearch/core@4.7.0":
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/@docsearch/core/-/core-4.7.0.tgz#914962191f2718b9caa48f4cbe46c0720fdc055d"
-  integrity sha512-p/9xVKmPDj3FPvMfPf5naVO3Ej8SCbcUugGvx1+8GgkuBNbqxqN2Irx3WLBv8VY0jH7XpRwKWdlmjXLZsmTLsg==
+"@docsearch/core@4.7.1":
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/@docsearch/core/-/core-4.7.1.tgz#50ffd913037fdcf33640a3739e31e21f214e5b6f"
+  integrity sha512-uzIFuu2Wsf3+/ZdLGDl6MhpjCZQ5DTMBGe1u/2DdQV+GlHEerOcthWZAoptCsNtjk+DX4Tbx3HmEgJE7RuMQhw==
 
-"@docsearch/css@4.7.0":
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-4.7.0.tgz#d6d93c6ddf5e813a3ea09da719e150c222693a5c"
-  integrity sha512-Sk5xkdRFeE7PeWjG9l4AfTwdvMfr9wHiwNNCpHXT4v4SNyNMKdHGvEILc31BgaVFGDDNbv5u/a73tofRiwbEZw==
+"@docsearch/css@4.7.1":
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-4.7.1.tgz#0b45c4bed63d0f0993d6f368fc3229da48f70106"
+  integrity sha512-AsMPnbNmVLDNjhtgfq4ZRskNvWR8vuK6riEegHp3kjBFtxbmTWPzZ5s1FJ04SGr2D0ZXglueUNISsV2sDgV6Jw==
 
 "@docsearch/react@^3.9.0 || ^4.3.2":
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/@docsearch/react/-/react-4.7.0.tgz#8e7d77c34d19755f98d225a3413eddf605658d70"
-  integrity sha512-x6oedjJ8O8/pIDBsMo5Orca3/6cQCz616/CwthVe68l43mqnj2lrJ9kFQITBqy8hMsS3nWeBWFoVO5dJ1DCFKA==
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/@docsearch/react/-/react-4.7.1.tgz#91de979757210031475a00bcb9ea767feda0f9b7"
+  integrity sha512-MhRNQp+Ew+i/xc/+ydDgSQmu6/lEH+Og8F0d1qpXWV/kKNw8OhFfDnLNJlNLiqZQhU1GaEv37G4wxipKw+HdNA==
   dependencies:
     "@algolia/autocomplete-core" "1.19.2"
-    "@docsearch/core" "4.7.0"
-    "@docsearch/css" "4.7.0"
+    "@docsearch/core" "4.7.1"
+    "@docsearch/css" "4.7.1"
 
 "@docusaurus/babel@3.10.2":
   version "3.10.2"
