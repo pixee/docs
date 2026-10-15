@@ -49,7 +49,7 @@
   "resolutions": {
     "got": "^16.1.0",
     "minimatch": "^10.2.6",
-    "qs": "^6.16.0",
+    "qs": "^6.16.1",
     "serialize-javascript": "^7.1.2",
     "uuid": "^14.0.3",
     "yaml": "^2.9.1"
