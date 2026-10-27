@@ -10,7 +10,7 @@ sidebar_position: 1
 
 # Integrations Overview & Coverage Matrix
 
-Pixee integrations fall into two categories. **Scanning Tools** are the SAST, SCA, IAST, and aggregation platforms that produce findings — Pixee triages each finding and generates fixes. **Source Control** platforms are where Pixee delivers those fixes as pull requests or merge requests. Pixee does not replace your scanners or your SCM; it sits downstream of detection and inside your existing review workflow.
+Pixee integrations fall into two categories. **Scanning Tools** are the SAST, SCA, and IAST tools that produce findings — Pixee triages each finding and generates fixes. **Source Control** platforms are where Pixee delivers those fixes as pull requests or merge requests. Pixee does not replace your scanners or your SCM; it sits downstream of detection and inside your existing review workflow.
 
 One triage-and-remediation pipeline spans every scanner in your stack, regardless of vendor. Pixee adds the resolution layer; the rest of your stack stays as it is.
 
@@ -46,14 +46,12 @@ Pixee provides a growing list of named scanner integrations plus universal SARIF
 | [Trivy](/integrations/scanners/trivy)                                 | Native           | SAST, SCA, IaC | Yes    | Yes         | SARIF            |
 | [Arnica](/integrations/scanners/arnica)                               | Native           | SAST           | Yes    | Yes         | SARIF            |
 | [Datadog SAST](/integrations/scanners/datadog-sast)                   | Native           | SAST           | Yes    | Yes         | SARIF            |
-| [DefectDojo](/integrations/scanners/defectdojo)                       | Aggregator       | Aggregated     | Yes    | Yes         | SARIF            |
 | Any SARIF-producing scanner                                           | Universal        | Varies         | Yes    | Yes         | SARIF            |
 
 **Integration tiers explained:**
 
 - **Deep:** Dedicated handler with scanner-specific metadata extraction. Extracts dataflow paths, rule descriptions, and scanner-specific context for higher triage accuracy.
 - **Native:** Recognized scanner with tool identification and standard SARIF processing. Findings are fully triaged and remediated through the standard pipeline.
-- **Aggregator:** Vulnerability management platforms that consolidate findings from many scanners. Pixee adds triage and remediation on top.
 - **Universal SARIF:** Any tool that produces SARIF output works automatically. No pre-built integration required.
 
 All tiers feed into the same downstream triage and remediation pipeline. Deep integrations provide richer context; universal SARIF ensures no scanner is locked out.
