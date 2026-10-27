@@ -42,19 +42,18 @@ Both tiers feed into the same downstream [triage](/platform/triage) and [remedia
 
 ## Standard Scanner Integrations
 
-| Scanner                    | Status | Integration Method                                          |
-| -------------------------- | ------ | ----------------------------------------------------------- |
-| **Veracode**               | GA     | SARIF pipeline with tool-specific identification            |
-| **Snyk Code**              | GA     | SARIF pipeline with native metadata extraction              |
-| **SonarQube / SonarCloud** | GA     | SARIF pipeline with native metadata extraction              |
-| **HCL AppScan**            | GA     | SARIF ingestion pipeline                                    |
-| **Polaris (Synopsys)**     | GA     | SARIF ingestion pipeline                                    |
-| **Fortify**                | GA     | SARIF ingestion pipeline                                    |
-| **Contrast**               | GA     | SARIF ingestion pipeline                                    |
-| **GitLab SAST**            | GA     | SARIF pipeline with dedicated namespace                     |
-| **GitLab SCA**             | GA     | SARIF pipeline                                              |
-| **Trivy**                  | GA     | SARIF pipeline with native metadata extraction              |
-| **DefectDojo**             | GA     | SARIF pipeline (aggregates findings from multiple scanners) |
+| Scanner                    | Status | Integration Method                               |
+| -------------------------- | ------ | ------------------------------------------------ |
+| **Veracode**               | GA     | SARIF pipeline with tool-specific identification |
+| **Snyk Code**              | GA     | SARIF pipeline with native metadata extraction   |
+| **SonarQube / SonarCloud** | GA     | SARIF pipeline with native metadata extraction   |
+| **HCL AppScan**            | GA     | SARIF ingestion pipeline                         |
+| **Polaris (Synopsys)**     | GA     | SARIF ingestion pipeline                         |
+| **Fortify**                | GA     | SARIF ingestion pipeline                         |
+| **Contrast**               | GA     | SARIF ingestion pipeline                         |
+| **GitLab SAST**            | GA     | SARIF pipeline with dedicated namespace          |
+| **GitLab SCA**             | GA     | SARIF pipeline                                   |
+| **Trivy**                  | GA     | SARIF pipeline with native metadata extraction   |
 
 All named scanner integrations are GA. See individual scanner integration pages under [Integrations](/integrations/overview) for per-tool setup guides.
 

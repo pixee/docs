@@ -184,6 +184,12 @@ const config = {
             from: "/integrations/scm-platforms",
             to: "/integrations/overview",
           },
+
+          // Removed scanner pages → overview
+          {
+            from: "/integrations/scanners/defectdojo",
+            to: "/integrations/overview",
+          },
         ],
       },
     ],
