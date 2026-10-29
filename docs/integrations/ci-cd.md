@@ -214,4 +214,4 @@ Pixee accepts scanner results through three paths:
 
 **Fix PRs not appearing.** Check that the Pixee integration has write access to the target repository. For GitHub, the App needs `pull_requests: write`. Fix generation is asynchronous — allow a few minutes after findings are ingested.
 
-**`pixee api` returns exit code 2.** Authentication failed. Run `pixee auth status` to confirm the configured server and token, or reset both with `pixee auth login`. See [Pixee CLI](/api/cli) for credential resolution rules.
+**`pixee api` returns exit code 2.** Authentication failed. Run `pixee auth status` to confirm the configured server and see which credential the CLI will send. In a pipeline, set `PIXEE_TOKEN` and `PIXEE_SERVER`, or store a key with `pixee auth login --server <url> --token -`. A bare `pixee auth login` starts an interactive browser sign-in, which cannot complete on a build runner. See [Pixee CLI](/api/cli) for credential resolution rules.
