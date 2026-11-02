@@ -47,7 +47,7 @@
     "node": ">=26.13.0"
   },
   "resolutions": {
-    "got": "^16.1.0",
+    "got": "^16.2.0",
     "minimatch": "^11.0.3",
     "qs": "^6.17.1",
     "serialize-javascript": "^7.1.4",
