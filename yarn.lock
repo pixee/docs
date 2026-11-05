@@ -7806,14 +7806,14 @@ regenerate@^1.4.2, regenerate@^1.5.0:
   integrity sha512-1s+CxXjJ71i7LNVy8nYwg47XV4y6lAnOEhsMtSKq3WpmPfhl9LuKlTqKIn/3yUpE8lBz+W+TT88Bxyhnr0U4yw==
 
 regexpu-core@^6.5.3:
-  version "6.5.3"
-  resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-6.5.3.tgz#29ed86876f053b68b954e2962162ee0f466c70ad"
-  integrity sha512-E8VgUoSK+LMQrLboDxavm76MTBGrQhx9RiNuomRmYnZ10Uw12HrI8fkxOOncktb2hBpzIZ9SV/347euQHG5z+g==
+  version "6.5.4"
+  resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-6.5.4.tgz#9d0fd7e27f494b925cf0f5f876194494deda9587"
+  integrity sha512-VpdamrZ9bw4YmvMZfTA3Yg8IHU9Guvg21bonvgjC4l3KfBkOqCPJesHakz7cQeE4Vh4zz4r4Gy6igAcnJxZv9g==
   dependencies:
     regenerate "^1.5.0"
     regenerate-unicode-properties "^10.3.0"
     regjsgen "^0.8.0"
-    regjsparser "^0.13.0"
+    regjsparser "^0.14.0"
     unicode-match-property-ecmascript "^2.0.0"
     unicode-match-property-value-ecmascript "^2.2.1"
 
@@ -7836,10 +7836,10 @@ regjsgen@^0.8.0:
   resolved "https://registry.yarnpkg.com/regjsgen/-/regjsgen-0.8.0.tgz#df23ff26e0c5b300a6470cad160a9d090c3a37ab"
   integrity sha512-RvwtGe3d7LvWiDQXeQw8p5asZUmfU1G/l6WbUXeHta7Y2PEIvBTwH6E2EfmYUK8pxcxEdEmaomqyp0vZZ7C+3Q==
 
-regjsparser@^0.13.0:
-  version "0.13.4"
-  resolved "https://registry.yarnpkg.com/regjsparser/-/regjsparser-0.13.4.tgz#a04c6a6976abd511561f275107243e83e05efa2d"
-  integrity sha512-EWV80YgFaVgFrjGCAsV7oybp4GOxbls5RzBg8OB0nKEVXsBJR1JlV8Di1JhCROg3MzTfe1RI8yitIm1eOs68iA==
+regjsparser@^0.14.0:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/regjsparser/-/regjsparser-0.14.1.tgz#469ce0ebbca0e8309350e132e132a066e90262bc"
+  integrity sha512-IeYboCLG1KBNRksrZQIZ1SV5KVWZiR0ikFokOcA0n63vLvlaFvCsfxN+fd4aXwL0KW3YD+ByRzIgo9ZAHdbldw==
   dependencies:
     jsesc "~3.1.0"
 
