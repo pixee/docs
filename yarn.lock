@@ -3145,9 +3145,9 @@ ajv@^8.0.0, ajv@^8.20.0:
     require-from-string "^2.0.2"
 
 algoliasearch-helper@^3.26.0:
-  version "3.30.1"
-  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.30.1.tgz#634507a3fdaee1fdfca9ece8917c3168afad620c"
-  integrity sha512-AmqAtGFUZSaOn64yt9WjqvT00iXkXFjvd18OyzoPY0G1vOWy8drhwHSlRznpwVCAwRUR/sVdkl9ZXgmu/voDBg==
+  version "3.30.2"
+  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.30.2.tgz#bc8c7a00eed433c5109978c9238e56395d7a9fae"
+  integrity sha512-Dk8wNq5ZvTBMrjfzXeeKYcWMgdTptGrYbLdjmxL4OuEFayueHbLN3Y9AE9DCoG1epQF6vtGpAM9RgHVpHp2PMw==
   dependencies:
     "@algolia/events" "^4.0.1"
 
