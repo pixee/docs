@@ -3696,9 +3696,9 @@ color-name@~1.1.4:
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 colord@^2.9.3:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/colord/-/colord-2.11.0.tgz#4d18d60421dcf4a253f95a186cbb1619247049ca"
-  integrity sha512-R7EZD9e+sWpUQFr3F6v747NAazZCD+OhsM0VnPkHGxSaQvw4ZvJoCVz51gemztBBoZaFvMP0qdKgFyBdBurfgA==
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/colord/-/colord-2.12.0.tgz#ce7381040981801b9fbbf2c004dc59f1d0143b5a"
+  integrity sha512-SpiONmQPZDqe50ivOTgkVikYsnp6l1HTFYqPRLNBCJJdA2Qympw2yYUzX99XlSbbKZswjiG6r+xsUpPPOHqY+Q==
 
 colorette@^2.0.10:
   version "2.0.20"
@@ -4309,9 +4309,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.464:
-  version "1.5.479"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.479.tgz#879b8b0c0447b3d9beec2954eae77e7271844784"
-  integrity sha512-uAJdJQ7vHa4TvPfzt1TOqoRgHmav5gwmqHMPLxBH6m8Cbj5R9/z/rygTOQiZ8pe5g0ZAEogga1bP6HoKcOzx/Q==
+  version "1.5.480"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.480.tgz#4f8bd2842e66efabb4cf41b0136267dc9a57cd5f"
+  integrity sha512-7WLDoWPKc+YiH37GshK2sLagySSbcQk3K2s6swA3x+BtWUH8BtphwL+YqarJQi09Sbf+LOCIW75RQooN2PqXsA==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -6529,9 +6529,9 @@ minimalistic-assert@^1.0.0:
   integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
 minimatch@3.1.5, minimatch@9.0.3, minimatch@^11.0.5:
-  version "11.0.6"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-11.0.6.tgz#99b1cdf4592b77aac7b12a83d2d76dfa78420016"
-  integrity sha512-6NZbDPQIRnsJFjJ9wbd5659OKaTHCqpPHdldE3WwArjxr5wLxHIwnx4eTGcPebpVBZZQbITvQQIx8K0VGXoT3Q==
+  version "11.0.7"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-11.0.7.tgz#696d78046604553717a82bb45b451b5319d63d34"
+  integrity sha512-Tnk+M9mPjqKDZlUd77eMSjPjhnlBIa1mABOwetMryIshUwi1YmOBdGFfQnHgn4Z8A66eLT8ENzJrxwYmKfqrZg==
   dependencies:
     "@isaacs/nonrecursive-glob-match" "^1.1.0"
     brace-expansion "^5.0.12"
