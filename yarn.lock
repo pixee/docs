@@ -4340,9 +4340,9 @@ emoticon@^4.0.1:
   integrity sha512-VWZfnxqwNcc51hIy/sbOdEem6D+cVtpPzEEtVAFdaas30+1dgkyaOQ4sQ6Bp0tOMqWO1v+HQfYaoodOkdhK6SQ==
 
 encodeurl@~2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-2.0.1.tgz#f268548822bd87b5b4fdce83c56388c6d33c9de6"
-  integrity sha512-Ev/hIyePLZtpL98x562lvPtenrUfGr0lfaf44HFZ+hDEwso7ccV9QAZrEVLg0hxNAzygaAFxy2dYaAKKM0G06A==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-2.0.2.tgz#6327ad110d75856d4106ca396431f7e702c40610"
+  integrity sha512-ddmxiyS6ETq/v5/+mdA4fykK7JgEmqcShrGmQFTaKf5o43tL8XLuMzNLLsspuIC3/qGupS7Ci2TF+feJRkYY0w==
 
 enhanced-resolve@^5.26.0:
   version "5.26.1"
