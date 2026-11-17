@@ -3146,9 +3146,9 @@ ajv@^8.0.0, ajv@^8.20.0:
     require-from-string "^2.0.2"
 
 algoliasearch-helper@^3.26.0:
-  version "3.30.2"
-  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.30.2.tgz#bc8c7a00eed433c5109978c9238e56395d7a9fae"
-  integrity sha512-Dk8wNq5ZvTBMrjfzXeeKYcWMgdTptGrYbLdjmxL4OuEFayueHbLN3Y9AE9DCoG1epQF6vtGpAM9RgHVpHp2PMw==
+  version "3.30.3"
+  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.30.3.tgz#97f15c3dac4c19d88b5f93e7a20ad6ec048dfe87"
+  integrity sha512-gMl/BG+1200HGAB40jr0pa29hoc1RgQ3LnPrj2RkxmXDF1XdsYS+xO6pOZwqY0y75FMWSxornuqIq3A106uhug==
   dependencies:
     "@algolia/events" "^4.0.1"
 
@@ -4058,9 +4058,9 @@ csso@^5.0.5:
     css-tree "~2.2.0"
 
 csstype@^3.2.2:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.2.3.tgz#ec48c0f3e993e50648c86da559e2610995cf989a"
-  integrity sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.2.4.tgz#e3c565add00793c36f089cc14b70d04d784daa19"
+  integrity sha512-PoKaoPzQapnEoqUSnHx1u6W6ku8CVEgKsnpmmzU3m1nwkidpPBQ8V/Zq2+bWNrsOKoKLwTGdbx6xF7BXP1zLVQ==
 
 debounce@^1.2.1:
   version "1.2.1"
@@ -6608,9 +6608,9 @@ node-emoji@^2.1.0:
     skin-tone "^2.0.0"
 
 node-releases@^2.0.64:
-  version "2.0.64"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.64.tgz#f98f49ee9592be46c78780a5246e3b2c8b8d6f4d"
-  integrity sha512-zAPCKqMcnqs2nGy6nlkm7JduFseiBJy3EXHGLh+8pFR+TxGCBxxiEN21+UROU5CKwX/f4TlUcYjiM+vs/tsyxw==
+  version "2.0.65"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.65.tgz#8937f0f215e572b35c1dc83f8c6ec61cafccb9f8"
+  integrity sha512-PfvofsGQ+MiOQIPkX9fU8ELUWmy5zL74CdQaph/ismKszfFkfwXaw0cGiwbwym2hT9k5+mdyl8O5WQ1MD8EHmA==
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
