@@ -2618,9 +2618,9 @@
     "@svgr/plugin-svgo" "8.1.0"
 
 "@types/body-parser@*":
-  version "1.19.6"
-  resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.6.tgz#1859bebb8fd7dac9918a45d54c1971ab8b5af474"
-  integrity sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-2.2.0.tgz#bc5804c560de83e12af87173259bcbf0561710bc"
+  integrity sha512-2xqOfKcCjEVvPzOqRa3Db4+CzY45+urO0ib+EvtV5G8z2SRhjVsEI8C6fXZjd0gLEszk27Z3UTpSgTI5Nh5QTg==
   dependencies:
     "@types/connect" "*"
     "@types/node" "*"
@@ -2839,9 +2839,9 @@
     "@types/react" "*"
 
 "@types/react@*":
-  version "19.3.1"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.3.1.tgz#a858eaa8a6dad5f3df8bb37204e4c9decad6119c"
-  integrity sha512-HNTkBIm8zmHX8LUXX2vtZ/ONzehrV1J3abl2fUIiZ5qxTYRCj/z+rDeFwOltqCLl9lRdUTKWT41OLtYuFV/Arg==
+  version "19.3.3"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.3.3.tgz#eba04bdeb1862d66507c2b49ee23ab71d554cb04"
+  integrity sha512-K8uWpJc4teiuOPdiP1umjeA9rGMgVPiXuoL66fcS1QlwBT1WMqY8PORmub9FadopIs+RCW6siYEs7Lpq+vDlog==
   dependencies:
     csstype "^3.2.2"
 
@@ -3697,9 +3697,9 @@ color-name@~1.1.4:
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 colord@^2.9.3:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/colord/-/colord-2.14.0.tgz#ee0f5ae8c64bb2c758ffa0279503dfa5cf22c5b9"
-  integrity sha512-eSdMel9EBvdFxnchObp7gljRoqYQLr+zXhaxjkym7syVphw1FIhfQwgsA5Bv3jArflZPJEa1rmQtGpa7NRc7Rw==
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/colord/-/colord-2.14.1.tgz#aed7149a16d7e5cba1ac026c4e4b72be5c08b41b"
+  integrity sha512-oAnRdUZtIoONz9y5JZEM/Ogg4m/eYIvpCvzFZIFOPfraLqVYTmevf61yeIhcLq/9EXztGOwF4O36pCu143BqGw==
 
 colorette@^2.0.10:
   version "2.0.20"
