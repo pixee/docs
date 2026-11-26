@@ -9068,9 +9068,9 @@ websocket-driver@^0.7.4:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1, websocket-extensions@>=0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.2.0.tgz#9b0dbdfd847e9dc2755854924d1c79025b800001"
-  integrity sha512-vQaTTgDDgwlrreIJAprknlnvEtZMMxfLqoxyQYnWO8dgcz2qIzQNysCpwOekz8kqLvzrZ0dcaL9hejZ+2AszCA==
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.3.0.tgz#c91b2cf99bacff7cc520819673b660f138d5647b"
+  integrity sha512-BPYQfFy0QTIibncavBZWTnHn1SpJzq1f+2u6qPN6SnoaTwKNV5U/PKhgddcmGdPZuPnXXw41AYi0u8BqOkbEbA==
 
 which@^2.0.1:
   version "2.0.2"
